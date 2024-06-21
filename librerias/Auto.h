@@ -84,8 +84,10 @@ void cargarArregloAutosNuevosInit();
 
 int esNuevo(Auto);
 int contarNuevos(Auto[]);
-Auto* crearArregloNuevos(int);
-void agregarAutosNuevos(Auto*);
+void agregarAutosNuevos(Auto**);
+void insertarAutoNuevoEnArr(Auto,int,Auto**);
+void crearArregloNuevos(Auto**,int);
+
 int encontrarMenor(Auto[], int, int);
 void ordenarAutos(Auto[], int);
 void mostrarAutosNuevos(Auto[],int);
