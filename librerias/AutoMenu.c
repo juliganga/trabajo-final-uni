@@ -87,15 +87,14 @@ while (opcion != 0){
             mostrarAutosEnVenta();
             break;
         case 6:
+            //printf("Nuevos contados: %i",nuevos);
             nuevos = contarNuevos(arregloAutos);
-            printf("Nuevos contados: %i",nuevos);
             Auto*autosnuevos;
-            int exito = 0;
-            autosnuevos = crearArregloNuevos(nuevos); /// ARREGLAR ESTO
-            printf("Autos ordenados");
             if(nuevos != 0)
             {
-                agregarAutosNuevos(autosnuevos);
+                printf("agregar");
+                agregarAutosNuevos(&autosnuevos); /// ARREGLAR ESTO
+                printf("Autos ordenados");
                 ordenarAutos(autosnuevos, nuevos);
                 mostrarAutosNuevos(autosnuevos,nuevos);
             }

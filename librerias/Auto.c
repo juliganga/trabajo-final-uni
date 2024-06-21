@@ -602,30 +602,35 @@ int contarNuevos(Auto arreglo[])
     return cantidadnuevos;
 }
 
-Auto * crearArregloNuevos(int validos)
+void AllocarEspacioParaAutoNuevo(int validos,Auto**arreglo)
 {
-    Auto**arreglo;
-    int exito = 1;
+    printf("VALIDOS %i",validos);
     if(validos != 0)
     {
-        *arreglo = realloc(*arreglo,sizeof(Auto)*validos); /// SE ROMPE ACA
+        arreglo = malloc(validos*sizeof(Auto)); /// SE ROMPE ACA
     }
-    else
-    {
-        exito = 0;
-    }
-    printf("Exito: %i",exito);
-    return exito;
 }
 
-void agregarAutosNuevos(Auto*arreglo)
+
+
+void agregarAutosNuevos(Auto**arreglo)
 {
     int pos = 0;
+    int nuevos = -1;
     for(int i = 0;i<=cantidadAutos;i++)
     {
-        arreglo[pos] = arregloAutos[i];
-        pos++;
+        if(esNuevo(arregloAutos[i]) == 1)
+        {
+            nuevos++;
+            insertarAutoNuevoEnArr(arregloAutos[i],nuevos,arreglo);
+        }
     }
+}
+
+void insertarAutoNuevoEnArr(Auto coche,int nuevos,Auto**arreglo)
+{
+    *arreglo = realloc(*arreglo,sizeof(Auto)*(nuevos+1));
+    (*arreglo)[nuevos] = coche;
 }
 
 

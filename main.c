@@ -41,15 +41,15 @@ int main()
     //Patente patente;
     //cargarPatente(&patente);
 
-    if(menuLogin() == 0)
-    {
+    /*if(menuLogin() == 0) // ESTO ESTA COMENTADO PARA PROBAR MAS RAPIDO, DESCOMENTAR UNA VEZ DE QUE TODO ESTE TERMINADO
+    {*/
         cargarEnArregloPersonasInit();
         cargarEnArregloAutosInit();
         //cargarArregloAutosEnVentaInit();
         //cargarArregloAutosNuevosInit();
         cargarArregloVentasInit();
         menuPrincipal();
-    }
+    //}
 
     return 0;
 }
