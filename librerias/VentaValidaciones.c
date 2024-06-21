@@ -152,7 +152,7 @@ int esComprador(char dni[])
     int i = 0;
 
     while(flag == 0 && cantidadpersonas >= i)
-        {
+    {
             persona = arreglopersona[i];
             resultado = strncmp(dni,persona.dni,strlen(dni));
             if(resultado == 0)
@@ -163,9 +163,16 @@ int esComprador(char dni[])
                 }
             }
             i++;
-        }
+    }
+
+    if(flag == 0)
+    {
+        puts("El dni ingresado no pertenece a un comprador");
+    }
+
     return flag;
 }
+
 
 /** \brief Funcion que verifica si se ingresa el DNI que se reserva para la consecionaria.
  *
@@ -196,26 +203,46 @@ int esConsecionariaVenta(char dni[])
  * \return int 1 si es un auto a la venta, 0 si no
  *
  */
-int esAutoEnVenta(Patente patente)
+int lePerteneceAutoYexiste(Patente patente, char dni[])
 {
-    int flag = 0;
-    int resultadoL;
-    int resultadoN;
+    int flag = 1;
+    int flagautoexiste = 0;
+    int flaglepertenece = 1;
+    int resultadoL = 0;
+    int resultadoN = 0;
+    int resultadodni = 0;
 
-    for(int i = 0; i <= cantidadEnVenta; i++)
+    for(int i = 0; i <= cantidadAutos; i++)
     {
-        resultadoL = strcmp(patente.letras, arregloAutosEnVenta[i].patente.letras);
-        resultadoN = strcmp(patente.numeros, arregloAutosEnVenta[i].patente.numeros);
+        resultadoL = strcmp(patente.letras, arregloAutos[i].patente.letras);
+        resultadoN = strcmp(patente.numeros, arregloAutos[i].patente.numeros);
 
         if(resultadoL == 0 && resultadoN == 0)
         {
-            flag = 1;
-        }
-        else
-        {
-            puts("ERROR: la patente ingresada no se encuentra en la base de datos.");
+            flagautoexiste = 1;
+            resultadodni = strcmp(dni, arregloAutos[i].titular.dni);
+            if(resultadodni != 0)
+            {
+                flaglepertenece = 0;
+            }
         }
     }
+
+    if(flagautoexiste == 0)
+    {
+        puts("ERROR: la patente ingresada no se encuentra en la base de datos.");
+    }
+
+    if(flaglepertenece == 0)
+    {
+        puts("ERROR: El auto no le pertenece.");
+    }
+
+    if(flagautoexiste == 0 || flaglepertenece == 0)
+    {
+        flag = 0;
+    }
+
     return flag;
 }
 

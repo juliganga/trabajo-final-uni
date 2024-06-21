@@ -92,5 +92,9 @@ int encontrarMenor(Auto[], int, int);
 void ordenarAutos(Auto[], int);
 void mostrarAutosNuevos(Auto[],int);
 
+/**----------------------------------------Cambios en una venta--------------------------------------------**/
+
+void cambiarTitularPorVenta(char[],char[],Patente);
+
 
 #endif // AUTO_H_INCLUDED

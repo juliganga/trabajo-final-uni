@@ -54,17 +54,13 @@ while (opcion != 0){
             break;
         case 2:
             printf("Ingrese la Patente del auto que quiere modificar: \n");
-
             patente = ingresarPatenteParaBuscar();
             coche = buscarAutoPatente(patente, &posicion);
             mostrarAuto(coche);
             coche = modificarAuto(coche);
+            arregloAutos[posicion] = coche;
             cocheArchivo = cargarAutoArchivo(coche);
             guardarAutoArchivoEnPos(cocheArchivo, ARCHIVO_AUTOS, posicion);
-            /*
-            cargarEnArregloAutosInit();
-            cargarArregloAutosEnVentaInit();
-            cargarArregloAutosNuevosInit();*/
             break;
         case 3:
             listarAutos();

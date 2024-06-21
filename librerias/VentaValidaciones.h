@@ -14,10 +14,17 @@ int mesPositivo(Venta);
 int verificarMes(Venta);
 int verificarDia(Venta);
 int diaPositivo(Venta);
+
 int esComprador(char[]);
+
 int esConsecionariaVenta(char[]);
-int esAutoEnVenta(Patente);
+int lePerteneceAutoYexiste(Patente,char[]);
 int precioVentaPositivo(Venta);
 int gananciaPositiva(Venta);
+
+
+
+
+
 // FIN VERIFICACIONES
 #endif // VENTAVALIDACIONES_H_INCLUDED
