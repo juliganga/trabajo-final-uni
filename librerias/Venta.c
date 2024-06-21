@@ -60,6 +60,7 @@ void menuVentas()
 
 
     scanf("%d", &decision);
+    fflush(stdin);
 
     switch(decision)
     {
@@ -174,21 +175,25 @@ void menuCargarVenta()
     system("cls");
     puts("--------- Agregando venta ---------");
 
-    cargarAnioVenta(&venta);
-    cargarMes(&venta);
-    cargarDia(&venta);
+    //cargarAnioVenta(&venta);
+    //cargarMes(&venta);
+    //cargarDia(&venta);
     cargarDNIComprador(&venta);
     cargarDNIVendedor(&venta);
     cargarPatenteVenta(&venta);
     cargarPrecioVenta(&venta);
     cargarGanancia(&venta);
 
-    verVentas(venta);
+    Patente patente;
+    strcpy(patente.letras,venta.autoAVender.letras);
+    strcpy(patente.numeros,venta.autoAVender.numeros);
+
+    cambiarTitularPorVenta(venta.dniComprador,venta.dniVendedor,patente);
+
+
     cargarVentaArreglo(venta);
     fflush(stdin);
     guardarVentaFile(venta);
-
-
 }
 
 
@@ -207,7 +212,6 @@ void cargarAnioVenta(Venta*venta)
         printf("A%co de la venta?\n", 164);
         scanf("%i", &venta->fecha.anio);
         fflush(stdin);
-        printf("Estoy aca %i\n",venta->fecha.anio);
 
         if(verificarAnioActual(*venta) == 1 && anioPositivo(*venta) == 1)
         {
@@ -282,11 +286,21 @@ void cargarDNIComprador(Venta*venta)
     {
         puts("DNI del comprador?");
         scanf("%s", &venta->dniComprador);
+        Persona comprador;
+        comprador = buscarSegunDNI(venta->dniComprador);
 
-        if(verificarEnteros(venta->dniComprador) == 1 && verificarDNI(venta->dniComprador) == 1 && esConsecionaria(venta->dniComprador) == 0 && verSiDNINoExiste(venta->dniComprador) == 0 && esComprador(venta->dniComprador) == 1)
+        if(strcmp("0",comprador.dni) != 0)
         {
-            verificado = 1;
+            if(verificarEnteros(venta->dniComprador) == 1 && verificarDNI(venta->dniComprador) == 1 && esConsecionaria(venta->dniComprador) == 0 && verSiDNINoExiste(venta->dniComprador) == 0 && esComprador(venta->dniComprador) == 1)
+            {
+                verificado = 1;
+            }
         }
+        else
+        {
+            printf("La persona no existe\n");
+        }
+
         printf("\n");
     }
 }
@@ -304,10 +318,30 @@ void cargarDNIVendedor(Venta*venta)
     {
         puts("DNI del vendedor? (DNI reservado para la consecionaria '00000000')");
         scanf("%s", venta->dniVendedor);
+        Persona vendedor;
 
-        if(verificarEnteros(venta->dniVendedor) == 1 && verificarDNI(venta->dniVendedor) == 1 && esConsecionariaVenta(venta->dniVendedor) == 1)
+
+
+        if(verificarEnteros(venta->dniVendedor) == 1 && verificarDNI(venta->dniVendedor) == 1/*esConsecionariaVenta(venta->dniVendedor) == 1*/)
         {
-            verificado = 1;
+            if(esConsecionaria(venta->dniVendedor) == 1)
+            {
+                verificado = 1;
+            }
+            else
+            {
+                vendedor = buscarSegunDNI(venta->dniVendedor);
+                verPersonaFull(vendedor);
+                printf("Resultado : %i",strcmp("0",vendedor.dni));
+                if(strcmp("0",vendedor.dni) != 0 && esVendedor(vendedor) == 1)
+                {
+                    verificado = 1;
+                }
+                else
+                {
+                    puts("La persona no es vendedor");
+                }
+            }
         }
 
         printf("\n");
@@ -378,15 +412,17 @@ void cargarPatenteVenta(Venta*venta)
 
         printf("Las letras: ");
         fflush(stdin);
-        letrasMayus(gets(patente.letras));
-        strcpy(venta->autoAVender.letras, &patente.letras);
+        letrasMayus(gets(&venta->autoAVender.letras));
+        fflush(stdin);
+        strcpy(&patente.letras, &venta->autoAVender.letras);
 
         printf("Los numeros: ");
         fflush(stdin);
-        gets(&patente.numeros);
-        strcpy(venta->autoAVender.numeros, &patente.numeros);
+        scanf("%s",venta->autoAVender.numeros);
+        fflush(stdin);
+        strcpy(&patente.numeros,&venta->autoAVender.numeros);
 
-        if(esAutoEnVenta(patente) == 1 && validarLetras(patente.letras) == 1 && validarNumeros(patente.numeros) == 1 && validarLimite(patente) == 1)
+        if(lePerteneceAutoYexiste(patente,venta->dniVendedor) == 1 && validarLetras(patente.letras) == 1 && validarNumeros(patente.numeros) == 1 && validarLimite(patente) == 1)
         {
             verificado = 1;
         }

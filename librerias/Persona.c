@@ -951,7 +951,7 @@ int esConsecionaria(char dni[])
 
     if(resultado == 0)
     {
-        puts("!!!--- DNI '00000000' RESERVADO para la consecionaria ---!!!");
+        puts("-Dni consecionaria!-");
         flag = 1;
     }
     return flag;

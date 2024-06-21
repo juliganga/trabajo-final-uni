@@ -697,3 +697,22 @@ void mostrarAutosNuevos(Auto arreglo[],int validos){
     }
 
 }
+
+void cambiarTitularPorVenta(char dnicomprador[],char dnivendedor[],Patente patente)
+{
+    int pos = -1;
+    Auto coche;
+    AutoArchivo cocheArchivo;
+    Persona nuevotitular;
+
+    coche = buscarAutoPatente(patente,&pos);
+    nuevotitular = buscarSegunDNI(dnicomprador);
+    puts("AHora");
+    coche.titular = nuevotitular;
+
+    arregloAutos[pos] = coche;
+    mostrarAuto(arregloAutos[pos]);
+    cocheArchivo = cargarAutoArchivo(coche);
+    guardarAutoArchivoEnPos(cocheArchivo, ARCHIVO_AUTOS, pos);
+}
+
