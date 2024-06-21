@@ -92,9 +92,8 @@ while (opcion != 0){
             Auto*autosnuevos;
             if(nuevos != 0)
             {
-                printf("agregar");
                 agregarAutosNuevos(&autosnuevos);
-                printf("Autos ordenados");
+                printf("Autos ordenados\n");
                 ordenarAutos(autosnuevos, nuevos);
                 mostrarAutosNuevos(autosnuevos,nuevos);
             }

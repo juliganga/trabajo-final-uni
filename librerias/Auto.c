@@ -602,14 +602,7 @@ int contarNuevos(Auto arreglo[])
     return cantidadnuevos;
 }
 
-void AllocarEspacioParaAutoNuevo(int validos,Auto**arreglo)
-{
-    printf("VALIDOS %i",validos);
-    if(validos != 0)
-    {
-        arreglo = malloc(validos*sizeof(Auto)); /// SE ROMPE ACA
-    }
-}
+
 
 
 
