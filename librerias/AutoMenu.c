@@ -35,7 +35,7 @@ while (opcion != 0){
     printf("2 - Modificar un auto\n");
     printf("3 - Listar Autos\n"); // marca modelo patente
     printf("4 - Ver Informaci%cn completa de un Auto\n", 162); // toda la info
-    printf("5 - Ver Autos en venta\n"); //marca modelo, patente año  mostrar bien esta info
+    printf("5 - Ver Autos en venta\n"); //marca modelo, patente aÃ±o  mostrar bien esta info
     printf("6 - Mostrar autos por antiguedad (menos de 10 a%cos)\n", 164);
 
 
