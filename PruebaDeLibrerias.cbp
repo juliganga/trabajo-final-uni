@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PruebaDeLibrerias" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PruebaDeLibrerias" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PruebaDeLibrerias" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="librerias/Auto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/Auto.h" />
+		<Unit filename="librerias/AutoArchivo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/AutoArchivo.h" />
+		<Unit filename="librerias/AutoMenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/AutoMenu.h" />
+		<Unit filename="librerias/AutoValidaciones.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/AutoValidaciones.h" />
+		<Unit filename="librerias/LoginMenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/LoginMenu.h" />
+		<Unit filename="librerias/Patente.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/Patente.h" />
+		<Unit filename="librerias/PatenteValidaciones.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/PatenteValidaciones.h" />
+		<Unit filename="librerias/Persona.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/Persona.h" />
+		<Unit filename="librerias/Usuario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/Usuario.h" />
+		<Unit filename="librerias/UsuarioValidaciones.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/UsuarioValidaciones.h" />
+		<Unit filename="librerias/Utiles.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/Utiles.h" />
+		<Unit filename="librerias/Venta.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/Venta.h" />
+		<Unit filename="librerias/VentaValidaciones.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/VentaValidaciones.h" />
+		<Unit filename="librerias/pila.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="librerias/pila.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
