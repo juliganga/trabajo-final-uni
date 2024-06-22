@@ -175,9 +175,9 @@ void menuCargarVenta()
     system("cls");
     puts("--------- Agregando venta ---------");
 
-    //cargarAnioVenta(&venta);
-    //cargarMes(&venta);
-    //cargarDia(&venta);
+    cargarAnioVenta(&venta);
+    cargarMes(&venta);
+    cargarDia(&venta);
     cargarDNIComprador(&venta);
     cargarDNIVendedor(&venta);
     cargarPatenteVenta(&venta);
@@ -189,8 +189,6 @@ void menuCargarVenta()
     strcpy(patente.numeros,venta.autoAVender.numeros);
 
     cambiarTitularPorVenta(venta.dniComprador,venta.dniVendedor,patente);
-
-
     cargarVentaArreglo(venta);
     fflush(stdin);
     guardarVentaFile(venta);
@@ -289,16 +287,9 @@ void cargarDNIComprador(Venta*venta)
         Persona comprador;
         //comprador = buscarSegunDNI(venta->dniComprador);
 
-        /*if(strcmp("0",comprador.dni) != 0)
-        {*/
         if(verificarEnteros(venta->dniComprador) == 1 && verificarDNI(venta->dniComprador) == 1 /*esConsecionaria(venta->dniComprador) == 0*/ && verSiDNINoExiste(venta->dniComprador) == 0 && esComprador(venta->dniComprador) == 1)
         {
             verificado = 1;
-        }
-        //}
-        else
-        {
-            printf("La persona no existe\n");
         }
 
         printf("\n");
@@ -329,10 +320,6 @@ void cargarDNIVendedor(Venta*venta)
                 if(esConsecionaria(venta->dniVendedor) || esVendedor(vendedor) == 1)
                 {
                     verificado = 1;
-                }
-                else
-                {
-                    puts("La persona no es vendedor\n");
                 }
             }
             else
