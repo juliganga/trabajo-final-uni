@@ -8,9 +8,9 @@
 #include "PatenteValidaciones.h"
 
 /**
-    Funcion que carga una patente.
-    Args: none
-    Return: Devuelve una estructura tipo Patente.
+    \brief Funcion que carga una patente.
+    \param none
+    \return Devuelve una estructura tipo Patente.
 **/
 
 Patente cargarPatente(){
@@ -45,10 +45,9 @@ return patente;
 }
 
 /**
-    Funcion que realiza el cambio de minusculas a mayusculas de las
-    letras de una patente.
-    Args: Recibe una arreglo de caracteres
-    Return: none
+    \brief Funcion que realiza el cambio de minusculas a mayusculas de las letras de una patente.
+    \param Recibe una arreglo de caracteres
+    \return none
 
 **/
 

@@ -505,6 +505,12 @@ Auto convertirAuto(AutoArchivo coche){
 
 }
 
+/**
+    \brief Funcion que verifica si hay autos en el arreglo de autos
+    \return int -> 1 si hay autos
+                   0 si no los hay
+**/
+
 int hayAutos()
 {
     int valor = 0;
@@ -601,7 +607,7 @@ int esNuevo(Auto coche){
 }
 
 /**
-    \brief Funcion que cuenta la cantidad de nuevos desntro del arreglo de autos.
+    \brief Funcion que cuenta la cantidad de nuevos dentro del arreglo de autos.
     \param Auto arreglo[] -> el arreglo a recorrer
     \return int -> la cantidad de autos nuevos
 

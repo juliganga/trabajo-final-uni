@@ -15,14 +15,14 @@
 
 
 /**
-    Funcion que carga una estructura de tipo Usuario.
-    Verifica que exista el archivo, si no lo crea.
-    verifica todos los campos de la estructura sean validos.
-    Al finalizar la carga guarda el usuario cargado.
+    \brief Funcion que carga una estructura de tipo Usuario.
+           Verifica que exista el archivo, si no lo crea.
+           Verifica todos los campos de la estructura sean validos.
+           Al finalizar la carga guarda el usuario cargado.
 
-    Args: recive un puntero a Usuario
+    \param Usuario *usuario -> un puntero a una estructura de tipo Usuario
+    \return none
 
-    Return: none
 **/
 void crearUsuario(Usuario *usuario){
 
@@ -64,9 +64,9 @@ void crearUsuario(Usuario *usuario){
 
 
 /**
-    Funcion que guarda un usuario en un archivo.
-    Args: recive un puntero a char, y un puntero a Usuario
-    Return: none
+    \brief Funcion que guarda un usuario en un archivo.
+    \param recive un puntero a char, y un puntero a Usuario
+    \return none
 
 **/
 
@@ -89,6 +89,17 @@ void guardarUsuario(char *nombreArchivo, Usuario *usuario){
 
     fclose(archivo);
 }
+
+/**
+    \brief Funcion que autentica un usuario, verifica que el usuario y la contraseña esten en el archivo.
+    \param char *nombreArchivo -> un puntero al nombre del archivo de usuarios
+    \param char *nombreUsuario -> un puntero a la variable que contiene el nombre de usuario
+    \param char *contrasenia -> un puntero a la variable que contiene la contraseña
+    \return int -> 1 si esta autenticado
+                   0 si no lo esta.
+
+**/
+
 int autenticar(char *nombreArchivo, char *nombreUsuario, char *contrasenia){
     FILE *archivo = fopen(nombreArchivo, "rb");
     Usuario usuario;
@@ -110,24 +121,3 @@ int autenticar(char *nombreArchivo, char *nombreUsuario, char *contrasenia){
 
 }
 
-/*
-int autPin(char *nombreArchivo, char *pin){
-    FILE *archivo = fopen(nombreArchivo, "rb");
-    Usuario usuario;
-    int autenticado = 0;
-
-    if (archivo !=  NULL){
-        while (fread(&usuario, sizeof(Usuario), 1, archivo) > 0){
-            if ( strcmpi(usuario.pin, pin) == 0){
-               autenticado = 1;
-            }
-        }
-
-    } else {
-        printf("Tuvimos problemas para abrir el archivo.\n");
-    }
-
-    fclose(archivo);
-    return autenticado;
-
-}*/

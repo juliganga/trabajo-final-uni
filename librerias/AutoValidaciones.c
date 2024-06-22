@@ -6,16 +6,11 @@
 #include "Persona.h"
 #include "Utiles.h"
 
-/** .falta verificar, que no se pueda agregar cuando una persona tiene persona.rol
-    no puede ser comprador para agregarle a un auto tiene que tener rol vendedor
-    .
-
- **/
 
 /**
-    Funcion que valida si el valor pasado como precio de adquisicion, es positivo.
-    Args: Float que representa el precio de adquisicion.
-    Return: 0 si es negativo
+    \brief Funcion que valida si el valor pasado como precio de adquisicion, es positivo.
+    \param Float que representa el precio de adquisicion.
+    \return 0 si es negativo
             1 si es positivo
 
 **/
@@ -41,9 +36,9 @@ int PrecioNoNegativo(float valor)
 
 /**
 
-Funcion que valida si el titular de un auto es vendedor.
-Params: Persona titular -> estructura tipo persona que representa el titular del vehiculo
-Return: int -> 1 si es Vendedor
+    \brief Funcion que valida si el titular de un auto es vendedor.
+    \param Persona titular -> estructura tipo persona que representa el titular del vehiculo
+    \return int -> 1 si es Vendedor
                0 si no lo es.
 
 **/
@@ -62,11 +57,12 @@ int esVendedor(Persona titular){
 }
 /**
 
-Funcion que verifica que la marca igresada no sobrepase los limites del arreglo
-Params: char marca[] -> el string a validar.
-return: int -> 1 si esta dentro de los limites
+    \brief Funcion que verifica que la marca igresada no sobrepase los limites del arreglo
+    \param char marca[] -> el string a validar.
+    \return int -> 1 si esta dentro de los limites
                0 si no.
 **/
+
 int limiteMarca(char marca[]){
     int flag = 1;
 
@@ -79,9 +75,9 @@ return flag;
 
 /**
 
-Funcion que verifica que el modelo igresado no sobrepase los limites del arreglo
-Params: char modelo[] -> el string a validar.
-return: int -> 1 si esta dentro de los limites
+    \brief Funcion que verifica que el modelo igresado no sobrepase los limites del arreglo
+    \param char modelo[] -> el string a validar.
+    \return int -> 1 si esta dentro de los limites
                0 si no.
 **/
 
@@ -98,10 +94,10 @@ int limiteModelo(char modelo[]){
 
 /**
 
-Funcion que verifica que el año igresado este correcto.
-Params: int anio -> representa el año
-return: int -> 1 si es correcto
-               0 si no.
+    \brief Funcion que verifica que el año igresado este correcto.
+    \param int anio -> representa el año
+    \return int -> 1 si es correcto
+                   0 si no.
 **/
 
 int esAnio(int anio){
@@ -118,10 +114,10 @@ return flag;
 
 /**
 
-Funcion que verifica que el año igresado no sea negativo.
-Params: int anio -> el año a evaluar
-return: int -> 1 si es mayor a 0
-               0 si no.
+    \brief Funcion que verifica que el año igresado no sea negativo.
+    \param int anio -> el año a evaluar
+    \return int -> 1 si es mayor a 0
+                   0 si no.
 **/
 
 int anioNoNegativo(int anio){
@@ -140,10 +136,10 @@ return flag;
 
 /**
 
-Funcion que verifica que el año este dentro de unos parametros establecidos
-Params: int anio -> el año a evaluar
-return: int -> 1 si es mayor a 0
-               0 si no.
+    \brief Funcion que verifica que el año este dentro de unos parametros establecidos
+    \param int anio -> el año a evaluar
+    \return int -> 1 si es mayor a 0
+                   0 si no.
 **/
 
 int limiteAnio(int anio){
@@ -163,10 +159,10 @@ return flag;
 
 
 /**
-    Funcion que verifica que el kilometraje no se pase del limite
+    \brief Funcion que verifica que el kilometraje no se pase del limite
 
-    Params: char kms[] -> un arreglo que representa los kilometros
-    return: int -> 1 si es mayor a 0
+    \param char kms[] -> un arreglo que representa los kilometros
+    \return int -> 1 si es mayor a 0
                    0 si es menor.
 **/
 
@@ -185,10 +181,10 @@ int limiteKms(char kms[]){
     }
 
 /**
-    Funcion que verifica que el kilometraje sea numerico
+    \brief Funcion que verifica que el kilometraje sea numerico
 
-    Params: char kms[] -> un arreglo que representa los kilometros
-    return: int -> 1 si es mayor a 0
+    \param char kms[] -> un arreglo que representa los kilometros
+    \return int -> 1 si es mayor a 0
                    0 si es menor.
 **/
 
@@ -211,10 +207,10 @@ return flag;
 }
 
 /**
-    Funcion que verifica que el kilometraje no sea negativo
+    \brief Funcion que verifica que el kilometraje no sea negativo
 
-    Params: char kms[] -> un arreglo que representa los kilometros
-    return: int -> 1 si es mayor a 0
+    \param char kms[] -> un arreglo que representa los kilometros
+    \return int -> 1 si es mayor a 0
                    0 si es menor.
 **/
 

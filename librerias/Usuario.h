@@ -14,7 +14,7 @@ typedef struct {
 void crearUsuario(Usuario*);
 void guardarUsuario(char[], Usuario*);
 int autenticar(char*, char*, char*);
-int autPin(char*, char*);
+
 
 
 

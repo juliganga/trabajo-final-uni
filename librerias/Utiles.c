@@ -9,9 +9,9 @@
 
 /**
 
-    Funcion que verifica si existe el archivo
-    Params: char *nombreArchivo -> un puntero al nombre del archivo para verificar si existe.
-    Return: int -> devuelve : 1 si existe
+    \brief Funcion que verifica si existe el archivo
+    \param char *nombreArchivo -> un puntero al nombre del archivo para verificar si existe.
+    \return int -> devuelve : 1 si existe
                               0 si no
 
 **/
@@ -30,9 +30,9 @@ int existeArchivo(char nombreArchivo[]){
 }
 
 /**
-    Funcion que crea un archivo
-    Params: char *nombreArchivo -> puntero a char, que representa la cadena del nombre del archivo
-    Return : none
+    \brief Funcion que crea un archivo
+    \param char *nombreArchivo -> puntero a char, que representa la cadena del nombre del archivo
+    \return none
 **/
 
 
@@ -42,9 +42,9 @@ void crearArchivo(char *nombreArchivo){
 }
 
 /**
-    Funcion que muestra el contenido del archivo de Personas
-    params: char *nombreArchivo -> el nombre del archivo
-    Return: none
+    \brief Funcion que muestra el contenido del archivo de Personas
+    \param char *nombreArchivo -> el nombre del archivo
+    \return none
 
 **/
 
@@ -75,9 +75,9 @@ fclose(archivo);
 }
 
 /**
-    Funcion que cuenta los digitos de un numero entero
-    Params: int numero -> el numero a evaluar
-    Return: int -> un entero que representa la cantidad de digitos que tiene el entero recibido por parametro
+    \brief Funcion que cuenta los digitos de un numero entero
+    \param int numero -> el numero a evaluar
+    \return int -> un entero que representa la cantidad de digitos que tiene el entero recibido por parametro
 
 **/
 
