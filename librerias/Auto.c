@@ -8,6 +8,8 @@
 #include "AutoArchivo.h"
 #include "Persona.h"
 #include "Utiles.h"
+#include "Patente.h"
+
 
 
 
@@ -19,12 +21,7 @@
 
  Auto *arregloAutos;
  int cantidadAutos = -1;
-/*
- Auto *arregloAutosEnVenta;
- int cantidadEnVenta = -1;
 
- Auto *arregloAutosNuevos;
- int cantidadNuevos = -1;*/
 
 /**
     Funcion que carga el campo Marca de la estructura.

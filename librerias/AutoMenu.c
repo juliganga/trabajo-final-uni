@@ -9,6 +9,7 @@
 #include "AutoArchivo.h"
 #include "Persona.h"
 #include "Utiles.h"
+#include "Patente.h"
 
 
 void autoMenu(){

@@ -72,10 +72,7 @@ Auto convertirAuto(AutoArchivo);
 /**------------------------------------------punto 5------------------------------------------------**/
 
 int enVenta(Auto);
-/*
-void designarEspacioAutoVenta(Auto**);
-void cargarAutoEnVentaEnArreglo(Auto);
-void cargarArregloAutosEnVentaInit();*/
+void mostrarAutosEnVenta();
 
 /**----------------------------------------Ordenacion--------------------------------------------**/
 void designarEspacioAutoNuevos(Auto**);
