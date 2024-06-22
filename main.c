@@ -22,8 +22,6 @@ int main()
     {*/
         cargarEnArregloPersonasInit();
         cargarEnArregloAutosInit();
-        //cargarArregloAutosEnVentaInit();
-        //cargarArregloAutosNuevosInit();
         cargarArregloVentasInit();
         menuPrincipal();
     //}

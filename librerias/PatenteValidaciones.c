@@ -8,9 +8,9 @@
 
 /**
 
-    Funcion que corrobora si existe la patente en el arreglo de autos.
-    Params: Patente patente -> la patente a evaluar
-    return: int -> 1 si la patente existe
+    \brief Funcion que corrobora si existe la patente en el arreglo de autos.
+    \param Patente patente -> la patente a evaluar
+    \return int -> 1 si la patente existe
                    0 en otro caso
 
 **/
@@ -30,9 +30,9 @@ return flag;
 
 /**
 
-    Funcion que valida las letras de la patente.
-    Params: char letras[] -> un arreglo que representa las letras de la patente
-    return: int -> 1 si son letras
+    \brief Funcion que valida las letras de la patente.
+    \param char letras[] -> un arreglo que representa las letras de la patente
+    \return int -> 1 si son letras
                    0 en otro caso
 
 **/
@@ -56,9 +56,9 @@ int validarLetras(char letras[]){
 
 /**
 
-    Funcion que valida los numeros de la patente.
-    Params: char letras[] -> un arreglo que representa los numeros de la patente
-    return: int -> 1 si son numeros
+    \brief Funcion que valida los numeros de la patente.
+    \param char letras[] -> un arreglo que representa los numeros de la patente
+    \return int -> 1 si son numeros
                    0 en otro caso
 
 **/
@@ -83,9 +83,9 @@ return flag;
 
 /**
 
-    Funcion que valida que la patente tenga tres letras y tres numeros
-    Params: Patente patente -> la patente a evaluar.
-    return: int -> 1 si son letras
+    \brief Funcion que valida que la patente tenga tres letras y tres numeros
+    \param Patente patente -> la patente a evaluar.
+    \return int -> 1 si son letras
                    0 en otro caso
 
 **/
