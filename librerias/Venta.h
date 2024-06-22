@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "pila.h"
 #include "Patente.h"
+#include "Auto.h"
 
 /**
     DEFINICION DE VARIABLES

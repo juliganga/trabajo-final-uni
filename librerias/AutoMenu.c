@@ -41,6 +41,7 @@ while (opcion != 0){
 
     printf("Elija una opcion: ");
     scanf("%d", &opcion);
+    fflush(stdin);
 
 
     int nuevos = 0;
