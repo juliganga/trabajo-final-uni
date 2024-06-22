@@ -84,7 +84,7 @@ while (opcion != 0){
             mostrarAutosEnVenta();
             break;
         case 6:
-            //printf("Nuevos contados: %i",nuevos);
+
             nuevos = contarNuevos(arregloAutos);
             Auto*autosnuevos;
             if(nuevos != 0)

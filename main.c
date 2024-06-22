@@ -17,29 +17,6 @@ void menuPrincipal();
 int main()
 {
 
-    //cargarEnArregloPersonasInit();
-    //////mostrarArchivoAutos(ARCHIVO_AUTOS);
-    //cargarEnArregloAutosInit();
-    //cargarArregloAutosEnVentaInit();
-    //cargarArregloAutosNuevosInit();
-    //
-    ////mostrarAutosNuevos();
-    //
-    //menuCargaPersonas();
-    //autoMenu();
-    //
-    //
-    Auto coche;
-    int i = 0;
-    int validado = 0;
-    char *cadena;
-    //while (validado != 1){
-    //cargarMarca(&coche);
-    //validado = limiteMarca(coche.marca);
-    //i++;
-
-    //Patente patente;
-    //cargarPatente(&patente);
 
     /*if(menuLogin() == 0) // ESTO ESTA COMENTADO PARA PROBAR MAS RAPIDO, DESCOMENTAR UNA VEZ DE QUE TODO ESTE TERMINADO
     {*/
