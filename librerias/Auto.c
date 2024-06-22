@@ -8,6 +8,8 @@
 #include "AutoArchivo.h"
 #include "Persona.h"
 #include "Utiles.h"
+#include "Patente.h"
+
 
 
 
@@ -19,12 +21,7 @@
 
  Auto *arregloAutos;
  int cantidadAutos = -1;
-/*
- Auto *arregloAutosEnVenta;
- int cantidadEnVenta = -1;
 
- Auto *arregloAutosNuevos;
- int cantidadNuevos = -1;*/
 
 /**
     Funcion que carga el campo Marca de la estructura.
@@ -235,13 +232,13 @@ Auto cargarAuto(){
 void mostrarAuto(Auto coche){
     printf(":::: DETALLES DEL AUTOMOTOR ::::\n");
 
-    printf(":: PATENTE: %s-%s::\n", coche.patente.letras, coche.patente.numeros);
-    printf(":: MARCA: %s::\n", coche.marca);
-    printf(":: MODELO: %s::\n", coche.modelo);
-    printf(":: A%cO: %d::\n", 165, coche.anio);
-    printf(":: KILOMETRAJE: %s kms::\n", coche.kms);
-    printf(":: NOMBRE DEL TITULAR: %s::\n", coche.titular.nombre);
-    printf(":: PRECIO DE ADQUISICION: %.2f::\n", coche.precioDeAdquisicion);
+    printf(":: PATENTE: %s-%s ::\n", coche.patente.letras, coche.patente.numeros);
+    printf(":: MARCA: %s ::\n", coche.marca);
+    printf(":: MODELO: %s ::\n", coche.modelo);
+    printf(":: A%cO: %d ::\n", 165, coche.anio);
+    printf(":: KILOMETRAJE: %s kms ::\n", coche.kms);
+    printf(":: NOMBRE DEL TITULAR: %s ::\n", coche.titular.nombre);
+    printf(":: PRECIO DE ADQUISICION: %.2f ::\n", coche.precioDeAdquisicion);
 
 }
 
@@ -319,14 +316,47 @@ void listarAutos(){
 
 }
 
+void listarAutosMatriz(){
+    int filas = cantidadAutos;
+    int colDim = 100;
+    char autos[cantidadAutos][colDim];
+    char string[colDim];
+
+
+    for (int i = 0; i < cantidadAutos; i++){
+
+        strcat(string, "-> Marca: ");
+        strcat(string, arregloAutos[i].marca);
+        strcat(string, " - ");
+        strcat(string, "Modelo: ");
+        strcat(string, arregloAutos[i].modelo);
+        strcat(string, " - ");
+        strcat(string, "Patente: ");
+        strcat(string, arregloAutos[i].patente.letras);
+        strcat(string, "-");
+        strcat(string, arregloAutos[i].patente.numeros);
+
+        strcpy(autos[i], string);
+        puts(string);
+        strcpy(string, "");
+
+
+    }
+
+
+
+
+
+}
+
 /**
 
-    Funcion que busca un auto por su patente.
-    Params: Patente patente -> la patente a buscar.
-            int *pos -> un puntero a la posicion del auto.
-    Return: Auto -> el coche encontrado
+    \brief Funcion que busca una patente
+    \param none
+    \return Patente -> la patente encontrada
 
 **/
+
 Patente ingresarPatenteParaBuscar()
 {
     Patente patente;
@@ -355,7 +385,14 @@ Patente ingresarPatenteParaBuscar()
 
     return patente;
 }
+/**
 
+    \brief Funcion que busca un auto por su patente.
+    \param Patente patente -> la patente a buscar.
+            int *pos -> un puntero a la posicion del auto.
+    \return Auto -> el coche encontrado
+
+**/
 
 Auto buscarAutoPatente(Patente patente, int *pos){
 
@@ -433,9 +470,9 @@ Auto modificarAuto(Auto autoAModificar)
 }
 
 /**
-    Fucnion que muestra el arreglo de autos.
-    Params: none
-    Return: none
+    \brief Funcion que muestra el arreglo de autos.
+    \param none
+    \return none
  **/
 
 void mostarArrAutos(){
@@ -447,9 +484,9 @@ void mostarArrAutos(){
 }
 
 /**
-    Funcion que convierte una estructura tipo AutoArchivo en una estructura tipo Auto
-    Params: AutoArchivo coche -> el auto a convertir
-    Return: Auto -> el auto pasado como parametro convertido.
+    \brief Funcion que convierte una estructura tipo AutoArchivo en una estructura tipo Auto
+    \param AutoArchivo coche -> el auto a convertir
+    \return Auto -> el auto pasado como parametro convertido.
 **/
 
 Auto convertirAuto(AutoArchivo coche){
@@ -468,9 +505,9 @@ Auto convertirAuto(AutoArchivo coche){
 
 }
 /**
-    Funcion que busca una persona por dni.
-    Prarams: char dni[] -> que representa el dni del titular a buscar.
-    Return: Persona titular -> la persona que se corresponde al dni pasado como argumento.
+    \brief Funcion que busca una persona por dni.
+    \param char dni[] -> que representa el dni del titular a buscar.
+    \return Persona titular -> la persona que se corresponde al dni pasado como argumento.
 
 **/
 Persona buscarTitular(char dni[]){
@@ -492,11 +529,12 @@ return titular;
 /**-----------------------------------------Punto 5---------------------------------------------------------------**/
 
 /**
-    Funcion que determina si un auto esta a la venta basandose en el dni del titular, ya que la consecionaria tiene un dni
+    \brief Funcion que determina si un auto esta a la venta basandose en el dni del titular, ya que la consecionaria tiene un dni
     especial.
 
-    Params: char* nombreArchivo -> Recibe un puntero a char que representa el nombre del archivo.
-    return: devuelve una estructura AutoArchivo que este en venta.
+    \param Auto coche -> recibe una Estructura tipo Auto
+    \return int -> 1 si el auto esta a la venta.
+                -> 0 en otro caso.
 **/
 
 int enVenta(Auto coche){
@@ -511,57 +549,11 @@ int enVenta(Auto coche){
 
 }
 
-/**
-    Funcion que reasigna espacio para el arreglo dinamico de autos en venta.
-    Params: Auto **arr -> un puntero doble de tipo Auto al arreglo.
-    return: none
-**/
-/*
-void designarEspacioAutoVenta(Auto **arr){
-    cantidadEnVenta++;
-    *arr = realloc(*arr, sizeof(Auto) * (cantidadEnVenta+1));
-
-}*/
 
 /**
-    Funcion que carga un auto en el arreglo dinamico de autos en venta.
-    Params: Auto coche -> el auto a agregar
-    Return: none
-
- **/
-/*
-void cargarAutoEnVentaEnArreglo(Auto coche){
-
-    designarEspacioAutoVenta(&arregloAutosEnVenta);
-    arregloAutosEnVenta[cantidadEnVenta] = coche;
-}*/
-
-/**
-    Funcion qur carga el arreglo de autos en venta a partir del arreglo de autos.
-    Params: none
-    Return: none
-
- **/
-/*
-void cargarArregloAutosEnVentaInit(){
-    cantidadEnVenta = -1;
-    int resultado = 0;
-    int i = 0;
-    while (i <= cantidadAutos){
-        resultado = enVenta(arregloAutos[i]);
-        if (resultado == 1){
-            cargarAutoEnVentaEnArreglo(arregloAutos[i]);
-        }
-        i++;
-
-    }
-
-}
-*/
-/**
-    Funcion que recorre el arreglo de autos en venta mostrando sus elementos.
-    Params: none
-    Return: none
+    \brief Funcion que recorre el arreglo de autos mostrando los autos que estan en venta.
+    \param none
+    \return none
 
 **/
 
@@ -575,7 +567,11 @@ void mostrarAutosEnVenta(){
 }
 /**----------------------------------------Ordenacion de los autos menores a 10 años---------------------------------------------------**/
 
-/** Funcion que chequea si el auto es nuevo  **/
+/** \brief Funcion que evalua si el auto es nuevo (mayor a 2014);
+    \param Auto coche -> el auto a evaluar
+    \return int -> 1 si es nuevo.
+                -> 0 si no.
+**/
 
 int esNuevo(Auto coche){
 
@@ -588,6 +584,13 @@ int esNuevo(Auto coche){
 
     return flag;
 }
+
+/**
+    \brief Funcion que cuenta la cantidad de nuevos desntro del arreglo de autos.
+    \param Auto arreglo[] -> el arreglo a recorrer
+    \return int -> la cantidad de autos nuevos
+
+**/
 
 int contarNuevos(Auto arreglo[])
 {
@@ -602,11 +605,13 @@ int contarNuevos(Auto arreglo[])
     return cantidadnuevos;
 }
 
+/**
+    \brief Funcion para agregar autos, al arreglo de autos nuevos.
+    \param Auto **arreglo -> puntero doble al arreglo
+    \return none
+**/
 
-
-
-
-void agregarAutosNuevos(Auto**arreglo)
+void agregarAutosNuevos(Auto **arreglo)
 {
     int pos = 0;
     int nuevos = -1;
@@ -620,12 +625,27 @@ void agregarAutosNuevos(Auto**arreglo)
     }
 }
 
+/**
+    \brief Funcion que asigna espacio en el arreglo para el auto a insertar y lo inserta en la ultima posicion
+    \param Auto coche -> el auto a insertar
+    \param int nuevos -> la cantidad de autos nuevos
+    \param Auto **arreglo -> Puntero doble al arreglo.
+    \return none.
+**/
+
 void insertarAutoNuevoEnArr(Auto coche,int nuevos,Auto**arreglo)
 {
     *arreglo = realloc(*arreglo,sizeof(Auto)*(nuevos+1));
     (*arreglo)[nuevos] = coche;
 }
 
+/**
+    \brief funcion que busca el auto con menor año
+    \param Auto arr[] -> el arreglo donde buscar
+    \param int pos -> la posicion donde comenzar a buscar
+    \param int validos -> la cantidad de registros validos en el arreglo
+    \return int -> la posicion del menor.
+**/
 
 int encontrarMenor(Auto arr[], int pos, int validos){
     int posMenor = pos;
@@ -646,6 +666,14 @@ return posMenor;
 
 }
 
+/**
+    \brief funcion que ordena el arreglo mediante Seleccion.
+    \param Auto arr[] -> el arreglo a ordenar
+    \param int validos -> la cantidad de registros validos del arreglo.
+    \return none
+
+**/
+
 void ordenarAutos(Auto arr[], int validos){
     int i = 0;
     int posMenor;
@@ -659,34 +687,13 @@ void ordenarAutos(Auto arr[], int validos){
         i++;
     }
 }
-/*
-void designarEspacioAutoNuevos(Auto **arr){
-    cantidadNuevos++;
-    *arr = realloc(*arr, sizeof(Auto) * (cantidadNuevos+1));
-}
 
-void cargarAutoNuevoEnArreglo(Auto coche){
+/**
+    \brief funcion que recorre el arreglo de autos nuevos y lo muestra.
+    \param Auto arr[] -> el arreglo a recorrer
+    \param int validos -> la cantidad de registros validos del arreglo.
 
-    designarEspacioAutoNuevos(&arregloAutosNuevos);
-    arregloAutosNuevos[cantidadNuevos] = coche;
-
-}
-
-void cargarArregloAutosNuevosInit(){
-    cantidadNuevos = -1;
-    int resultado = 0;
-    int i = 0;
-    while (i <= cantidadAutos){
-        resultado = esNuevo(arregloAutos[i]);
-        if (resultado == 1){
-            cargarAutoNuevoEnArreglo(arregloAutos[i]);
-        }
-        i++;
-
-    }
-
-}
-*/
+**/
 
 void mostrarAutosNuevos(Auto arreglo[],int validos){
 
@@ -697,6 +704,14 @@ void mostrarAutosNuevos(Auto arreglo[],int validos){
     }
 
 }
+
+/**
+    \brief Funcion que cambia el titular de un auto
+    \param char dnicomprador[] -> string con el dni del comprador
+    \param char dnicomprador[] -> string con el dni del comprador
+    \param Patente patente -> la patente del auto a modificar
+    \return none
+**/
 
 void cambiarTitularPorVenta(char dnicomprador[],char dnivendedor[],Patente patente)
 {

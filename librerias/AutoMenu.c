@@ -9,6 +9,7 @@
 #include "AutoArchivo.h"
 #include "Persona.h"
 #include "Utiles.h"
+#include "Patente.h"
 
 
 void autoMenu(){
@@ -64,7 +65,8 @@ while (opcion != 0){
             guardarAutoArchivoEnPos(cocheArchivo, ARCHIVO_AUTOS, posicion);
             break;
         case 3:
-            listarAutos();
+            //listarAutos();
+            listarAutosMatriz();
             break;
         case 4:
             if(cantidadAutos != -1)
@@ -84,7 +86,7 @@ while (opcion != 0){
             mostrarAutosEnVenta();
             break;
         case 6:
-            //printf("Nuevos contados: %i",nuevos);
+
             nuevos = contarNuevos(arregloAutos);
             Auto*autosnuevos;
             if(nuevos != 0)
