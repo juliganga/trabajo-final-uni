@@ -67,6 +67,8 @@ void mostarArrAutos();
 
 void listarAutos();
 
+void listarAutosMatriz();
+
 Auto convertirAuto(AutoArchivo);
 
 /**------------------------------------------punto 5------------------------------------------------**/

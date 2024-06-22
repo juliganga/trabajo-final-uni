@@ -315,6 +315,40 @@ void listarAutos(){
 
 
 }
+
+void listarAutosMatriz(){
+    int filas = cantidadAutos;
+    int colDim = 100;
+    char autos[cantidadAutos][colDim];
+    char string[colDim];
+
+
+    for (int i = 0; i < cantidadAutos; i++){
+
+        strcat(string, "-> Marca: ");
+        strcat(string, arregloAutos[i].marca);
+        strcat(string, " - ");
+        strcat(string, "Modelo: ");
+        strcat(string, arregloAutos[i].modelo);
+        strcat(string, " - ");
+        strcat(string, "Patente: ");
+        strcat(string, arregloAutos[i].patente.letras);
+        strcat(string, "-");
+        strcat(string, arregloAutos[i].patente.numeros);
+
+        strcpy(autos[i], string);
+        puts(string);
+        strcpy(string, "");
+
+
+    }
+
+
+
+
+
+}
+
 /**
 
     \brief Funcion que busca una patente

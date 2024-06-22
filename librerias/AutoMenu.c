@@ -65,7 +65,8 @@ while (opcion != 0){
             guardarAutoArchivoEnPos(cocheArchivo, ARCHIVO_AUTOS, posicion);
             break;
         case 3:
-            listarAutos();
+            //listarAutos();
+            listarAutosMatriz();
             break;
         case 4:
             if(cantidadAutos != -1)
