@@ -175,9 +175,9 @@ void menuCargarVenta()
     system("cls");
     puts("--------- Agregando venta ---------");
 
-    //cargarAnioVenta(&venta);
-    //cargarMes(&venta);
-    //cargarDia(&venta);
+    cargarAnioVenta(&venta);
+    cargarMes(&venta);
+    cargarDia(&venta);
     cargarDNIComprador(&venta);
     cargarDNIVendedor(&venta);
     cargarPatenteVenta(&venta);
@@ -187,11 +187,11 @@ void menuCargarVenta()
     Patente patente;
     strcpy(patente.letras,venta.autoAVender.letras);
     strcpy(patente.numeros,venta.autoAVender.numeros);
-/*
+
     cambiarTitularPorVenta(venta.dniComprador,venta.dniVendedor,patente);
     cargarVentaArreglo(venta);
     fflush(stdin);
-    guardarVentaFile(venta);*/
+    guardarVentaFile(venta);
 }
 
 
