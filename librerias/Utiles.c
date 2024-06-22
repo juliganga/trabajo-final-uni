@@ -16,7 +16,7 @@
 
 **/
 
-int existeArchivo(char *nombreArchivo){
+int existeArchivo(char nombreArchivo[]){
     FILE *archivo = fopen(nombreArchivo, "rb");
     int valor;
 

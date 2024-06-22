@@ -408,7 +408,7 @@ void guardarCambiosPersona(Persona persona,int entrada)
  */
 void modificarPersona()
 {
-    if(!archivoExiste(archivopersona))
+    if(!existeArchivo(archivopersona))
     {
         puts("No existe el archivo de persona. Crear una persona.");
         system("pause");
@@ -553,7 +553,7 @@ void menuDeModificacionPersona(Persona personanueva,int entrada)
  */
 void menuVerPersonas()
 {
-    if(!archivoExiste(archivopersona) == 1)
+    if(!existeArchivo(archivopersona) == 1)
     {
         puts("No existe el archivo de persona. Crear una persona.");
         system("pause");
@@ -858,7 +858,7 @@ int devolverNumEntrada(char dni[])
 int verSiDNINoExiste(char dni[])
 {
     int flag = 1;
-    if(cantidadpersonas == -1 && !archivoExiste(archivopersona))
+    if(cantidadpersonas == -1 && !existeArchivo(archivopersona))
     {
         flag = 1;
     }
@@ -921,7 +921,7 @@ void cargarEnArregloPersonasInit()
     cantidadpersonas = -1;
     cargarPersonaConsesioanaria();
 
-    if(archivoExiste(archivopersona) == 1)
+    if(existeArchivo(archivopersona) == 1)
     {
         FILE * arch = fopen(archivopersona,"rb");
         Persona persona;

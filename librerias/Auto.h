@@ -6,8 +6,9 @@
 #include "AutoArchivo.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-
+/*
+Auto *arregloAutos;
+int cantidadAutos = -1;
 /**
     interface de la la estructura auto
 
@@ -34,11 +35,6 @@ typedef struct {
 Auto *arregloAutos;
 int cantidadAutos;
 
-Auto *arregloAutosEnVenta;
-int cantidadEnVenta;
-
-Auto *arregloAutosNuevos;
-int cantidadNuevos;
 
 void cargarMarca(Auto*);
 void cargarModelo(Auto*);
@@ -70,6 +66,8 @@ void listarAutos();
 void listarAutosMatriz();
 
 Auto convertirAuto(AutoArchivo);
+
+int hayAutos();
 
 /**------------------------------------------punto 5------------------------------------------------**/
 

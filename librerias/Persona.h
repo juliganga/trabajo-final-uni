@@ -2,6 +2,7 @@
 #define PERSONA_H_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>
+#include "Utiles.h"
 
 /// VARIABLES ///
 
