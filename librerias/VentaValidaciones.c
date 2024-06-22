@@ -157,7 +157,7 @@ int esComprador(char dni[])
             resultado = strncmp(dni,persona.dni,strlen(dni));
             if(resultado == 0)
             {
-                if(persona.rol == 'C')
+                if(persona.rol == 'C' || persona.rol == 'S')
                 {
                     flag = 1;
                 }

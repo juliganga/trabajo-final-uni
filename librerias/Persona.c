@@ -874,7 +874,7 @@ int verSiDNINoExiste(char dni[])
             if(resultado == 0)
             {
                 flag = 0;
-                puts("Se encontro con alguien que tiene el dni ingresado");
+                puts("Se encontro con alguien que tiene el dni ingresado\n");
             }
             i++;
         }

@@ -284,18 +284,18 @@ void cargarDNIComprador(Venta*venta)
     int verificado = 0;
     while(verificado == 0)
     {
-        puts("DNI del comprador?");
+        puts("DNI del comprador? (DNI reservado para la consecionaria '00000000')");
         scanf("%s", &venta->dniComprador);
         Persona comprador;
-        comprador = buscarSegunDNI(venta->dniComprador);
+        //comprador = buscarSegunDNI(venta->dniComprador);
 
-        if(strcmp("0",comprador.dni) != 0)
+        /*if(strcmp("0",comprador.dni) != 0)
+        {*/
+        if(verificarEnteros(venta->dniComprador) == 1 && verificarDNI(venta->dniComprador) == 1 /*esConsecionaria(venta->dniComprador) == 0*/ && verSiDNINoExiste(venta->dniComprador) == 0 && esComprador(venta->dniComprador) == 1)
         {
-            if(verificarEnteros(venta->dniComprador) == 1 && verificarDNI(venta->dniComprador) == 1 && esConsecionaria(venta->dniComprador) == 0 && verSiDNINoExiste(venta->dniComprador) == 0 && esComprador(venta->dniComprador) == 1)
-            {
-                verificado = 1;
-            }
+            verificado = 1;
         }
+        //}
         else
         {
             printf("La persona no existe\n");
@@ -320,30 +320,30 @@ void cargarDNIVendedor(Venta*venta)
         scanf("%s", venta->dniVendedor);
         Persona vendedor;
 
-
-
-        if(verificarEnteros(venta->dniVendedor) == 1 && verificarDNI(venta->dniVendedor) == 1/*esConsecionariaVenta(venta->dniVendedor) == 1*/)
+        if(strcmp(venta->dniComprador,venta->dniVendedor) != 0)
         {
-            if(esConsecionaria(venta->dniVendedor) == 1)
-            {
-                verificado = 1;
-            }
-            else
+
+            if(verificarEnteros(venta->dniVendedor) == 1 && verificarDNI(venta->dniVendedor) == 1 && verSiDNINoExiste(venta->dniVendedor) == 0/*esConsecionariaVenta(venta->dniVendedor) == 1*/)
             {
                 vendedor = buscarSegunDNI(venta->dniVendedor);
-                verPersonaFull(vendedor);
-                printf("Resultado : %i",strcmp("0",vendedor.dni));
-                if(strcmp("0",vendedor.dni) != 0 && esVendedor(vendedor) == 1)
+                if(esConsecionaria(venta->dniVendedor) || esVendedor(vendedor) == 1)
                 {
                     verificado = 1;
                 }
                 else
                 {
-                    puts("La persona no es vendedor");
+                    puts("La persona no es vendedor\n");
                 }
             }
+            else
+            {
+                printf("La person no existe");
+            }
         }
-
+        else
+        {
+            printf("Son la misma persona\n");
+        }
         printf("\n");
     }
 }
@@ -379,6 +379,25 @@ void cargarPrecioVenta(Venta*venta)
  */
 void cargarGanancia(Venta*venta)
 {
+    Auto autoenventa;
+    Patente patenteenventa;
+    int pos = 0;
+    strcpy(patenteenventa.letras,venta->autoAVender.letras);
+    strcpy(patenteenventa.numeros,venta->autoAVender.numeros);
+    autoenventa = buscarAutoPatente(patenteenventa,&pos);
+
+    mostrarAuto(autoenventa);
+
+    venta->ganancia = venta->precioVenta-autoenventa.precioDeAdquisicion;
+    printf("GANANCIA : %f",venta->ganancia);
+
+    system("pause");
+
+
+
+
+
+    /*
     int verificado = 0;
     while(verificado == 0)
     {
@@ -392,7 +411,7 @@ void cargarGanancia(Venta*venta)
         }
 
         printf("\n");
-    }
+    }*/
 }
 
 /** \brief Funcion que carga la totalidad de una patente y llama a las verificaciones de la misma.

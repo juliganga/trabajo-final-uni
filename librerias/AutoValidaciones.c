@@ -55,7 +55,7 @@ int esVendedor(Persona titular){
         flag = 1;
 
     } else {
-        printf("La persona no tiene el rol de Vendedor");
+        printf("\nLa persona no tiene el rol de Vendedor");
     }
 
     return flag;
