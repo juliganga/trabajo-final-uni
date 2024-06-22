@@ -19,8 +19,8 @@
 
  **/
 
- Auto *arregloAutos;
- int cantidadAutos = -1;
+Auto *arregloAutos;
+int cantidadAutos = -1;
 
 
 /**
@@ -504,6 +504,21 @@ Auto convertirAuto(AutoArchivo coche){
     return aux;
 
 }
+
+int hayAutos()
+{
+    int valor = 0;
+    if(cantidadAutos != -1)
+    {
+        valor = 1;
+    }
+    else
+    {
+        puts("No hay autos...");
+    }
+    return valor;
+}
+
 /**
     \brief Funcion que busca una persona por dni.
     \param char dni[] -> que representa el dni del titular a buscar.

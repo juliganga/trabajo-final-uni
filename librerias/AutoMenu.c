@@ -55,21 +55,26 @@ while (opcion != 0){
             cargarAutoArreglo(coche);
             break;
         case 2:
-            printf("Ingrese la Patente del auto que quiere modificar: \n");
-            patente = ingresarPatenteParaBuscar();
-            coche = buscarAutoPatente(patente, &posicion);
-            mostrarAuto(coche);
-            coche = modificarAuto(coche);
-            arregloAutos[posicion] = coche;
-            cocheArchivo = cargarAutoArchivo(coche);
-            guardarAutoArchivoEnPos(cocheArchivo, ARCHIVO_AUTOS, posicion);
+            if(hayAutos() == 1)
+            {
+                printf("Ingrese la Patente del auto que quiere modificar: \n");
+                patente = ingresarPatenteParaBuscar();
+                coche = buscarAutoPatente(patente, &posicion);
+                mostrarAuto(coche);
+                coche = modificarAuto(coche);
+                arregloAutos[posicion] = coche;
+                cocheArchivo = cargarAutoArchivo(coche);
+                guardarAutoArchivoEnPos(cocheArchivo, ARCHIVO_AUTOS, posicion);
+            }
             break;
         case 3:
-            //listarAutos();
-            listarAutosMatriz();
+            if(hayAutos() == 1)
+            {
+                listarAutosMatriz();
+            }
             break;
         case 4:
-            if(cantidadAutos != -1)
+            if(hayAutos() == 1)
             {
                 printf("Ingrese la Patente del auto que quiere ver: \n");
                 patente = ingresarPatenteParaBuscar();
@@ -77,16 +82,14 @@ while (opcion != 0){
                 coche = buscarAutoPatente(patente, &posicion);
                 mostrarAuto(coche);
             }
-            else
-            {
-                puts("No hay ningun auto...");
-            }
             break;
         case 5:
-            mostrarAutosEnVenta();
+            if(hayAutos() == 1)
+            {
+                mostrarAutosEnVenta();
+            }
             break;
         case 6:
-
             nuevos = contarNuevos(arregloAutos);
             Auto*autosnuevos;
             if(nuevos != 0)
