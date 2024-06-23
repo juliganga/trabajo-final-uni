@@ -12,41 +12,44 @@
 #include "Patente.h"
 
 
-void autoMenu(){
+void autoMenu()
+{
 
-fflush(stdin);
-int opcion = -1;
-Auto coche;
-Auto *pCoche = &coche;
-AutoArchivo cocheArchivo;
-AutoArchivo **EnVenta;
-
-Patente patente;
-int posicion = 0;
-int validosEnVenta = 0;
-
-
-
-while (opcion != 0){
-
-    printf("\t..:: Menu Autos ::..\n");
-    printf("Que desea hacer?\n");
-    printf("0 - Salir\n");
-    printf("1 - Agregar un auto\n");
-    printf("2 - Modificar un auto\n");
-    printf("3 - Listar Autos\n"); // marca modelo patente
-    printf("4 - Ver Informaci%cn completa de un Auto\n", 162); // toda la info
-    printf("5 - Ver Autos en venta\n"); //marca modelo, patente año  mostrar bien esta info
-    printf("6 - Mostrar autos por antiguedad (menos de 10 a%cos)\n", 164);
-
-
-    printf("Elija una opcion: ");
-    scanf("%d", &opcion);
     fflush(stdin);
+    int opcion = -1;
+    Auto coche;
+    Auto *pCoche = &coche;
+    AutoArchivo cocheArchivo;
+    AutoArchivo **EnVenta;
+
+    Patente patente;
+    int posicion = 0;
+    int validosEnVenta = 0;
 
 
-    int nuevos = 0;
-    switch(opcion){
+
+    while (opcion != 0)
+    {
+        system("cls");
+        printf("\t..:: Menu Autos ::..\n");
+        printf("Que desea hacer?\n");
+        printf("0 - Salir\n");
+        printf("1 - Agregar un auto\n");
+        printf("2 - Modificar un auto\n");
+        printf("3 - Listar Autos\n"); // marca modelo patente
+        printf("4 - Ver Informaci%cn completa de un Auto\n", 162); // toda la info
+        printf("5 - Ver Autos en venta por la consecionaria\n"); //marca modelo, patente año  mostrar bien esta info
+        printf("6 - Mostrar autos por antiguedad (menos de 10 a%cos)\n", 164);
+
+
+        printf("Elija una opcion: ");
+        scanf("%d", &opcion);
+        fflush(stdin);
+
+
+        int nuevos = 0;
+        switch(opcion)
+        {
         case 1:
             printf("El auto cargado se guarda automaticamente en el archivo al finalizar la carga.\n");
             coche = cargarAuto();
@@ -105,5 +108,6 @@ while (opcion != 0){
             }
             break;
         }
+    system("pause");
     }
 }

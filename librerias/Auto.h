@@ -91,7 +91,7 @@ void mostrarAutosNuevos(Auto[],int);
 
 /**----------------------------------------Cambios en una venta--------------------------------------------**/
 
-void cambiarTitularPorVenta(char[],char[],Patente);
+void cambiarTitularPorVenta(char[],char[],float,Patente);
 
 
 #endif // AUTO_H_INCLUDED

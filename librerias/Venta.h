@@ -3,9 +3,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "Auto.h"
 #include "pila.h"
 #include "Patente.h"
-#include "Auto.h"
 
 /**
     DEFINICION DE VARIABLES
@@ -48,6 +48,7 @@ void guardarVentaFile(Venta);
 
 // UTILIDADES VENTAS
 void menuVentas();
+void calcularGanancia(Venta*);
 // FIN UTILIDADES VENTAS
 
 // MUESTRA DE VENTAS
@@ -56,4 +57,16 @@ void verArrVentas();
 void verGananciaMes();
 void verMayor();
 // FIN DE MUESTRA DE VENTAS
+
+
+// CALCULO DE GANANCIAS
+void verGananciaMes(Venta);
+void verGananciaMatrizAnio(Venta);
+int esVendedorConsecionaria(Venta);
+int esLaMismaFecha(Venta,Venta);
+
+// FIN DE CALCULO DE GANANCIAS
+
+
+
 #endif // VENTA_H_INCLUDED

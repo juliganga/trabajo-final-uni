@@ -18,27 +18,27 @@
                              0 si no lo encontró.
 **/
 
-int existeUsuario(char *nombreArchivo, char *nombreUsuario){
+int existeUsuario(char *nombreArchivo, char *nombreUsuario)
+{
     FILE *archivo = fopen(nombreArchivo, "rb");
 
     Usuario usuarioAux;
     int resultado = 0;
 
-    if (existeArchivo(nombreArchivo) == 1){
-
-     while (fread(&usuarioAux, sizeof(Usuario), 1, archivo) > 0){
-
-            if ( strcmpi(usuarioAux.nombreUsuario, nombreUsuario) == 0){
+    if (existeArchivo(nombreArchivo) == 1)
+    {
+        while (fread(&usuarioAux, sizeof(Usuario), 1, archivo) > 0)
+        {
+            if ( strcmpi(usuarioAux.nombreUsuario, nombreUsuario) == 0)
+            {
                 resultado = 1;
+            }
         }
     }
-
-    } else {
-
+    else
+    {
         printf("Problemas para abrir el archivo");
     }
-
-
 
     fclose(archivo);
     return resultado;
@@ -74,7 +74,7 @@ return valida;
 
 
 **/
-
+/*
 int esPinNumerico(char pin[]){
 
     int numerico;
@@ -95,7 +95,7 @@ int esPinNumerico(char pin[]){
     return: devuelve un int = 1 si es valido.
                               0 si no lo es.
 **/
-
+/*
 int validarPin(char pin[]){
     int valido;
     int numerico = esPinNumerico(pin);
@@ -118,5 +118,5 @@ int validarPin(char pin[]){
     }
 return valido;
 
-}
+}*/
 
