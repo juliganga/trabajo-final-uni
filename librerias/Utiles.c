@@ -71,48 +71,5 @@ int contarDigitos(int numero){
 char * traducirMes(int numero)
 {
     char*meses[] = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Sempiembre","Octubre","Noviembre","Diciembre"};
-    switch(numero)
-    {/*
-        case 1:
-            strcpy(string,"Enero");
-            break;
-        case 2:
-            strcpy(string,"Febrero");
-            break;
-        case 3:
-            strcpy(string,"Marzo");
-            break;
-        case 4:
-            strcpy(string,"Abril");
-            break;
-        case 5:
-            strcpy(string,"Mayo");
-            break;
-        case 6:
-            strcpy(string,"Junio");
-            break;
-        case 7:
-            strcpy(string,"Julio");
-            break;
-        case 8:
-            strcpy(string,"Agosto");
-            break;
-        case 9:
-            strcpy(string,"Septiembre");
-            break;
-        case 10:
-            strcpy(string,"Octubre");
-            break;
-        case 11:
-            strcpy(string,"Noviembre");
-            break;
-        case 12:
-            return "Diciembre";
-            strcpy(string,"Diciembre");
-            break;
-        default:
-            strcpy(string,"?");
-            break;*/
-    }
     return meses[numero-1];
 }
