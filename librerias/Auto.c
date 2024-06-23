@@ -60,10 +60,18 @@ void cargarModelo(Auto *coche){
 
 void cargarAnio(Auto *coche){
 
-    printf("Ingrese el a%co: ", 164);
-    fflush(stdin);
-    scanf("%d", &coche->anio);
+    int verificado = 0;
 
+    while(verificado == 0)
+    {
+        printf("Ingrese el a%co: ", 164);
+        scanf("%d", &coche->anio);
+        fflush(stdin);
+        if(esAnio(coche->anio) == 1)
+        {
+            verificado = 1;
+        }
+    }
 }
 /**
     Funcion que carga el nombre del titular del vehiculo.
@@ -74,7 +82,8 @@ void cargarAnio(Auto *coche){
  **/
 
 
-void cargarTitular(Auto *coche){
+void cargarTitular(Auto *coche)
+{
 
     char opcion;
     char dni[9];
@@ -82,16 +91,19 @@ void cargarTitular(Auto *coche){
     Persona aux;
     int flag = 0;
 
-    if (cantidadpersonas <= 0){
+    if (cantidadpersonas <= 0)
+    {
 
         printf("Parece que no hay personas cargadas en el sistema.\n");
         printf("Por defecto, agregaremos a la consecionaria como titular!\n");
         coche->titular = consecionaria;
 
-    } else {
+    }
+    else
+    {
 
-        while(flag == 0){
-            printf("flag: %d", flag);
+        while(flag == 0)
+        {
             printf("\n\tCargaremos los datos del titular\n");
             printf("\tElija una de estas opciones:\n");
             printf("R - Persona registrada\nN - Persona nueva\nC - Concesionaria\n");
@@ -100,35 +112,41 @@ void cargarTitular(Auto *coche){
 
             letrasMayus(&opcion);
 
-            switch(opcion){
+            switch(opcion)
+            {
             case 'R':
                 printf("Ingrese el DNI de la persona: ");
                 fflush(stdin);
                 gets(dni);
                 aux = buscarSegunDNI(dni);
-                    if (strcmp(aux.dni, "0") == 0){
-                        printf("la persona no se encuentra en el registro.");
-                        }else {
-                            verPersonaFull(aux);
-                            if(esVendedor(aux) == 1){
-                                coche->titular = aux;
-                                flag = 1;
-                            }
-                        }
+                if (strcmp(aux.dni, "0") == 0)
+                {
+                    printf("la persona no se encuentra en el registro.");
+                }
+                else
+                {
+                    verPersonaFull(aux);
+                    if(esVendedor(aux) == 1)
+                    {
+                        coche->titular = aux;
+                        flag = 1;
+                    }
+                }
                 break;
-        case 'N':
+            case 'N':
                 agregarPersona();
-                if (esVendedor(arreglopersona[cantidadpersonas]) == 1){
+                if (esVendedor(arreglopersona[cantidadpersonas]) == 1)
+                {
                     coche->titular = arreglopersona[cantidadpersonas];
                     flag = 1;
                 }
-            break;
-        case 'C':
-            coche->titular = consecionaria;
-            flag = 1;
-            break;
+                break;
+            case 'C':
+                coche->titular = consecionaria;
+                flag = 1;
+                break;
+            }
         }
-    }
     }
 
 }
@@ -158,6 +176,7 @@ void cargarKms(Auto *coche){
     limite = limiteKms(kms);
     evaluacion = kmsNumerico(kms);
     noNegativo = kmsNoNegativo(kms);
+
     while (evaluacion == 0 || limite == 0 || noNegativo == 0){
         printf("Vuelva a Intentarlo.\n");
         printf("Ingrese el kilometraje: ");
@@ -165,8 +184,7 @@ void cargarKms(Auto *coche){
         gets(kms);
         limite = limiteKms(kms);
         evaluacion = kmsNumerico(kms);
-
-
+        noNegativo = kmsNoNegativo(kms);
     }
 
     strcpy(coche->kms, kms);
@@ -323,7 +341,7 @@ void listarAutosMatriz(){
     char string[colDim];
 
 
-    for (int i = 0; i < cantidadAutos; i++){
+    for (int i = 0; i <= cantidadAutos; i++){
 
         strcat(string, "-> Marca: ");
         strcat(string, arregloAutos[i].marca);
@@ -342,11 +360,6 @@ void listarAutosMatriz(){
 
 
     }
-
-
-
-
-
 }
 
 /**
@@ -373,7 +386,6 @@ Patente ingresarPatenteParaBuscar()
         } while (letrasValidas == 0);
 
         do {
-
             printf("Los numeros: ");
             fflush(stdin);
             gets(patente.numeros);
@@ -431,6 +443,10 @@ Auto modificarAuto(Auto autoAModificar)
 {
     int opcion = -1;
     while (opcion != 0){
+        system("cls");
+        mostrarAuto(autoAModificar);
+        printf("\n\n\n");
+
         printf("Que campo desea modificar?\n");
         printf("0 - Salir\n");
         printf("1 - Marca\n");
@@ -462,7 +478,6 @@ Auto modificarAuto(Auto autoAModificar)
             cargarPrecioAd(&autoAModificar);
             break;
         }
-
 
     }
 
@@ -734,7 +749,7 @@ void mostrarAutosNuevos(Auto arreglo[],int validos){
     \return none
 **/
 
-void cambiarTitularPorVenta(char dnicomprador[],char dnivendedor[],Patente patente)
+void cambiarTitularPorVenta(char dnicomprador[],char dnivendedor[],float precionuevo,Patente patente)
 {
     int pos = -1;
     Auto coche;
@@ -743,8 +758,8 @@ void cambiarTitularPorVenta(char dnicomprador[],char dnivendedor[],Patente paten
 
     coche = buscarAutoPatente(patente,&pos);
     nuevotitular = buscarSegunDNI(dnicomprador);
-    puts("AHora");
     coche.titular = nuevotitular;
+    coche.precioDeAdquisicion = precionuevo;
 
     arregloAutos[pos] = coche;
     mostrarAuto(arregloAutos[pos]);

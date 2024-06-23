@@ -56,7 +56,8 @@ void menuVentas()
         printf("2 - Ver todas las ventas\n");
         printf("3 - Ver solo la fecha y patente de todas las ventas\n");
         printf("4 - Buscar cuanto se recaudo en un mes de un a%co especifico\n", 164);
-        printf("5 - Buscar cual venta genero la mayor ganancia\n");
+        printf("5 - Buscar cuanto se recuado en un a%co especifico\n",164);
+        printf("6 - Buscar cual venta genero la mayor ganancia\n");
 
 
     scanf("%d", &decision);
@@ -82,9 +83,13 @@ void menuVentas()
         case 4:
             cargarAnioVenta(&venta);
             cargarMes(&venta);
-            verGananciaMes(&venta);
+            verGananciaMes(venta);
             break;
         case 5:
+            cargarAnioVenta(&venta);
+            verGananciaMatrizAnio(venta);
+            break;
+        case 6:
             verMayor();
             break;
         }
@@ -111,14 +116,14 @@ void verVentaFyP(Venta venta)
  */
 void verVentas(Venta venta)
 {
-    printf("------------------------------------\n");
+    puts("------------------------------------");
     printf("- Fecha: %i/%i/%i -\n", venta.fecha.anio, venta.fecha.mes, venta.fecha.dia);
     printf("- Patente: %s %s -\n", venta.autoAVender.letras, venta.autoAVender.numeros);
     printf("- DNI Comprador: %s -\n", venta.dniComprador);
     printf("- DNI Vendedor: %s -\n", venta.dniVendedor);
     printf("- Precio de venta: %.2f -\n", venta.precioVenta);
     printf("- Ganancias: %.2f -\n", venta.ganancia);
-    printf("------------------------------------\n");
+    puts("------------------------------------");
 }
 
 /** \brief Funcion que apila ganancias hasta finalizar recorriendo todas las ventas, despues de eso muestra esta venta
@@ -128,6 +133,7 @@ void verVentas(Venta venta)
  */
 void verMayor()
 {
+    int masgrande = 0;
     Pila mayor, comp;
     inicpila(&mayor);
     inicpila(&comp);
@@ -139,29 +145,83 @@ void verMayor()
         if(tope(&mayor) < arregloVentas[i].ganancia)
         {
             apilar(&mayor, arregloVentas[i].ganancia);
+            masgrande = i;
         }
     }
-    for(int i = 0; i <= cantidadVentas; i++)
-    {
-        apilar(&comp, arregloVentas[i].ganancia);
 
-        if(tope(&comp) == tope(&mayor))
-        {
-            verVentas(arregloVentas[i]);
-        }
-    }
+    printf("Mayor ganancia: %i\n",tope(&mayor));
+    verVentas(arregloVentas[masgrande]);
 }
 
-void verGananciaMes(Venta venta)
+void verGananciaMes(Venta busqueda)
 {
-    float suma;
-    for(int i = 0; i <= cantidadVentas; i++)
+    float ganancias = 0;
+    float temp = 0;
+
+    for(int i = 0;i<=cantidadVentas;i++)
+    {
+        if(esVendedorConsecionaria(arregloVentas[i]) == 1 && esLaMismaFecha(busqueda,arregloVentas[i]) == 1)
         {
-            if(venta.fecha.anio == arregloVentas[i].fecha.anio && venta.fecha.mes == arregloVentas[i].fecha.mes)
-                {
-                suma = suma + arregloVentas[i].ganancia;
-                }
+            ganancias = (float)ganancias + arregloVentas[i].ganancia;
         }
+    }
+
+    printf("Ganancias del mes %s: %.2f\n",traducirMes(busqueda.fecha.mes),ganancias);
+}
+
+void verGananciaMatrizAnio(Venta busqueda)
+{
+    float ganancias = 0;
+    float temp = 0;
+    float matrizanio[3][4];
+    int filaactual = 0;
+    int columnaactual = 0;
+
+    for(int m = 1;m<=12;m++)
+    {
+        busqueda.fecha.mes = m;
+        for(int i = 0;i<=cantidadVentas;i++)
+        {
+            if(esVendedorConsecionaria(arregloVentas[i]) == 1 && esLaMismaFecha(busqueda,arregloVentas[i]) == 1)
+            {
+                ganancias = (float)(ganancias + arregloVentas[i].ganancia);
+            }
+        }
+
+        if(columnaactual == 4)
+        {
+            filaactual++;
+            columnaactual = 0;
+        }
+
+        matrizanio[filaactual][columnaactual] = ganancias;
+        ganancias = 0;
+        columnaactual++;
+
+
+    }
+
+
+
+    int sizecolumnas = 12;
+
+    printf(" - A%cO %i, ganancias hechas por la consecionaria -\n",165,busqueda.fecha.anio);
+
+    imprimirSeparador(sizecolumnas*4+3);
+    int linea = 0;
+    for(int i = 0;i<3;i++)
+    {
+        printf("|%-*s|%-*s|%-*s|%-*s|\n", sizecolumnas, traducirMes(linea+1), sizecolumnas,traducirMes(linea+2), sizecolumnas,traducirMes(linea+3),sizecolumnas,traducirMes(linea+4));
+        for(int m = 0;m<4;m++)
+        {
+            printf("|%-*.2f",sizecolumnas,matrizanio[i][m]);
+            linea++;
+        }
+        printf("|\n");
+        imprimirSeparador(sizecolumnas*4+3);
+    }
+
+
 }
 
 /** \brief Funcion que llama a todas las funciones necesarias para cargar una venta
@@ -188,7 +248,7 @@ void menuCargarVenta()
     strcpy(patente.letras,venta.autoAVender.letras);
     strcpy(patente.numeros,venta.autoAVender.numeros);
 
-    cambiarTitularPorVenta(venta.dniComprador,venta.dniVendedor,patente);
+    cambiarTitularPorVenta(venta.dniComprador,venta.dniVendedor,venta.precioVenta,patente);
     cargarVentaArreglo(venta);
     fflush(stdin);
     guardarVentaFile(venta);
@@ -282,12 +342,11 @@ void cargarDNIComprador(Venta*venta)
     int verificado = 0;
     while(verificado == 0)
     {
-        puts("DNI del comprador? (DNI reservado para la consecionaria '00000000')");
+        puts("DNI del comprador?");
         scanf("%s", &venta->dniComprador);
         Persona comprador;
-        //comprador = buscarSegunDNI(venta->dniComprador);
 
-        if(verificarEnteros(venta->dniComprador) == 1 && verificarDNI(venta->dniComprador) == 1 /*esConsecionaria(venta->dniComprador) == 0*/ && verSiDNINoExiste(venta->dniComprador) == 0 && esComprador(venta->dniComprador) == 1)
+        if(verificarEnteros(venta->dniComprador) == 1 && verificarDNI(venta->dniComprador) == 1 && verSiDNINoExiste(venta->dniComprador) == 0 && esComprador(venta->dniComprador) == 1)
         {
             verificado = 1;
         }
@@ -314,7 +373,7 @@ void cargarDNIVendedor(Venta*venta)
         if(strcmp(venta->dniComprador,venta->dniVendedor) != 0)
         {
 
-            if(verificarEnteros(venta->dniVendedor) == 1 && verificarDNI(venta->dniVendedor) == 1 && verSiDNINoExiste(venta->dniVendedor) == 0/*esConsecionariaVenta(venta->dniVendedor) == 1*/)
+            if(verificarEnteros(venta->dniVendedor) == 1 && verificarDNI(venta->dniVendedor) == 1 && verSiDNINoExiste(venta->dniVendedor) == 0)
             {
                 vendedor = buscarSegunDNI(venta->dniVendedor);
                 if(esConsecionaria(venta->dniVendedor) || esVendedor(vendedor) == 1)
@@ -379,26 +438,6 @@ void cargarGanancia(Venta*venta)
     printf("GANANCIA : %f",venta->ganancia);
 
     system("pause");
-
-
-
-
-
-    /*
-    int verificado = 0;
-    while(verificado == 0)
-    {
-        puts("Ganancia de la venta?");
-        scanf("%f", &venta->ganancia);
-        printf("Venta %f",venta->ganancia);
-
-        if(gananciaPositiva(*venta) == 1)
-        {
-            verificado = 1;
-        }
-
-        printf("\n");
-    }*/
 }
 
 /** \brief Funcion que carga la totalidad de una patente y llama a las verificaciones de la misma.
@@ -477,3 +516,25 @@ void guardarVentaFile(Venta venta)
     }
     fclose(archi);
 }
+
+int esVendedorConsecionaria(Venta venta)
+{
+    int flag = 0;
+
+    if(strcmp(venta.dniVendedor,"00000000") == 0)
+    {
+        flag = 1;
+    }
+    return flag;
+}
+
+int esLaMismaFecha(Venta busqueda,Venta venta)
+{
+    int flag = 0;
+    if(busqueda.fecha.anio == venta.fecha.anio && busqueda.fecha.mes == venta.fecha.mes)
+    {
+        flag = 1;
+    }
+    return flag;
+}
+

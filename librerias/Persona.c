@@ -1117,6 +1117,7 @@ void mostrarPersonaOrdenadoSegun()
     int contadordeCaracters = (sizecolumnarol + sizecolumnadni + sizecolumnadir +sizecolumnatel+5) + sizecolumnanombre;
     puts("Personas ordenadas segun lo pedido");
     puts("SE RECOMIENDA MAXIMIZAR LA VENTANA PARA ABRIR"); // La verdad no se si se puede expandir la ventana :(
+
     system("pause");
     imprimirSeparador(contadordeCaracters);
     printf("%-*s  |%-*s|%-*s|%-*s|%-*s\n", sizecolumnadni, "|DNI", sizecolumnanombre,"NOMBRE", sizecolumnatel, "TELEFONO",sizecolumnadir,"DIRECCION",sizecolumnarol,"ROL|"); // hace espacio para columnas

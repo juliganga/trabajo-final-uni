@@ -6,8 +6,6 @@
 
 int existeUsuario(char*, char*);
 int validarContrasenia(char[]);
-int esPinNumerico(char[]);
-int validarPin(char[]);
 
 
 #endif // USUARIOVALIDACIONES_H_INCLUDED

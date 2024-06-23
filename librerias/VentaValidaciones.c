@@ -157,7 +157,7 @@ int esComprador(char dni[])
             resultado = strncmp(dni,persona.dni,strlen(dni));
             if(resultado == 0)
             {
-                if(persona.rol == 'C' || persona.rol == 'S')
+                if(persona.rol == 'C')
                 {
                     flag = 1;
                 }
@@ -173,29 +173,6 @@ int esComprador(char dni[])
     return flag;
 }
 
-
-/** \brief Funcion que verifica si se ingresa el DNI que se reserva para la consecionaria.
- *
- * \param dni[] char Representa el DNI reservado para la consecionaria
- * \return int 1 si es consecionaria, 0 si no
- *
- */
-int esConsecionariaVenta(char dni[])
-{
-    int flag = 0;
-    int resultado = 1;
-    resultado = strcmp(dni,"00000000");
-
-    if(resultado == 0)
-    {
-        flag = 1;
-    }
-    else
-    {
-        puts("ERROR: DNI INGRESADO DIFERENTE A DNI RESERVADO PARA LA CONSESIONARIA '00000000'");
-    }
-    return flag;
-}
 
 /** \brief Funcion que verifica si el auto que pertenece a la patente esta a la venta.
  *
@@ -286,5 +263,26 @@ int gananciaPositiva(Venta venta)
         puts("ERROR: la ganancia ingresada no es un numero positivo");
     }
 
+    return flag;
+}
+
+/** \brief Funcion que verifica si la ganancia es menor que el precio de venta.
+ *
+ * \param venta Venta Representa la ganancia ingresada en la venta a registrar
+ * \return int 1 si la ganancia es menor que el precio de venta, 0 si no
+ *
+ */
+int gananciaMenorQueVenta(Venta venta)
+{
+    int flag = 0;
+
+    if(venta.ganancia < venta.precioVenta)
+    {
+        flag = 1;
+    }
+    else
+    {
+        puts("ERROR: la ganancia no puede ser mayor que el precio de venta");
+    }
     return flag;
 }

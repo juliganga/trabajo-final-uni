@@ -100,16 +100,18 @@ int limiteModelo(char modelo[]){
                    0 si no.
 **/
 
-int esAnio(int anio){
+int esAnio(int anio)
+{
     int flag = 0;
     int digitos = contarDigitos(anio);
     int noNegativo = anioNoNegativo(anio);
     int rango = limiteAnio(anio);
 
-        if (digitos == 4 && noNegativo == 1 && rango == 1) {
-           flag = 1;
-        }
-return flag;
+    if (digitos == 4 && noNegativo == 1 && rango == 1)
+    {
+        flag = 1;
+    }
+    return flag;
 }
 
 /**
@@ -124,7 +126,6 @@ int anioNoNegativo(int anio){
     int flag = 0;
     if (anio > 0){
         flag = 1;
-
     } else {
 
         printf("el a%co no puede ser negativo.\n", 164);
@@ -142,16 +143,20 @@ return flag;
                    0 si no.
 **/
 
-int limiteAnio(int anio){
+int limiteAnio(int anio)
+{
 
     int flag = 0;
-    if (anio <= 2024 && anio > 1930) {
+    if (anio <= 2024 && anio > 1930)
+    {
         flag = 1;
 
-    } else{
+    }
+    else
+    {
         printf("A%co incorrecto. el rango de posibilidades va desde 1930 a 2024\n", 164);
     }
-return flag;
+    return flag;
 
 
 }
@@ -166,19 +171,23 @@ return flag;
                    0 si es menor.
 **/
 
-int limiteKms(char kms[]){
+int limiteKms(char kms[])
+{
     int flag = 0;
 
     int largo = strlen(kms);
 
-    if(largo <= 8){
+    if(largo <= 8)
+    {
         flag = 1;
-    }else{
+    }
+    else
+    {
         printf("kilomtreaje demasiado largo\n");
 
     }
     return flag;
-    }
+}
 
 /**
     \brief Funcion que verifica que el kilometraje sea numerico

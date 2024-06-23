@@ -17,14 +17,14 @@ int diaPositivo(Venta);
 
 int esComprador(char[]);
 
-int esConsecionariaVenta(char[]);
 int lePerteneceAutoYexiste(Patente,char[]);
 int precioVentaPositivo(Venta);
 int gananciaPositiva(Venta);
-
+int gananciaMenorQueVenta(Venta);
 
 
 
 
 // FIN VERIFICACIONES
 #endif // VENTAVALIDACIONES_H_INCLUDED
+
