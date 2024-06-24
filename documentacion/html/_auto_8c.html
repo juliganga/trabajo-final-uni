@@ -1,0 +1,1118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabajo final de Programacion 1: Referencia del archivo librerias/Auto.c</title>
+<link rel="icon" href="auto.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="auto.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabajo final de Programacion 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Julián Alonso, Schettini Javier, Tonello Tiziano</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_auto_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Auto.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_auto_8h_source.html">Auto.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_auto_validaciones_8h_source.html">AutoValidaciones.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_auto_archivo_8h_source.html">AutoArchivo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_persona_8h_source.html">Persona.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utiles_8h_source.html">Utiles.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_patente_8h_source.html">Patente.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a35fc6abbd985ecaf0f4dc4905774ebc8" id="r_a35fc6abbd985ecaf0f4dc4905774ebc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35fc6abbd985ecaf0f4dc4905774ebc8">cargarMarca</a> (<a class="el" href="struct_auto.html">Auto</a> *coche)</td></tr>
+<tr class="memdesc:a35fc6abbd985ecaf0f4dc4905774ebc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga la marca del auto que se esta cargando.  <br /></td></tr>
+<tr class="separator:a35fc6abbd985ecaf0f4dc4905774ebc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f7882e6d1e6385ced8f1619165f97d9" id="r_a8f7882e6d1e6385ced8f1619165f97d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f7882e6d1e6385ced8f1619165f97d9">cargarModelo</a> (<a class="el" href="struct_auto.html">Auto</a> *coche)</td></tr>
+<tr class="memdesc:a8f7882e6d1e6385ced8f1619165f97d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga el modelo de un coche (no tiene verificaciones)  <br /></td></tr>
+<tr class="separator:a8f7882e6d1e6385ced8f1619165f97d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be8e07ff586bdd89c9949a214c59855" id="r_a3be8e07ff586bdd89c9949a214c59855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be8e07ff586bdd89c9949a214c59855">cargarAnio</a> (<a class="el" href="struct_auto.html">Auto</a> *coche)</td></tr>
+<tr class="memdesc:a3be8e07ff586bdd89c9949a214c59855"><td class="mdescLeft">&#160;</td><td class="mdescRight">El anio que se carga del auto.  <br /></td></tr>
+<tr class="separator:a3be8e07ff586bdd89c9949a214c59855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8905ab7b380772ae91a63f77deedbc4" id="r_ab8905ab7b380772ae91a63f77deedbc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8905ab7b380772ae91a63f77deedbc4">cargarTitular</a> (<a class="el" href="struct_auto.html">Auto</a> *coche)</td></tr>
+<tr class="memdesc:ab8905ab7b380772ae91a63f77deedbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se carga el titular de un auto, debe ser un vendedor/consecionaria.  <br /></td></tr>
+<tr class="separator:ab8905ab7b380772ae91a63f77deedbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3635ec8fce45252a433b8aa05d3c5905" id="r_a3635ec8fce45252a433b8aa05d3c5905"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3635ec8fce45252a433b8aa05d3c5905">cargarKms</a> (<a class="el" href="struct_auto.html">Auto</a> *coche)</td></tr>
+<tr class="memdesc:a3635ec8fce45252a433b8aa05d3c5905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se carga los kilometros del auto.  <br /></td></tr>
+<tr class="separator:a3635ec8fce45252a433b8aa05d3c5905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e218b86a6369376f1700b107f2b4074" id="r_a2e218b86a6369376f1700b107f2b4074"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e218b86a6369376f1700b107f2b4074">cargarPrecioAd</a> (<a class="el" href="struct_auto.html">Auto</a> *coche)</td></tr>
+<tr class="memdesc:a2e218b86a6369376f1700b107f2b4074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga el precio de adquisicion de un auto.  <br /></td></tr>
+<tr class="separator:a2e218b86a6369376f1700b107f2b4074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5382471e840bffe3cbe88091b553bedb" id="r_a5382471e840bffe3cbe88091b553bedb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_auto.html">Auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5382471e840bffe3cbe88091b553bedb">cargarAuto</a> ()</td></tr>
+<tr class="memdesc:a5382471e840bffe3cbe88091b553bedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga un auto al sistema.  <br /></td></tr>
+<tr class="separator:a5382471e840bffe3cbe88091b553bedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba6cf1713a22799cd8d738a8ca78f1d" id="r_adba6cf1713a22799cd8d738a8ca78f1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adba6cf1713a22799cd8d738a8ca78f1d">mostrarAuto</a> (<a class="el" href="struct_auto.html">Auto</a> coche)</td></tr>
+<tr class="memdesc:adba6cf1713a22799cd8d738a8ca78f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que muestra por pantalla, los datos de una estructura tipo <a class="el" href="struct_auto.html">Auto</a>.  <br /></td></tr>
+<tr class="separator:adba6cf1713a22799cd8d738a8ca78f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc738cf3719203ffdd4913c79aef561" id="r_a9dc738cf3719203ffdd4913c79aef561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dc738cf3719203ffdd4913c79aef561">designarEspacioAuto</a> (<a class="el" href="struct_auto.html">Auto</a> **arr)</td></tr>
+<tr class="memdesc:a9dc738cf3719203ffdd4913c79aef561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Da espacio al arreglo autos.  <br /></td></tr>
+<tr class="separator:a9dc738cf3719203ffdd4913c79aef561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f6a6be9acb6e2bd24fbeec190528da9" id="r_a8f6a6be9acb6e2bd24fbeec190528da9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f6a6be9acb6e2bd24fbeec190528da9">cargarAutoArreglo</a> (<a class="el" href="struct_auto.html">Auto</a> coche)</td></tr>
+<tr class="memdesc:a8f6a6be9acb6e2bd24fbeec190528da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Da espacio y carga un auto en el arreglo.  <br /></td></tr>
+<tr class="separator:a8f6a6be9acb6e2bd24fbeec190528da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42636c826e82c8634921ca303c80c10a" id="r_a42636c826e82c8634921ca303c80c10a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42636c826e82c8634921ca303c80c10a">cargarEnArregloAutosInit</a> ()</td></tr>
+<tr class="memdesc:a42636c826e82c8634921ca303c80c10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga en un arreglo todos los autos del archivo.  <br /></td></tr>
+<tr class="separator:a42636c826e82c8634921ca303c80c10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79458a1931eb55b863928b621df52b93" id="r_a79458a1931eb55b863928b621df52b93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79458a1931eb55b863928b621df52b93">listarAutos</a> ()</td></tr>
+<tr class="memdesc:a79458a1931eb55b863928b621df52b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos los autos en el sistema.  <br /></td></tr>
+<tr class="separator:a79458a1931eb55b863928b621df52b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631d8a2b9863ebb349bdadd63c5374fb" id="r_a631d8a2b9863ebb349bdadd63c5374fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a631d8a2b9863ebb349bdadd63c5374fb">listarAutosMatriz</a> ()</td></tr>
+<tr class="memdesc:a631d8a2b9863ebb349bdadd63c5374fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista autos mediante una matriz.  <br /></td></tr>
+<tr class="separator:a631d8a2b9863ebb349bdadd63c5374fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d1e174e4e2f74e956e7bcccf09f116" id="r_a53d1e174e4e2f74e956e7bcccf09f116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_patente.html">Patente</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53d1e174e4e2f74e956e7bcccf09f116">ingresarPatenteParaBuscar</a> ()</td></tr>
+<tr class="memdesc:a53d1e174e4e2f74e956e7bcccf09f116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que busca una patente.  <br /></td></tr>
+<tr class="separator:a53d1e174e4e2f74e956e7bcccf09f116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5495b7d85800fb6c62a5c08252d096fc" id="r_a5495b7d85800fb6c62a5c08252d096fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_auto.html">Auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5495b7d85800fb6c62a5c08252d096fc">buscarAutoPatente</a> (<a class="el" href="struct_patente.html">Patente</a> patente, int *pos)</td></tr>
+<tr class="memdesc:a5495b7d85800fb6c62a5c08252d096fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que busca un auto por su patente.  <br /></td></tr>
+<tr class="separator:a5495b7d85800fb6c62a5c08252d096fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3d769468187046aa1f1d750eb879cc" id="r_a8b3d769468187046aa1f1d750eb879cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_auto.html">Auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b3d769468187046aa1f1d750eb879cc">modificarAuto</a> (<a class="el" href="struct_auto.html">Auto</a> autoAModificar)</td></tr>
+<tr class="memdesc:a8b3d769468187046aa1f1d750eb879cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu que permite modificar un auto.  <br /></td></tr>
+<tr class="separator:a8b3d769468187046aa1f1d750eb879cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5243642e643b71b9c1624f4a07297c" id="r_a5d5243642e643b71b9c1624f4a07297c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d5243642e643b71b9c1624f4a07297c">mostarArrAutos</a> ()</td></tr>
+<tr class="memdesc:a5d5243642e643b71b9c1624f4a07297c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que muestra el arreglo de autos.  <br /></td></tr>
+<tr class="separator:a5d5243642e643b71b9c1624f4a07297c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e143bd50d954275ee9ff2f77a4b7e5" id="r_a76e143bd50d954275ee9ff2f77a4b7e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_auto.html">Auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76e143bd50d954275ee9ff2f77a4b7e5">convertirAuto</a> (<a class="el" href="struct_auto_archivo.html">AutoArchivo</a> coche)</td></tr>
+<tr class="memdesc:a76e143bd50d954275ee9ff2f77a4b7e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que convierte una estructura tipo <a class="el" href="struct_auto_archivo.html">AutoArchivo</a> en una estructura tipo <a class="el" href="struct_auto.html">Auto</a>.  <br /></td></tr>
+<tr class="separator:a76e143bd50d954275ee9ff2f77a4b7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9e7b8f4d13cc3d2f01ace988ede725" id="r_a8d9e7b8f4d13cc3d2f01ace988ede725"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d9e7b8f4d13cc3d2f01ace988ede725">hayAutos</a> ()</td></tr>
+<tr class="memdesc:a8d9e7b8f4d13cc3d2f01ace988ede725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica si hay autos en el arreglo de autos.  <br /></td></tr>
+<tr class="separator:a8d9e7b8f4d13cc3d2f01ace988ede725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3e185625821c85b790150241f9db62" id="r_a7c3e185625821c85b790150241f9db62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_persona.html">Persona</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c3e185625821c85b790150241f9db62">buscarTitular</a> (char dni[])</td></tr>
+<tr class="memdesc:a7c3e185625821c85b790150241f9db62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que busca una persona por dni.  <br /></td></tr>
+<tr class="separator:a7c3e185625821c85b790150241f9db62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7dfe94db4dae35d58584e3d4db443e" id="r_aff7dfe94db4dae35d58584e3d4db443e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff7dfe94db4dae35d58584e3d4db443e">enVenta</a> (<a class="el" href="struct_auto.html">Auto</a> coche)</td></tr>
+<tr class="memdesc:aff7dfe94db4dae35d58584e3d4db443e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que determina si un auto esta a la venta basandose en el dni del titular, ya que la consecionaria tiene un dni especial.  <br /></td></tr>
+<tr class="separator:aff7dfe94db4dae35d58584e3d4db443e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8238e04f56b9c2ef9936860102afb6" id="r_a1e8238e04f56b9c2ef9936860102afb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e8238e04f56b9c2ef9936860102afb6">mostrarAutosEnVenta</a> ()</td></tr>
+<tr class="memdesc:a1e8238e04f56b9c2ef9936860102afb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que recorre el arreglo de autos mostrando los autos que estan en venta.  <br /></td></tr>
+<tr class="separator:a1e8238e04f56b9c2ef9936860102afb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be25144bf976ad72e117de5625662fb" id="r_a1be25144bf976ad72e117de5625662fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1be25144bf976ad72e117de5625662fb">esNuevo</a> (<a class="el" href="struct_auto.html">Auto</a> coche)</td></tr>
+<tr class="memdesc:a1be25144bf976ad72e117de5625662fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que evalua si el auto es nuevo (mayor a 2014);.  <br /></td></tr>
+<tr class="separator:a1be25144bf976ad72e117de5625662fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b7fd1037e0a007ac57c18879aff984" id="r_af1b7fd1037e0a007ac57c18879aff984"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1b7fd1037e0a007ac57c18879aff984">contarNuevos</a> (<a class="el" href="struct_auto.html">Auto</a> arreglo[])</td></tr>
+<tr class="memdesc:af1b7fd1037e0a007ac57c18879aff984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que cuenta la cantidad de nuevos dentro del arreglo de autos.  <br /></td></tr>
+<tr class="separator:af1b7fd1037e0a007ac57c18879aff984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace69f8dfa409b752154862ce82015d55" id="r_ace69f8dfa409b752154862ce82015d55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace69f8dfa409b752154862ce82015d55">agregarAutosNuevos</a> ()</td></tr>
+<tr class="memdesc:ace69f8dfa409b752154862ce82015d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion para agregar autos, al arreglo de autos nuevos.  <br /></td></tr>
+<tr class="separator:ace69f8dfa409b752154862ce82015d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae580494d85ee18c7ad88bd13e404dd47" id="r_ae580494d85ee18c7ad88bd13e404dd47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae580494d85ee18c7ad88bd13e404dd47">insertarAutoNuevoEnArr</a> (<a class="el" href="struct_auto.html">Auto</a> coche)</td></tr>
+<tr class="memdesc:ae580494d85ee18c7ad88bd13e404dd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que asigna espacio en el arreglo para el auto a insertar y lo inserta en la ultima posicion.  <br /></td></tr>
+<tr class="separator:ae580494d85ee18c7ad88bd13e404dd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45cf1c33c0b055f616c7ca5517a9f26" id="r_ac45cf1c33c0b055f616c7ca5517a9f26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac45cf1c33c0b055f616c7ca5517a9f26">encontrarMenor</a> (<a class="el" href="struct_auto.html">Auto</a> arr[], int pos, int validos)</td></tr>
+<tr class="memdesc:ac45cf1c33c0b055f616c7ca5517a9f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">funcion que busca el auto con menor a�o  <br /></td></tr>
+<tr class="separator:ac45cf1c33c0b055f616c7ca5517a9f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ad4397d4e7cda3ce62f0b0b6d355a3" id="r_a36ad4397d4e7cda3ce62f0b0b6d355a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36ad4397d4e7cda3ce62f0b0b6d355a3">ordenarAutos</a> ()</td></tr>
+<tr class="memdesc:a36ad4397d4e7cda3ce62f0b0b6d355a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">funcion que ordena el arreglo mediante Seleccion.  <br /></td></tr>
+<tr class="separator:a36ad4397d4e7cda3ce62f0b0b6d355a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e392d97cf29fc517fdc320dfb1ddb0c" id="r_a4e392d97cf29fc517fdc320dfb1ddb0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e392d97cf29fc517fdc320dfb1ddb0c">mostrarAutosNuevos</a> ()</td></tr>
+<tr class="memdesc:a4e392d97cf29fc517fdc320dfb1ddb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">funcion que recorre el arreglo de autos nuevos y lo muestra.  <br /></td></tr>
+<tr class="separator:a4e392d97cf29fc517fdc320dfb1ddb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd76e883b0eacd7f9d3faa6d69b5fcda" id="r_abd76e883b0eacd7f9d3faa6d69b5fcda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd76e883b0eacd7f9d3faa6d69b5fcda">cambiarTitularPorVenta</a> (char dnicomprador[], char dnivendedor[], float precionuevo, <a class="el" href="struct_patente.html">Patente</a> patente)</td></tr>
+<tr class="memdesc:abd76e883b0eacd7f9d3faa6d69b5fcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que cambia el titular de un auto.  <br /></td></tr>
+<tr class="separator:abd76e883b0eacd7f9d3faa6d69b5fcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a4768fd5d77d6836c409c690d54c5a" id="r_ab5a4768fd5d77d6836c409c690d54c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5a4768fd5d77d6836c409c690d54c5a">mostrarSegunTitular</a> (char dni[])</td></tr>
+<tr class="memdesc:ab5a4768fd5d77d6836c409c690d54c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra autos segun el titular del auto.  <br /></td></tr>
+<tr class="separator:ab5a4768fd5d77d6836c409c690d54c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a89d46992495525e88678bff362de5a1b" id="r_a89d46992495525e88678bff362de5a1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_auto.html">Auto</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89d46992495525e88678bff362de5a1b">arregloAutos</a></td></tr>
+<tr class="separator:a89d46992495525e88678bff362de5a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7130928c740cb930980e2f1242ef85" id="r_aed7130928c740cb930980e2f1242ef85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed7130928c740cb930980e2f1242ef85">cantidadAutos</a> = -1</td></tr>
+<tr class="separator:aed7130928c740cb930980e2f1242ef85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6abbffe9a3fcc2dc7b18feb1aef043" id="r_abf6abbffe9a3fcc2dc7b18feb1aef043"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_auto.html">Auto</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf6abbffe9a3fcc2dc7b18feb1aef043">arregloNuevos</a></td></tr>
+<tr class="separator:abf6abbffe9a3fcc2dc7b18feb1aef043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e92b28a3c32bd5cf8a3b4728d4452b" id="r_a59e92b28a3c32bd5cf8a3b4728d4452b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59e92b28a3c32bd5cf8a3b4728d4452b">cantidadNuevos</a> = -1</td></tr>
+<tr class="separator:a59e92b28a3c32bd5cf8a3b4728d4452b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="ace69f8dfa409b752154862ce82015d55" name="ace69f8dfa409b752154862ce82015d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace69f8dfa409b752154862ce82015d55">&#9670;&#160;</a></span>agregarAutosNuevos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void agregarAutosNuevos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion para agregar autos, al arreglo de autos nuevos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>**arreglo -&gt; puntero doble al arreglo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a id="a5495b7d85800fb6c62a5c08252d096fc" name="a5495b7d85800fb6c62a5c08252d096fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5495b7d85800fb6c62a5c08252d096fc">&#9670;&#160;</a></span>buscarAutoPatente()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_auto.html">Auto</a> buscarAutoPatente </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_patente.html">Patente</a></td>          <td class="paramname"><span class="paramname"><em>patente</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que busca un auto por su patente. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_patente.html">Patente</a></td><td>patente -&gt; la patente a buscar. int *pos -&gt; un puntero a la posicion del auto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_auto.html">Auto</a> -&gt; el coche encontrado </dd></dl>
+
+</div>
+</div>
+<a id="a7c3e185625821c85b790150241f9db62" name="a7c3e185625821c85b790150241f9db62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3e185625821c85b790150241f9db62">&#9670;&#160;</a></span>buscarTitular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_persona.html">Persona</a> buscarTitular </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dni</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que busca una persona por dni. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>dni[] -&gt; que representa el dni del titular a buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a> titular -&gt; la persona que se corresponde al dni pasado como argumento. </dd></dl>
+
+</div>
+</div>
+<a id="abd76e883b0eacd7f9d3faa6d69b5fcda" name="abd76e883b0eacd7f9d3faa6d69b5fcda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd76e883b0eacd7f9d3faa6d69b5fcda">&#9670;&#160;</a></span>cambiarTitularPorVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cambiarTitularPorVenta </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dnicomprador</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dnivendedor</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>precionuevo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_patente.html">Patente</a></td>          <td class="paramname"><span class="paramname"><em>patente</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que cambia el titular de un auto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>dnicomprador[] -&gt; string con el dni del comprador </td></tr>
+    <tr><td class="paramname">char</td><td>dnicomprador[] -&gt; string con el dni del comprador </td></tr>
+    <tr><td class="paramname"><a class="el" href="struct_patente.html">Patente</a></td><td>patente -&gt; la patente del auto a modificar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a id="a3be8e07ff586bdd89c9949a214c59855" name="a3be8e07ff586bdd89c9949a214c59855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be8e07ff586bdd89c9949a214c59855">&#9670;&#160;</a></span>cargarAnio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarAnio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a> *</td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>El anio que se carga del auto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td>Auto* Puntero del auto que se esta cargando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a5382471e840bffe3cbe88091b553bedb" name="a5382471e840bffe3cbe88091b553bedb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5382471e840bffe3cbe88091b553bedb">&#9670;&#160;</a></span>cargarAuto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_auto.html">Auto</a> cargarAuto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga un auto al sistema. </p>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_auto.html">Auto</a> Retorna el auto cargado </dd></dl>
+
+</div>
+</div>
+<a id="a8f6a6be9acb6e2bd24fbeec190528da9" name="a8f6a6be9acb6e2bd24fbeec190528da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f6a6be9acb6e2bd24fbeec190528da9">&#9670;&#160;</a></span>cargarAutoArreglo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarAutoArreglo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Da espacio y carga un auto en el arreglo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td><a class="el" href="struct_auto.html">Auto</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a42636c826e82c8634921ca303c80c10a" name="a42636c826e82c8634921ca303c80c10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42636c826e82c8634921ca303c80c10a">&#9670;&#160;</a></span>cargarEnArregloAutosInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarEnArregloAutosInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga en un arreglo todos los autos del archivo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a3635ec8fce45252a433b8aa05d3c5905" name="a3635ec8fce45252a433b8aa05d3c5905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3635ec8fce45252a433b8aa05d3c5905">&#9670;&#160;</a></span>cargarKms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarKms </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a> *</td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Se carga los kilometros del auto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td>Auto* </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a35fc6abbd985ecaf0f4dc4905774ebc8" name="a35fc6abbd985ecaf0f4dc4905774ebc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35fc6abbd985ecaf0f4dc4905774ebc8">&#9670;&#160;</a></span>cargarMarca()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarMarca </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a> *</td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga la marca del auto que se esta cargando. </p>
+<p>Funcion que carga el campo Marca de la estructura. Args: recive un puntero a <a class="el" href="struct_auto.html">Auto</a> Return: none </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td>Auto* El puntero del auto que se esta cargando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a8f7882e6d1e6385ced8f1619165f97d9" name="a8f7882e6d1e6385ced8f1619165f97d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f7882e6d1e6385ced8f1619165f97d9">&#9670;&#160;</a></span>cargarModelo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarModelo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a> *</td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga el modelo de un coche (no tiene verificaciones) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td>Auto* Puntero del auto que se esta cargando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a2e218b86a6369376f1700b107f2b4074" name="a2e218b86a6369376f1700b107f2b4074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e218b86a6369376f1700b107f2b4074">&#9670;&#160;</a></span>cargarPrecioAd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarPrecioAd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a> *</td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga el precio de adquisicion de un auto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td>Auto* puntero de un auto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ab8905ab7b380772ae91a63f77deedbc4" name="ab8905ab7b380772ae91a63f77deedbc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8905ab7b380772ae91a63f77deedbc4">&#9670;&#160;</a></span>cargarTitular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarTitular </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a> *</td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Se carga el titular de un auto, debe ser un vendedor/consecionaria. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td>Auto* El coche que se esta cargando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="af1b7fd1037e0a007ac57c18879aff984" name="af1b7fd1037e0a007ac57c18879aff984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b7fd1037e0a007ac57c18879aff984">&#9670;&#160;</a></span>contarNuevos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int contarNuevos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>arreglo</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que cuenta la cantidad de nuevos dentro del arreglo de autos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>arreglo[] -&gt; el arreglo a recorrer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; la cantidad de autos nuevos </dd></dl>
+
+</div>
+</div>
+<a id="a76e143bd50d954275ee9ff2f77a4b7e5" name="a76e143bd50d954275ee9ff2f77a4b7e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e143bd50d954275ee9ff2f77a4b7e5">&#9670;&#160;</a></span>convertirAuto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_auto.html">Auto</a> convertirAuto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto_archivo.html">AutoArchivo</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que convierte una estructura tipo <a class="el" href="struct_auto_archivo.html">AutoArchivo</a> en una estructura tipo <a class="el" href="struct_auto.html">Auto</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto_archivo.html">AutoArchivo</a></td><td>coche -&gt; el auto a convertir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_auto.html">Auto</a> -&gt; el auto pasado como parametro convertido. </dd></dl>
+
+</div>
+</div>
+<a id="a9dc738cf3719203ffdd4913c79aef561" name="a9dc738cf3719203ffdd4913c79aef561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc738cf3719203ffdd4913c79aef561">&#9670;&#160;</a></span>designarEspacioAuto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void designarEspacioAuto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a> **</td>          <td class="paramname"><span class="paramname"><em>arr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Da espacio al arreglo autos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Auto** Puntero de arreglo de autos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ac45cf1c33c0b055f616c7ca5517a9f26" name="ac45cf1c33c0b055f616c7ca5517a9f26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45cf1c33c0b055f616c7ca5517a9f26">&#9670;&#160;</a></span>encontrarMenor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int encontrarMenor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>arr</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>validos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funcion que busca el auto con menor a�o </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>arr[] -&gt; el arreglo donde buscar </td></tr>
+    <tr><td class="paramname">int</td><td>pos -&gt; la posicion donde comenzar a buscar </td></tr>
+    <tr><td class="paramname">int</td><td>validos -&gt; la cantidad de registros validos en el arreglo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; la posicion del menor. </dd></dl>
+
+</div>
+</div>
+<a id="aff7dfe94db4dae35d58584e3d4db443e" name="aff7dfe94db4dae35d58584e3d4db443e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff7dfe94db4dae35d58584e3d4db443e">&#9670;&#160;</a></span>enVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int enVenta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que determina si un auto esta a la venta basandose en el dni del titular, ya que la consecionaria tiene un dni especial. </p>
+<p>--------------------------------------&mdash;Punto 5------------------------------------------------------------&mdash; </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>coche -&gt; recibe una Estructura tipo <a class="el" href="struct_auto.html">Auto</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si el auto esta a la venta. -&gt; 0 en otro caso. </dd></dl>
+
+</div>
+</div>
+<a id="a1be25144bf976ad72e117de5625662fb" name="a1be25144bf976ad72e117de5625662fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be25144bf976ad72e117de5625662fb">&#9670;&#160;</a></span>esNuevo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esNuevo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que evalua si el auto es nuevo (mayor a 2014);. </p>
+<p>-------------------------------------&mdash;Ordenacion de los autos menores a 10 a�os------------------------------------------------&mdash; </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>coche -&gt; el auto a evaluar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si es nuevo. -&gt; 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="a8d9e7b8f4d13cc3d2f01ace988ede725" name="a8d9e7b8f4d13cc3d2f01ace988ede725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9e7b8f4d13cc3d2f01ace988ede725">&#9670;&#160;</a></span>hayAutos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int hayAutos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica si hay autos en el arreglo de autos. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si hay autos 0 si no los hay </dd></dl>
+
+</div>
+</div>
+<a id="a53d1e174e4e2f74e956e7bcccf09f116" name="a53d1e174e4e2f74e956e7bcccf09f116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d1e174e4e2f74e956e7bcccf09f116">&#9670;&#160;</a></span>ingresarPatenteParaBuscar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_patente.html">Patente</a> ingresarPatenteParaBuscar </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que busca una patente. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_patente.html">Patente</a> -&gt; la patente encontrada </dd></dl>
+
+</div>
+</div>
+<a id="ae580494d85ee18c7ad88bd13e404dd47" name="ae580494d85ee18c7ad88bd13e404dd47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae580494d85ee18c7ad88bd13e404dd47">&#9670;&#160;</a></span>insertarAutoNuevoEnArr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void insertarAutoNuevoEnArr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que asigna espacio en el arreglo para el auto a insertar y lo inserta en la ultima posicion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>coche -&gt; el auto a insertar </td></tr>
+    <tr><td class="paramname">int</td><td>nuevos -&gt; la cantidad de autos nuevos </td></tr>
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>**arreglo -&gt; Puntero doble al arreglo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>none. </dd></dl>
+
+</div>
+</div>
+<a id="a79458a1931eb55b863928b621df52b93" name="a79458a1931eb55b863928b621df52b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79458a1931eb55b863928b621df52b93">&#9670;&#160;</a></span>listarAutos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listarAutos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista todos los autos en el sistema. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>param </p><dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a631d8a2b9863ebb349bdadd63c5374fb" name="a631d8a2b9863ebb349bdadd63c5374fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631d8a2b9863ebb349bdadd63c5374fb">&#9670;&#160;</a></span>listarAutosMatriz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listarAutosMatriz </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista autos mediante una matriz. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a8b3d769468187046aa1f1d750eb879cc" name="a8b3d769468187046aa1f1d750eb879cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3d769468187046aa1f1d750eb879cc">&#9670;&#160;</a></span>modificarAuto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_auto.html">Auto</a> modificarAuto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>autoAModificar</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Menu que permite modificar un auto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">autoAModificar</td><td><a class="el" href="struct_auto.html">Auto</a> <a class="el" href="struct_auto.html">Auto</a> a modificar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_auto.html">Auto</a> <a class="el" href="struct_auto.html">Auto</a> modificado </dd></dl>
+
+</div>
+</div>
+<a id="a5d5243642e643b71b9c1624f4a07297c" name="a5d5243642e643b71b9c1624f4a07297c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5243642e643b71b9c1624f4a07297c">&#9670;&#160;</a></span>mostarArrAutos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostarArrAutos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que muestra el arreglo de autos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a id="adba6cf1713a22799cd8d738a8ca78f1d" name="adba6cf1713a22799cd8d738a8ca78f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba6cf1713a22799cd8d738a8ca78f1d">&#9670;&#160;</a></span>mostrarAuto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarAuto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que muestra por pantalla, los datos de una estructura tipo <a class="el" href="struct_auto.html">Auto</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td>puntero a <a class="el" href="struct_auto.html">Auto</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a1e8238e04f56b9c2ef9936860102afb6" name="a1e8238e04f56b9c2ef9936860102afb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e8238e04f56b9c2ef9936860102afb6">&#9670;&#160;</a></span>mostrarAutosEnVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarAutosEnVenta </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que recorre el arreglo de autos mostrando los autos que estan en venta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a id="a4e392d97cf29fc517fdc320dfb1ddb0c" name="a4e392d97cf29fc517fdc320dfb1ddb0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e392d97cf29fc517fdc320dfb1ddb0c">&#9670;&#160;</a></span>mostrarAutosNuevos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarAutosNuevos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funcion que recorre el arreglo de autos nuevos y lo muestra. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>arr[] -&gt; el arreglo a recorrer </td></tr>
+    <tr><td class="paramname">int</td><td>validos -&gt; la cantidad de registros validos del arreglo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab5a4768fd5d77d6836c409c690d54c5a" name="ab5a4768fd5d77d6836c409c690d54c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a4768fd5d77d6836c409c690d54c5a">&#9670;&#160;</a></span>mostrarSegunTitular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarSegunTitular </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dni</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra autos segun el titular del auto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dni[]</td><td>char DNI del vendedor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>voidc </dd></dl>
+
+</div>
+</div>
+<a id="a36ad4397d4e7cda3ce62f0b0b6d355a3" name="a36ad4397d4e7cda3ce62f0b0b6d355a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ad4397d4e7cda3ce62f0b0b6d355a3">&#9670;&#160;</a></span>ordenarAutos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ordenarAutos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funcion que ordena el arreglo mediante Seleccion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_auto.html">Auto</a></td><td>arr[] -&gt; el arreglo a ordenar </td></tr>
+    <tr><td class="paramname">int</td><td>validos -&gt; la cantidad de registros validos del arreglo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>none </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a89d46992495525e88678bff362de5a1b" name="a89d46992495525e88678bff362de5a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d46992495525e88678bff362de5a1b">&#9670;&#160;</a></span>arregloAutos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_auto.html">Auto</a>* arregloAutos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&lt; Arreglos </p>
+
+</div>
+</div>
+<a id="abf6abbffe9a3fcc2dc7b18feb1aef043" name="abf6abbffe9a3fcc2dc7b18feb1aef043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6abbffe9a3fcc2dc7b18feb1aef043">&#9670;&#160;</a></span>arregloNuevos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_auto.html">Auto</a>* arregloNuevos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed7130928c740cb930980e2f1242ef85" name="aed7130928c740cb930980e2f1242ef85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7130928c740cb930980e2f1242ef85">&#9670;&#160;</a></span>cantidadAutos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cantidadAutos = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59e92b28a3c32bd5cf8a3b4728d4452b" name="a59e92b28a3c32bd5cf8a3b4728d4452b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e92b28a3c32bd5cf8a3b4728d4452b">&#9670;&#160;</a></span>cantidadNuevos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cantidadNuevos = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_390ffc40b31ea80b54cee1ba617c6532.html">librerias</a></li><li class="navelem"><a class="el" href="_auto_8c.html">Auto.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

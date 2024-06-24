@@ -408,10 +408,9 @@ void guardarCambiosPersona(Persona persona,int entrada)
  */
 void modificarPersona()
 {
-    if(!existeArchivo(archivopersona))
+    if(hayPersonas() == 0)
     {
         puts("No existe el archivo de persona. Crear una persona.");
-        system("pause");
         return;
     }
 
@@ -553,10 +552,9 @@ void menuDeModificacionPersona(Persona personanueva,int entrada)
  */
 void menuVerPersonas()
 {
-    if(!existeArchivo(archivopersona) == 1)
+    if(hayPersonas() == 0)
     {
         puts("No existe el archivo de persona. Crear una persona.");
-        system("pause");
         return;
     }
 
@@ -957,6 +955,22 @@ int esConsecionaria(char dni[])
     return flag;
 }
 
+/** \brief Verifica si hay personas
+ *
+ * \return int 1 si hay, 0 si no.
+ *
+ */
+int hayPersonas()
+{
+    int flag = 0;
+
+    if(cantidadpersonas > 0)
+    {
+        flag = 1;
+    }
+    return flag;
+}
+
 
 
 /** \brief Hace espacio en el arreglo y carga una persona al arreglo.
@@ -1228,6 +1242,11 @@ char * acortarDireccion(char texto[],int largotexto)
     return textonuevo;
 }
 
+/** \brief Muestra el menu para manipular personas
+ *
+ * \return void
+ *
+ */
 void mostrarMenuPersonas()
 {
     system("cls");

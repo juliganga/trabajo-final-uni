@@ -272,17 +272,17 @@ int gananciaPositiva(Venta venta)
  * \return int 1 si la ganancia es menor que el precio de venta, 0 si no
  *
  */
-int gananciaMenorQueVenta(Venta venta)
+int gananciaMenorQueVenta(float precioventa,float precioadquisicion)
 {
     int flag = 0;
 
-    if(venta.ganancia < venta.precioVenta)
+    if(precioadquisicion < precioventa)
     {
         flag = 1;
     }
     else
     {
-        puts("ERROR: la ganancia no puede ser mayor que el precio de venta");
+        puts("ERROR: El precio de venta debe ser mayor al de adquisicion");
     }
     return flag;
 }

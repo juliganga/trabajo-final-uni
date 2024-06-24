@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabajo final de Programacion 1: Referencia del archivo librerias/AutoValidaciones.c</title>
+<link rel="icon" href="auto.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="auto.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabajo final de Programacion 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Julián Alonso, Schettini Javier, Tonello Tiziano</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_auto_validaciones_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo AutoValidaciones.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_auto_validaciones_8h_source.html">AutoValidaciones.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_persona_8h_source.html">Persona.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utiles_8h_source.html">Utiles.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:af33e5ed72f8d82fc1cf8ac7a8758122b" id="r_af33e5ed72f8d82fc1cf8ac7a8758122b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af33e5ed72f8d82fc1cf8ac7a8758122b">PrecioNoNegativo</a> (float valor)</td></tr>
+<tr class="memdesc:af33e5ed72f8d82fc1cf8ac7a8758122b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que valida si el valor pasado como precio de adquisicion, es positivo.  <br /></td></tr>
+<tr class="separator:af33e5ed72f8d82fc1cf8ac7a8758122b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21576e41c6d85e75e1ab3eb3ed5e3ae5" id="r_a21576e41c6d85e75e1ab3eb3ed5e3ae5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21576e41c6d85e75e1ab3eb3ed5e3ae5">esVendedor</a> (<a class="el" href="struct_persona.html">Persona</a> titular)</td></tr>
+<tr class="memdesc:a21576e41c6d85e75e1ab3eb3ed5e3ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que valida si el titular de un auto es vendedor.  <br /></td></tr>
+<tr class="separator:a21576e41c6d85e75e1ab3eb3ed5e3ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b01c8cc117cac24f51dc9e901588b1c" id="r_a2b01c8cc117cac24f51dc9e901588b1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b01c8cc117cac24f51dc9e901588b1c">limiteMarca</a> (char marca[])</td></tr>
+<tr class="memdesc:a2b01c8cc117cac24f51dc9e901588b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica que la marca igresada no sobrepase los limites del arreglo.  <br /></td></tr>
+<tr class="separator:a2b01c8cc117cac24f51dc9e901588b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dfe81d554824d5b72618cdfb243d8ec" id="r_a3dfe81d554824d5b72618cdfb243d8ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dfe81d554824d5b72618cdfb243d8ec">limiteModelo</a> (char modelo[])</td></tr>
+<tr class="memdesc:a3dfe81d554824d5b72618cdfb243d8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica que el modelo igresado no sobrepase los limites del arreglo.  <br /></td></tr>
+<tr class="separator:a3dfe81d554824d5b72618cdfb243d8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44bfab60963765ef85a317588d88dee4" id="r_a44bfab60963765ef85a317588d88dee4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44bfab60963765ef85a317588d88dee4">esAnio</a> (int anio)</td></tr>
+<tr class="memdesc:a44bfab60963765ef85a317588d88dee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica que el a�o igresado este correcto.  <br /></td></tr>
+<tr class="separator:a44bfab60963765ef85a317588d88dee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaeac7dde81d7faedcc6012144103c38" id="r_afaeac7dde81d7faedcc6012144103c38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaeac7dde81d7faedcc6012144103c38">anioNoNegativo</a> (int anio)</td></tr>
+<tr class="memdesc:afaeac7dde81d7faedcc6012144103c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica que el a�o igresado no sea negativo.  <br /></td></tr>
+<tr class="separator:afaeac7dde81d7faedcc6012144103c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe11ca6aa9560999ef457355ff91988a" id="r_abe11ca6aa9560999ef457355ff91988a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe11ca6aa9560999ef457355ff91988a">limiteAnio</a> (int anio)</td></tr>
+<tr class="memdesc:abe11ca6aa9560999ef457355ff91988a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica que el a�o este dentro de unos parametros establecidos.  <br /></td></tr>
+<tr class="separator:abe11ca6aa9560999ef457355ff91988a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad93755a462cb63bc2863010b9e4b20c" id="r_aad93755a462cb63bc2863010b9e4b20c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad93755a462cb63bc2863010b9e4b20c">limiteKms</a> (char kms[])</td></tr>
+<tr class="memdesc:aad93755a462cb63bc2863010b9e4b20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica que el kilometraje no se pase del limite.  <br /></td></tr>
+<tr class="separator:aad93755a462cb63bc2863010b9e4b20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36fcde4b821cfc6fc4809c22605969f" id="r_af36fcde4b821cfc6fc4809c22605969f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af36fcde4b821cfc6fc4809c22605969f">kmsNumerico</a> (char kms[])</td></tr>
+<tr class="memdesc:af36fcde4b821cfc6fc4809c22605969f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica que el kilometraje sea numerico.  <br /></td></tr>
+<tr class="separator:af36fcde4b821cfc6fc4809c22605969f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf41cf19f6ebc3816b43d24dfd28189" id="r_a0cf41cf19f6ebc3816b43d24dfd28189"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cf41cf19f6ebc3816b43d24dfd28189">kmsNoNegativo</a> (char kms[])</td></tr>
+<tr class="memdesc:a0cf41cf19f6ebc3816b43d24dfd28189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica que el kilometraje no sea negativo.  <br /></td></tr>
+<tr class="separator:a0cf41cf19f6ebc3816b43d24dfd28189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="afaeac7dde81d7faedcc6012144103c38" name="afaeac7dde81d7faedcc6012144103c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaeac7dde81d7faedcc6012144103c38">&#9670;&#160;</a></span>anioNoNegativo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int anioNoNegativo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>anio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica que el a�o igresado no sea negativo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>anio -&gt; el a�o a evaluar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si es mayor a 0 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="a44bfab60963765ef85a317588d88dee4" name="a44bfab60963765ef85a317588d88dee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44bfab60963765ef85a317588d88dee4">&#9670;&#160;</a></span>esAnio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esAnio </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>anio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica que el a�o igresado este correcto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>anio -&gt; representa el a�o </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si es correcto 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="a21576e41c6d85e75e1ab3eb3ed5e3ae5" name="a21576e41c6d85e75e1ab3eb3ed5e3ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21576e41c6d85e75e1ab3eb3ed5e3ae5">&#9670;&#160;</a></span>esVendedor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esVendedor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a></td>          <td class="paramname"><span class="paramname"><em>titular</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que valida si el titular de un auto es vendedor. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a></td><td>titular -&gt; estructura tipo persona que representa el titular del vehiculo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si es Vendedor 0 si no lo es. </dd></dl>
+
+</div>
+</div>
+<a id="a0cf41cf19f6ebc3816b43d24dfd28189" name="a0cf41cf19f6ebc3816b43d24dfd28189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf41cf19f6ebc3816b43d24dfd28189">&#9670;&#160;</a></span>kmsNoNegativo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kmsNoNegativo </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>kms</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica que el kilometraje no sea negativo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>kms[] -&gt; un arreglo que representa los kilometros </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si es mayor a 0 0 si es menor. </dd></dl>
+
+</div>
+</div>
+<a id="af36fcde4b821cfc6fc4809c22605969f" name="af36fcde4b821cfc6fc4809c22605969f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36fcde4b821cfc6fc4809c22605969f">&#9670;&#160;</a></span>kmsNumerico()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kmsNumerico </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>kms</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica que el kilometraje sea numerico. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>kms[] -&gt; un arreglo que representa los kilometros </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si es mayor a 0 0 si es menor. </dd></dl>
+
+</div>
+</div>
+<a id="abe11ca6aa9560999ef457355ff91988a" name="abe11ca6aa9560999ef457355ff91988a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe11ca6aa9560999ef457355ff91988a">&#9670;&#160;</a></span>limiteAnio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int limiteAnio </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>anio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica que el a�o este dentro de unos parametros establecidos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>anio -&gt; el a�o a evaluar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si es mayor a 0, 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="aad93755a462cb63bc2863010b9e4b20c" name="aad93755a462cb63bc2863010b9e4b20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad93755a462cb63bc2863010b9e4b20c">&#9670;&#160;</a></span>limiteKms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int limiteKms </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>kms</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica que el kilometraje no se pase del limite. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>kms[] -&gt; un arreglo que representa los kilometros </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si es mayor a 0 0 si es menor. </dd></dl>
+
+</div>
+</div>
+<a id="a2b01c8cc117cac24f51dc9e901588b1c" name="a2b01c8cc117cac24f51dc9e901588b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b01c8cc117cac24f51dc9e901588b1c">&#9670;&#160;</a></span>limiteMarca()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int limiteMarca </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>marca</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica que la marca igresada no sobrepase los limites del arreglo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>marca[] -&gt; el string a validar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si esta dentro de los limites 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="a3dfe81d554824d5b72618cdfb243d8ec" name="a3dfe81d554824d5b72618cdfb243d8ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dfe81d554824d5b72618cdfb243d8ec">&#9670;&#160;</a></span>limiteModelo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int limiteModelo </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>modelo</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica que el modelo igresado no sobrepase los limites del arreglo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>modelo[] -&gt; el string a validar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; 1 si esta dentro de los limites 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="af33e5ed72f8d82fc1cf8ac7a8758122b" name="af33e5ed72f8d82fc1cf8ac7a8758122b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33e5ed72f8d82fc1cf8ac7a8758122b">&#9670;&#160;</a></span>PrecioNoNegativo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PrecioNoNegativo </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>valor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que valida si el valor pasado como precio de adquisicion, es positivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Float</td><td>que representa el precio de adquisicion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>0 si es negativo 1 si es positivo </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_390ffc40b31ea80b54cee1ba617c6532.html">librerias</a></li><li class="navelem"><a class="el" href="_auto_validaciones_8c.html">AutoValidaciones.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

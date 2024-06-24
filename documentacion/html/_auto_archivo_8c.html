@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabajo final de Programacion 1: Referencia del archivo librerias/AutoArchivo.c</title>
+<link rel="icon" href="auto.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="auto.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabajo final de Programacion 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Julián Alonso, Schettini Javier, Tonello Tiziano</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_auto_archivo_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo AutoArchivo.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_auto_archivo_8h_source.html">AutoArchivo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_patente_8h_source.html">Patente.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_auto_8h_source.html">Auto.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_persona_8h_source.html">Persona.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a446e15cc938f1eee4e0d596b0857b26c" id="r_a446e15cc938f1eee4e0d596b0857b26c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_auto_archivo.html">AutoArchivo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a446e15cc938f1eee4e0d596b0857b26c">cargarAutoArchivo</a> (<a class="el" href="struct_auto.html">Auto</a> autoACargar)</td></tr>
+<tr class="memdesc:a446e15cc938f1eee4e0d596b0857b26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funci�n que carga una estructura tipo <a class="el" href="struct_auto_archivo.html">AutoArchivo</a>.  <br /></td></tr>
+<tr class="separator:a446e15cc938f1eee4e0d596b0857b26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c42553c31e7a5f47da6837bece10c30" id="r_a8c42553c31e7a5f47da6837bece10c30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c42553c31e7a5f47da6837bece10c30">mostrarAutoArchivo</a> (<a class="el" href="struct_auto_archivo.html">AutoArchivo</a> coche)</td></tr>
+<tr class="memdesc:a8c42553c31e7a5f47da6837bece10c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funci�n que muestra por pantalla todos los campos de una estructura tipo <a class="el" href="struct_auto_archivo.html">AutoArchivo</a>.  <br /></td></tr>
+<tr class="separator:a8c42553c31e7a5f47da6837bece10c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ef434ea95b7c62e8f651d059431d2a" id="r_ae0ef434ea95b7c62e8f651d059431d2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0ef434ea95b7c62e8f651d059431d2a">guardarAutoArchivo</a> (<a class="el" href="struct_auto_archivo.html">AutoArchivo</a> coche, char *nombreArchivo)</td></tr>
+<tr class="memdesc:ae0ef434ea95b7c62e8f651d059431d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que guarda los datos de un auto en formato <a class="el" href="struct_auto_archivo.html">AutoArchivo</a>.  <br /></td></tr>
+<tr class="separator:ae0ef434ea95b7c62e8f651d059431d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec3e394c983d5581a6d7da0c52a376d" id="r_acec3e394c983d5581a6d7da0c52a376d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acec3e394c983d5581a6d7da0c52a376d">guardarAutoArchivoEnPos</a> (<a class="el" href="struct_auto_archivo.html">AutoArchivo</a> coche, char *nombreArchivo, int pos)</td></tr>
+<tr class="memdesc:acec3e394c983d5581a6d7da0c52a376d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que guarda un <a class="el" href="struct_auto_archivo.html">AutoArchivo</a> en la posicion indicada.  <br /></td></tr>
+<tr class="separator:acec3e394c983d5581a6d7da0c52a376d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a446e15cc938f1eee4e0d596b0857b26c" name="a446e15cc938f1eee4e0d596b0857b26c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a446e15cc938f1eee4e0d596b0857b26c">&#9670;&#160;</a></span>cargarAutoArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_auto_archivo.html">AutoArchivo</a> cargarAutoArchivo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto.html">Auto</a></td>          <td class="paramname"><span class="paramname"><em>autoACargar</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funci�n que carga una estructura tipo <a class="el" href="struct_auto_archivo.html">AutoArchivo</a>. </p>
+<p>Implementacion de la interface <a class="el" href="struct_auto_archivo.html">AutoArchivo</a> </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">autoACargar</td><td><a class="el" href="struct_auto.html">Auto</a> ecibe una estructura tipo <a class="el" href="struct_auto.html">Auto</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_auto_archivo.html">AutoArchivo</a> <a class="el" href="struct_auto.html">Auto</a> para cargar a archivo </dd></dl>
+
+</div>
+</div>
+<a id="ae0ef434ea95b7c62e8f651d059431d2a" name="ae0ef434ea95b7c62e8f651d059431d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ef434ea95b7c62e8f651d059431d2a">&#9670;&#160;</a></span>guardarAutoArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void guardarAutoArchivo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto_archivo.html">AutoArchivo</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>nombreArchivo</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que guarda los datos de un auto en formato <a class="el" href="struct_auto_archivo.html">AutoArchivo</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td><a class="el" href="struct_auto_archivo.html">AutoArchivo</a> el auto a guardar </td></tr>
+    <tr><td class="paramname">nombreArchivo</td><td>char* Puntero al nombre del archivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="acec3e394c983d5581a6d7da0c52a376d" name="acec3e394c983d5581a6d7da0c52a376d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec3e394c983d5581a6d7da0c52a376d">&#9670;&#160;</a></span>guardarAutoArchivoEnPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void guardarAutoArchivoEnPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto_archivo.html">AutoArchivo</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>nombreArchivo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que guarda un <a class="el" href="struct_auto_archivo.html">AutoArchivo</a> en la posicion indicada. </p>
+<p>Funcion que guarda un <a class="el" href="struct_auto_archivo.html">AutoArchivo</a> en la posicion indicada Params: <a class="el" href="struct_auto_archivo.html">AutoArchivo</a> coche -&gt; el coche a guardar char *nombreArchivo -&gt; puntero al archivo donde guardar int pos -&gt; las posicion donde guardar el auto </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td><a class="el" href="struct_auto_archivo.html">AutoArchivo</a> El coche a guardar </td></tr>
+    <tr><td class="paramname">nombreArchivo</td><td>char* Puntero al archivo donde guardar </td></tr>
+    <tr><td class="paramname">pos</td><td>int Las posicion donde guardar el auto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a8c42553c31e7a5f47da6837bece10c30" name="a8c42553c31e7a5f47da6837bece10c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c42553c31e7a5f47da6837bece10c30">&#9670;&#160;</a></span>mostrarAutoArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarAutoArchivo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_auto_archivo.html">AutoArchivo</a></td>          <td class="paramname"><span class="paramname"><em>coche</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funci�n que muestra por pantalla todos los campos de una estructura tipo <a class="el" href="struct_auto_archivo.html">AutoArchivo</a>. </p>
+<p>Funci�n que muestra por pantalla todos los campos de una estructura tipo <a class="el" href="struct_auto_archivo.html">AutoArchivo</a>. Args: <a class="el" href="struct_auto_archivo.html">AutoArchivo</a> Return: none </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coche</td><td><a class="el" href="struct_auto_archivo.html">AutoArchivo</a> archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_390ffc40b31ea80b54cee1ba617c6532.html">librerias</a></li><li class="navelem"><a class="el" href="_auto_archivo_8c.html">AutoArchivo.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

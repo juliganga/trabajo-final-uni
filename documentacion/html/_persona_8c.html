@@ -1,0 +1,1337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabajo final de Programacion 1: Referencia del archivo librerias/Persona.c</title>
+<link rel="icon" href="auto.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="auto.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabajo final de Programacion 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Julián Alonso, Schettini Javier, Tonello Tiziano</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_persona_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Persona.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_persona_8h_source.html">persona.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ae3398f203fc876579c82f776b0ecfa39" id="r_ae3398f203fc876579c82f776b0ecfa39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3398f203fc876579c82f776b0ecfa39">archivopersona</a>&#160;&#160;&#160;&quot;personas.bin&quot;</td></tr>
+<tr class="separator:ae3398f203fc876579c82f776b0ecfa39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a50f26f093f0893cd4454e0c847eeb135" id="r_a50f26f093f0893cd4454e0c847eeb135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50f26f093f0893cd4454e0c847eeb135">menuCargaPersonas</a> ()</td></tr>
+<tr class="memdesc:a50f26f093f0893cd4454e0c847eeb135"><td class="mdescLeft">&#160;</td><td class="mdescRight">FUNCIONALIDAD ///.  <br /></td></tr>
+<tr class="separator:a50f26f093f0893cd4454e0c847eeb135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af564fffdee62aa097b5cdcfa809db3d9" id="r_af564fffdee62aa097b5cdcfa809db3d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9">agregarPersona</a> ()</td></tr>
+<tr class="memdesc:af564fffdee62aa097b5cdcfa809db3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interfaz que se usa para cargar datos a una variable persona.  <br /></td></tr>
+<tr class="separator:af564fffdee62aa097b5cdcfa809db3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e7283eaa64852a5bd101907612e3fae" id="r_a0e7283eaa64852a5bd101907612e3fae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e7283eaa64852a5bd101907612e3fae">cargarDNI</a> (<a class="el" href="struct_persona.html">Persona</a> *persona)</td></tr>
+<tr class="memdesc:a0e7283eaa64852a5bd101907612e3fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga el DNI.  <br /></td></tr>
+<tr class="separator:a0e7283eaa64852a5bd101907612e3fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2e2824fb58d3bb3aaad2fb8d247654" id="r_a6f2e2824fb58d3bb3aaad2fb8d247654"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f2e2824fb58d3bb3aaad2fb8d247654">cargarNombre</a> (<a class="el" href="struct_persona.html">Persona</a> *persona)</td></tr>
+<tr class="memdesc:a6f2e2824fb58d3bb3aaad2fb8d247654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga el Nombre.  <br /></td></tr>
+<tr class="separator:a6f2e2824fb58d3bb3aaad2fb8d247654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb3a6c6db065bb03832bf5335a608c2" id="r_afcb3a6c6db065bb03832bf5335a608c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcb3a6c6db065bb03832bf5335a608c2">cargarTEL</a> (<a class="el" href="struct_persona.html">Persona</a> *persona)</td></tr>
+<tr class="memdesc:afcb3a6c6db065bb03832bf5335a608c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga el TEL.  <br /></td></tr>
+<tr class="separator:afcb3a6c6db065bb03832bf5335a608c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedbee1745e0b98c812bbfbd5b7bfdfc2" id="r_aedbee1745e0b98c812bbfbd5b7bfdfc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedbee1745e0b98c812bbfbd5b7bfdfc2">cargarDIR</a> (<a class="el" href="struct_persona.html">Persona</a> *persona)</td></tr>
+<tr class="memdesc:aedbee1745e0b98c812bbfbd5b7bfdfc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga la DIR (no tiene checks)  <br /></td></tr>
+<tr class="separator:aedbee1745e0b98c812bbfbd5b7bfdfc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b11381c3e68146f273e385a42b1d1f3" id="r_a9b11381c3e68146f273e385a42b1d1f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b11381c3e68146f273e385a42b1d1f3">cargarRol</a> (<a class="el" href="struct_persona.html">Persona</a> *persona)</td></tr>
+<tr class="memdesc:a9b11381c3e68146f273e385a42b1d1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga el rol.  <br /></td></tr>
+<tr class="separator:a9b11381c3e68146f273e385a42b1d1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6650f23f7def101bd1ef81411beaa4" id="r_a1c6650f23f7def101bd1ef81411beaa4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c6650f23f7def101bd1ef81411beaa4">verificarEnteros</a> (char cadena[])</td></tr>
+<tr class="memdesc:a1c6650f23f7def101bd1ef81411beaa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si una string tiene solo numeros o no.  <br /></td></tr>
+<tr class="separator:a1c6650f23f7def101bd1ef81411beaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec93e37170ae04697b62abe8c5422ce8" id="r_aec93e37170ae04697b62abe8c5422ce8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec93e37170ae04697b62abe8c5422ce8">verificarNombre</a> (char nombre[])</td></tr>
+<tr class="memdesc:aec93e37170ae04697b62abe8c5422ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si el largo del nombre es mayor a 3 y menor que 48. Verifica si tiene numeros o no.  <br /></td></tr>
+<tr class="separator:aec93e37170ae04697b62abe8c5422ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba5e9b6f0c2c9275233ed0c656817be" id="r_a9ba5e9b6f0c2c9275233ed0c656817be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ba5e9b6f0c2c9275233ed0c656817be">verificarDir</a> (char dir[])</td></tr>
+<tr class="memdesc:a9ba5e9b6f0c2c9275233ed0c656817be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si la direccion es entre 3 characteres y 98.  <br /></td></tr>
+<tr class="separator:a9ba5e9b6f0c2c9275233ed0c656817be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9688e5c70282cdcddebf89bd506eaeec" id="r_a9688e5c70282cdcddebf89bd506eaeec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9688e5c70282cdcddebf89bd506eaeec">verificarDNI</a> (char dni[])</td></tr>
+<tr class="memdesc:a9688e5c70282cdcddebf89bd506eaeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">verifica si el largo de dni es mayor o igual a 8  <br /></td></tr>
+<tr class="separator:a9688e5c70282cdcddebf89bd506eaeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31412c3e05adbaff29a8477356b8ab16" id="r_a31412c3e05adbaff29a8477356b8ab16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31412c3e05adbaff29a8477356b8ab16">verificarRol</a> (char rol)</td></tr>
+<tr class="memdesc:a31412c3e05adbaff29a8477356b8ab16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si el rol ingresado es C o V.  <br /></td></tr>
+<tr class="separator:a31412c3e05adbaff29a8477356b8ab16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19d9cef7965f9ac3e1a785ab686bf288" id="r_a19d9cef7965f9ac3e1a785ab686bf288"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19d9cef7965f9ac3e1a785ab686bf288">verificarTel</a> (char tel[])</td></tr>
+<tr class="memdesc:a19d9cef7965f9ac3e1a785ab686bf288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si el numero de telefono es mayor o igual a 10.  <br /></td></tr>
+<tr class="separator:a19d9cef7965f9ac3e1a785ab686bf288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4bd53ea8972172cd788490c245c5068" id="r_ac4bd53ea8972172cd788490c245c5068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4bd53ea8972172cd788490c245c5068">guardarPersonaAFile</a> (<a class="el" href="struct_persona.html">Persona</a> persona)</td></tr>
+<tr class="memdesc:ac4bd53ea8972172cd788490c245c5068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda la persona a un archivo, definido de antemano.  <br /></td></tr>
+<tr class="separator:ac4bd53ea8972172cd788490c245c5068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87d8cd5a8f0dc5753f0acdbccbf9df0c" id="r_a87d8cd5a8f0dc5753f0acdbccbf9df0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87d8cd5a8f0dc5753f0acdbccbf9df0c">guardarCambiosPersona</a> (<a class="el" href="struct_persona.html">Persona</a> persona, int entrada)</td></tr>
+<tr class="memdesc:a87d8cd5a8f0dc5753f0acdbccbf9df0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda cambios de persona que se hicieron.  <br /></td></tr>
+<tr class="separator:a87d8cd5a8f0dc5753f0acdbccbf9df0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01306c12c338c84601f082781b67b75" id="r_af01306c12c338c84601f082781b67b75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01306c12c338c84601f082781b67b75">modificarPersona</a> ()</td></tr>
+<tr class="memdesc:af01306c12c338c84601f082781b67b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un menu en donde se escribe un dni, una vez encontrado el cliente, se le dara acceso a el menu de edicion.  <br /></td></tr>
+<tr class="separator:af01306c12c338c84601f082781b67b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24f0f9f56c7da38fa09a31c01ca73a2" id="r_ab24f0f9f56c7da38fa09a31c01ca73a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab24f0f9f56c7da38fa09a31c01ca73a2">menuDeModificacionPersona</a> (<a class="el" href="struct_persona.html">Persona</a> personanueva, int entrada)</td></tr>
+<tr class="memdesc:ab24f0f9f56c7da38fa09a31c01ca73a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">El menu de modificacion de entrada de cliente, tiene un rango de funciones distintas.  <br /></td></tr>
+<tr class="separator:ab24f0f9f56c7da38fa09a31c01ca73a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf967e37ae77f75b2fb2300e714a974" id="r_aecf967e37ae77f75b2fb2300e714a974"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecf967e37ae77f75b2fb2300e714a974">menuVerPersonas</a> ()</td></tr>
+<tr class="memdesc:aecf967e37ae77f75b2fb2300e714a974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un menu dedicado para la seleccion para mostrar todos o un cliente solo.  <br /></td></tr>
+<tr class="separator:aecf967e37ae77f75b2fb2300e714a974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a08911c7432662aa7fb769ea772ae0" id="r_a51a08911c7432662aa7fb769ea772ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51a08911c7432662aa7fb769ea772ae0">mostrarPersonasMenu</a> ()</td></tr>
+<tr class="memdesc:a51a08911c7432662aa7fb769ea772ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un menu dedicado para mostrar las opciones de mostrar personas, completo o simple.  <br /></td></tr>
+<tr class="separator:a51a08911c7432662aa7fb769ea772ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab83b0af6d412483eebbc8423da3cf3e6" id="r_ab83b0af6d412483eebbc8423da3cf3e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab83b0af6d412483eebbc8423da3cf3e6">mostrarPersonasFull</a> ()</td></tr>
+<tr class="memdesc:ab83b0af6d412483eebbc8423da3cf3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop que recorre el arreglo de clientes, para mostrar todos sus contenidos.  <br /></td></tr>
+<tr class="separator:ab83b0af6d412483eebbc8423da3cf3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2b6edaf152fce5d11f517d6358892f" id="r_a3d2b6edaf152fce5d11f517d6358892f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d2b6edaf152fce5d11f517d6358892f">mostrarPersonasMin</a> ()</td></tr>
+<tr class="memdesc:a3d2b6edaf152fce5d11f517d6358892f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop que recorre el arreglo de clientes, para mostrar los contenidos mas importantes.  <br /></td></tr>
+<tr class="separator:a3d2b6edaf152fce5d11f517d6358892f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876c8dddcf48021933be50896461dc40" id="r_a876c8dddcf48021933be50896461dc40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876c8dddcf48021933be50896461dc40">buscarUnaPersona</a> ()</td></tr>
+<tr class="memdesc:a876c8dddcf48021933be50896461dc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se busca una persona segun su DNI, se hacen verificaciones. Luego se puede elegir si mostrar completamente o solo lo basico.  <br /></td></tr>
+<tr class="separator:a876c8dddcf48021933be50896461dc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa757c8b25d084fc400c0ed9c7c91e18e" id="r_aa757c8b25d084fc400c0ed9c7c91e18e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa757c8b25d084fc400c0ed9c7c91e18e">verPersonaFull</a> (<a class="el" href="struct_persona.html">Persona</a> persona)</td></tr>
+<tr class="memdesc:aa757c8b25d084fc400c0ed9c7c91e18e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra todos los datos del cliente.  <br /></td></tr>
+<tr class="separator:aa757c8b25d084fc400c0ed9c7c91e18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add95ba8a95e216c634364c56c4073542" id="r_add95ba8a95e216c634364c56c4073542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add95ba8a95e216c634364c56c4073542">verPersonaMin</a> (<a class="el" href="struct_persona.html">Persona</a> persona)</td></tr>
+<tr class="memdesc:add95ba8a95e216c634364c56c4073542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra algunos de los datos del cliente.  <br /></td></tr>
+<tr class="separator:add95ba8a95e216c634364c56c4073542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23de20bd92b4867f700e0a72938f380" id="r_ae23de20bd92b4867f700e0a72938f380"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae23de20bd92b4867f700e0a72938f380">pasarAMayus</a> (char *caracter)</td></tr>
+<tr class="memdesc:ae23de20bd92b4867f700e0a72938f380"><td class="mdescLeft">&#160;</td><td class="mdescRight">AYUDANTES ///.  <br /></td></tr>
+<tr class="separator:ae23de20bd92b4867f700e0a72938f380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aee5e474ece2e57d21bb47625dbb111" id="r_a8aee5e474ece2e57d21bb47625dbb111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8aee5e474ece2e57d21bb47625dbb111">traducirRolCliente</a> (char rol)</td></tr>
+<tr class="memdesc:a8aee5e474ece2e57d21bb47625dbb111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra en consola el rol correspondiente del cliente (NO SE GUARDAN ESTAS TRADUCCIONES)  <br /></td></tr>
+<tr class="separator:a8aee5e474ece2e57d21bb47625dbb111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa125c7d3ea4851814233b2b164598c" id="r_a9fa125c7d3ea4851814233b2b164598c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_persona.html">Persona</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fa125c7d3ea4851814233b2b164598c">buscarSegunDNI</a> (char dni[])</td></tr>
+<tr class="memdesc:a9fa125c7d3ea4851814233b2b164598c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Busca una persona segun su DNI.  <br /></td></tr>
+<tr class="separator:a9fa125c7d3ea4851814233b2b164598c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d36b1c5b2b21e51c2709c7f0a06653" id="r_ae9d36b1c5b2b21e51c2709c7f0a06653"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9d36b1c5b2b21e51c2709c7f0a06653">devolverNumEntrada</a> (char dni[])</td></tr>
+<tr class="memdesc:ae9d36b1c5b2b21e51c2709c7f0a06653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se busca el numero de entrada de el dni del cliente.  <br /></td></tr>
+<tr class="separator:ae9d36b1c5b2b21e51c2709c7f0a06653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e476a22bf77023993a4851fdb83820" id="r_a96e476a22bf77023993a4851fdb83820"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96e476a22bf77023993a4851fdb83820">verSiDNINoExiste</a> (char dni[])</td></tr>
+<tr class="memdesc:a96e476a22bf77023993a4851fdb83820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un valor de 1 o 0 segun si el dni esta presente en un arreglo.  <br /></td></tr>
+<tr class="separator:a96e476a22bf77023993a4851fdb83820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc224f38dc34ea5ff6b6f102795c8343" id="r_abc224f38dc34ea5ff6b6f102795c8343"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc224f38dc34ea5ff6b6f102795c8343">archivoExiste</a> (char archivonombre[])</td></tr>
+<tr class="memdesc:abc224f38dc34ea5ff6b6f102795c8343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revisa si el archivo existe.  <br /></td></tr>
+<tr class="separator:abc224f38dc34ea5ff6b6f102795c8343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d66936384c3070c29c7af77cc78207" id="r_aa3d66936384c3070c29c7af77cc78207"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3d66936384c3070c29c7af77cc78207">cargarEnArregloPersonasInit</a> ()</td></tr>
+<tr class="memdesc:aa3d66936384c3070c29c7af77cc78207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepara el arreglo dinamico que esta definido globalmente. Teoricamente no deberia traer problemas si se ejecuta mas de una vez.  <br /></td></tr>
+<tr class="separator:aa3d66936384c3070c29c7af77cc78207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8fa36ca466720a378e9ccc7b59ed0f9" id="r_ab8fa36ca466720a378e9ccc7b59ed0f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8fa36ca466720a378e9ccc7b59ed0f9">esConsecionaria</a> (char dni[])</td></tr>
+<tr class="memdesc:ab8fa36ca466720a378e9ccc7b59ed0f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si el dni ingresado es la consecionaria.  <br /></td></tr>
+<tr class="separator:ab8fa36ca466720a378e9ccc7b59ed0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740403db4d1a5fadc094af2ee9a4ea32" id="r_a740403db4d1a5fadc094af2ee9a4ea32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a740403db4d1a5fadc094af2ee9a4ea32">hayPersonas</a> ()</td></tr>
+<tr class="memdesc:a740403db4d1a5fadc094af2ee9a4ea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si hay personas.  <br /></td></tr>
+<tr class="separator:a740403db4d1a5fadc094af2ee9a4ea32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81357a26a8124b06aa46f9114ae3e385" id="r_a81357a26a8124b06aa46f9114ae3e385"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81357a26a8124b06aa46f9114ae3e385">cargarPersonaArreglo</a> (<a class="el" href="struct_persona.html">Persona</a> persona)</td></tr>
+<tr class="memdesc:a81357a26a8124b06aa46f9114ae3e385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hace espacio en el arreglo y carga una persona al arreglo.  <br /></td></tr>
+<tr class="separator:a81357a26a8124b06aa46f9114ae3e385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac856e9fe4e9e24512b45bca034b7e6b8" id="r_ac856e9fe4e9e24512b45bca034b7e6b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac856e9fe4e9e24512b45bca034b7e6b8">allocarEspacioParaPersona</a> (<a class="el" href="struct_persona.html">Persona</a> **arreglo)</td></tr>
+<tr class="memdesc:ac856e9fe4e9e24512b45bca034b7e6b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hace espacio en el arreglo para una persona, incrementa cantidadpersonas por 1.  <br /></td></tr>
+<tr class="separator:ac856e9fe4e9e24512b45bca034b7e6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d823a5953bda6c0c9f57dc93e0c657c" id="r_a1d823a5953bda6c0c9f57dc93e0c657c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d823a5953bda6c0c9f57dc93e0c657c">cargarPersonaConsesioanaria</a> ()</td></tr>
+<tr class="memdesc:a1d823a5953bda6c0c9f57dc93e0c657c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepara para cargar una persona la arreglo dinamico llamada consecionaria (esta es inmodificable y no se guarda en el archivo)  <br /></td></tr>
+<tr class="separator:a1d823a5953bda6c0c9f57dc93e0c657c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04edefade6239b1607099a6814c271ba" id="r_a04edefade6239b1607099a6814c271ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04edefade6239b1607099a6814c271ba">mostrarPersonaOrdenadoSegun</a> ()</td></tr>
+<tr class="memdesc:a04edefade6239b1607099a6814c271ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Una funcion que genera matrices de strings para ordenarlos segun lo que pide el usuario.  <br /></td></tr>
+<tr class="separator:a04edefade6239b1607099a6814c271ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dca06a6d40be216f4a35bfed296ef76" id="r_a5dca06a6d40be216f4a35bfed296ef76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dca06a6d40be216f4a35bfed296ef76">ordenarSegunParam</a> (int i, int size, char matriz[][size])</td></tr>
+<tr class="memdesc:a5dca06a6d40be216f4a35bfed296ef76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la posicion de la matriz menor (selection sort)  <br /></td></tr>
+<tr class="separator:a5dca06a6d40be216f4a35bfed296ef76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde6b45ac206321f39c61b417d6acec2" id="r_afde6b45ac206321f39c61b417d6acec2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde6b45ac206321f39c61b417d6acec2">imprimirSeparador</a> (int sizeChars)</td></tr>
+<tr class="memdesc:afde6b45ac206321f39c61b417d6acec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe '-' x cantidad de veces.  <br /></td></tr>
+<tr class="separator:afde6b45ac206321f39c61b417d6acec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c69887aaf19caadba5d19aeff26393" id="r_a94c69887aaf19caadba5d19aeff26393"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94c69887aaf19caadba5d19aeff26393">acortarDireccion</a> (char texto[], int largotexto)</td></tr>
+<tr class="memdesc:a94c69887aaf19caadba5d19aeff26393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acorta una direccion y agregar '...' si es muy largo.  <br /></td></tr>
+<tr class="separator:a94c69887aaf19caadba5d19aeff26393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a8d8c8c17baa6f884fea54aad3add7" id="r_a99a8d8c8c17baa6f884fea54aad3add7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a8d8c8c17baa6f884fea54aad3add7">mostrarMenuPersonas</a> ()</td></tr>
+<tr class="memdesc:a99a8d8c8c17baa6f884fea54aad3add7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el menu para manipular personas.  <br /></td></tr>
+<tr class="separator:a99a8d8c8c17baa6f884fea54aad3add7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a28f84059642ab4c2ed73d384e156eb45" id="r_a28f84059642ab4c2ed73d384e156eb45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_persona.html">Persona</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28f84059642ab4c2ed73d384e156eb45">arreglopersona</a></td></tr>
+<tr class="memdesc:a28f84059642ab4c2ed73d384e156eb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables globales fuera de libreria.  <br /></td></tr>
+<tr class="separator:a28f84059642ab4c2ed73d384e156eb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58743210c23483217cab8706a26874af" id="r_a58743210c23483217cab8706a26874af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58743210c23483217cab8706a26874af">cantidadpersonas</a> = -1</td></tr>
+<tr class="separator:a58743210c23483217cab8706a26874af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="ae3398f203fc876579c82f776b0ecfa39" name="ae3398f203fc876579c82f776b0ecfa39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3398f203fc876579c82f776b0ecfa39">&#9670;&#160;</a></span>archivopersona</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define archivopersona&#160;&#160;&#160;&quot;personas.bin&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a94c69887aaf19caadba5d19aeff26393" name="a94c69887aaf19caadba5d19aeff26393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c69887aaf19caadba5d19aeff26393">&#9670;&#160;</a></span>acortarDireccion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * acortarDireccion </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>texto</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>largotexto</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Acorta una direccion y agregar '...' si es muy largo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texto[]</td><td>char El texto que llega de la matriz </td></tr>
+    <tr><td class="paramname">largotexto</td><td>int El largo de un texto que llega del loop </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>char* String que se genera </dd></dl>
+
+</div>
+</div>
+<a id="af564fffdee62aa097b5cdcfa809db3d9" name="af564fffdee62aa097b5cdcfa809db3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af564fffdee62aa097b5cdcfa809db3d9">&#9670;&#160;</a></span>agregarPersona()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void agregarPersona </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interfaz que se usa para cargar datos a una variable persona. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void Se debe completar todo antes de salir. </dd></dl>
+
+</div>
+</div>
+<a id="ac856e9fe4e9e24512b45bca034b7e6b8" name="ac856e9fe4e9e24512b45bca034b7e6b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac856e9fe4e9e24512b45bca034b7e6b8">&#9670;&#160;</a></span>allocarEspacioParaPersona()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void allocarEspacioParaPersona </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a> **</td>          <td class="paramname"><span class="paramname"><em>arreglo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hace espacio en el arreglo para una persona, incrementa cantidadpersonas por 1. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Persona**arreglo</td><td>puntero de arreglo dinamico de personas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="abc224f38dc34ea5ff6b6f102795c8343" name="abc224f38dc34ea5ff6b6f102795c8343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc224f38dc34ea5ff6b6f102795c8343">&#9670;&#160;</a></span>archivoExiste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int archivoExiste </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>archivonombre</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Revisa si el archivo existe. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">archivonombre[]</td><td>char archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si existe, 0 si no </dd></dl>
+
+</div>
+</div>
+<a id="a9fa125c7d3ea4851814233b2b164598c" name="a9fa125c7d3ea4851814233b2b164598c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa125c7d3ea4851814233b2b164598c">&#9670;&#160;</a></span>buscarSegunDNI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_persona.html">Persona</a> buscarSegunDNI </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dni</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Busca una persona segun su DNI. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dni[]</td><td>char El DNI que se usa para buscar la persona </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a> devuelve la estructura de la persona </dd></dl>
+
+</div>
+</div>
+<a id="a876c8dddcf48021933be50896461dc40" name="a876c8dddcf48021933be50896461dc40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876c8dddcf48021933be50896461dc40">&#9670;&#160;</a></span>buscarUnaPersona()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void buscarUnaPersona </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Se busca una persona segun su DNI, se hacen verificaciones. Luego se puede elegir si mostrar completamente o solo lo basico. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aedbee1745e0b98c812bbfbd5b7bfdfc2" name="aedbee1745e0b98c812bbfbd5b7bfdfc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedbee1745e0b98c812bbfbd5b7bfdfc2">&#9670;&#160;</a></span>cargarDIR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarDIR </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a> *</td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga la DIR (no tiene checks) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td>Persona* Representa la persona que esta siendo cargada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a0e7283eaa64852a5bd101907612e3fae" name="a0e7283eaa64852a5bd101907612e3fae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7283eaa64852a5bd101907612e3fae">&#9670;&#160;</a></span>cargarDNI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarDNI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a> *</td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga el DNI. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td>Persona* Representa la persona que esta siendo cargada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void TODO: POR RAZONES QUE NO ENTIENDO, SI EL STRING SE LLEGA A SOBREPASAR, LAS VERIFICACIONES NO SE HACEN, EL WHILE SE SALTA, Y SE EJECUTA LA SIGUIENTE FUNCION </dd></dl>
+
+</div>
+</div>
+<a id="aa3d66936384c3070c29c7af77cc78207" name="aa3d66936384c3070c29c7af77cc78207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d66936384c3070c29c7af77cc78207">&#9670;&#160;</a></span>cargarEnArregloPersonasInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarEnArregloPersonasInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepara el arreglo dinamico que esta definido globalmente. Teoricamente no deberia traer problemas si se ejecuta mas de una vez. </p>
+<p>CARGA EN MEMORIA ///.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>void se DEBE llamar al principio del programa antes de cualquier otra funcion que usa el arreglo. </dd></dl>
+
+</div>
+</div>
+<a id="a6f2e2824fb58d3bb3aaad2fb8d247654" name="a6f2e2824fb58d3bb3aaad2fb8d247654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2e2824fb58d3bb3aaad2fb8d247654">&#9670;&#160;</a></span>cargarNombre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarNombre </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a> *</td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga el Nombre. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td>Persona* Representa la persona que esta siendo cargada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a81357a26a8124b06aa46f9114ae3e385" name="a81357a26a8124b06aa46f9114ae3e385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81357a26a8124b06aa46f9114ae3e385">&#9670;&#160;</a></span>cargarPersonaArreglo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarPersonaArreglo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a></td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hace espacio en el arreglo y carga una persona al arreglo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a> Recive una copia de una persona para colocar en el arreglo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void Se puede llamar fuera de <a class="el" href="#aa3d66936384c3070c29c7af77cc78207" title="Prepara el arreglo dinamico que esta definido globalmente. Teoricamente no deberia traer problemas si...">cargarEnArregloPersonasInit()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a1d823a5953bda6c0c9f57dc93e0c657c" name="a1d823a5953bda6c0c9f57dc93e0c657c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d823a5953bda6c0c9f57dc93e0c657c">&#9670;&#160;</a></span>cargarPersonaConsesioanaria()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarPersonaConsesioanaria </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepara para cargar una persona la arreglo dinamico llamada consecionaria (esta es inmodificable y no se guarda en el archivo) </p>
+<p>CARGA DE MIEMBRO "CONCESIONARIA" ///.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a9b11381c3e68146f273e385a42b1d1f3" name="a9b11381c3e68146f273e385a42b1d1f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b11381c3e68146f273e385a42b1d1f3">&#9670;&#160;</a></span>cargarRol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarRol </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a> *</td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga el rol. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td>Persona* Representa la persona que esta siendo cargada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="afcb3a6c6db065bb03832bf5335a608c2" name="afcb3a6c6db065bb03832bf5335a608c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb3a6c6db065bb03832bf5335a608c2">&#9670;&#160;</a></span>cargarTEL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarTEL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a> *</td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que recibe un puntero de la variable persona de la funcion <a class="el" href="#af564fffdee62aa097b5cdcfa809db3d9" title="Interfaz que se usa para cargar datos a una variable persona.">agregarPersona()</a>, Carga el TEL. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td>Persona* Representa la persona que esta siendo cargada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ae9d36b1c5b2b21e51c2709c7f0a06653" name="ae9d36b1c5b2b21e51c2709c7f0a06653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d36b1c5b2b21e51c2709c7f0a06653">&#9670;&#160;</a></span>devolverNumEntrada()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int devolverNumEntrada </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dni</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Se busca el numero de entrada de el dni del cliente. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dni[]</td><td>char El DNI que se usa para buscar la persona </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int Retorna un valor (1,2,3) representando la posicion </dd></dl>
+
+</div>
+</div>
+<a id="ab8fa36ca466720a378e9ccc7b59ed0f9" name="ab8fa36ca466720a378e9ccc7b59ed0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8fa36ca466720a378e9ccc7b59ed0f9">&#9670;&#160;</a></span>esConsecionaria()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esConsecionaria </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dni</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si el dni ingresado es la consecionaria. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dni[]</td><td>char el dni ingresado del usuario </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si es 00000000, 0 si no </dd></dl>
+
+</div>
+</div>
+<a id="a87d8cd5a8f0dc5753f0acdbccbf9df0c" name="a87d8cd5a8f0dc5753f0acdbccbf9df0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d8cd5a8f0dc5753f0acdbccbf9df0c">&#9670;&#160;</a></span>guardarCambiosPersona()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void guardarCambiosPersona </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a></td>          <td class="paramname"><span class="paramname"><em>persona</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>entrada</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Guarda cambios de persona que se hicieron. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a> Sobreescribe datos ya antes cargados del archivo de clientes </td></tr>
+    <tr><td class="paramname">entrada</td><td>int Representa la "entrada" que es al respecto del inicio del archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void si el archivo no existe, esto no hace nada </dd></dl>
+
+</div>
+</div>
+<a id="ac4bd53ea8972172cd788490c245c5068" name="ac4bd53ea8972172cd788490c245c5068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4bd53ea8972172cd788490c245c5068">&#9670;&#160;</a></span>guardarPersonaAFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void guardarPersonaAFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a></td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Guarda la persona a un archivo, definido de antemano. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a> Representa el conjunto de una persona, todos sus datos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void Si el archivo falla en su creacion por algun motivo, esto no haria nada </dd></dl>
+
+</div>
+</div>
+<a id="a740403db4d1a5fadc094af2ee9a4ea32" name="a740403db4d1a5fadc094af2ee9a4ea32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740403db4d1a5fadc094af2ee9a4ea32">&#9670;&#160;</a></span>hayPersonas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int hayPersonas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si hay personas. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si hay, 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="afde6b45ac206321f39c61b417d6acec2" name="afde6b45ac206321f39c61b417d6acec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde6b45ac206321f39c61b417d6acec2">&#9670;&#160;</a></span>imprimirSeparador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void imprimirSeparador </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sizeChars</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe '-' x cantidad de veces. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sizeChars</td><td>int cantidad de veces que printea el '-' </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a50f26f093f0893cd4454e0c847eeb135" name="a50f26f093f0893cd4454e0c847eeb135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50f26f093f0893cd4454e0c847eeb135">&#9670;&#160;</a></span>menuCargaPersonas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menuCargaPersonas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FUNCIONALIDAD ///. </p>
+<p>Muestra el menu de opciones para que el usuario elija una de los dos opciones</p>
+<dl class="section return"><dt>Devuelve</dt><dd>void Sale de la funcion cuando el usuario hace cualquier eleccion. </dd></dl>
+
+</div>
+</div>
+<a id="ab24f0f9f56c7da38fa09a31c01ca73a2" name="ab24f0f9f56c7da38fa09a31c01ca73a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24f0f9f56c7da38fa09a31c01ca73a2">&#9670;&#160;</a></span>menuDeModificacionPersona()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menuDeModificacionPersona </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a></td>          <td class="paramname"><span class="paramname"><em>personanueva</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>entrada</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>El menu de modificacion de entrada de cliente, tiene un rango de funciones distintas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">personanueva</td><td><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a> Una copia que se le cambiaran los detalles del cliente antes de cargarlo </td></tr>
+    <tr><td class="paramname">entrada</td><td>int // Posicion en el archivo de cliente en el que esta el cliente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void Tiene 3 metodos de salida, uno de guardado y 2 de salida </dd></dl>
+
+</div>
+</div>
+<a id="aecf967e37ae77f75b2fb2300e714a974" name="aecf967e37ae77f75b2fb2300e714a974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf967e37ae77f75b2fb2300e714a974">&#9670;&#160;</a></span>menuVerPersonas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menuVerPersonas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un menu dedicado para la seleccion para mostrar todos o un cliente solo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void Retorna en caso de que el archivo de clientes no existe </dd></dl>
+
+</div>
+</div>
+<a id="af01306c12c338c84601f082781b67b75" name="af01306c12c338c84601f082781b67b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01306c12c338c84601f082781b67b75">&#9670;&#160;</a></span>modificarPersona()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void modificarPersona </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un menu en donde se escribe un dni, una vez encontrado el cliente, se le dara acceso a el menu de edicion. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void retorna en caso de que el archivo de clientes no exista </dd></dl>
+
+</div>
+</div>
+<a id="a99a8d8c8c17baa6f884fea54aad3add7" name="a99a8d8c8c17baa6f884fea54aad3add7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a8d8c8c17baa6f884fea54aad3add7">&#9670;&#160;</a></span>mostrarMenuPersonas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarMenuPersonas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra el menu para manipular personas. </p>
+<p>Menu ///.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a04edefade6239b1607099a6814c271ba" name="a04edefade6239b1607099a6814c271ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04edefade6239b1607099a6814c271ba">&#9670;&#160;</a></span>mostrarPersonaOrdenadoSegun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarPersonaOrdenadoSegun </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Una funcion que genera matrices de strings para ordenarlos segun lo que pide el usuario. </p>
+<p>Matrices ///.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ab83b0af6d412483eebbc8423da3cf3e6" name="ab83b0af6d412483eebbc8423da3cf3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83b0af6d412483eebbc8423da3cf3e6">&#9670;&#160;</a></span>mostrarPersonasFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarPersonasFull </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loop que recorre el arreglo de clientes, para mostrar todos sus contenidos. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a51a08911c7432662aa7fb769ea772ae0" name="a51a08911c7432662aa7fb769ea772ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a08911c7432662aa7fb769ea772ae0">&#9670;&#160;</a></span>mostrarPersonasMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarPersonasMenu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un menu dedicado para mostrar las opciones de mostrar personas, completo o simple. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a3d2b6edaf152fce5d11f517d6358892f" name="a3d2b6edaf152fce5d11f517d6358892f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2b6edaf152fce5d11f517d6358892f">&#9670;&#160;</a></span>mostrarPersonasMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarPersonasMin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loop que recorre el arreglo de clientes, para mostrar los contenidos mas importantes. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a5dca06a6d40be216f4a35bfed296ef76" name="a5dca06a6d40be216f4a35bfed296ef76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dca06a6d40be216f4a35bfed296ef76">&#9670;&#160;</a></span>ordenarSegunParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ordenarSegunParam </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>matriz</em></span>[][size]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la posicion de la matriz menor (selection sort) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>int Iteracion actual </td></tr>
+    <tr><td class="paramname">size</td><td>int tama�o de la matriz </td></tr>
+    <tr><td class="paramname">matriz[][size]</td><td>char matriz de caracteres </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int posicion menor del arreglo </dd></dl>
+
+</div>
+</div>
+<a id="ae23de20bd92b4867f700e0a72938f380" name="ae23de20bd92b4867f700e0a72938f380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23de20bd92b4867f700e0a72938f380">&#9670;&#160;</a></span>pasarAMayus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pasarAMayus </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>caracter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AYUDANTES ///. </p>
+<p>pasa UN CARACTER a mayuscula</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char*caracter</td><td>Un puntero al caracter para hacer mayuscula </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a8aee5e474ece2e57d21bb47625dbb111" name="a8aee5e474ece2e57d21bb47625dbb111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aee5e474ece2e57d21bb47625dbb111">&#9670;&#160;</a></span>traducirRolCliente()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void traducirRolCliente </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>rol</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra en consola el rol correspondiente del cliente (NO SE GUARDAN ESTAS TRADUCCIONES) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rol</td><td>char caracter que representa el rol del cliente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a9ba5e9b6f0c2c9275233ed0c656817be" name="a9ba5e9b6f0c2c9275233ed0c656817be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba5e9b6f0c2c9275233ed0c656817be">&#9670;&#160;</a></span>verificarDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verificarDir </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si la direccion es entre 3 characteres y 98. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir[]</td><td>char La direccion del usuario </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si es valido, sino 0. </dd></dl>
+
+</div>
+</div>
+<a id="a9688e5c70282cdcddebf89bd506eaeec" name="a9688e5c70282cdcddebf89bd506eaeec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9688e5c70282cdcddebf89bd506eaeec">&#9670;&#160;</a></span>verificarDNI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verificarDNI </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dni</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>verifica si el largo de dni es mayor o igual a 8 </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dni[]</td><td>char representa el dni del cliente. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si es mayor a 8, 0 si no </dd></dl>
+
+</div>
+</div>
+<a id="a1c6650f23f7def101bd1ef81411beaa4" name="a1c6650f23f7def101bd1ef81411beaa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6650f23f7def101bd1ef81411beaa4">&#9670;&#160;</a></span>verificarEnteros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verificarEnteros </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>cadena</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si una string tiene solo numeros o no. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cadena[]</td><td>char cadena </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 en caso de que sea verdadero, 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="aec93e37170ae04697b62abe8c5422ce8" name="aec93e37170ae04697b62abe8c5422ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec93e37170ae04697b62abe8c5422ce8">&#9670;&#160;</a></span>verificarNombre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verificarNombre </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>nombre</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si el largo del nombre es mayor a 3 y menor que 48. Verifica si tiene numeros o no. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre[]</td><td>char El nombre ingresado por el usuario </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si es valido, sino 0. </dd></dl>
+
+</div>
+</div>
+<a id="a31412c3e05adbaff29a8477356b8ab16" name="a31412c3e05adbaff29a8477356b8ab16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31412c3e05adbaff29a8477356b8ab16">&#9670;&#160;</a></span>verificarRol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verificarRol </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>rol</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si el rol ingresado es C o V. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rol</td><td>char representa el rol del cliente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int retorna 1 si es correspondiente, 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="a19d9cef7965f9ac3e1a785ab686bf288" name="a19d9cef7965f9ac3e1a785ab686bf288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19d9cef7965f9ac3e1a785ab686bf288">&#9670;&#160;</a></span>verificarTel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verificarTel </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>tel</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si el numero de telefono es mayor o igual a 10. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tel[]</td><td>char representa el numero de telefono del cliente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si es valido, 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="aa757c8b25d084fc400c0ed9c7c91e18e" name="aa757c8b25d084fc400c0ed9c7c91e18e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa757c8b25d084fc400c0ed9c7c91e18e">&#9670;&#160;</a></span>verPersonaFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verPersonaFull </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a></td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra todos los datos del cliente. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a> llega por copia </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="add95ba8a95e216c634364c56c4073542" name="add95ba8a95e216c634364c56c4073542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add95ba8a95e216c634364c56c4073542">&#9670;&#160;</a></span>verPersonaMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verPersonaMin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_persona.html">Persona</a></td>          <td class="paramname"><span class="paramname"><em>persona</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra algunos de los datos del cliente. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">persona</td><td><a class="el" href="struct_persona.html" title="VARIABLES ///.">Persona</a> llega por copia </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a96e476a22bf77023993a4851fdb83820" name="a96e476a22bf77023993a4851fdb83820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e476a22bf77023993a4851fdb83820">&#9670;&#160;</a></span>verSiDNINoExiste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verSiDNINoExiste </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dni</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un valor de 1 o 0 segun si el dni esta presente en un arreglo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dni[]</td><td>char El dni del cliente que se va a insertar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si no existe, 0 si existe. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a28f84059642ab4c2ed73d384e156eb45" name="a28f84059642ab4c2ed73d384e156eb45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f84059642ab4c2ed73d384e156eb45">&#9670;&#160;</a></span>arreglopersona</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_persona.html">Persona</a>* arreglopersona</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variables globales fuera de libreria. </p>
+
+</div>
+</div>
+<a id="a58743210c23483217cab8706a26874af" name="a58743210c23483217cab8706a26874af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58743210c23483217cab8706a26874af">&#9670;&#160;</a></span>cantidadpersonas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cantidadpersonas = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_390ffc40b31ea80b54cee1ba617c6532.html">librerias</a></li><li class="navelem"><a class="el" href="_persona_8c.html">Persona.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

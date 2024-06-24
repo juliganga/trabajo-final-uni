@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabajo final de Programacion 1: Referencia del archivo librerias/Utiles.c</title>
+<link rel="icon" href="auto.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="auto.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabajo final de Programacion 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Julián Alonso, Schettini Javier, Tonello Tiziano</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_utiles_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Utiles.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;limits.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_utiles_8h_source.html">Utiles.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_persona_8h_source.html">Persona.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:adfa40e3462b1483f32af3970c5236ee3" id="r_adfa40e3462b1483f32af3970c5236ee3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfa40e3462b1483f32af3970c5236ee3">existeArchivo</a> (char nombreArchivo[])</td></tr>
+<tr class="memdesc:adfa40e3462b1483f32af3970c5236ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que verifica si existe el archivo.  <br /></td></tr>
+<tr class="separator:adfa40e3462b1483f32af3970c5236ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2a2cb1b03b1f6f5a3ccb3b98f3766b" id="r_a0b2a2cb1b03b1f6f5a3ccb3b98f3766b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b2a2cb1b03b1f6f5a3ccb3b98f3766b">crearArchivo</a> (char *nombreArchivo)</td></tr>
+<tr class="memdesc:a0b2a2cb1b03b1f6f5a3ccb3b98f3766b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que crea un archivo.  <br /></td></tr>
+<tr class="separator:a0b2a2cb1b03b1f6f5a3ccb3b98f3766b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e2f327ba545a339ec05c27ec40c848" id="r_a98e2f327ba545a339ec05c27ec40c848"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98e2f327ba545a339ec05c27ec40c848">contarDigitos</a> (int numero)</td></tr>
+<tr class="memdesc:a98e2f327ba545a339ec05c27ec40c848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que muestra el contenido del archivo de Personas.  <br /></td></tr>
+<tr class="separator:a98e2f327ba545a339ec05c27ec40c848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43af1b65189e68f94fda99672744a1ac" id="r_a43af1b65189e68f94fda99672744a1ac"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43af1b65189e68f94fda99672744a1ac">traducirMes</a> (int numero)</td></tr>
+<tr class="memdesc:a43af1b65189e68f94fda99672744a1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traduce el mes de y devuelve u.  <br /></td></tr>
+<tr class="separator:a43af1b65189e68f94fda99672744a1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a98e2f327ba545a339ec05c27ec40c848" name="a98e2f327ba545a339ec05c27ec40c848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e2f327ba545a339ec05c27ec40c848">&#9670;&#160;</a></span>contarDigitos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int contarDigitos </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numero</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que muestra el contenido del archivo de Personas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>*nombreArchivo -&gt; el nombre del archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>none</dd></dl>
+<p>Funcion que cuenta los digitos de un numero entero </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>numero -&gt; el numero a evaluar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; un entero que representa la cantidad de digitos que tiene el entero recibido por parametro </dd></dl>
+
+</div>
+</div>
+<a id="a0b2a2cb1b03b1f6f5a3ccb3b98f3766b" name="a0b2a2cb1b03b1f6f5a3ccb3b98f3766b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2a2cb1b03b1f6f5a3ccb3b98f3766b">&#9670;&#160;</a></span>crearArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crearArchivo </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>nombreArchivo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que crea un archivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>*nombreArchivo -&gt; puntero a char, que representa la cadena del nombre del archivo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a id="adfa40e3462b1483f32af3970c5236ee3" name="adfa40e3462b1483f32af3970c5236ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa40e3462b1483f32af3970c5236ee3">&#9670;&#160;</a></span>existeArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int existeArchivo </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>nombreArchivo</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que verifica si existe el archivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>*nombreArchivo -&gt; un puntero al nombre del archivo para verificar si existe. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int -&gt; devuelve : 1 si existe 0 si no </dd></dl>
+
+</div>
+</div>
+<a id="a43af1b65189e68f94fda99672744a1ac" name="a43af1b65189e68f94fda99672744a1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43af1b65189e68f94fda99672744a1ac">&#9670;&#160;</a></span>traducirMes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * traducirMes </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numero</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Traduce el mes de y devuelve u. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numero</td><td>int numero de mes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_390ffc40b31ea80b54cee1ba617c6532.html">librerias</a></li><li class="navelem"><a class="el" href="_utiles_8c.html">Utiles.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

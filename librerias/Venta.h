@@ -48,7 +48,8 @@ void guardarVentaFile(Venta);
 
 // UTILIDADES VENTAS
 void menuVentas();
-void calcularGanancia(Venta*);
+void escribirPatenteParaBuscar(Venta*);
+int esPatenteEspecifica(Venta,Venta);
 // FIN UTILIDADES VENTAS
 
 // MUESTRA DE VENTAS
@@ -56,6 +57,11 @@ void verVentaFyP();
 void verArrVentas();
 void verGananciaMes();
 void verMayor();
+void mostrarVentasConsecionaria();
+void mostrarVentasOtros();
+void mostrarVentasBasico();
+void mostrarUnaVenta(Venta);
+int esVendedorYpatenteEspecifica(Venta,Venta);
 // FIN DE MUESTRA DE VENTAS
 
 
@@ -66,7 +72,6 @@ int esVendedorConsecionaria(Venta);
 int esLaMismaFecha(Venta,Venta);
 
 // FIN DE CALCULO DE GANANCIAS
-
 
 
 #endif // VENTA_H_INCLUDED
