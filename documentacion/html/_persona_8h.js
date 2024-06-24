@@ -19,6 +19,7 @@ var _persona_8h =
     [ "esConsecionaria", "_persona_8h.html#a509b289890ebae8bd130c7823de2bc59", null ],
     [ "guardarCambiosPersona", "_persona_8h.html#a80477330995f126c5be1a8d44505f2a9", null ],
     [ "guardarPersonaAFile", "_persona_8h.html#a594d12a3152bb23b16fc1bd3b87a5149", null ],
+    [ "hayCompradores", "_persona_8h.html#adff30a1f69d3e2c41167d94796e247ee", null ],
     [ "hayPersonas", "_persona_8h.html#a740403db4d1a5fadc094af2ee9a4ea32", null ],
     [ "imprimirSeparador", "_persona_8h.html#ad0984a564d85afae396d2b9683d2c23f", null ],
     [ "menuCargaPersonas", "_persona_8h.html#a50f26f093f0893cd4454e0c847eeb135", null ],

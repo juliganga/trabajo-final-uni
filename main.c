@@ -17,7 +17,6 @@ void menuPrincipal();
 int main()
 {
 
-
     if(menuLogin() == 0)
     {
         cargarEnArregloPersonasInit();

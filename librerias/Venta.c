@@ -292,7 +292,7 @@ void verGananciaMatrizAnio(Venta busqueda)
  */
 void menuCargarVenta()
 {
-    if(hayPersonas() == 1 && hayAutos() == 1)
+    if(hayPersonas() == 1 && hayAutos() == 1 && hayCompradores() == 1)
     {
         Venta venta;
         system("cls");
