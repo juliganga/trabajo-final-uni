@@ -161,7 +161,7 @@ void verVentas(Venta venta)
  */
 void verMayor()
 {
-    int masgrande = 0;
+    int masgrande = -1;
     Pila mayor, comp;
     inicpila(&mayor);
     inicpila(&comp);
@@ -174,10 +174,14 @@ void verMayor()
         if(esVendedorConsecionaria(arregloVentas[i]) == 1)
         {
             apilar(&mayor, arregloVentas[i].ganancia);
+            masgrande = i;
             flag = 1;
         }
         i++;
     }
+
+
+
 
     if(flag == 1)
     {
