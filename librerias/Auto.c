@@ -739,7 +739,7 @@ void ordenarAutos(){
     int posMenor;
     Auto aux;
 
-    while(i < cantidadNuevos)
+    while(i <= cantidadNuevos)
     {
         posMenor = encontrarMenor(arregloNuevos, i, cantidadNuevos);
         aux = arregloNuevos[posMenor];

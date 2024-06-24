@@ -41,6 +41,7 @@ int menuLogin(){
         printf("2 - Ingresar\n");
         printf("Elija una opcion: ");
         scanf("%d", &opcion);
+        fflush(stdin);
 
         switch(opcion){
         case 1:

@@ -76,7 +76,7 @@ int verSiDNINoExiste(char[]); // Verificar asi no hay duplicados.
 int archivoExiste(char[]);
 int esConsecionaria(char[]);
 int hayPersonas();
-
+int hayCompradores();
 
 
 /// CARGA EN MEMORIA ///

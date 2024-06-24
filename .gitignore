@@ -3,3 +3,5 @@
 # generated directories
 bin/
 obj/
+doxyfile/
+documentacion/

@@ -479,11 +479,10 @@ void menuDeModificacionPersona(Persona personanueva,int entrada)
 
         printf("\n");
         puts("Que desea modificar?");
-        puts("1- DNI");
-        puts("2- NOMBRE");
-        puts("3- TELEFONO");
-        puts("4- Direccion");
-        puts("5- ROL");
+        puts("1- NOMBRE");
+        puts("2- TELEFONO");
+        puts("3- Direccion");
+        puts("4- ROL");
         printf("\n");
         puts("ACCIONES: ");
         puts("B- VOLVER");
@@ -499,22 +498,18 @@ void menuDeModificacionPersona(Persona personanueva,int entrada)
         switch(eleccion)
         {
         case '1':
-            cargarDNI(&personanueva);
-            system("pause");
-            break;
-        case '2':
             cargarNombre(&personanueva);
             system("pause");
             break;
-        case '3':
+        case '2':
             cargarTEL(&personanueva);
             system("pause");
             break;
-        case '4':
+        case '3':
             cargarDIR(&personanueva);
             system("pause");
             break;
-        case '5':
+        case '4':
             cargarRol(&personanueva);
             system("pause");
             break;
@@ -971,6 +966,33 @@ int hayPersonas()
     return flag;
 }
 
+
+
+/** \brief Revisa si tiene compradores el arreglo personas
+ *
+ * \return int 1 si tiene, 0 si no.
+ *
+ */
+int hayCompradores()
+{
+    int flag = 0;
+    int i = 1;
+    while(flag == 0 && i<=cantidadpersonas)
+    {
+        if(arreglopersona[i].rol == 'C')
+        {
+            flag = 1;
+        }
+        i++;
+    }
+
+    if(flag == 0)
+    {
+        printf("No hay personas compradoras!\n");
+    }
+
+    return flag;
+}
 
 
 /** \brief Hace espacio en el arreglo y carga una persona al arreglo.
