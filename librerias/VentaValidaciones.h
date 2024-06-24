@@ -20,7 +20,7 @@ int esComprador(char[]);
 int lePerteneceAutoYexiste(Patente,char[]);
 int precioVentaPositivo(Venta);
 int gananciaPositiva(Venta);
-int gananciaMenorQueVenta(Venta);
+int gananciaMenorQueVenta(float,float);
 
 
 

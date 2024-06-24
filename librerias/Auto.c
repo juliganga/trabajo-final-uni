@@ -14,14 +14,12 @@
 
 
 
-/**
-    Implementación de la interface Auto
-
- **/
-
+/**< Arreglos */
 Auto *arregloAutos;
 int cantidadAutos = -1;
 
+Auto *arregloNuevos;
+int cantidadNuevos = -1;
 
 /**
     Funcion que carga el campo Marca de la estructura.
@@ -29,6 +27,13 @@ int cantidadAutos = -1;
     Return: none
 **/
 
+
+/** \brief Carga la marca del auto que se esta cargando
+ *
+ * \param coche Auto* El puntero del auto que se esta cargando
+ * \return void
+ *
+ */
 void cargarMarca(Auto *coche){
 
     printf("Ingrese la marca: ");
@@ -38,12 +43,14 @@ void cargarMarca(Auto *coche){
 
 }
 
-/**
-    Funcion que carga el campo Modelo de la estructura.
-    Args: recive un puntero a Auto
-    Return: none
-**/
 
+
+/** \brief Carga el modelo de un coche (no tiene verificaciones)
+ *
+ * \param coche Auto* Puntero del auto que se esta cargando
+ * \return void
+ *
+ */
 void cargarModelo(Auto *coche){
 
     printf("Ingrese el modelo: ");
@@ -52,12 +59,14 @@ void cargarModelo(Auto *coche){
 
 }
 
-/**
-    Funcion que carga el campo Anio de la estructura.
-    Args: recive un puntero a Auto
-    Return: none
-**/
 
+
+/** \brief El anio que se carga del auto
+ *
+ * \param coche Auto* Puntero del auto que se esta cargando
+ * \return void
+ *
+ */
 void cargarAnio(Auto *coche){
 
     int verificado = 0;
@@ -73,15 +82,15 @@ void cargarAnio(Auto *coche){
         }
     }
 }
-/**
-    Funcion que carga el nombre del titular del vehiculo.
-    Permite elegir si se quiere agregar la consecionaria, o alguna persona en especial.
-
-    Param: Auto* coche -> puntero a una estructura tipo auto
-    Return: none
- **/
 
 
+
+/** \brief Se carga el titular de un auto, debe ser un vendedor/consecionaria
+ *
+ * \param coche Auto* El coche que se esta cargando
+ * \return void
+ *
+ */
 void cargarTitular(Auto *coche)
 {
 
@@ -153,14 +162,14 @@ void cargarTitular(Auto *coche)
 
 
 
-/**
-    Funcion que carga el campo Kms de la estructura.
-    Args: recive un puntero a Auto
-    Return: none
-**/
 
 
-
+/** \brief Se carga los kilometros del auto
+ *
+ * \param coche Auto*
+ * \return void
+ *
+ */
 void cargarKms(Auto *coche){
 
     char kms[8];
@@ -191,13 +200,14 @@ void cargarKms(Auto *coche){
 
 }
 
-/**
-    Funcion que carga el campo PrecioDeAdquisicion de la estructura.
-    Args: recive un puntero a Auto
-    Return: none
-**/
 
 
+/** \brief Carga el precio de adquisicion de un auto
+ *
+ * \param coche Auto* puntero de un auto
+ * \return void
+ *
+ */
 void cargarPrecioAd(Auto *coche){
     float precio;
     int evaluacion;
@@ -219,12 +229,12 @@ void cargarPrecioAd(Auto *coche){
     coche->precioDeAdquisicion = precio;
 }
 
-/**
-    Funcion que carga todos los campos de la estructura Auto.
-    Args: none
-    Return: devuelve una estrucutra de tipo Auto cargada
-**/
 
+/** \brief Carga un auto al sistema
+ *
+ * \return Auto Retorna el auto cargado
+ *
+ */
 Auto cargarAuto(){
 
     Auto coche;
@@ -241,12 +251,13 @@ Auto cargarAuto(){
     return coche;
 }
 
-/**
-    Funcion que muestra por pantalla, los datos de una estructura tipo Auto
-    Args: recibe un puntero a Auto
-    Return: none
-**/
 
+/** \brief Funcion que muestra por pantalla, los datos de una estructura tipo Auto
+ *
+ * \param coche puntero a Auto
+ * \return void
+ *
+ */
 void mostrarAuto(Auto coche){
     printf(":::: DETALLES DEL AUTOMOTOR ::::\n");
 
@@ -260,39 +271,41 @@ void mostrarAuto(Auto coche){
 
 }
 
-/**
-    Funcion que reasigna espacio para el arreglo dinamico de autos.
-    Params: Auto **arr -> un puntero doble de tipo Auto al arreglo.
-    return: none
-**/
 
+
+/** \brief Da espacio al arreglo autos
+ *
+ * \param arr Auto** Puntero de arreglo de autos
+ * \return void
+ *
+ */
 void designarEspacioAuto(Auto **arr){
     cantidadAutos++;
     *arr = realloc(*arr, sizeof(Auto) * (cantidadAutos+1));
 }
 
-/**
-    funcion que carga un auto en el arreglo dinamico de autos.
-    Params: Auto coche -> el auto a agregar
-    Return: none
 
- **/
 
+/** \brief Da espacio y carga un auto en el arreglo
+ *
+ * \param coche Auto
+ * \return void
+ *
+ */
 void cargarAutoArreglo(Auto coche){
 
     designarEspacioAuto(&arregloAutos);
     arregloAutos[cantidadAutos] = coche;
-    //mostrarAuto(arregloAutos[cantidadAutos]);
 }
 
-/**
 
-    Funcion que carga en el arreglo de autos, todos los autos que se encuentran en el archivo.
-    Params: none
-    Return: none
 
-**/
 
+/** \brief Carga en un arreglo todos los autos del archivo.
+ *
+ * \return void
+ *
+ */
 void cargarEnArregloAutosInit(){
     cantidadAutos = -1;
 
@@ -315,13 +328,13 @@ void cargarEnArregloAutosInit(){
 
 }
 
-/**
-
-    Funcion que lista todos los autos, mostrado solamente marca, modelo y patente.
-    Params: none
-    Return none
-
-**/
+/** \brief Lista todos los autos en el sistema
+ *
+ * \param
+ * \param
+ * \return void
+ *
+ */
 
 void listarAutos(){
 
@@ -334,30 +347,37 @@ void listarAutos(){
 
 }
 
+
+/** \brief Lista autos mediante una matriz
+ *
+ * \return void
+ *
+ */
 void listarAutosMatriz(){
     int filas = cantidadAutos;
     int colDim = 100;
     char autos[cantidadAutos][colDim];
     char string[colDim];
-
+    strcpy(string, "");
 
     for (int i = 0; i <= cantidadAutos; i++){
 
-        strcat(string, "-> Marca: ");
-        strcat(string, arregloAutos[i].marca);
-        strcat(string, " - ");
-        strcat(string, "Modelo: ");
-        strcat(string, arregloAutos[i].modelo);
-        strcat(string, " - ");
-        strcat(string, "Patente: ");
-        strcat(string, arregloAutos[i].patente.letras);
-        strcat(string, "-");
-        strcat(string, arregloAutos[i].patente.numeros);
 
-        strcpy(autos[i], string);
-        puts(string);
+        printf("%i",i);
+        strcat(string,"-> Marca: ");
+        strcat(string,arregloAutos[i].marca);
+        strcat(string," - ");
+        strcat(string,"Modelo: ");
+        strcat(string,arregloAutos[i].modelo);
+        strcat(string," - ");
+        strcat(string,"Patente: ");
+        strcat(string,arregloAutos[i].patente.letras);
+        strcat(string,"-");
+        strcat(string,arregloAutos[i].patente.numeros);
+
+        strcpy(autos[i],string);
+        printf("%s\n",autos[i]);
         strcpy(string, "");
-
 
     }
 }
@@ -406,42 +426,43 @@ Patente ingresarPatenteParaBuscar()
 
 **/
 
-Auto buscarAutoPatente(Patente patente, int *pos){
+Auto buscarAutoPatente(Patente patente, int *pos)
+{
 
     int i = 0;
     int flag = 0;
     Auto coche;
 
-    while (flag == 0 && i <= cantidadAutos){
-        if (strcmp(arregloAutos[i].patente.letras, patente.letras) == 0 && strcmp(arregloAutos[i].patente.numeros, patente.numeros) == 0){
+    while (flag == 0 && i <= cantidadAutos)
+    {
+        if (strcmp(arregloAutos[i].patente.letras, patente.letras) == 0 && strcmp(arregloAutos[i].patente.numeros, patente.numeros) == 0)
+        {
             coche = arregloAutos[i];
             (*pos) = i;
             flag = 1;
-        } else {
+        }
+        else
+        {
             i++;
         }
-
-
-
     }
 
-return coche;
+    return coche;
 
 }
 
 
-/**
-
-    Funcion que permite modificar un auto.
-    Params: Auto autoModificar -> el auto a modificar
-    Return: Auto -> el auto modificado
-
-**/
-
-
+/** \brief Menu que permite modificar un auto.
+ *
+ * \param autoAModificar Auto Auto a modificar
+ * \return Auto Auto modificado
+ *
+ */
 Auto modificarAuto(Auto autoAModificar)
 {
     int opcion = -1;
+
+
     while (opcion != 0){
         system("cls");
         mostrarAuto(autoAModificar);
@@ -453,8 +474,7 @@ Auto modificarAuto(Auto autoAModificar)
         printf("2 - Modelo\n");
         printf("3 - A%co\n", 164);
         printf("4 - Kilometraje\n");
-        printf("5 - Titular\n");
-        printf("6 - Precio de adquisi%cn\n", 162);
+        printf("5 - Precio de adquisici%cn\n", 162);
         fflush(stdin);
         scanf("%d", &opcion);
 
@@ -472,9 +492,6 @@ Auto modificarAuto(Auto autoAModificar)
             cargarKms(&autoAModificar);
             break;
         case 5:
-            cargarTitular(&autoAModificar);
-            break;
-        case 6:
             cargarPrecioAd(&autoAModificar);
             break;
         }
@@ -516,6 +533,7 @@ Auto convertirAuto(AutoArchivo coche){
     aux.titular = buscarTitular(coche.dniTitular);
     aux.precioDeAdquisicion = coche.precioDeAdquisicion;
 
+
     return aux;
 
 }
@@ -550,12 +568,18 @@ Persona buscarTitular(char dni[]){
     Persona titular;
 
     int i = 0;
-    int resultado;
+    int resultado = 1;
+    int flag = 0;
+    strcpy(titular.nombre,"[PERSONA FALTANTE]");
+    strcpy(titular.dni,"????????");
 
-
-    while(resultado != 0 && i <= cantidadpersonas){
-        titular = arreglopersona[i];
-        resultado = strcmp(titular.dni, dni);
+    while(flag == 0 && i <= cantidadpersonas){
+        resultado = strcmp(arreglopersona[i].dni, dni);
+        if(resultado == 0)
+        {
+            titular = arreglopersona[i];
+            flag = 1;
+        }
         i++;
     }
 
@@ -630,7 +654,7 @@ int esNuevo(Auto coche){
 
 int contarNuevos(Auto arreglo[])
 {
-    int cantidadnuevos;
+    int cantidadnuevos = 0;
     for(int i = 0;i<=cantidadAutos;i++)
     {
         if(esNuevo(arreglo[i]) == 1)
@@ -647,16 +671,14 @@ int contarNuevos(Auto arreglo[])
     \return none
 **/
 
-void agregarAutosNuevos(Auto **arreglo)
+void agregarAutosNuevos()
 {
-    int pos = 0;
-    int nuevos = -1;
     for(int i = 0;i<=cantidadAutos;i++)
     {
         if(esNuevo(arregloAutos[i]) == 1)
         {
-            nuevos++;
-            insertarAutoNuevoEnArr(arregloAutos[i],nuevos,arreglo);
+            cantidadNuevos++;
+            insertarAutoNuevoEnArr(arregloAutos[i]);
         }
     }
 }
@@ -669,10 +691,10 @@ void agregarAutosNuevos(Auto **arreglo)
     \return none.
 **/
 
-void insertarAutoNuevoEnArr(Auto coche,int nuevos,Auto**arreglo)
+void insertarAutoNuevoEnArr(Auto coche)
 {
-    *arreglo = realloc(*arreglo,sizeof(Auto)*(nuevos+1));
-    (*arreglo)[nuevos] = coche;
+    arregloNuevos = realloc(arregloNuevos,sizeof(Auto)*(cantidadNuevos+1));
+    arregloNuevos[cantidadNuevos] = coche;
 }
 
 /**
@@ -683,22 +705,23 @@ void insertarAutoNuevoEnArr(Auto coche,int nuevos,Auto**arreglo)
     \return int -> la posicion del menor.
 **/
 
-int encontrarMenor(Auto arr[], int pos, int validos){
+int encontrarMenor(Auto arr[], int pos, int validos)
+{
     int posMenor = pos;
     Auto aux = arr[pos];
-    int i = posMenor + 1;
+    int i = posMenor;
 
-    while (i < validos){
-
-        if (arr[i].anio < aux.anio){
-
+    while (i < validos)
+    {
+        if (arr[i].anio < aux.anio)
+        {
             aux = arr[i];
             posMenor = i;
         }
         i++;
     }
 
-return posMenor;
+    return posMenor;
 
 }
 
@@ -710,16 +733,17 @@ return posMenor;
 
 **/
 
-void ordenarAutos(Auto arr[], int validos){
+void ordenarAutos(){
     int i = 0;
     int posMenor;
     Auto aux;
 
-    while(i < validos){
-        posMenor = encontrarMenor(arr, i, validos);
-        aux = arr[posMenor];
-        arr[posMenor] = arr[i];
-        arr[i] = aux;
+    while(i < cantidadNuevos)
+    {
+        posMenor = encontrarMenor(arregloNuevos, i, cantidadNuevos);
+        aux = arregloNuevos[posMenor];
+        arregloNuevos[posMenor] = arregloNuevos[i];
+        arregloNuevos[i] = aux;
         i++;
     }
 }
@@ -731,12 +755,11 @@ void ordenarAutos(Auto arr[], int validos){
 
 **/
 
-void mostrarAutosNuevos(Auto arreglo[],int validos){
+void mostrarAutosNuevos(){
 
-    for (int i = 0; i < validos; i++){
-        {
-            mostrarAuto(arreglo[i]);
-        }
+    for (int i = 0; i <= cantidadNuevos; i++)
+    {
+        mostrarAuto(arregloNuevos[i]);
     }
 
 }
@@ -766,4 +789,51 @@ void cambiarTitularPorVenta(char dnicomprador[],char dnivendedor[],float precion
     cocheArchivo = cargarAutoArchivo(coche);
     guardarAutoArchivoEnPos(cocheArchivo, ARCHIVO_AUTOS, pos);
 }
+
+/** \brief Muestra autos segun el titular del auto
+ *
+ * \param dni[] char DNI del vendedor
+ * \return voidc
+ *
+ */
+void mostrarSegunTitular(char dni[])
+{
+    printf("Autos de %s\n",dni);
+
+    int filas = cantidadAutos;
+    int colDim = 100;
+    char autos[cantidadAutos][colDim];
+    char string[colDim];
+    strcpy(string, "");
+    int resultados = 0;
+
+    for (int i = 0; i <= cantidadAutos; i++){
+        if(strcmp(arregloAutos[i].titular.dni,dni) == 0)
+        {
+            printf("%i",i);
+            strcat(string,"-> Marca: ");
+            strcat(string,arregloAutos[i].marca);
+            strcat(string," - ");
+            strcat(string,"Modelo: ");
+            strcat(string,arregloAutos[i].modelo);
+            strcat(string," - ");
+            strcat(string,"Patente: ");
+            strcat(string,arregloAutos[i].patente.letras);
+            strcat(string,"-");
+            strcat(string,arregloAutos[i].patente.numeros);
+
+            strcpy(autos[i],string);
+            printf("%s\n",autos[i]);
+            strcpy(string, "");
+            resultados++;
+        }
+    }
+
+    if(resultados == 0)
+    {
+        printf("--!ESTE VENDEDOR NO TIENE NINGUN AUTO!--");
+    }
+}
+
+
 

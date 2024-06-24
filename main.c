@@ -18,17 +18,24 @@ int main()
 {
 
 
-    /*if(menuLogin() == 0) // ESTO ESTA COMENTADO PARA PROBAR MAS RAPIDO, DESCOMENTAR UNA VEZ DE QUE TODO ESTE TERMINADO
-    {*/
+    if(menuLogin() == 0)
+    {
         cargarEnArregloPersonasInit();
         cargarEnArregloAutosInit();
         cargarArregloVentasInit();
         menuPrincipal();
-    //}
+    }
 
     return 0;
 }
 
+
+
+/** \brief Menu principal para el sistema
+ *
+ * \return void
+ *
+ */
 void menuPrincipal()
 {
     char decision = 's';

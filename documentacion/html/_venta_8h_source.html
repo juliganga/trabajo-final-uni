@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabajo final de Programacion 1: Archivo de c√≥digo fuente librerias/Venta.h</title>
+<link rel="icon" href="auto.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="auto.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabajo final de Programacion 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Juli√°n Alonso, Schettini Javier, Tonello Tiziano</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_venta_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Venta.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_venta_8h.html">Ir a la documentaci√≥n de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef VENTA_H_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define VENTA_H_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_auto_8h.html">Auto.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="pila_8h.html">pila.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_patente_8h.html">Patente.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_fecha.html">   13</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_fecha.html#ac53f8e215a42333a1a9ff1a87e8e70f7">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_fecha.html#ac53f8e215a42333a1a9ff1a87e8e70f7">dia</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_fecha.html#a92bb43d32ce633e59bd11874c1a4b370">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_fecha.html#a92bb43d32ce633e59bd11874c1a4b370">mes</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_fecha.html#ad596dcd5c981e026d04a83a1c214e759">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_fecha.html#ad596dcd5c981e026d04a83a1c214e759">anio</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>} <a class="code hl_struct" href="struct_fecha.html">Fecha</a>;</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_venta.html">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_venta.html#ac6bc62bec3a07b0519080f227771dc46">   23</a></span>    <a class="code hl_struct" href="struct_fecha.html">Fecha</a> <a class="code hl_variable" href="struct_venta.html#ac6bc62bec3a07b0519080f227771dc46">fecha</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_venta.html#a1e9fa2a0532b7e565875110994552298">   24</a></span>    <a class="code hl_struct" href="struct_patente.html">Patente</a> <a class="code hl_variable" href="struct_venta.html#a1e9fa2a0532b7e565875110994552298">autoAVender</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_venta.html#a923430ea8897bf8f304b0fff2f4c1996">   25</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_venta.html#a923430ea8897bf8f304b0fff2f4c1996">precioVenta</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_venta.html#af7ae20db3adab1c0bc8a3b5bbf62667b">   26</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_venta.html#af7ae20db3adab1c0bc8a3b5bbf62667b">ganancia</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_venta.html#aa9842482ab718a1a7bb999e554e66bfc">   27</a></span>    <span class="keywordtype">char</span> dniComprador[9];</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_venta.html#aa79add9458d91712a32cbf3d0f62b0ec">   28</a></span>    <span class="keywordtype">char</span> dniVendedor[9];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <a class="code hl_struct" href="struct_venta.html">Venta</a>;</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// CARGAR VENTAS</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a3cf7b23eee1db6652dc731ec40f616f9">menuCargarVenta</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#ad97ad7d50dd4697ecb3bf33dff95d171">cargarAnioVenta</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a970d77487ee3dde587f1bc5ad02478da">cargarMes</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a88dad4c91f4174fbc3789dd5d49bc99c">cargarDia</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a9bf1cab184a39e3cb65ceefb518e22a2">cargarDNIComprador</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#af70445a73a3ecb333241272207b6f8a1">cargarDNIVendedor</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a41d97d4a1ed37150f184ccb5304c9a2a">cargarPrecioVenta</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a50085b1efb8f1451d4ba531ea55e49eb">cargarGanancia</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a13858a7950c1a89f01bf82a05d7699c3">cargarPatenteVenta</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#ad93dc718c6e30502cab12051f8608de5">guardarVentaFile</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// FIN CARGAR VENTAS</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// UTILIDADES VENTAS</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a821f09877632e1a30d89532fe8ef9696">menuVentas</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a1baaa84049b4a1f7128f588410944f40">escribirPatenteParaBuscar</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>*);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">int</span> <a class="code hl_function" href="_venta_8h.html#a45e59f9e1ef3ff2576d372070704170b">esPatenteEspecifica</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>,<a class="code hl_struct" href="struct_venta.html">Venta</a>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// FIN UTILIDADES VENTAS</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// MUESTRA DE VENTAS</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="_venta_8h.html#acf3446634ca33b47f7a013298ffb9091">   56</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#acf3446634ca33b47f7a013298ffb9091">verVentaFyP</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="_venta_8h.html#a793395b2322d734291ea15a5e0939337">   57</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a793395b2322d734291ea15a5e0939337">verArrVentas</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_venta_8h.html#a8935c9e60c32db78388737635fe51bd3">   58</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a8935c9e60c32db78388737635fe51bd3">verGananciaMes</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a33444a592875c70412f635a7253636ac">verMayor</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#aaf94f3d68338760ecc2560f354cdca7c">mostrarVentasConsecionaria</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a9a274c39303e9d92876811e10fa0f1f2">mostrarVentasOtros</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a3995a9001568d4c1f8da89e1be6d2752">mostrarVentasBasico</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a915c894d2ca0f96444e5730f7fc1035f">mostrarUnaVenta</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">int</span> <a class="code hl_function" href="_venta_8h.html#a4681cba198bb26ec36bddf9203cccc7c">esVendedorYpatenteEspecifica</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>,<a class="code hl_struct" href="struct_venta.html">Venta</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// FIN DE MUESTRA DE VENTAS</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// CALCULO DE GANANCIAS</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a8935c9e60c32db78388737635fe51bd3">verGananciaMes</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="_venta_8h.html#a59b4c3a0b4752a5363e756521bffba50">verGananciaMatrizAnio</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">int</span> <a class="code hl_function" href="_venta_8h.html#a75b3c67de916df4a31431480754749ac">esVendedorConsecionaria</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">int</span> <a class="code hl_function" href="_venta_8h.html#ab0dda681bead54e50b5ccfaaceedf0de">esLaMismaFecha</a>(<a class="code hl_struct" href="struct_venta.html">Venta</a>,<a class="code hl_struct" href="struct_venta.html">Venta</a>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// FIN DE CALCULO DE GANANCIAS</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">// VENTA_H_INCLUDED</span></div>
+<div class="ttc" id="a_auto_8h_html"><div class="ttname"><a href="_auto_8h.html">Auto.h</a></div></div>
+<div class="ttc" id="a_patente_8h_html"><div class="ttname"><a href="_patente_8h.html">Patente.h</a></div></div>
+<div class="ttc" id="a_venta_8h_html_a13858a7950c1a89f01bf82a05d7699c3"><div class="ttname"><a href="_venta_8h.html#a13858a7950c1a89f01bf82a05d7699c3">cargarPatenteVenta</a></div><div class="ttdeci">void cargarPatenteVenta(Venta *)</div><div class="ttdoc">Funcion que carga la totalidad de una patente y llama a las verificaciones de la misma.</div><div class="ttdef"><b>Definition</b> Venta.c:520</div></div>
+<div class="ttc" id="a_venta_8h_html_a1baaa84049b4a1f7128f588410944f40"><div class="ttname"><a href="_venta_8h.html#a1baaa84049b4a1f7128f588410944f40">escribirPatenteParaBuscar</a></div><div class="ttdeci">void escribirPatenteParaBuscar(Venta *)</div><div class="ttdoc">Se escribe una patente para buscar ventas que hayan pasado con ella.</div><div class="ttdef"><b>Definition</b> Venta.c:768</div></div>
+<div class="ttc" id="a_venta_8h_html_a33444a592875c70412f635a7253636ac"><div class="ttname"><a href="_venta_8h.html#a33444a592875c70412f635a7253636ac">verMayor</a></div><div class="ttdeci">void verMayor()</div><div class="ttdoc">Funcion que apila ganancias hasta finalizar recorriendo todas las ventas, despues de eso muestra esta...</div><div class="ttdef"><b>Definition</b> Venta.c:162</div></div>
+<div class="ttc" id="a_venta_8h_html_a3995a9001568d4c1f8da89e1be6d2752"><div class="ttname"><a href="_venta_8h.html#a3995a9001568d4c1f8da89e1be6d2752">mostrarVentasBasico</a></div><div class="ttdeci">void mostrarVentasBasico()</div><div class="ttdoc">Muestra solo la fecha y patente de las ventas hechas por la consicionaria.</div><div class="ttdef"><b>Definition</b> Venta.c:681</div></div>
+<div class="ttc" id="a_venta_8h_html_a3cf7b23eee1db6652dc731ec40f616f9"><div class="ttname"><a href="_venta_8h.html#a3cf7b23eee1db6652dc731ec40f616f9">menuCargarVenta</a></div><div class="ttdeci">void menuCargarVenta()</div><div class="ttdoc">Funcion que llama a todas las funciones necesarias para cargar una venta.</div><div class="ttdef"><b>Definition</b> Venta.c:289</div></div>
+<div class="ttc" id="a_venta_8h_html_a41d97d4a1ed37150f184ccb5304c9a2a"><div class="ttname"><a href="_venta_8h.html#a41d97d4a1ed37150f184ccb5304c9a2a">cargarPrecioVenta</a></div><div class="ttdeci">void cargarPrecioVenta(Venta *)</div><div class="ttdoc">Funcion que carga el precio de venta de una venta realizada y llama a su verificacion.</div><div class="ttdef"><b>Definition</b> Venta.c:467</div></div>
+<div class="ttc" id="a_venta_8h_html_a45e59f9e1ef3ff2576d372070704170b"><div class="ttname"><a href="_venta_8h.html#a45e59f9e1ef3ff2576d372070704170b">esPatenteEspecifica</a></div><div class="ttdeci">int esPatenteEspecifica(Venta, Venta)</div><div class="ttdef"><b>Definition</b> Venta.c:749</div></div>
+<div class="ttc" id="a_venta_8h_html_a4681cba198bb26ec36bddf9203cccc7c"><div class="ttname"><a href="_venta_8h.html#a4681cba198bb26ec36bddf9203cccc7c">esVendedorYpatenteEspecifica</a></div><div class="ttdeci">int esVendedorYpatenteEspecifica(Venta, Venta)</div><div class="ttdoc">Verifica si una patente y vendedor es la misma que la busqueda.</div><div class="ttdef"><b>Definition</b> Venta.c:732</div></div>
+<div class="ttc" id="a_venta_8h_html_a50085b1efb8f1451d4ba531ea55e49eb"><div class="ttname"><a href="_venta_8h.html#a50085b1efb8f1451d4ba531ea55e49eb">cargarGanancia</a></div><div class="ttdeci">void cargarGanancia(Venta *)</div><div class="ttdoc">Funcion que carga una ganancia y llama a la verificacion de la misma.</div><div class="ttdef"><b>Definition</b> Venta.c:500</div></div>
+<div class="ttc" id="a_venta_8h_html_a59b4c3a0b4752a5363e756521bffba50"><div class="ttname"><a href="_venta_8h.html#a59b4c3a0b4752a5363e756521bffba50">verGananciaMatrizAnio</a></div><div class="ttdeci">void verGananciaMatrizAnio(Venta)</div><div class="ttdoc">Muestra mediante una matriz las ganancias de un aÒo.</div><div class="ttdef"><b>Definition</b> Venta.c:229</div></div>
+<div class="ttc" id="a_venta_8h_html_a75b3c67de916df4a31431480754749ac"><div class="ttname"><a href="_venta_8h.html#a75b3c67de916df4a31431480754749ac">esVendedorConsecionaria</a></div><div class="ttdeci">int esVendedorConsecionaria(Venta)</div><div class="ttdoc">Revisa si el vendedor de la venta es la consecionaria.</div><div class="ttdef"><b>Definition</b> Venta.c:598</div></div>
+<div class="ttc" id="a_venta_8h_html_a793395b2322d734291ea15a5e0939337"><div class="ttname"><a href="_venta_8h.html#a793395b2322d734291ea15a5e0939337">verArrVentas</a></div><div class="ttdeci">void verArrVentas()</div></div>
+<div class="ttc" id="a_venta_8h_html_a821f09877632e1a30d89532fe8ef9696"><div class="ttname"><a href="_venta_8h.html#a821f09877632e1a30d89532fe8ef9696">menuVentas</a></div><div class="ttdeci">void menuVentas()</div><div class="ttdoc">Funcion que muestra un menu interactivo para el usuario sobre las funciones de la libreria ventas.</div><div class="ttdef"><b>Definition</b> Venta.c:46</div></div>
+<div class="ttc" id="a_venta_8h_html_a88dad4c91f4174fbc3789dd5d49bc99c"><div class="ttname"><a href="_venta_8h.html#a88dad4c91f4174fbc3789dd5d49bc99c">cargarDia</a></div><div class="ttdeci">void cargarDia(Venta *)</div><div class="ttdoc">Funcion que carga el dia en que se hizo la venta.</div><div class="ttdef"><b>Definition</b> Venta.c:378</div></div>
+<div class="ttc" id="a_venta_8h_html_a8935c9e60c32db78388737635fe51bd3"><div class="ttname"><a href="_venta_8h.html#a8935c9e60c32db78388737635fe51bd3">verGananciaMes</a></div><div class="ttdeci">void verGananciaMes()</div></div>
+<div class="ttc" id="a_venta_8h_html_a915c894d2ca0f96444e5730f7fc1035f"><div class="ttname"><a href="_venta_8h.html#a915c894d2ca0f96444e5730f7fc1035f">mostrarUnaVenta</a></div><div class="ttdeci">void mostrarUnaVenta(Venta)</div><div class="ttdoc">Muestra venta/s segun el vendedor y la patente.</div><div class="ttdef"><b>Definition</b> Venta.c:706</div></div>
+<div class="ttc" id="a_venta_8h_html_a970d77487ee3dde587f1bc5ad02478da"><div class="ttname"><a href="_venta_8h.html#a970d77487ee3dde587f1bc5ad02478da">cargarMes</a></div><div class="ttdeci">void cargarMes(Venta *)</div><div class="ttdoc">Funcion que carga el mes en que se hizo la venta.</div><div class="ttdef"><b>Definition</b> Venta.c:352</div></div>
+<div class="ttc" id="a_venta_8h_html_a9a274c39303e9d92876811e10fa0f1f2"><div class="ttname"><a href="_venta_8h.html#a9a274c39303e9d92876811e10fa0f1f2">mostrarVentasOtros</a></div><div class="ttdeci">void mostrarVentasOtros()</div><div class="ttdoc">Muestra todas las ventas hechas por otros titulares (externos a la consecionaria)</div><div class="ttdef"><b>Definition</b> Venta.c:658</div></div>
+<div class="ttc" id="a_venta_8h_html_a9bf1cab184a39e3cb65ceefb518e22a2"><div class="ttname"><a href="_venta_8h.html#a9bf1cab184a39e3cb65ceefb518e22a2">cargarDNIComprador</a></div><div class="ttdeci">void cargarDNIComprador(Venta *)</div><div class="ttdoc">Funcion que carga el DNI del comprador en una venta.</div><div class="ttdef"><b>Definition</b> Venta.c:404</div></div>
+<div class="ttc" id="a_venta_8h_html_aaf94f3d68338760ecc2560f354cdca7c"><div class="ttname"><a href="_venta_8h.html#aaf94f3d68338760ecc2560f354cdca7c">mostrarVentasConsecionaria</a></div><div class="ttdeci">void mostrarVentasConsecionaria()</div><div class="ttdoc">Muestra todas las ventas hechas por la consecionaria.</div><div class="ttdef"><b>Definition</b> Venta.c:633</div></div>
+<div class="ttc" id="a_venta_8h_html_ab0dda681bead54e50b5ccfaaceedf0de"><div class="ttname"><a href="_venta_8h.html#ab0dda681bead54e50b5ccfaaceedf0de">esLaMismaFecha</a></div><div class="ttdeci">int esLaMismaFecha(Venta, Venta)</div><div class="ttdoc">Revisa si es la misma fecha de busqueda con la de la venta.</div><div class="ttdef"><b>Definition</b> Venta.c:617</div></div>
+<div class="ttc" id="a_venta_8h_html_acf3446634ca33b47f7a013298ffb9091"><div class="ttname"><a href="_venta_8h.html#acf3446634ca33b47f7a013298ffb9091">verVentaFyP</a></div><div class="ttdeci">void verVentaFyP()</div></div>
+<div class="ttc" id="a_venta_8h_html_ad93dc718c6e30502cab12051f8608de5"><div class="ttname"><a href="_venta_8h.html#ad93dc718c6e30502cab12051f8608de5">guardarVentaFile</a></div><div class="ttdeci">void guardarVentaFile(Venta)</div><div class="ttdoc">Funcion que guarda el arreglo de ventas en un archivo binario.</div><div class="ttdef"><b>Definition</b> Venta.c:579</div></div>
+<div class="ttc" id="a_venta_8h_html_ad97ad7d50dd4697ecb3bf33dff95d171"><div class="ttname"><a href="_venta_8h.html#ad97ad7d50dd4697ecb3bf33dff95d171">cargarAnioVenta</a></div><div class="ttdeci">void cargarAnioVenta(Venta *)</div><div class="ttdoc">Funcion que carga el aÒo en que se hizo la venta.</div><div class="ttdef"><b>Definition</b> Venta.c:328</div></div>
+<div class="ttc" id="a_venta_8h_html_af70445a73a3ecb333241272207b6f8a1"><div class="ttname"><a href="_venta_8h.html#af70445a73a3ecb333241272207b6f8a1">cargarDNIVendedor</a></div><div class="ttdeci">void cargarDNIVendedor(Venta *)</div><div class="ttdoc">Funcion que carga el DNI de la consecionaria a la hora de vender un auto.</div><div class="ttdef"><b>Definition</b> Venta.c:428</div></div>
+<div class="ttc" id="apila_8h_html"><div class="ttname"><a href="pila_8h.html">pila.h</a></div></div>
+<div class="ttc" id="astruct_fecha_html"><div class="ttname"><a href="struct_fecha.html">Fecha</a></div><div class="ttdef"><b>Definition</b> Venta.h:14</div></div>
+<div class="ttc" id="astruct_fecha_html_a92bb43d32ce633e59bd11874c1a4b370"><div class="ttname"><a href="struct_fecha.html#a92bb43d32ce633e59bd11874c1a4b370">Fecha::mes</a></div><div class="ttdeci">int mes</div><div class="ttdef"><b>Definition</b> Venta.h:16</div></div>
+<div class="ttc" id="astruct_fecha_html_ac53f8e215a42333a1a9ff1a87e8e70f7"><div class="ttname"><a href="struct_fecha.html#ac53f8e215a42333a1a9ff1a87e8e70f7">Fecha::dia</a></div><div class="ttdeci">int dia</div><div class="ttdef"><b>Definition</b> Venta.h:15</div></div>
+<div class="ttc" id="astruct_fecha_html_ad596dcd5c981e026d04a83a1c214e759"><div class="ttname"><a href="struct_fecha.html#ad596dcd5c981e026d04a83a1c214e759">Fecha::anio</a></div><div class="ttdeci">int anio</div><div class="ttdef"><b>Definition</b> Venta.h:17</div></div>
+<div class="ttc" id="astruct_patente_html"><div class="ttname"><a href="struct_patente.html">Patente</a></div><div class="ttdef"><b>Definition</b> Patente.h:5</div></div>
+<div class="ttc" id="astruct_venta_html"><div class="ttname"><a href="struct_venta.html">Venta</a></div><div class="ttdef"><b>Definition</b> Venta.h:22</div></div>
+<div class="ttc" id="astruct_venta_html_a1e9fa2a0532b7e565875110994552298"><div class="ttname"><a href="struct_venta.html#a1e9fa2a0532b7e565875110994552298">Venta::autoAVender</a></div><div class="ttdeci">Patente autoAVender</div><div class="ttdef"><b>Definition</b> Venta.h:24</div></div>
+<div class="ttc" id="astruct_venta_html_a923430ea8897bf8f304b0fff2f4c1996"><div class="ttname"><a href="struct_venta.html#a923430ea8897bf8f304b0fff2f4c1996">Venta::precioVenta</a></div><div class="ttdeci">float precioVenta</div><div class="ttdef"><b>Definition</b> Venta.h:25</div></div>
+<div class="ttc" id="astruct_venta_html_ac6bc62bec3a07b0519080f227771dc46"><div class="ttname"><a href="struct_venta.html#ac6bc62bec3a07b0519080f227771dc46">Venta::fecha</a></div><div class="ttdeci">Fecha fecha</div><div class="ttdef"><b>Definition</b> Venta.h:23</div></div>
+<div class="ttc" id="astruct_venta_html_af7ae20db3adab1c0bc8a3b5bbf62667b"><div class="ttname"><a href="struct_venta.html#af7ae20db3adab1c0bc8a3b5bbf62667b">Venta::ganancia</a></div><div class="ttdeci">float ganancia</div><div class="ttdef"><b>Definition</b> Venta.h:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_390ffc40b31ea80b54cee1ba617c6532.html">librerias</a></li><li class="navelem"><a class="el" href="_venta_8h.html">Venta.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

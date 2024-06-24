@@ -1,0 +1,713 @@
+\doxysection{Referencia del archivo librerias/\+Auto.h}
+\hypertarget{_auto_8h}{}\label{_auto_8h}\index{librerias/Auto.h@{librerias/Auto.h}}
+{\ttfamily \#include "{}Persona.\+h"{}}\newline
+{\ttfamily \#include "{}Patente.\+h"{}}\newline
+{\ttfamily \#include "{}Auto\+Archivo.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_auto}{Auto}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_auto_8h_ac24626aabe99dcfc7d1e1d695b8f62fe}{cargar\+Marca}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Carga la marca del auto que se esta cargando. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_ab6de7fdb2842460dcb4e0a64b33c93d4}{cargar\+Modelo}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Carga el modelo de un coche (no tiene verificaciones) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a246d89c1ac8c3d66f639ed3c9586a8d5}{cargar\+Anio}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em El anio que se carga del auto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a94a1dd8008d97a3880f94a63e14cd23c}{cargar\+Kms}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Se carga los kilometros del auto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a50974ae18ae1da874aea49f2515e05e9}{cargar\+Precio\+Ad}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Carga el precio de adquisicion de un auto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_abd6760dda3e5a5c72b01bf3e6a787a0a}{cargar\+Titular}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Se carga el titular de un auto, debe ser un vendedor/consecionaria. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_auto}{Auto}} \mbox{\hyperlink{_auto_8h_a5382471e840bffe3cbe88091b553bedb}{cargar\+Auto}} ()
+\begin{DoxyCompactList}\small\item\em Carga un auto al sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_ae6946d40fe123c843574e7f0e7c06a1d}{mostrar\+Auto}} (\mbox{\hyperlink{struct_auto}{Auto}})
+\begin{DoxyCompactList}\small\item\em Funcion que muestra por pantalla, los datos de una estructura tipo \doxylink{struct_auto}{Auto}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_patente}{Patente}} \mbox{\hyperlink{_auto_8h_a53d1e174e4e2f74e956e7bcccf09f116}{ingresar\+Patente\+Para\+Buscar}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que busca una patente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_auto}{Auto}} \mbox{\hyperlink{_auto_8h_aeeafc1f47416de66c792b952252ee2f1}{buscar\+Auto\+Patente}} (\mbox{\hyperlink{struct_patente}{Patente}}, int \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Funcion que busca un auto por su patente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_auto}{Auto}} \mbox{\hyperlink{_auto_8h_a5cc32cb7bab53b75db2c186207c16643}{modificar\+Auto}} (\mbox{\hyperlink{struct_auto}{Auto}})
+\begin{DoxyCompactList}\small\item\em Menu que permite modificar un auto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_persona}{Persona}} \mbox{\hyperlink{_auto_8h_a5d7084ebad880d52707355e062fdc783}{buscar\+Titular}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que busca una persona por dni. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a4aeb5268aad17405ffbe997b126dc922}{cargar\+Auto\+Arreglo}} (\mbox{\hyperlink{struct_auto}{Auto}})
+\begin{DoxyCompactList}\small\item\em Da espacio y carga un auto en el arreglo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a4ad314d019b0744c55d3d0360387246e}{designar\+Espacio\+Auto}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Da espacio al arreglo autos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a42636c826e82c8634921ca303c80c10a}{cargar\+En\+Arreglo\+Autos\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Carga en un arreglo todos los autos del archivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a5d5243642e643b71b9c1624f4a07297c}{mostar\+Arr\+Autos}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que muestra el arreglo de autos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a79458a1931eb55b863928b621df52b93}{listar\+Autos}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos los autos en el sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a631d8a2b9863ebb349bdadd63c5374fb}{listar\+Autos\+Matriz}} ()
+\begin{DoxyCompactList}\small\item\em Lista autos mediante una matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_auto}{Auto}} \mbox{\hyperlink{_auto_8h_aa24993fdc9cfe71cb32c7fbbd4573bd6}{convertir\+Auto}} (\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}})
+\begin{DoxyCompactList}\small\item\em Funcion que convierte una estructura tipo \doxylink{struct_auto_archivo}{Auto\+Archivo} en una estructura tipo \doxylink{struct_auto}{Auto}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_8h_a8d9e7b8f4d13cc3d2f01ace988ede725}{hay\+Autos}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si hay autos en el arreglo de autos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_8h_af3b1f129c53c2b5dea21c37c2cde2c30}{en\+Venta}} (\mbox{\hyperlink{struct_auto}{Auto}})
+\begin{DoxyCompactList}\small\item\em Funcion que determina si un auto esta a la venta basandose en el dni del titular, ya que la consecionaria tiene un dni especial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a1e8238e04f56b9c2ef9936860102afb6}{mostrar\+Autos\+En\+Venta}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que recorre el arreglo de autos mostrando los autos que estan en venta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a24f32732361d89c8e0a4f99adb215e32}{designar\+Espacio\+Auto\+Nuevos}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*})
+\item 
+void \mbox{\hyperlink{_auto_8h_ae0624d7cdf8ac8149860a77689e6016b}{cargar\+Auto\+Nuevo\+En\+Arreglo}} (\mbox{\hyperlink{struct_auto}{Auto}})
+\item 
+void \mbox{\hyperlink{_auto_8h_aa65054738297067befa9641d0ddad2a9}{cargar\+Arreglo\+Autos\+Nuevos\+Init}} ()
+\item 
+int \mbox{\hyperlink{_auto_8h_a61c504ab5380633c0cd489a15844a355}{es\+Nuevo}} (\mbox{\hyperlink{struct_auto}{Auto}})
+\begin{DoxyCompactList}\small\item\em Funcion que evalua si el auto es nuevo (mayor a 2014);. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_8h_a2666f9cb0ec55a70aeaccf223d2e2105}{contar\+Nuevos}} (\mbox{\hyperlink{struct_auto}{Auto}}\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que cuenta la cantidad de nuevos dentro del arreglo de autos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_ace69f8dfa409b752154862ce82015d55}{agregar\+Autos\+Nuevos}} ()
+\begin{DoxyCompactList}\small\item\em Funcion para agregar autos, al arreglo de autos nuevos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_ac07f41f94758f668f447570bf69f50d9}{insertar\+Auto\+Nuevo\+En\+Arr}} (\mbox{\hyperlink{struct_auto}{Auto}})
+\begin{DoxyCompactList}\small\item\em Funcion que asigna espacio en el arreglo para el auto a insertar y lo inserta en la ultima posicion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a3c1a5ca63a48859a51855c0cae1427d4}{crear\+Arreglo\+Nuevos}} (\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, int)
+\item 
+int \mbox{\hyperlink{_auto_8h_a9d577db6b51d19482140e2fcb3587a0c}{encontrar\+Menor}} (\mbox{\hyperlink{struct_auto}{Auto}}\mbox{[}$\,$\mbox{]}, int, int)
+\begin{DoxyCompactList}\small\item\em funcion que busca el auto con menor a�o \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a36ad4397d4e7cda3ce62f0b0b6d355a3}{ordenar\+Autos}} ()
+\begin{DoxyCompactList}\small\item\em funcion que ordena el arreglo mediante Seleccion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a4e392d97cf29fc517fdc320dfb1ddb0c}{mostrar\+Autos\+Nuevos}} ()
+\begin{DoxyCompactList}\small\item\em funcion que recorre el arreglo de autos nuevos y lo muestra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_a4b36ce6973a843cfbe827eb67a34636b}{cambiar\+Titular\+Por\+Venta}} (char\mbox{[}$\,$\mbox{]}, char\mbox{[}$\,$\mbox{]}, float, \mbox{\hyperlink{struct_patente}{Patente}})
+\begin{DoxyCompactList}\small\item\em Funcion que cambia el titular de un auto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_8h_ad68989458efff3e85bf1e8d68414f9e2}{mostrar\+Segun\+Titular}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Muestra autos segun el titular del auto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_auto_8h_a89d46992495525e88678bff362de5a1b}{arreglo\+Autos}}
+\item 
+int \mbox{\hyperlink{_auto_8h_aed7130928c740cb930980e2f1242ef85}{cantidad\+Autos}}
+\item 
+\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_auto_8h_abf6abbffe9a3fcc2dc7b18feb1aef043}{arreglo\+Nuevos}}
+\item 
+int \mbox{\hyperlink{_auto_8h_a59e92b28a3c32bd5cf8a3b4728d4452b}{cantidad\+Nuevos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_auto_8h_ace69f8dfa409b752154862ce82015d55}\index{Auto.h@{Auto.h}!agregarAutosNuevos@{agregarAutosNuevos}}
+\index{agregarAutosNuevos@{agregarAutosNuevos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{agregarAutosNuevos()}{agregarAutosNuevos()}}
+{\footnotesize\ttfamily \label{_auto_8h_ace69f8dfa409b752154862ce82015d55} 
+void agregar\+Autos\+Nuevos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion para agregar autos, al arreglo de autos nuevos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto}{Auto}} & \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arreglo -\/\texorpdfstring{$>$}{>} puntero doble al arreglo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_aeeafc1f47416de66c792b952252ee2f1}\index{Auto.h@{Auto.h}!buscarAutoPatente@{buscarAutoPatente}}
+\index{buscarAutoPatente@{buscarAutoPatente}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{buscarAutoPatente()}{buscarAutoPatente()}}
+{\footnotesize\ttfamily \label{_auto_8h_aeeafc1f47416de66c792b952252ee2f1} 
+\mbox{\hyperlink{struct_auto}{Auto}} buscar\+Auto\+Patente (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_patente}{Patente}}}]{patente}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que busca un auto por su patente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_patente}{Patente}} & patente -\/\texorpdfstring{$>$}{>} la patente a buscar. int \texorpdfstring{$\ast$}{*}pos -\/\texorpdfstring{$>$}{>} un puntero a la posicion del auto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\doxylink{struct_auto}{Auto} -\/\texorpdfstring{$>$}{>} el coche encontrado 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a5d7084ebad880d52707355e062fdc783}\index{Auto.h@{Auto.h}!buscarTitular@{buscarTitular}}
+\index{buscarTitular@{buscarTitular}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{buscarTitular()}{buscarTitular()}}
+{\footnotesize\ttfamily \label{_auto_8h_a5d7084ebad880d52707355e062fdc783} 
+\mbox{\hyperlink{struct_persona}{Persona}} buscar\+Titular (\begin{DoxyParamCaption}\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que busca una persona por dni. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & dni\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} que representa el dni del titular a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\doxylink{struct_persona}{Persona} titular -\/\texorpdfstring{$>$}{>} la persona que se corresponde al dni pasado como argumento. 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a4b36ce6973a843cfbe827eb67a34636b}\index{Auto.h@{Auto.h}!cambiarTitularPorVenta@{cambiarTitularPorVenta}}
+\index{cambiarTitularPorVenta@{cambiarTitularPorVenta}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cambiarTitularPorVenta()}{cambiarTitularPorVenta()}}
+{\footnotesize\ttfamily \label{_auto_8h_a4b36ce6973a843cfbe827eb67a34636b} 
+void cambiar\+Titular\+Por\+Venta (\begin{DoxyParamCaption}\item[{char}]{dnicomprador}{\mbox{[}$\,$\mbox{]}, }\item[{char}]{dnivendedor}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{precionuevo}{, }\item[{\mbox{\hyperlink{struct_patente}{Patente}}}]{patente}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que cambia el titular de un auto. 
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---Cambios en una venta-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & dnicomprador\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} string con el dni del comprador \\
+\hline
+{\em char} & dnicomprador\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} string con el dni del comprador \\
+\hline
+{\em \doxylink{struct_patente}{Patente}} & patente -\/\texorpdfstring{$>$}{>} la patente del auto a modificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a246d89c1ac8c3d66f639ed3c9586a8d5}\index{Auto.h@{Auto.h}!cargarAnio@{cargarAnio}}
+\index{cargarAnio@{cargarAnio}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarAnio()}{cargarAnio()}}
+{\footnotesize\ttfamily \label{_auto_8h_a246d89c1ac8c3d66f639ed3c9586a8d5} 
+void cargar\+Anio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+El anio que se carga del auto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coche} & Auto\texorpdfstring{$\ast$}{*} Puntero del auto que se esta cargando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_aa65054738297067befa9641d0ddad2a9}\index{Auto.h@{Auto.h}!cargarArregloAutosNuevosInit@{cargarArregloAutosNuevosInit}}
+\index{cargarArregloAutosNuevosInit@{cargarArregloAutosNuevosInit}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarArregloAutosNuevosInit()}{cargarArregloAutosNuevosInit()}}
+{\footnotesize\ttfamily \label{_auto_8h_aa65054738297067befa9641d0ddad2a9} 
+void cargar\+Arreglo\+Autos\+Nuevos\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_auto_8h_a5382471e840bffe3cbe88091b553bedb}\index{Auto.h@{Auto.h}!cargarAuto@{cargarAuto}}
+\index{cargarAuto@{cargarAuto}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarAuto()}{cargarAuto()}}
+{\footnotesize\ttfamily \label{_auto_8h_a5382471e840bffe3cbe88091b553bedb} 
+\mbox{\hyperlink{struct_auto}{Auto}} cargar\+Auto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Carga un auto al sistema. 
+
+\begin{DoxyReturn}{Devuelve}
+\doxylink{struct_auto}{Auto} Retorna el auto cargado 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a4aeb5268aad17405ffbe997b126dc922}\index{Auto.h@{Auto.h}!cargarAutoArreglo@{cargarAutoArreglo}}
+\index{cargarAutoArreglo@{cargarAutoArreglo}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarAutoArreglo()}{cargarAutoArreglo()}}
+{\footnotesize\ttfamily \label{_auto_8h_a4aeb5268aad17405ffbe997b126dc922} 
+void cargar\+Auto\+Arreglo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Da espacio y carga un auto en el arreglo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coche} & \doxylink{struct_auto}{Auto} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_ae0624d7cdf8ac8149860a77689e6016b}\index{Auto.h@{Auto.h}!cargarAutoNuevoEnArreglo@{cargarAutoNuevoEnArreglo}}
+\index{cargarAutoNuevoEnArreglo@{cargarAutoNuevoEnArreglo}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarAutoNuevoEnArreglo()}{cargarAutoNuevoEnArreglo()}}
+{\footnotesize\ttfamily \label{_auto_8h_ae0624d7cdf8ac8149860a77689e6016b} 
+void cargar\+Auto\+Nuevo\+En\+Arreglo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_auto_8h_a42636c826e82c8634921ca303c80c10a}\index{Auto.h@{Auto.h}!cargarEnArregloAutosInit@{cargarEnArregloAutosInit}}
+\index{cargarEnArregloAutosInit@{cargarEnArregloAutosInit}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarEnArregloAutosInit()}{cargarEnArregloAutosInit()}}
+{\footnotesize\ttfamily \label{_auto_8h_a42636c826e82c8634921ca303c80c10a} 
+void cargar\+En\+Arreglo\+Autos\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Carga en un arreglo todos los autos del archivo. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a94a1dd8008d97a3880f94a63e14cd23c}\index{Auto.h@{Auto.h}!cargarKms@{cargarKms}}
+\index{cargarKms@{cargarKms}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarKms()}{cargarKms()}}
+{\footnotesize\ttfamily \label{_auto_8h_a94a1dd8008d97a3880f94a63e14cd23c} 
+void cargar\+Kms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Se carga los kilometros del auto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coche} & Auto\texorpdfstring{$\ast$}{*} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_ac24626aabe99dcfc7d1e1d695b8f62fe}\index{Auto.h@{Auto.h}!cargarMarca@{cargarMarca}}
+\index{cargarMarca@{cargarMarca}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarMarca()}{cargarMarca()}}
+{\footnotesize\ttfamily \label{_auto_8h_ac24626aabe99dcfc7d1e1d695b8f62fe} 
+void cargar\+Marca (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Carga la marca del auto que se esta cargando. 
+
+Funcion que carga el campo Marca de la estructura. Args\+: recive un puntero a \doxylink{struct_auto}{Auto} Return\+: none 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coche} & Auto\texorpdfstring{$\ast$}{*} El puntero del auto que se esta cargando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_ab6de7fdb2842460dcb4e0a64b33c93d4}\index{Auto.h@{Auto.h}!cargarModelo@{cargarModelo}}
+\index{cargarModelo@{cargarModelo}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarModelo()}{cargarModelo()}}
+{\footnotesize\ttfamily \label{_auto_8h_ab6de7fdb2842460dcb4e0a64b33c93d4} 
+void cargar\+Modelo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Carga el modelo de un coche (no tiene verificaciones) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coche} & Auto\texorpdfstring{$\ast$}{*} Puntero del auto que se esta cargando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a50974ae18ae1da874aea49f2515e05e9}\index{Auto.h@{Auto.h}!cargarPrecioAd@{cargarPrecioAd}}
+\index{cargarPrecioAd@{cargarPrecioAd}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarPrecioAd()}{cargarPrecioAd()}}
+{\footnotesize\ttfamily \label{_auto_8h_a50974ae18ae1da874aea49f2515e05e9} 
+void cargar\+Precio\+Ad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Carga el precio de adquisicion de un auto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coche} & Auto\texorpdfstring{$\ast$}{*} puntero de un auto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_abd6760dda3e5a5c72b01bf3e6a787a0a}\index{Auto.h@{Auto.h}!cargarTitular@{cargarTitular}}
+\index{cargarTitular@{cargarTitular}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cargarTitular()}{cargarTitular()}}
+{\footnotesize\ttfamily \label{_auto_8h_abd6760dda3e5a5c72b01bf3e6a787a0a} 
+void cargar\+Titular (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Se carga el titular de un auto, debe ser un vendedor/consecionaria. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coche} & Auto\texorpdfstring{$\ast$}{*} El coche que se esta cargando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a2666f9cb0ec55a70aeaccf223d2e2105}\index{Auto.h@{Auto.h}!contarNuevos@{contarNuevos}}
+\index{contarNuevos@{contarNuevos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{contarNuevos()}{contarNuevos()}}
+{\footnotesize\ttfamily \label{_auto_8h_a2666f9cb0ec55a70aeaccf223d2e2105} 
+int contar\+Nuevos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{arreglo}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que cuenta la cantidad de nuevos dentro del arreglo de autos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto}{Auto}} & arreglo\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} el arreglo a recorrer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} la cantidad de autos nuevos 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_aa24993fdc9cfe71cb32c7fbbd4573bd6}\index{Auto.h@{Auto.h}!convertirAuto@{convertirAuto}}
+\index{convertirAuto@{convertirAuto}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{convertirAuto()}{convertirAuto()}}
+{\footnotesize\ttfamily \label{_auto_8h_aa24993fdc9cfe71cb32c7fbbd4573bd6} 
+\mbox{\hyperlink{struct_auto}{Auto}} convertir\+Auto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que convierte una estructura tipo \doxylink{struct_auto_archivo}{Auto\+Archivo} en una estructura tipo \doxylink{struct_auto}{Auto}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto_archivo}{Auto\+Archivo}} & coche -\/\texorpdfstring{$>$}{>} el auto a convertir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\doxylink{struct_auto}{Auto} -\/\texorpdfstring{$>$}{>} el auto pasado como parametro convertido. 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a3c1a5ca63a48859a51855c0cae1427d4}\index{Auto.h@{Auto.h}!crearArregloNuevos@{crearArregloNuevos}}
+\index{crearArregloNuevos@{crearArregloNuevos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{crearArregloNuevos()}{crearArregloNuevos()}}
+{\footnotesize\ttfamily \label{_auto_8h_a3c1a5ca63a48859a51855c0cae1427d4} 
+void crear\+Arreglo\+Nuevos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{}{, }\item[{int}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_auto_8h_a4ad314d019b0744c55d3d0360387246e}\index{Auto.h@{Auto.h}!designarEspacioAuto@{designarEspacioAuto}}
+\index{designarEspacioAuto@{designarEspacioAuto}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{designarEspacioAuto()}{designarEspacioAuto()}}
+{\footnotesize\ttfamily \label{_auto_8h_a4ad314d019b0744c55d3d0360387246e} 
+void designar\+Espacio\+Auto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Da espacio al arreglo autos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arr} & Auto\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Puntero de arreglo de autos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a24f32732361d89c8e0a4f99adb215e32}\index{Auto.h@{Auto.h}!designarEspacioAutoNuevos@{designarEspacioAutoNuevos}}
+\index{designarEspacioAutoNuevos@{designarEspacioAutoNuevos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{designarEspacioAutoNuevos()}{designarEspacioAutoNuevos()}}
+{\footnotesize\ttfamily \label{_auto_8h_a24f32732361d89c8e0a4f99adb215e32} 
+void designar\+Espacio\+Auto\+Nuevos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---Ordenacion-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \Hypertarget{_auto_8h_a9d577db6b51d19482140e2fcb3587a0c}\index{Auto.h@{Auto.h}!encontrarMenor@{encontrarMenor}}
+\index{encontrarMenor@{encontrarMenor}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{encontrarMenor()}{encontrarMenor()}}
+{\footnotesize\ttfamily \label{_auto_8h_a9d577db6b51d19482140e2fcb3587a0c} 
+int encontrar\+Menor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{pos}{, }\item[{int}]{validos}{}\end{DoxyParamCaption})}
+
+
+
+funcion que busca el auto con menor a�o 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto}{Auto}} & arr\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} el arreglo donde buscar \\
+\hline
+{\em int} & pos -\/\texorpdfstring{$>$}{>} la posicion donde comenzar a buscar \\
+\hline
+{\em int} & validos -\/\texorpdfstring{$>$}{>} la cantidad de registros validos en el arreglo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} la posicion del menor. 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_af3b1f129c53c2b5dea21c37c2cde2c30}\index{Auto.h@{Auto.h}!enVenta@{enVenta}}
+\index{enVenta@{enVenta}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{enVenta()}{enVenta()}}
+{\footnotesize\ttfamily \label{_auto_8h_af3b1f129c53c2b5dea21c37c2cde2c30} 
+int en\+Venta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que determina si un auto esta a la venta basandose en el dni del titular, ya que la consecionaria tiene un dni especial. 
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---punto 5-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---Punto 5-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto}{Auto}} & coche -\/\texorpdfstring{$>$}{>} recibe una Estructura tipo \doxylink{struct_auto}{Auto} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si el auto esta a la venta. -\/\texorpdfstring{$>$}{>} 0 en otro caso. 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a61c504ab5380633c0cd489a15844a355}\index{Auto.h@{Auto.h}!esNuevo@{esNuevo}}
+\index{esNuevo@{esNuevo}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{esNuevo()}{esNuevo()}}
+{\footnotesize\ttfamily \label{_auto_8h_a61c504ab5380633c0cd489a15844a355} 
+int es\+Nuevo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que evalua si el auto es nuevo (mayor a 2014);. 
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---Ordenacion de los autos menores a 10 a�os-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto}{Auto}} & coche -\/\texorpdfstring{$>$}{>} el auto a evaluar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si es nuevo. -\/\texorpdfstring{$>$}{>} 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a8d9e7b8f4d13cc3d2f01ace988ede725}\index{Auto.h@{Auto.h}!hayAutos@{hayAutos}}
+\index{hayAutos@{hayAutos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{hayAutos()}{hayAutos()}}
+{\footnotesize\ttfamily \label{_auto_8h_a8d9e7b8f4d13cc3d2f01ace988ede725} 
+int hay\+Autos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si hay autos en el arreglo de autos. 
+
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si hay autos 0 si no los hay 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a53d1e174e4e2f74e956e7bcccf09f116}\index{Auto.h@{Auto.h}!ingresarPatenteParaBuscar@{ingresarPatenteParaBuscar}}
+\index{ingresarPatenteParaBuscar@{ingresarPatenteParaBuscar}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{ingresarPatenteParaBuscar()}{ingresarPatenteParaBuscar()}}
+{\footnotesize\ttfamily \label{_auto_8h_a53d1e174e4e2f74e956e7bcccf09f116} 
+\mbox{\hyperlink{struct_patente}{Patente}} ingresar\+Patente\+Para\+Buscar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que busca una patente. 
+
+Funciones para la busqueda y edicion de un \doxylink{struct_auto}{Auto}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\doxylink{struct_patente}{Patente} -\/\texorpdfstring{$>$}{>} la patente encontrada 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_ac07f41f94758f668f447570bf69f50d9}\index{Auto.h@{Auto.h}!insertarAutoNuevoEnArr@{insertarAutoNuevoEnArr}}
+\index{insertarAutoNuevoEnArr@{insertarAutoNuevoEnArr}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{insertarAutoNuevoEnArr()}{insertarAutoNuevoEnArr()}}
+{\footnotesize\ttfamily \label{_auto_8h_ac07f41f94758f668f447570bf69f50d9} 
+void insertar\+Auto\+Nuevo\+En\+Arr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que asigna espacio en el arreglo para el auto a insertar y lo inserta en la ultima posicion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto}{Auto}} & coche -\/\texorpdfstring{$>$}{>} el auto a insertar \\
+\hline
+{\em int} & nuevos -\/\texorpdfstring{$>$}{>} la cantidad de autos nuevos \\
+\hline
+{\em \doxylink{struct_auto}{Auto}} & \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arreglo -\/\texorpdfstring{$>$}{>} Puntero doble al arreglo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none. 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a79458a1931eb55b863928b621df52b93}\index{Auto.h@{Auto.h}!listarAutos@{listarAutos}}
+\index{listarAutos@{listarAutos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{listarAutos()}{listarAutos()}}
+{\footnotesize\ttfamily \label{_auto_8h_a79458a1931eb55b863928b621df52b93} 
+void listar\+Autos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lista todos los autos en el sistema. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+param \begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a631d8a2b9863ebb349bdadd63c5374fb}\index{Auto.h@{Auto.h}!listarAutosMatriz@{listarAutosMatriz}}
+\index{listarAutosMatriz@{listarAutosMatriz}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{listarAutosMatriz()}{listarAutosMatriz()}}
+{\footnotesize\ttfamily \label{_auto_8h_a631d8a2b9863ebb349bdadd63c5374fb} 
+void listar\+Autos\+Matriz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lista autos mediante una matriz. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a5cc32cb7bab53b75db2c186207c16643}\index{Auto.h@{Auto.h}!modificarAuto@{modificarAuto}}
+\index{modificarAuto@{modificarAuto}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{modificarAuto()}{modificarAuto()}}
+{\footnotesize\ttfamily \label{_auto_8h_a5cc32cb7bab53b75db2c186207c16643} 
+\mbox{\hyperlink{struct_auto}{Auto}} modificar\+Auto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{auto\+AModificar}{}\end{DoxyParamCaption})}
+
+
+
+Menu que permite modificar un auto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em auto\+AModificar} & \doxylink{struct_auto}{Auto} \doxylink{struct_auto}{Auto} a modificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\doxylink{struct_auto}{Auto} \doxylink{struct_auto}{Auto} modificado 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a5d5243642e643b71b9c1624f4a07297c}\index{Auto.h@{Auto.h}!mostarArrAutos@{mostarArrAutos}}
+\index{mostarArrAutos@{mostarArrAutos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{mostarArrAutos()}{mostarArrAutos()}}
+{\footnotesize\ttfamily \label{_auto_8h_a5d5243642e643b71b9c1624f4a07297c} 
+void mostar\+Arr\+Autos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que muestra el arreglo de autos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_ae6946d40fe123c843574e7f0e7c06a1d}\index{Auto.h@{Auto.h}!mostrarAuto@{mostrarAuto}}
+\index{mostrarAuto@{mostrarAuto}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{mostrarAuto()}{mostrarAuto()}}
+{\footnotesize\ttfamily \label{_auto_8h_ae6946d40fe123c843574e7f0e7c06a1d} 
+void mostrar\+Auto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que muestra por pantalla, los datos de una estructura tipo \doxylink{struct_auto}{Auto}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coche} & puntero a \doxylink{struct_auto}{Auto} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a1e8238e04f56b9c2ef9936860102afb6}\index{Auto.h@{Auto.h}!mostrarAutosEnVenta@{mostrarAutosEnVenta}}
+\index{mostrarAutosEnVenta@{mostrarAutosEnVenta}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{mostrarAutosEnVenta()}{mostrarAutosEnVenta()}}
+{\footnotesize\ttfamily \label{_auto_8h_a1e8238e04f56b9c2ef9936860102afb6} 
+void mostrar\+Autos\+En\+Venta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que recorre el arreglo de autos mostrando los autos que estan en venta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a4e392d97cf29fc517fdc320dfb1ddb0c}\index{Auto.h@{Auto.h}!mostrarAutosNuevos@{mostrarAutosNuevos}}
+\index{mostrarAutosNuevos@{mostrarAutosNuevos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{mostrarAutosNuevos()}{mostrarAutosNuevos()}}
+{\footnotesize\ttfamily \label{_auto_8h_a4e392d97cf29fc517fdc320dfb1ddb0c} 
+void mostrar\+Autos\+Nuevos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funcion que recorre el arreglo de autos nuevos y lo muestra. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto}{Auto}} & arr\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} el arreglo a recorrer \\
+\hline
+{\em int} & validos -\/\texorpdfstring{$>$}{>} la cantidad de registros validos del arreglo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_auto_8h_ad68989458efff3e85bf1e8d68414f9e2}\index{Auto.h@{Auto.h}!mostrarSegunTitular@{mostrarSegunTitular}}
+\index{mostrarSegunTitular@{mostrarSegunTitular}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{mostrarSegunTitular()}{mostrarSegunTitular()}}
+{\footnotesize\ttfamily \label{_auto_8h_ad68989458efff3e85bf1e8d68414f9e2} 
+void mostrar\+Segun\+Titular (\begin{DoxyParamCaption}\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Muestra autos segun el titular del auto. 
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---Mostrar Segun due�o-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dni\mbox{[}$\,$\mbox{]}} & char DNI del vendedor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+voidc 
+\end{DoxyReturn}
+\Hypertarget{_auto_8h_a36ad4397d4e7cda3ce62f0b0b6d355a3}\index{Auto.h@{Auto.h}!ordenarAutos@{ordenarAutos}}
+\index{ordenarAutos@{ordenarAutos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{ordenarAutos()}{ordenarAutos()}}
+{\footnotesize\ttfamily \label{_auto_8h_a36ad4397d4e7cda3ce62f0b0b6d355a3} 
+void ordenar\+Autos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funcion que ordena el arreglo mediante Seleccion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_auto}{Auto}} & arr\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} el arreglo a ordenar \\
+\hline
+{\em int} & validos -\/\texorpdfstring{$>$}{>} la cantidad de registros validos del arreglo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{_auto_8h_a89d46992495525e88678bff362de5a1b}\index{Auto.h@{Auto.h}!arregloAutos@{arregloAutos}}
+\index{arregloAutos@{arregloAutos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{arregloAutos}{arregloAutos}}
+{\footnotesize\ttfamily \label{_auto_8h_a89d46992495525e88678bff362de5a1b} 
+\mbox{\hyperlink{struct_auto}{Auto}}\texorpdfstring{$\ast$}{*} arreglo\+Autos}
+
+\Hypertarget{_auto_8h_abf6abbffe9a3fcc2dc7b18feb1aef043}\index{Auto.h@{Auto.h}!arregloNuevos@{arregloNuevos}}
+\index{arregloNuevos@{arregloNuevos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{arregloNuevos}{arregloNuevos}}
+{\footnotesize\ttfamily \label{_auto_8h_abf6abbffe9a3fcc2dc7b18feb1aef043} 
+\mbox{\hyperlink{struct_auto}{Auto}}\texorpdfstring{$\ast$}{*} arreglo\+Nuevos}
+
+\Hypertarget{_auto_8h_aed7130928c740cb930980e2f1242ef85}\index{Auto.h@{Auto.h}!cantidadAutos@{cantidadAutos}}
+\index{cantidadAutos@{cantidadAutos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cantidadAutos}{cantidadAutos}}
+{\footnotesize\ttfamily \label{_auto_8h_aed7130928c740cb930980e2f1242ef85} 
+int cantidad\+Autos}
+
+\Hypertarget{_auto_8h_a59e92b28a3c32bd5cf8a3b4728d4452b}\index{Auto.h@{Auto.h}!cantidadNuevos@{cantidadNuevos}}
+\index{cantidadNuevos@{cantidadNuevos}!Auto.h@{Auto.h}}
+\doxysubsubsection{\texorpdfstring{cantidadNuevos}{cantidadNuevos}}
+{\footnotesize\ttfamily \label{_auto_8h_a59e92b28a3c32bd5cf8a3b4728d4452b} 
+int cantidad\+Nuevos}
+

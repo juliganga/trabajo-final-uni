@@ -14,25 +14,26 @@
 
 
 
-/**
-    Función que carga una estructura tipo AutoArchivo.
-    Params: Auto autoAcargar -> recibe una estructura tipo Auto
-    Return: AutoArchivo
-**/
+/** \brief Función que carga una estructura tipo AutoArchivo.
+ *
+ * \param autoACargar Auto ecibe una estructura tipo Auto
+ * \return AutoArchivo Auto para cargar a archivo
+ *
+ */
+AutoArchivo cargarAutoArchivo(Auto autoACargar)
+{
 
-AutoArchivo cargarAutoArchivo(Auto autoACargar){
+    AutoArchivo coche;
 
-AutoArchivo coche;
+    coche.patente = autoACargar.patente;
+    strcpy (coche.marca, autoACargar.marca);
+    strcpy (coche.modelo, autoACargar.modelo);
+    coche.anio = autoACargar.anio;
+    strcpy (coche.kms, autoACargar.kms);
+    strcpy (coche.dniTitular, autoACargar.titular.dni);
+    coche.precioDeAdquisicion = autoACargar.precioDeAdquisicion;
 
-coche.patente = autoACargar.patente;
-strcpy (coche.marca, autoACargar.marca);
-strcpy (coche.modelo, autoACargar.modelo);
-coche.anio = autoACargar.anio;
-strcpy (coche.kms, autoACargar.kms);
-strcpy (coche.dniTitular, autoACargar.titular.dni);
-coche.precioDeAdquisicion = autoACargar.precioDeAdquisicion;
-
-return coche;
+    return coche;
 
 }
 
@@ -43,42 +44,54 @@ return coche;
 
  **/
 
-void mostrarAutoArchivo(AutoArchivo coche){
 
-printf("-----------------------------------------\n");
-printf("Patente: %s-%s\n", coche.patente.letras, coche.patente.numeros);
-printf("Marca : %s\n", coche.marca);
-printf("Modelo : %s\n", coche.modelo);
-printf("A%co : %d\n",164, coche.anio);
-printf("-----------------------------------------\n");
+/** \brief Función que muestra por pantalla todos los campos de una estructura tipo AutoArchivo.
+ *
+ * \param coche AutoArchivo archivo
+ * \return void
+ *
+ */
+void mostrarAutoArchivo(AutoArchivo coche)
+{
+
+    printf("-----------------------------------------\n");
+    printf("Patente: %s-%s\n", coche.patente.letras, coche.patente.numeros);
+    printf("Marca : %s\n", coche.marca);
+    printf("Modelo : %s\n", coche.modelo);
+    printf("A%co : %d\n",164, coche.anio);
+    printf("-----------------------------------------\n");
 }
 
 
 
 
 
-/**
-    Funcion que guarda los datos de un auto en formato AutoArchivo
-    param: AutoArchivo coche -> el auto a guardar,
-           char* nombreArchivo -> puntero al nombre del archivo.
 
-**/
+/** \brief Funcion que guarda los datos de un auto en formato AutoArchivo
+ *
+ * \param coche AutoArchivo el auto a guardar
+ * \param nombreArchivo char* Puntero al nombre del archivo.
+ * \return void
+ *
+ */
+void guardarAutoArchivo(AutoArchivo coche, char *nombreArchivo)
+{
+    FILE *archivo = fopen(nombreArchivo, "ab");
 
-void guardarAutoArchivo(AutoArchivo coche, char *nombreArchivo){
-FILE *archivo = fopen(nombreArchivo, "ab");
+    if (archivo !=NULL)
+    {
 
-if (archivo !=NULL){
+        fwrite(&coche, sizeof(AutoArchivo), 1, archivo);
 
-    fwrite(&coche, sizeof(AutoArchivo), 1, archivo);
+    }
+    else
+    {
 
-} else {
+        printf("Tuvimos problemas abriendo el archivo");
 
-    printf("Tuvimos problemas abriendo el archivo");
+    }
 
-}
-
-fclose(archivo);
-
+    fclose(archivo);
 }
 
 /**
@@ -90,11 +103,17 @@ Params: AutoArchivo coche -> el coche a guardar
 
 **/
 
+/** \brief Funcion que guarda un AutoArchivo en la posicion indicada
+ *
+ * \param coche AutoArchivo El coche a guardar
+ * \param nombreArchivo char* Puntero al archivo donde guardar
+ * \param pos int Las posicion donde guardar el auto
+ * \return void
+ *
+ */
 void guardarAutoArchivoEnPos(AutoArchivo coche, char *nombreArchivo, int pos){
     FILE* archivo = fopen(nombreArchivo, "r+b");
     Auto aux;
-
-    printf("%d", pos);
 
 
 
@@ -113,32 +132,3 @@ fclose(archivo);
 
 }
 
-/**
-
-    Funcion que muestra el contenido del archivo.
-    Params: char *nombreArchivo
-    return: none
-
-**/
-
-void mostrarArchivoAutos(char *nombreArchivo){
-
-FILE *archivo = fopen(nombreArchivo, "rb");
-
-AutoArchivo coche;
-
-if(archivo !=NULL){
-
-        while (fread(&coche, sizeof(AutoArchivo), 1, archivo) > 0){
-
-            mostrarAutoArchivo(coche);
-
-        }
-
-} else {
-    printf("problemas con el archivo");
-
-}
-fclose(archivo);
-
-}

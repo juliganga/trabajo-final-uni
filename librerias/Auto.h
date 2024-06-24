@@ -7,9 +7,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
-Auto *arregloAutos;
-int cantidadAutos = -1;
-/**
     interface de la la estructura auto
 
 
@@ -35,6 +32,8 @@ typedef struct {
 Auto *arregloAutos;
 int cantidadAutos;
 
+Auto *arregloNuevos;
+int cantidadNuevos;
 
 void cargarMarca(Auto*);
 void cargarModelo(Auto*);
@@ -81,17 +80,20 @@ void cargarArregloAutosNuevosInit();
 
 int esNuevo(Auto);
 int contarNuevos(Auto[]);
-void agregarAutosNuevos(Auto**);
-void insertarAutoNuevoEnArr(Auto,int,Auto**);
+void agregarAutosNuevos(/*Auto***/);
+void insertarAutoNuevoEnArr(Auto/*,int,Auto***/);
 void crearArregloNuevos(Auto**,int);
 
 int encontrarMenor(Auto[], int, int);
-void ordenarAutos(Auto[], int);
-void mostrarAutosNuevos(Auto[],int);
+void ordenarAutos(/*Auto[], int*/);
+void mostrarAutosNuevos(/*Auto[],int*/);
 
 /**----------------------------------------Cambios en una venta--------------------------------------------**/
 
 void cambiarTitularPorVenta(char[],char[],float,Patente);
 
+/**----------------------------------------Mostrar Segun dueño--------------------------------------------**/
+
+void mostrarSegunTitular(char[]);
 
 #endif // AUTO_H_INCLUDED

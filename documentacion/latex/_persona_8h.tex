@@ -1,0 +1,807 @@
+\doxysection{Referencia del archivo librerias/\+Persona.h}
+\hypertarget{_persona_8h}{}\label{_persona_8h}\index{librerias/Persona.h@{librerias/Persona.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}Utiles.\+h"{}}\newline
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_persona}{Persona}}
+\begin{DoxyCompactList}\small\item\em VARIABLES ///. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_persona_8h_a50f26f093f0893cd4454e0c847eeb135}{menu\+Carga\+Personas}} ()
+\begin{DoxyCompactList}\small\item\em FUNCIONALIDAD ///. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona}} ()
+\begin{DoxyCompactList}\small\item\em Interfaz que se usa para cargar datos a una variable persona. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a1ffa9dbbc0a947d7a1a8bf8afb2669c8}{cargar\+DNI}} (\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga el DNI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a27c86c0e635bea6bc0893b25f86511ae}{cargar\+Nombre}} (\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga el Nombre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_aaf49abdd57cd70e6f4e8e844c26d679b}{cargar\+TEL}} (\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga el TEL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a29eea44f9fe1bb8aa0a4aae9b205fb6b}{cargar\+DIR}} (\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga la DIR (no tiene checks) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_adeb8dced5b106f32c5268b67b1d8f3df}{cargar\+Rol}} (\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga el rol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a594d12a3152bb23b16fc1bd3b87a5149}{guardar\+Persona\+AFile}} (\mbox{\hyperlink{struct_persona}{Persona}})
+\begin{DoxyCompactList}\small\item\em Guarda la persona a un archivo, definido de antemano. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a80477330995f126c5be1a8d44505f2a9}{guardar\+Cambios\+Persona}} (\mbox{\hyperlink{struct_persona}{Persona}}, int)
+\begin{DoxyCompactList}\small\item\em Guarda cambios de persona que se hicieron. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_af01306c12c338c84601f082781b67b75}{modificar\+Persona}} ()
+\begin{DoxyCompactList}\small\item\em Un menu en donde se escribe un dni, una vez encontrado el cliente, se le dara acceso a el menu de edicion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a56b7289f300f3d48ee146047390cfa25}{menu\+De\+Modificacion\+Persona}} (\mbox{\hyperlink{struct_persona}{Persona}}, int)
+\begin{DoxyCompactList}\small\item\em El menu de modificacion de entrada de cliente, tiene un rango de funciones distintas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_aecf967e37ae77f75b2fb2300e714a974}{menu\+Ver\+Personas}} ()
+\begin{DoxyCompactList}\small\item\em Un menu dedicado para la seleccion para mostrar todos o un cliente solo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a51a08911c7432662aa7fb769ea772ae0}{mostrar\+Personas\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Un menu dedicado para mostrar las opciones de mostrar personas, completo o simple. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_ab83b0af6d412483eebbc8423da3cf3e6}{mostrar\+Personas\+Full}} ()
+\begin{DoxyCompactList}\small\item\em Loop que recorre el arreglo de clientes, para mostrar todos sus contenidos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a3d2b6edaf152fce5d11f517d6358892f}{mostrar\+Personas\+Min}} ()
+\begin{DoxyCompactList}\small\item\em Loop que recorre el arreglo de clientes, para mostrar los contenidos mas importantes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a876c8dddcf48021933be50896461dc40}{buscar\+Una\+Persona}} ()
+\begin{DoxyCompactList}\small\item\em Se busca una persona segun su DNI, se hacen verificaciones. Luego se puede elegir si mostrar completamente o solo lo basico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a9858756331367c4be03bb02c7896702a}{ver\+Persona\+Full}} (\mbox{\hyperlink{struct_persona}{Persona}})
+\begin{DoxyCompactList}\small\item\em Muestra todos los datos del cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_afd5c0315139bdd42700b0812740f8dac}{ver\+Persona\+Min}} (\mbox{\hyperlink{struct_persona}{Persona}})
+\begin{DoxyCompactList}\small\item\em Muestra algunos de los datos del cliente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a5d22bd26f4fb16697752b4c2505db80a}{verificar\+Enteros}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Verifica si una string tiene solo numeros o no. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_afb385f700f84deb06a6e271a0dc0793e}{verificar\+Chars}} (char\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{_persona_8h_aba58fbde77243a1302076108ca44c2fc}{verificar\+DNI}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em verifica si el largo de dni es mayor o igual a 8 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a0612712c44ad54a99c874e6744fc1829}{verificar\+Nombre}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Verifica si el largo del nombre es mayor a 3 y menor que 48. Verifica si tiene numeros o no. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_af85772a65da80e6e5cf79bf9e77b9df2}{verificar\+Dir}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Verifica si la direccion es entre 3 characteres y 98. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a650ebaf52842f65d99a83516640149ae}{verificar\+Rol}} (char)
+\begin{DoxyCompactList}\small\item\em Verifica si el rol ingresado es C o V. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_ab786d6fe2fff881c136d67b365838483}{verificar\+Tel}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Verifica si el numero de telefono es mayor o igual a 10. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a9a2f4174fa01d27040b08d4e51182314}{pasar\+AMayus}} (char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em AYUDANTES ///. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_ab1e2b17f7e620a6b7a3269c89fb9a320}{traducir\+Rol\+Cliente}} (char)
+\begin{DoxyCompactList}\small\item\em Muestra en consola el rol correspondiente del cliente (NO SE GUARDAN ESTAS TRADUCCIONES) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_persona}{Persona}} \mbox{\hyperlink{_persona_8h_a7ab46a668237c6b33e3c1bf302ad0072}{buscar\+Segun\+DNI}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Busca una persona segun su DNI. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a7fa55e6ff0b3bd3c8c75d3e580eb12c5}{devolver\+Num\+Entrada}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Se busca el numero de entrada de el dni del cliente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a4e7659d83ba8a961d4602160516f9ecb}{ver\+Si\+DNINo\+Existe}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Devuelve un valor de 1 o 0 segun si el dni esta presente en un arreglo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a6bc359ab43f65fff38e75d7ecab01347}{archivo\+Existe}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Revisa si el archivo existe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a509b289890ebae8bd130c7823de2bc59}{es\+Consecionaria}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Verifica si el dni ingresado es la consecionaria. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a740403db4d1a5fadc094af2ee9a4ea32}{hay\+Personas}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si hay personas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_aa3d66936384c3070c29c7af77cc78207}{cargar\+En\+Arreglo\+Personas\+Init}} ()
+\begin{DoxyCompactList}\small\item\em CARGA EN MEMORIA ///. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a20e8a0896ffcdfa308e3afd881f3828d}{cargar\+Persona\+Arreglo}} (\mbox{\hyperlink{struct_persona}{Persona}})
+\begin{DoxyCompactList}\small\item\em Hace espacio en el arreglo y carga una persona al arreglo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a88114d925d2b69bbe3b1a4f92de8cb1f}{allocar\+Espacio\+Para\+Persona}} (\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Hace espacio en el arreglo para una persona, incrementa cantidadpersonas por 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a1d823a5953bda6c0c9f57dc93e0c657c}{cargar\+Persona\+Consesioanaria}} ()
+\begin{DoxyCompactList}\small\item\em CARGA DE MIEMBRO "{}\+CONCESIONARIA"{} ///. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a04edefade6239b1607099a6814c271ba}{mostrar\+Persona\+Ordenado\+Segun}} ()
+\begin{DoxyCompactList}\small\item\em Matrices ///. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_persona_8h_a6990a4de0513677580b70e1c76a93b27}{ordenar\+Segun\+Param}} (int, int param, char\mbox{[}$\,$\mbox{]}\mbox{[}param\mbox{]})
+\item 
+void \mbox{\hyperlink{_persona_8h_ad0984a564d85afae396d2b9683d2c23f}{imprimir\+Separador}} (int)
+\begin{DoxyCompactList}\small\item\em Escribe \textquotesingle{}-\/\textquotesingle{} x cantidad de veces. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_persona_8h_abdfb453f63a3e3c34fe16d48516d501e}{acortar\+Direccion}} (char\mbox{[}$\,$\mbox{]}, int)
+\begin{DoxyCompactList}\small\item\em Acorta una direccion y agregar \textquotesingle{}...\textquotesingle{} si es muy largo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_persona_8h_a99a8d8c8c17baa6f884fea54aad3add7}{mostrar\+Menu\+Personas}} ()
+\begin{DoxyCompactList}\small\item\em Menu ///. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_persona_8h_a28f84059642ab4c2ed73d384e156eb45}{arreglopersona}}
+\item 
+int \mbox{\hyperlink{_persona_8h_a856ed6c0db19418c2067a7a68d4df981}{cantidadpersonas}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_persona_8h_abdfb453f63a3e3c34fe16d48516d501e}\index{Persona.h@{Persona.h}!acortarDireccion@{acortarDireccion}}
+\index{acortarDireccion@{acortarDireccion}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{acortarDireccion()}{acortarDireccion()}}
+{\footnotesize\ttfamily \label{_persona_8h_abdfb453f63a3e3c34fe16d48516d501e} 
+char \texorpdfstring{$\ast$}{*} acortar\+Direccion (\begin{DoxyParamCaption}\item[{char}]{texto}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{largotexto}{}\end{DoxyParamCaption})}
+
+
+
+Acorta una direccion y agregar \textquotesingle{}...\textquotesingle{} si es muy largo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em texto\mbox{[}$\,$\mbox{]}} & char El texto que llega de la matriz \\
+\hline
+{\em largotexto} & int El largo de un texto que llega del loop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+char\texorpdfstring{$\ast$}{*} String que se genera 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_af564fffdee62aa097b5cdcfa809db3d9}\index{Persona.h@{Persona.h}!agregarPersona@{agregarPersona}}
+\index{agregarPersona@{agregarPersona}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{agregarPersona()}{agregarPersona()}}
+{\footnotesize\ttfamily \label{_persona_8h_af564fffdee62aa097b5cdcfa809db3d9} 
+void agregar\+Persona (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Interfaz que se usa para cargar datos a una variable persona. 
+
+\begin{DoxyReturn}{Devuelve}
+void Se debe completar todo antes de salir. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a88114d925d2b69bbe3b1a4f92de8cb1f}\index{Persona.h@{Persona.h}!allocarEspacioParaPersona@{allocarEspacioParaPersona}}
+\index{allocarEspacioParaPersona@{allocarEspacioParaPersona}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{allocarEspacioParaPersona()}{allocarEspacioParaPersona()}}
+{\footnotesize\ttfamily \label{_persona_8h_a88114d925d2b69bbe3b1a4f92de8cb1f} 
+void allocar\+Espacio\+Para\+Persona (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{arreglo}{}\end{DoxyParamCaption})}
+
+
+
+Hace espacio en el arreglo para una persona, incrementa cantidadpersonas por 1. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Persona\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arreglo} & puntero de arreglo dinamico de personas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a6bc359ab43f65fff38e75d7ecab01347}\index{Persona.h@{Persona.h}!archivoExiste@{archivoExiste}}
+\index{archivoExiste@{archivoExiste}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{archivoExiste()}{archivoExiste()}}
+{\footnotesize\ttfamily \label{_persona_8h_a6bc359ab43f65fff38e75d7ecab01347} 
+int archivo\+Existe (\begin{DoxyParamCaption}\item[{char}]{archivonombre}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Revisa si el archivo existe. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em archivonombre\mbox{[}$\,$\mbox{]}} & char archivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si existe, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a7ab46a668237c6b33e3c1bf302ad0072}\index{Persona.h@{Persona.h}!buscarSegunDNI@{buscarSegunDNI}}
+\index{buscarSegunDNI@{buscarSegunDNI}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{buscarSegunDNI()}{buscarSegunDNI()}}
+{\footnotesize\ttfamily \label{_persona_8h_a7ab46a668237c6b33e3c1bf302ad0072} 
+\mbox{\hyperlink{struct_persona}{Persona}} buscar\+Segun\+DNI (\begin{DoxyParamCaption}\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Busca una persona segun su DNI. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dni\mbox{[}$\,$\mbox{]}} & char El DNI que se usa para buscar la persona \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\doxylink{struct_persona}{Persona} devuelve la estructura de la persona 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a876c8dddcf48021933be50896461dc40}\index{Persona.h@{Persona.h}!buscarUnaPersona@{buscarUnaPersona}}
+\index{buscarUnaPersona@{buscarUnaPersona}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{buscarUnaPersona()}{buscarUnaPersona()}}
+{\footnotesize\ttfamily \label{_persona_8h_a876c8dddcf48021933be50896461dc40} 
+void buscar\+Una\+Persona (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Se busca una persona segun su DNI, se hacen verificaciones. Luego se puede elegir si mostrar completamente o solo lo basico. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a29eea44f9fe1bb8aa0a4aae9b205fb6b}\index{Persona.h@{Persona.h}!cargarDIR@{cargarDIR}}
+\index{cargarDIR@{cargarDIR}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cargarDIR()}{cargarDIR()}}
+{\footnotesize\ttfamily \label{_persona_8h_a29eea44f9fe1bb8aa0a4aae9b205fb6b} 
+void cargar\+DIR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga la DIR (no tiene checks) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & Persona\texorpdfstring{$\ast$}{*} Representa la persona que esta siendo cargada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a1ffa9dbbc0a947d7a1a8bf8afb2669c8}\index{Persona.h@{Persona.h}!cargarDNI@{cargarDNI}}
+\index{cargarDNI@{cargarDNI}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cargarDNI()}{cargarDNI()}}
+{\footnotesize\ttfamily \label{_persona_8h_a1ffa9dbbc0a947d7a1a8bf8afb2669c8} 
+void cargar\+DNI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga el DNI. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & Persona\texorpdfstring{$\ast$}{*} Representa la persona que esta siendo cargada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void TODO\+: POR RAZONES QUE NO ENTIENDO, SI EL STRING SE LLEGA A SOBREPASAR, LAS VERIFICACIONES NO SE HACEN, EL WHILE SE SALTA, Y SE EJECUTA LA SIGUIENTE FUNCION 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_aa3d66936384c3070c29c7af77cc78207}\index{Persona.h@{Persona.h}!cargarEnArregloPersonasInit@{cargarEnArregloPersonasInit}}
+\index{cargarEnArregloPersonasInit@{cargarEnArregloPersonasInit}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cargarEnArregloPersonasInit()}{cargarEnArregloPersonasInit()}}
+{\footnotesize\ttfamily \label{_persona_8h_aa3d66936384c3070c29c7af77cc78207} 
+void cargar\+En\+Arreglo\+Personas\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+CARGA EN MEMORIA ///. 
+
+CARGA EN MEMORIA ///.
+
+\begin{DoxyReturn}{Devuelve}
+void se DEBE llamar al principio del programa antes de cualquier otra funcion que usa el arreglo. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a27c86c0e635bea6bc0893b25f86511ae}\index{Persona.h@{Persona.h}!cargarNombre@{cargarNombre}}
+\index{cargarNombre@{cargarNombre}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cargarNombre()}{cargarNombre()}}
+{\footnotesize\ttfamily \label{_persona_8h_a27c86c0e635bea6bc0893b25f86511ae} 
+void cargar\+Nombre (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga el Nombre. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & Persona\texorpdfstring{$\ast$}{*} Representa la persona que esta siendo cargada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a20e8a0896ffcdfa308e3afd881f3828d}\index{Persona.h@{Persona.h}!cargarPersonaArreglo@{cargarPersonaArreglo}}
+\index{cargarPersonaArreglo@{cargarPersonaArreglo}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cargarPersonaArreglo()}{cargarPersonaArreglo()}}
+{\footnotesize\ttfamily \label{_persona_8h_a20e8a0896ffcdfa308e3afd881f3828d} 
+void cargar\+Persona\+Arreglo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Hace espacio en el arreglo y carga una persona al arreglo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & \doxylink{struct_persona}{Persona} Recive una copia de una persona para colocar en el arreglo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void Se puede llamar fuera de \doxylink{_persona_8c_aa3d66936384c3070c29c7af77cc78207}{cargar\+En\+Arreglo\+Personas\+Init()} 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a1d823a5953bda6c0c9f57dc93e0c657c}\index{Persona.h@{Persona.h}!cargarPersonaConsesioanaria@{cargarPersonaConsesioanaria}}
+\index{cargarPersonaConsesioanaria@{cargarPersonaConsesioanaria}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cargarPersonaConsesioanaria()}{cargarPersonaConsesioanaria()}}
+{\footnotesize\ttfamily \label{_persona_8h_a1d823a5953bda6c0c9f57dc93e0c657c} 
+void cargar\+Persona\+Consesioanaria (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+CARGA DE MIEMBRO "{}\+CONCESIONARIA"{} ///. 
+
+CARGA DE MIEMBRO "{}\+CONCESIONARIA"{} ///.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_adeb8dced5b106f32c5268b67b1d8f3df}\index{Persona.h@{Persona.h}!cargarRol@{cargarRol}}
+\index{cargarRol@{cargarRol}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cargarRol()}{cargarRol()}}
+{\footnotesize\ttfamily \label{_persona_8h_adeb8dced5b106f32c5268b67b1d8f3df} 
+void cargar\+Rol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga el rol. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & Persona\texorpdfstring{$\ast$}{*} Representa la persona que esta siendo cargada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_aaf49abdd57cd70e6f4e8e844c26d679b}\index{Persona.h@{Persona.h}!cargarTEL@{cargarTEL}}
+\index{cargarTEL@{cargarTEL}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cargarTEL()}{cargarTEL()}}
+{\footnotesize\ttfamily \label{_persona_8h_aaf49abdd57cd70e6f4e8e844c26d679b} 
+void cargar\+TEL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}} \texorpdfstring{$\ast$}{*}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que recibe un puntero de la variable persona de la funcion \doxylink{_persona_8c_af564fffdee62aa097b5cdcfa809db3d9}{agregar\+Persona()}, Carga el TEL. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & Persona\texorpdfstring{$\ast$}{*} Representa la persona que esta siendo cargada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a7fa55e6ff0b3bd3c8c75d3e580eb12c5}\index{Persona.h@{Persona.h}!devolverNumEntrada@{devolverNumEntrada}}
+\index{devolverNumEntrada@{devolverNumEntrada}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{devolverNumEntrada()}{devolverNumEntrada()}}
+{\footnotesize\ttfamily \label{_persona_8h_a7fa55e6ff0b3bd3c8c75d3e580eb12c5} 
+int devolver\+Num\+Entrada (\begin{DoxyParamCaption}\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Se busca el numero de entrada de el dni del cliente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dni\mbox{[}$\,$\mbox{]}} & char El DNI que se usa para buscar la persona \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int Retorna un valor (1,2,3) representando la posicion 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a509b289890ebae8bd130c7823de2bc59}\index{Persona.h@{Persona.h}!esConsecionaria@{esConsecionaria}}
+\index{esConsecionaria@{esConsecionaria}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{esConsecionaria()}{esConsecionaria()}}
+{\footnotesize\ttfamily \label{_persona_8h_a509b289890ebae8bd130c7823de2bc59} 
+int es\+Consecionaria (\begin{DoxyParamCaption}\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Verifica si el dni ingresado es la consecionaria. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dni\mbox{[}$\,$\mbox{]}} & char el dni ingresado del usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es 00000000, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a80477330995f126c5be1a8d44505f2a9}\index{Persona.h@{Persona.h}!guardarCambiosPersona@{guardarCambiosPersona}}
+\index{guardarCambiosPersona@{guardarCambiosPersona}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{guardarCambiosPersona()}{guardarCambiosPersona()}}
+{\footnotesize\ttfamily \label{_persona_8h_a80477330995f126c5be1a8d44505f2a9} 
+void guardar\+Cambios\+Persona (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}}}]{persona}{, }\item[{int}]{entrada}{}\end{DoxyParamCaption})}
+
+
+
+Guarda cambios de persona que se hicieron. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & \doxylink{struct_persona}{Persona} Sobreescribe datos ya antes cargados del archivo de clientes \\
+\hline
+{\em entrada} & int Representa la "{}entrada"{} que es al respecto del inicio del archivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void si el archivo no existe, esto no hace nada 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a594d12a3152bb23b16fc1bd3b87a5149}\index{Persona.h@{Persona.h}!guardarPersonaAFile@{guardarPersonaAFile}}
+\index{guardarPersonaAFile@{guardarPersonaAFile}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{guardarPersonaAFile()}{guardarPersonaAFile()}}
+{\footnotesize\ttfamily \label{_persona_8h_a594d12a3152bb23b16fc1bd3b87a5149} 
+void guardar\+Persona\+AFile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Guarda la persona a un archivo, definido de antemano. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & \doxylink{struct_persona}{Persona} Representa el conjunto de una persona, todos sus datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void Si el archivo falla en su creacion por algun motivo, esto no haria nada 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a740403db4d1a5fadc094af2ee9a4ea32}\index{Persona.h@{Persona.h}!hayPersonas@{hayPersonas}}
+\index{hayPersonas@{hayPersonas}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{hayPersonas()}{hayPersonas()}}
+{\footnotesize\ttfamily \label{_persona_8h_a740403db4d1a5fadc094af2ee9a4ea32} 
+int hay\+Personas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si hay personas. 
+
+\begin{DoxyReturn}{Devuelve}
+int 1 si hay, 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_ad0984a564d85afae396d2b9683d2c23f}\index{Persona.h@{Persona.h}!imprimirSeparador@{imprimirSeparador}}
+\index{imprimirSeparador@{imprimirSeparador}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{imprimirSeparador()}{imprimirSeparador()}}
+{\footnotesize\ttfamily \label{_persona_8h_ad0984a564d85afae396d2b9683d2c23f} 
+void imprimir\+Separador (\begin{DoxyParamCaption}\item[{int}]{size\+Chars}{}\end{DoxyParamCaption})}
+
+
+
+Escribe \textquotesingle{}-\/\textquotesingle{} x cantidad de veces. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em size\+Chars} & int cantidad de veces que printea el \textquotesingle{}-\/\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a50f26f093f0893cd4454e0c847eeb135}\index{Persona.h@{Persona.h}!menuCargaPersonas@{menuCargaPersonas}}
+\index{menuCargaPersonas@{menuCargaPersonas}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{menuCargaPersonas()}{menuCargaPersonas()}}
+{\footnotesize\ttfamily \label{_persona_8h_a50f26f093f0893cd4454e0c847eeb135} 
+void menu\+Carga\+Personas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+FUNCIONALIDAD ///. 
+
+Muestra el menu de opciones para que el usuario elija una de los dos opciones
+
+\begin{DoxyReturn}{Devuelve}
+void Sale de la funcion cuando el usuario hace cualquier eleccion. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a56b7289f300f3d48ee146047390cfa25}\index{Persona.h@{Persona.h}!menuDeModificacionPersona@{menuDeModificacionPersona}}
+\index{menuDeModificacionPersona@{menuDeModificacionPersona}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{menuDeModificacionPersona()}{menuDeModificacionPersona()}}
+{\footnotesize\ttfamily \label{_persona_8h_a56b7289f300f3d48ee146047390cfa25} 
+void menu\+De\+Modificacion\+Persona (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}}}]{personanueva}{, }\item[{int}]{entrada}{}\end{DoxyParamCaption})}
+
+
+
+El menu de modificacion de entrada de cliente, tiene un rango de funciones distintas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em personanueva} & \doxylink{struct_persona}{Persona} Una copia que se le cambiaran los detalles del cliente antes de cargarlo \\
+\hline
+{\em entrada} & int // Posicion en el archivo de cliente en el que esta el cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void Tiene 3 metodos de salida, uno de guardado y 2 de salida 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_aecf967e37ae77f75b2fb2300e714a974}\index{Persona.h@{Persona.h}!menuVerPersonas@{menuVerPersonas}}
+\index{menuVerPersonas@{menuVerPersonas}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{menuVerPersonas()}{menuVerPersonas()}}
+{\footnotesize\ttfamily \label{_persona_8h_aecf967e37ae77f75b2fb2300e714a974} 
+void menu\+Ver\+Personas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Un menu dedicado para la seleccion para mostrar todos o un cliente solo. 
+
+\begin{DoxyReturn}{Devuelve}
+void Retorna en caso de que el archivo de clientes no existe 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_af01306c12c338c84601f082781b67b75}\index{Persona.h@{Persona.h}!modificarPersona@{modificarPersona}}
+\index{modificarPersona@{modificarPersona}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{modificarPersona()}{modificarPersona()}}
+{\footnotesize\ttfamily \label{_persona_8h_af01306c12c338c84601f082781b67b75} 
+void modificar\+Persona (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Un menu en donde se escribe un dni, una vez encontrado el cliente, se le dara acceso a el menu de edicion. 
+
+\begin{DoxyReturn}{Devuelve}
+void retorna en caso de que el archivo de clientes no exista 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a99a8d8c8c17baa6f884fea54aad3add7}\index{Persona.h@{Persona.h}!mostrarMenuPersonas@{mostrarMenuPersonas}}
+\index{mostrarMenuPersonas@{mostrarMenuPersonas}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{mostrarMenuPersonas()}{mostrarMenuPersonas()}}
+{\footnotesize\ttfamily \label{_persona_8h_a99a8d8c8c17baa6f884fea54aad3add7} 
+void mostrar\+Menu\+Personas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Menu ///. 
+
+Menu ///.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a04edefade6239b1607099a6814c271ba}\index{Persona.h@{Persona.h}!mostrarPersonaOrdenadoSegun@{mostrarPersonaOrdenadoSegun}}
+\index{mostrarPersonaOrdenadoSegun@{mostrarPersonaOrdenadoSegun}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{mostrarPersonaOrdenadoSegun()}{mostrarPersonaOrdenadoSegun()}}
+{\footnotesize\ttfamily \label{_persona_8h_a04edefade6239b1607099a6814c271ba} 
+void mostrar\+Persona\+Ordenado\+Segun (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Matrices ///. 
+
+Matrices ///.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_ab83b0af6d412483eebbc8423da3cf3e6}\index{Persona.h@{Persona.h}!mostrarPersonasFull@{mostrarPersonasFull}}
+\index{mostrarPersonasFull@{mostrarPersonasFull}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{mostrarPersonasFull()}{mostrarPersonasFull()}}
+{\footnotesize\ttfamily \label{_persona_8h_ab83b0af6d412483eebbc8423da3cf3e6} 
+void mostrar\+Personas\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loop que recorre el arreglo de clientes, para mostrar todos sus contenidos. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a51a08911c7432662aa7fb769ea772ae0}\index{Persona.h@{Persona.h}!mostrarPersonasMenu@{mostrarPersonasMenu}}
+\index{mostrarPersonasMenu@{mostrarPersonasMenu}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{mostrarPersonasMenu()}{mostrarPersonasMenu()}}
+{\footnotesize\ttfamily \label{_persona_8h_a51a08911c7432662aa7fb769ea772ae0} 
+void mostrar\+Personas\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Un menu dedicado para mostrar las opciones de mostrar personas, completo o simple. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a3d2b6edaf152fce5d11f517d6358892f}\index{Persona.h@{Persona.h}!mostrarPersonasMin@{mostrarPersonasMin}}
+\index{mostrarPersonasMin@{mostrarPersonasMin}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{mostrarPersonasMin()}{mostrarPersonasMin()}}
+{\footnotesize\ttfamily \label{_persona_8h_a3d2b6edaf152fce5d11f517d6358892f} 
+void mostrar\+Personas\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loop que recorre el arreglo de clientes, para mostrar los contenidos mas importantes. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a6990a4de0513677580b70e1c76a93b27}\index{Persona.h@{Persona.h}!ordenarSegunParam@{ordenarSegunParam}}
+\index{ordenarSegunParam@{ordenarSegunParam}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{ordenarSegunParam()}{ordenarSegunParam()}}
+{\footnotesize\ttfamily \label{_persona_8h_a6990a4de0513677580b70e1c76a93b27} 
+int ordenar\+Segun\+Param (\begin{DoxyParamCaption}\item[{int}]{}{, }\item[{int}]{param}{, }\item[{char}]{}{\mbox{[}$\,$\mbox{]}\mbox{[}param\mbox{]}}\end{DoxyParamCaption})}
+
+\Hypertarget{_persona_8h_a9a2f4174fa01d27040b08d4e51182314}\index{Persona.h@{Persona.h}!pasarAMayus@{pasarAMayus}}
+\index{pasarAMayus@{pasarAMayus}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{pasarAMayus()}{pasarAMayus()}}
+{\footnotesize\ttfamily \label{_persona_8h_a9a2f4174fa01d27040b08d4e51182314} 
+void pasar\+AMayus (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{caracter}{}\end{DoxyParamCaption})}
+
+
+
+AYUDANTES ///. 
+
+pasa UN CARACTER a mayuscula
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char\texorpdfstring{$\ast$}{*}caracter} & Un puntero al caracter para hacer mayuscula \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_ab1e2b17f7e620a6b7a3269c89fb9a320}\index{Persona.h@{Persona.h}!traducirRolCliente@{traducirRolCliente}}
+\index{traducirRolCliente@{traducirRolCliente}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{traducirRolCliente()}{traducirRolCliente()}}
+{\footnotesize\ttfamily \label{_persona_8h_ab1e2b17f7e620a6b7a3269c89fb9a320} 
+void traducir\+Rol\+Cliente (\begin{DoxyParamCaption}\item[{char}]{rol}{}\end{DoxyParamCaption})}
+
+
+
+Muestra en consola el rol correspondiente del cliente (NO SE GUARDAN ESTAS TRADUCCIONES) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em rol} & char caracter que representa el rol del cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_afb385f700f84deb06a6e271a0dc0793e}\index{Persona.h@{Persona.h}!verificarChars@{verificarChars}}
+\index{verificarChars@{verificarChars}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verificarChars()}{verificarChars()}}
+{\footnotesize\ttfamily \label{_persona_8h_afb385f700f84deb06a6e271a0dc0793e} 
+int verificar\+Chars (\begin{DoxyParamCaption}\item[{char}]{}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+\Hypertarget{_persona_8h_af85772a65da80e6e5cf79bf9e77b9df2}\index{Persona.h@{Persona.h}!verificarDir@{verificarDir}}
+\index{verificarDir@{verificarDir}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verificarDir()}{verificarDir()}}
+{\footnotesize\ttfamily \label{_persona_8h_af85772a65da80e6e5cf79bf9e77b9df2} 
+int verificar\+Dir (\begin{DoxyParamCaption}\item[{char}]{dir}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Verifica si la direccion es entre 3 characteres y 98. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dir\mbox{[}$\,$\mbox{]}} & char La direccion del usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es valido, sino 0. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_aba58fbde77243a1302076108ca44c2fc}\index{Persona.h@{Persona.h}!verificarDNI@{verificarDNI}}
+\index{verificarDNI@{verificarDNI}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verificarDNI()}{verificarDNI()}}
+{\footnotesize\ttfamily \label{_persona_8h_aba58fbde77243a1302076108ca44c2fc} 
+int verificar\+DNI (\begin{DoxyParamCaption}\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+verifica si el largo de dni es mayor o igual a 8 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dni\mbox{[}$\,$\mbox{]}} & char representa el dni del cliente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es mayor a 8, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a5d22bd26f4fb16697752b4c2505db80a}\index{Persona.h@{Persona.h}!verificarEnteros@{verificarEnteros}}
+\index{verificarEnteros@{verificarEnteros}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verificarEnteros()}{verificarEnteros()}}
+{\footnotesize\ttfamily \label{_persona_8h_a5d22bd26f4fb16697752b4c2505db80a} 
+int verificar\+Enteros (\begin{DoxyParamCaption}\item[{char}]{cadena}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Verifica si una string tiene solo numeros o no. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cadena\mbox{[}$\,$\mbox{]}} & char cadena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 en caso de que sea verdadero, 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a0612712c44ad54a99c874e6744fc1829}\index{Persona.h@{Persona.h}!verificarNombre@{verificarNombre}}
+\index{verificarNombre@{verificarNombre}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verificarNombre()}{verificarNombre()}}
+{\footnotesize\ttfamily \label{_persona_8h_a0612712c44ad54a99c874e6744fc1829} 
+int verificar\+Nombre (\begin{DoxyParamCaption}\item[{char}]{nombre}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Verifica si el largo del nombre es mayor a 3 y menor que 48. Verifica si tiene numeros o no. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\mbox{[}$\,$\mbox{]}} & char El nombre ingresado por el usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es valido, sino 0. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a650ebaf52842f65d99a83516640149ae}\index{Persona.h@{Persona.h}!verificarRol@{verificarRol}}
+\index{verificarRol@{verificarRol}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verificarRol()}{verificarRol()}}
+{\footnotesize\ttfamily \label{_persona_8h_a650ebaf52842f65d99a83516640149ae} 
+int verificar\+Rol (\begin{DoxyParamCaption}\item[{char}]{rol}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si el rol ingresado es C o V. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em rol} & char representa el rol del cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int retorna 1 si es correspondiente, 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_ab786d6fe2fff881c136d67b365838483}\index{Persona.h@{Persona.h}!verificarTel@{verificarTel}}
+\index{verificarTel@{verificarTel}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verificarTel()}{verificarTel()}}
+{\footnotesize\ttfamily \label{_persona_8h_ab786d6fe2fff881c136d67b365838483} 
+int verificar\+Tel (\begin{DoxyParamCaption}\item[{char}]{tel}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Verifica si el numero de telefono es mayor o igual a 10. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em tel\mbox{[}$\,$\mbox{]}} & char representa el numero de telefono del cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es valido, 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a9858756331367c4be03bb02c7896702a}\index{Persona.h@{Persona.h}!verPersonaFull@{verPersonaFull}}
+\index{verPersonaFull@{verPersonaFull}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verPersonaFull()}{verPersonaFull()}}
+{\footnotesize\ttfamily \label{_persona_8h_a9858756331367c4be03bb02c7896702a} 
+void ver\+Persona\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Muestra todos los datos del cliente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & \doxylink{struct_persona}{Persona} llega por copia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_afd5c0315139bdd42700b0812740f8dac}\index{Persona.h@{Persona.h}!verPersonaMin@{verPersonaMin}}
+\index{verPersonaMin@{verPersonaMin}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verPersonaMin()}{verPersonaMin()}}
+{\footnotesize\ttfamily \label{_persona_8h_afd5c0315139bdd42700b0812740f8dac} 
+void ver\+Persona\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}}}]{persona}{}\end{DoxyParamCaption})}
+
+
+
+Muestra algunos de los datos del cliente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em persona} & \doxylink{struct_persona}{Persona} llega por copia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_persona_8h_a4e7659d83ba8a961d4602160516f9ecb}\index{Persona.h@{Persona.h}!verSiDNINoExiste@{verSiDNINoExiste}}
+\index{verSiDNINoExiste@{verSiDNINoExiste}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{verSiDNINoExiste()}{verSiDNINoExiste()}}
+{\footnotesize\ttfamily \label{_persona_8h_a4e7659d83ba8a961d4602160516f9ecb} 
+int ver\+Si\+DNINo\+Existe (\begin{DoxyParamCaption}\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Devuelve un valor de 1 o 0 segun si el dni esta presente en un arreglo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dni\mbox{[}$\,$\mbox{]}} & char El dni del cliente que se va a insertar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si no existe, 0 si existe. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{_persona_8h_a28f84059642ab4c2ed73d384e156eb45}\index{Persona.h@{Persona.h}!arreglopersona@{arreglopersona}}
+\index{arreglopersona@{arreglopersona}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{arreglopersona}{arreglopersona}}
+{\footnotesize\ttfamily \label{_persona_8h_a28f84059642ab4c2ed73d384e156eb45} 
+\mbox{\hyperlink{struct_persona}{Persona}}\texorpdfstring{$\ast$}{*} arreglopersona}
+
+\Hypertarget{_persona_8h_a856ed6c0db19418c2067a7a68d4df981}\index{Persona.h@{Persona.h}!cantidadpersonas@{cantidadpersonas}}
+\index{cantidadpersonas@{cantidadpersonas}!Persona.h@{Persona.h}}
+\doxysubsubsection{\texorpdfstring{cantidadpersonas}{cantidadpersonas}}
+{\footnotesize\ttfamily \label{_persona_8h_a856ed6c0db19418c2067a7a68d4df981} 
+int cantidadpersonas}
+

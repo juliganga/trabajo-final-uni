@@ -26,8 +26,6 @@ typedef struct {
 
 AutoArchivo cargarAutoArchivo(Auto);
 
-void mostrarArchivoAutos(char*);
-void mostrarAutoArchivo(AutoArchivo);
 
 void guardarAutoArchivo(AutoArchivo, char*);
 void guardarAutoArchivoEnPos(AutoArchivo, char*, int);

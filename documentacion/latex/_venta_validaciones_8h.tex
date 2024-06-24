@@ -1,0 +1,231 @@
+\doxysection{Referencia del archivo librerias/\+Venta\+Validaciones.h}
+\hypertarget{_venta_validaciones_8h}{}\label{_venta_validaciones_8h}\index{librerias/VentaValidaciones.h@{librerias/VentaValidaciones.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}Patente.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_a551f66734318444e9857e6ad3c88f301}{verificar\+Anio\+Actual}} (\mbox{\hyperlink{struct_venta}{Venta}})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si el a�o ingresado no es en el futuro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_a960cfb53f68d6775e164e369720e70c5}{anio\+Positivo}} (\mbox{\hyperlink{struct_venta}{Venta}})
+\begin{DoxyCompactList}\small\item\em Verifica si el a�o proporcionado es positivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_ab4246f5b73266702291765936676f069}{mes\+Positivo}} (\mbox{\hyperlink{struct_venta}{Venta}})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si el mes proporcionado es un numero positivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_ab7384c2cded9da2cd9ee29b19c6a1898}{verificar\+Mes}} (\mbox{\hyperlink{struct_venta}{Venta}})
+\begin{DoxyCompactList}\small\item\em Verifica si el mes proporcionado existe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_ae1c168bb3c45c6d4186413101d29c95d}{verificar\+Dia}} (\mbox{\hyperlink{struct_venta}{Venta}})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si el dia existe en un mes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_af6668324248bb9b07b30461140cffed9}{dia\+Positivo}} (\mbox{\hyperlink{struct_venta}{Venta}})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si el dia proporcionado es positivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_a97c4123ecf54954a79c2877086d93c48}{es\+Comprador}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si la persona del DNI proporcionado es un comprador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_a2c807b9a4bea610d4e946405db8b3ddf}{le\+Pertenece\+Auto\+Yexiste}} (\mbox{\hyperlink{struct_patente}{Patente}}, char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si el auto que pertenece a la patente esta a la venta. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_a3e04f2a875713ee7eaa4bdfd4ee7c34f}{precio\+Venta\+Positivo}} (\mbox{\hyperlink{struct_venta}{Venta}})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si el precio de venta ingresado es positivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_a47ab0082c9687704f7dfcb709578b749}{ganancia\+Positiva}} (\mbox{\hyperlink{struct_venta}{Venta}})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si el numero ingresado para la ganancia de la venta es positivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_validaciones_8h_a014d740ba8cb477b94c5ba3e2eccb871}{ganancia\+Menor\+Que\+Venta}} (float, float)
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si la ganancia es menor que el precio de venta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_venta_validaciones_8h_a960cfb53f68d6775e164e369720e70c5}\index{VentaValidaciones.h@{VentaValidaciones.h}!anioPositivo@{anioPositivo}}
+\index{anioPositivo@{anioPositivo}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{anioPositivo()}{anioPositivo()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_a960cfb53f68d6775e164e369720e70c5} 
+int anio\+Positivo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si el a�o proporcionado es positivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} representa la venta a cargar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un numero positivo, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_af6668324248bb9b07b30461140cffed9}\index{VentaValidaciones.h@{VentaValidaciones.h}!diaPositivo@{diaPositivo}}
+\index{diaPositivo@{diaPositivo}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{diaPositivo()}{diaPositivo()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_af6668324248bb9b07b30461140cffed9} 
+int dia\+Positivo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si el dia proporcionado es positivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un numero positivo, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_a97c4123ecf54954a79c2877086d93c48}\index{VentaValidaciones.h@{VentaValidaciones.h}!esComprador@{esComprador}}
+\index{esComprador@{esComprador}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{esComprador()}{esComprador()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_a97c4123ecf54954a79c2877086d93c48} 
+int es\+Comprador (\begin{DoxyParamCaption}\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si la persona del DNI proporcionado es un comprador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dni\mbox{[}$\,$\mbox{]}} & char \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un comprador, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_a014d740ba8cb477b94c5ba3e2eccb871}\index{VentaValidaciones.h@{VentaValidaciones.h}!gananciaMenorQueVenta@{gananciaMenorQueVenta}}
+\index{gananciaMenorQueVenta@{gananciaMenorQueVenta}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{gananciaMenorQueVenta()}{gananciaMenorQueVenta()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_a014d740ba8cb477b94c5ba3e2eccb871} 
+int ganancia\+Menor\+Que\+Venta (\begin{DoxyParamCaption}\item[{float}]{precioventa}{, }\item[{float}]{precioadquisicion}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si la ganancia es menor que el precio de venta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la ganancia ingresada en la venta a registrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si la ganancia es menor que el precio de venta, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_a47ab0082c9687704f7dfcb709578b749}\index{VentaValidaciones.h@{VentaValidaciones.h}!gananciaPositiva@{gananciaPositiva}}
+\index{gananciaPositiva@{gananciaPositiva}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{gananciaPositiva()}{gananciaPositiva()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_a47ab0082c9687704f7dfcb709578b749} 
+int ganancia\+Positiva (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si el numero ingresado para la ganancia de la venta es positivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la ganancia ingresada en la venta a registrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un numero positivo, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_a2c807b9a4bea610d4e946405db8b3ddf}\index{VentaValidaciones.h@{VentaValidaciones.h}!lePerteneceAutoYexiste@{lePerteneceAutoYexiste}}
+\index{lePerteneceAutoYexiste@{lePerteneceAutoYexiste}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{lePerteneceAutoYexiste()}{lePerteneceAutoYexiste()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_a2c807b9a4bea610d4e946405db8b3ddf} 
+int le\+Pertenece\+Auto\+Yexiste (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_patente}{Patente}}}]{patente}{, }\item[{char}]{dni}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si el auto que pertenece a la patente esta a la venta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em patente} & \doxylink{struct_patente}{Patente} Representa la patente ingresada a la venta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un auto a la venta, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_ab4246f5b73266702291765936676f069}\index{VentaValidaciones.h@{VentaValidaciones.h}!mesPositivo@{mesPositivo}}
+\index{mesPositivo@{mesPositivo}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{mesPositivo()}{mesPositivo()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_ab4246f5b73266702291765936676f069} 
+int mes\+Positivo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si el mes proporcionado es un numero positivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un numero positivo, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_a3e04f2a875713ee7eaa4bdfd4ee7c34f}\index{VentaValidaciones.h@{VentaValidaciones.h}!precioVentaPositivo@{precioVentaPositivo}}
+\index{precioVentaPositivo@{precioVentaPositivo}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{precioVentaPositivo()}{precioVentaPositivo()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_a3e04f2a875713ee7eaa4bdfd4ee7c34f} 
+int precio\+Venta\+Positivo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si el precio de venta ingresado es positivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa el precio de la venta a registrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un numero positivo, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_a551f66734318444e9857e6ad3c88f301}\index{VentaValidaciones.h@{VentaValidaciones.h}!verificarAnioActual@{verificarAnioActual}}
+\index{verificarAnioActual@{verificarAnioActual}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{verificarAnioActual()}{verificarAnioActual()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_a551f66734318444e9857e6ad3c88f301} 
+int verificar\+Anio\+Actual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si el a�o ingresado no es en el futuro. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es menor que el a�o actual, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_ae1c168bb3c45c6d4186413101d29c95d}\index{VentaValidaciones.h@{VentaValidaciones.h}!verificarDia@{verificarDia}}
+\index{verificarDia@{verificarDia}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{verificarDia()}{verificarDia()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_ae1c168bb3c45c6d4186413101d29c95d} 
+int verificar\+Dia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica si el dia existe en un mes. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un dia posible, 0 si no 
+\end{DoxyReturn}
+\Hypertarget{_venta_validaciones_8h_ab7384c2cded9da2cd9ee29b19c6a1898}\index{VentaValidaciones.h@{VentaValidaciones.h}!verificarMes@{verificarMes}}
+\index{verificarMes@{verificarMes}!VentaValidaciones.h@{VentaValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{verificarMes()}{verificarMes()}}
+{\footnotesize\ttfamily \label{_venta_validaciones_8h_ab7384c2cded9da2cd9ee29b19c6a1898} 
+int verificar\+Mes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si el mes proporcionado existe. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es un mes posible, 0 si no 
+\end{DoxyReturn}

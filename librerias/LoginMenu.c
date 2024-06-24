@@ -8,6 +8,11 @@
 #include "UsuarioValidaciones.h"
 #include "Utiles.h"
 
+/** \brief Menu en donde el usuario puede logearse al sistema
+ *
+ * \return int Si es -1, no entrara si es 0 entrara
+ *
+ */
 int menuLogin(){
     char *nombreArchivo = "Usuarios.bin";
     char *nombre = (char*) malloc(sizeof(char) * 20);

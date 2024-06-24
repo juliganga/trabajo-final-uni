@@ -1,0 +1,210 @@
+\doxysection{Referencia del archivo librerias/\+Auto\+Validaciones.h}
+\hypertarget{_auto_validaciones_8h}{}\label{_auto_validaciones_8h}\index{librerias/AutoValidaciones.h@{librerias/AutoValidaciones.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_a31f224bd4a1d6b74bcf96401d3459e5d}{limite\+Marca}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica que la marca igresada no sobrepase los limites del arreglo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_acd7b6b715915d136a712f6050eb51593}{limite\+Modelo}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica que el modelo igresado no sobrepase los limites del arreglo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_ad99298de646b0e0e6ee0797fecbb7d45}{es\+Anio}} (int)
+\begin{DoxyCompactList}\small\item\em Funcion que verifica que el a�o igresado este correcto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_ad133939776091310d2564ea9825c02af}{limite\+Anio}} (int)
+\begin{DoxyCompactList}\small\item\em Funcion que verifica que el a�o este dentro de unos parametros establecidos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_a97469c5a5e6ebc24dcad9eaf3a04e3f2}{anio\+No\+Negativo}} (int)
+\begin{DoxyCompactList}\small\item\em Funcion que verifica que el a�o igresado no sea negativo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_a0c355478ace6e1c035f33cbf520366b5}{Precio\+No\+Negativo}} (float)
+\begin{DoxyCompactList}\small\item\em Funcion que valida si el valor pasado como precio de adquisicion, es positivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_ae3f005514832b1accd5ed4c7c895828c}{limite\+Kms}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica que el kilometraje no se pase del limite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_a4e93116a186c352e3c02f04819b22802}{kms\+Numerico}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica que el kilometraje sea numerico. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_ab40b3d776c3771c71b61fe04c977e330}{kms\+No\+Negativo}} (char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que verifica que el kilometraje no sea negativo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_auto_validaciones_8h_a8b0641f1f324dfb7c2dcadccbf56b226}{es\+Vendedor}} (\mbox{\hyperlink{struct_persona}{Persona}})
+\begin{DoxyCompactList}\small\item\em Funcion que valida si el titular de un auto es vendedor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_auto_validaciones_8h_a97469c5a5e6ebc24dcad9eaf3a04e3f2}\index{AutoValidaciones.h@{AutoValidaciones.h}!anioNoNegativo@{anioNoNegativo}}
+\index{anioNoNegativo@{anioNoNegativo}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{anioNoNegativo()}{anioNoNegativo()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_a97469c5a5e6ebc24dcad9eaf3a04e3f2} 
+int anio\+No\+Negativo (\begin{DoxyParamCaption}\item[{int}]{anio}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica que el a�o igresado no sea negativo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em int} & anio -\/\texorpdfstring{$>$}{>} el a�o a evaluar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si es mayor a 0 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_ad99298de646b0e0e6ee0797fecbb7d45}\index{AutoValidaciones.h@{AutoValidaciones.h}!esAnio@{esAnio}}
+\index{esAnio@{esAnio}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{esAnio()}{esAnio()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_ad99298de646b0e0e6ee0797fecbb7d45} 
+int es\+Anio (\begin{DoxyParamCaption}\item[{int}]{anio}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica que el a�o igresado este correcto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em int} & anio -\/\texorpdfstring{$>$}{>} representa el a�o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si es correcto 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_a8b0641f1f324dfb7c2dcadccbf56b226}\index{AutoValidaciones.h@{AutoValidaciones.h}!esVendedor@{esVendedor}}
+\index{esVendedor@{esVendedor}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{esVendedor()}{esVendedor()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_a8b0641f1f324dfb7c2dcadccbf56b226} 
+int es\+Vendedor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_persona}{Persona}}}]{titular}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que valida si el titular de un auto es vendedor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_persona}{Persona}} & titular -\/\texorpdfstring{$>$}{>} estructura tipo persona que representa el titular del vehiculo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si es Vendedor 0 si no lo es. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_ab40b3d776c3771c71b61fe04c977e330}\index{AutoValidaciones.h@{AutoValidaciones.h}!kmsNoNegativo@{kmsNoNegativo}}
+\index{kmsNoNegativo@{kmsNoNegativo}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{kmsNoNegativo()}{kmsNoNegativo()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_ab40b3d776c3771c71b61fe04c977e330} 
+int kms\+No\+Negativo (\begin{DoxyParamCaption}\item[{char}]{kms}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica que el kilometraje no sea negativo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & kms\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} un arreglo que representa los kilometros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si es mayor a 0 0 si es menor. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_a4e93116a186c352e3c02f04819b22802}\index{AutoValidaciones.h@{AutoValidaciones.h}!kmsNumerico@{kmsNumerico}}
+\index{kmsNumerico@{kmsNumerico}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{kmsNumerico()}{kmsNumerico()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_a4e93116a186c352e3c02f04819b22802} 
+int kms\+Numerico (\begin{DoxyParamCaption}\item[{char}]{kms}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica que el kilometraje sea numerico. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & kms\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} un arreglo que representa los kilometros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si es mayor a 0 0 si es menor. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_ad133939776091310d2564ea9825c02af}\index{AutoValidaciones.h@{AutoValidaciones.h}!limiteAnio@{limiteAnio}}
+\index{limiteAnio@{limiteAnio}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{limiteAnio()}{limiteAnio()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_ad133939776091310d2564ea9825c02af} 
+int limite\+Anio (\begin{DoxyParamCaption}\item[{int}]{anio}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica que el a�o este dentro de unos parametros establecidos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em int} & anio -\/\texorpdfstring{$>$}{>} el a�o a evaluar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si es mayor a 0, 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_ae3f005514832b1accd5ed4c7c895828c}\index{AutoValidaciones.h@{AutoValidaciones.h}!limiteKms@{limiteKms}}
+\index{limiteKms@{limiteKms}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{limiteKms()}{limiteKms()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_ae3f005514832b1accd5ed4c7c895828c} 
+int limite\+Kms (\begin{DoxyParamCaption}\item[{char}]{kms}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica que el kilometraje no se pase del limite. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & kms\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} un arreglo que representa los kilometros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si es mayor a 0 0 si es menor. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_a31f224bd4a1d6b74bcf96401d3459e5d}\index{AutoValidaciones.h@{AutoValidaciones.h}!limiteMarca@{limiteMarca}}
+\index{limiteMarca@{limiteMarca}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{limiteMarca()}{limiteMarca()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_a31f224bd4a1d6b74bcf96401d3459e5d} 
+int limite\+Marca (\begin{DoxyParamCaption}\item[{char}]{marca}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica que la marca igresada no sobrepase los limites del arreglo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & marca\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} el string a validar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si esta dentro de los limites 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_acd7b6b715915d136a712f6050eb51593}\index{AutoValidaciones.h@{AutoValidaciones.h}!limiteModelo@{limiteModelo}}
+\index{limiteModelo@{limiteModelo}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{limiteModelo()}{limiteModelo()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_acd7b6b715915d136a712f6050eb51593} 
+int limite\+Modelo (\begin{DoxyParamCaption}\item[{char}]{modelo}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que verifica que el modelo igresado no sobrepase los limites del arreglo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & modelo\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} el string a validar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si esta dentro de los limites 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_auto_validaciones_8h_a0c355478ace6e1c035f33cbf520366b5}\index{AutoValidaciones.h@{AutoValidaciones.h}!PrecioNoNegativo@{PrecioNoNegativo}}
+\index{PrecioNoNegativo@{PrecioNoNegativo}!AutoValidaciones.h@{AutoValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{PrecioNoNegativo()}{PrecioNoNegativo()}}
+{\footnotesize\ttfamily \label{_auto_validaciones_8h_a0c355478ace6e1c035f33cbf520366b5} 
+int Precio\+No\+Negativo (\begin{DoxyParamCaption}\item[{float}]{valor}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que valida si el valor pasado como precio de adquisicion, es positivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Float} & que representa el precio de adquisicion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+0 si es negativo 1 si es positivo 
+\end{DoxyReturn}

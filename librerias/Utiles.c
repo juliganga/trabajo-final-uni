@@ -70,6 +70,6 @@ int contarDigitos(int numero){
  */
 char * traducirMes(int numero)
 {
-    char*meses[] = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Sempiembre","Octubre","Noviembre","Diciembre"};
+    char*meses[] = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
     return meses[numero-1];
 }

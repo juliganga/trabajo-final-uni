@@ -1,0 +1,76 @@
+\doxysection{Venta.\+h}
+\hypertarget{_venta_8h_source}{}\label{_venta_8h_source}\index{librerias/Venta.h@{librerias/Venta.h}}
+\mbox{\hyperlink{_venta_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VENTA\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VENTA\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_auto_8h}{Auto.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pila_8h}{pila.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_patente_8h}{Patente.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_fecha_ac53f8e215a42333a1a9ff1a87e8e70f7}{dia}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_fecha_a92bb43d32ce633e59bd11874c1a4b370}{mes}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_fecha_ad596dcd5c981e026d04a83a1c214e759}{anio}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{struct_fecha}{Fecha}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_fecha}{Fecha}}\ \mbox{\hyperlink{struct_venta_ac6bc62bec3a07b0519080f227771dc46}{fecha}};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{struct_patente}{Patente}}\ \mbox{\hyperlink{struct_venta_a1e9fa2a0532b7e565875110994552298}{autoAVender}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_venta_a923430ea8897bf8f304b0fff2f4c1996}{precioVenta}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_venta_af7ae20db3adab1c0bc8a3b5bbf62667b}{ganancia}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{char}\ dniComprador[9];}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{char}\ dniVendedor[9];}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_venta}{Venta}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ CARGAR\ VENTAS}}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a3cf7b23eee1db6652dc731ec40f616f9}{menuCargarVenta}}();}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_ad97ad7d50dd4697ecb3bf33dff95d171}{cargarAnioVenta}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a970d77487ee3dde587f1bc5ad02478da}{cargarMes}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a88dad4c91f4174fbc3789dd5d49bc99c}{cargarDia}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a9bf1cab184a39e3cb65ceefb518e22a2}{cargarDNIComprador}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_af70445a73a3ecb333241272207b6f8a1}{cargarDNIVendedor}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a41d97d4a1ed37150f184ccb5304c9a2a}{cargarPrecioVenta}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a50085b1efb8f1451d4ba531ea55e49eb}{cargarGanancia}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a13858a7950c1a89f01bf82a05d7699c3}{cargarPatenteVenta}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_ad93dc718c6e30502cab12051f8608de5}{guardarVentaFile}}(\mbox{\hyperlink{struct_venta}{Venta}});}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ FIN\ CARGAR\ VENTAS}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ UTILIDADES\ VENTAS}}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a821f09877632e1a30d89532fe8ef9696}{menuVentas}}();}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a1baaa84049b4a1f7128f588410944f40}{escribirPatenteParaBuscar}}(\mbox{\hyperlink{struct_venta}{Venta}}*);}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_venta_8h_a45e59f9e1ef3ff2576d372070704170b}{esPatenteEspecifica}}(\mbox{\hyperlink{struct_venta}{Venta}},\mbox{\hyperlink{struct_venta}{Venta}});}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ FIN\ UTILIDADES\ VENTAS}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ MUESTRA\ DE\ VENTAS}}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_acf3446634ca33b47f7a013298ffb9091}{verVentaFyP}}();}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a793395b2322d734291ea15a5e0939337}{verArrVentas}}();}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a8935c9e60c32db78388737635fe51bd3}{verGananciaMes}}();}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a33444a592875c70412f635a7253636ac}{verMayor}}();}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_aaf94f3d68338760ecc2560f354cdca7c}{mostrarVentasConsecionaria}}();}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a9a274c39303e9d92876811e10fa0f1f2}{mostrarVentasOtros}}();}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a3995a9001568d4c1f8da89e1be6d2752}{mostrarVentasBasico}}();}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a915c894d2ca0f96444e5730f7fc1035f}{mostrarUnaVenta}}(\mbox{\hyperlink{struct_venta}{Venta}});}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_venta_8h_a4681cba198bb26ec36bddf9203cccc7c}{esVendedorYpatenteEspecifica}}(\mbox{\hyperlink{struct_venta}{Venta}},\mbox{\hyperlink{struct_venta}{Venta}});}
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ FIN\ DE\ MUESTRA\ DE\ VENTAS}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//\ CALCULO\ DE\ GANANCIAS}}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a8935c9e60c32db78388737635fe51bd3}{verGananciaMes}}(\mbox{\hyperlink{struct_venta}{Venta}});}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_venta_8h_a59b4c3a0b4752a5363e756521bffba50}{verGananciaMatrizAnio}}(\mbox{\hyperlink{struct_venta}{Venta}});}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_venta_8h_a75b3c67de916df4a31431480754749ac}{esVendedorConsecionaria}}(\mbox{\hyperlink{struct_venta}{Venta}});}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_venta_8h_ab0dda681bead54e50b5ccfaaceedf0de}{esLaMismaFecha}}(\mbox{\hyperlink{struct_venta}{Venta}},\mbox{\hyperlink{struct_venta}{Venta}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ FIN\ DE\ CALCULO\ DE\ GANANCIAS}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VENTA\_H\_INCLUDED}}
+
+\end{DoxyCode}

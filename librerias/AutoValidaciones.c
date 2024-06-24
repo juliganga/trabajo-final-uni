@@ -8,11 +8,11 @@
 
 
 /**
-    \brief Funcion que valida si el valor pasado como precio de adquisicion, es positivo.
-    \param Float que representa el precio de adquisicion.
-    \return 0 si es negativo
-            1 si es positivo
-
+*    \brief Funcion que valida si el valor pasado como precio de adquisicion, es positivo.
+*    \param Float que representa el precio de adquisicion.
+*    \return 0 si es negativo
+*            1 si es positivo
+*
 **/
 
 int PrecioNoNegativo(float valor)
@@ -38,8 +38,7 @@ int PrecioNoNegativo(float valor)
 
     \brief Funcion que valida si el titular de un auto es vendedor.
     \param Persona titular -> estructura tipo persona que representa el titular del vehiculo
-    \return int -> 1 si es Vendedor
-               0 si no lo es.
+    \return int -> 1 si es Vendedor 0 si no lo es.
 
 **/
 
@@ -56,11 +55,11 @@ int esVendedor(Persona titular){
     return flag;
 }
 /**
-
-    \brief Funcion que verifica que la marca igresada no sobrepase los limites del arreglo
-    \param char marca[] -> el string a validar.
-    \return int -> 1 si esta dentro de los limites
-               0 si no.
+*
+*    \brief Funcion que verifica que la marca igresada no sobrepase los limites del arreglo
+*    \param char marca[] -> el string a validar.
+*    \return int -> 1 si esta dentro de los limites 0 si no.
+*
 **/
 
 int limiteMarca(char marca[]){
@@ -139,8 +138,7 @@ return flag;
 
     \brief Funcion que verifica que el año este dentro de unos parametros establecidos
     \param int anio -> el año a evaluar
-    \return int -> 1 si es mayor a 0
-                   0 si no.
+    \return int -> 1 si es mayor a 0, 0 si no.
 **/
 
 int limiteAnio(int anio)

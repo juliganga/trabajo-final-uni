@@ -12,6 +12,11 @@
 #include "Patente.h"
 
 
+/** \brief Menu de control de autos
+ *
+ * \return void
+ *
+ */
 void autoMenu()
 {
 
@@ -60,6 +65,7 @@ void autoMenu()
         case 2:
             if(hayAutos() == 1)
             {
+                listarAutosMatriz();
                 printf("Ingrese la Patente del auto que quiere modificar: \n");
                 patente = ingresarPatenteParaBuscar();
                 coche = buscarAutoPatente(patente, &posicion);
@@ -80,10 +86,11 @@ void autoMenu()
             if(hayAutos() == 1)
             {
                 printf("Ingrese la Patente del auto que quiere ver: \n");
+                listarAutosMatriz();
                 patente = ingresarPatenteParaBuscar();
 
                 coche = buscarAutoPatente(patente, &posicion);
-                mostrarAuto(coche);
+                mostrarAuto(arregloAutos[posicion]);
             }
             break;
         case 5:
@@ -93,20 +100,23 @@ void autoMenu()
             }
             break;
         case 6:
-            nuevos = contarNuevos(arregloAutos);
-            Auto*autosnuevos;
-            if(nuevos != 0)
+            if(hayAutos() == 1)
             {
-                agregarAutosNuevos(&autosnuevos);
-                printf("Autos ordenados\n");
-                ordenarAutos(autosnuevos, nuevos);
-                mostrarAutosNuevos(autosnuevos,nuevos);
+                nuevos = contarNuevos(arregloAutos);
+                Auto*autosnuevos;
+                if(nuevos != 0)
+                {
+                    agregarAutosNuevos();
+                    printf("Autos ordenados\n");
+                    ordenarAutos(autosnuevos, nuevos);
+                    mostrarAutosNuevos();
+                }
+                else
+                {
+                    puts("No hay autos nuevos...");
+                }
+                break;
             }
-            else
-            {
-                puts("No hay autos nuevos...");
-            }
-            break;
         }
     system("pause");
     }

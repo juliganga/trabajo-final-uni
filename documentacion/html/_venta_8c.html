@@ -1,0 +1,986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabajo final de Programacion 1: Referencia del archivo librerias/Venta.c</title>
+<link rel="icon" href="auto.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="auto.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabajo final de Programacion 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Julián Alonso, Schettini Javier, Tonello Tiziano</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_venta_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Venta.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_venta_8h_source.html">Venta.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_venta_validaciones_8h_source.html">VentaValidaciones.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_persona_8h_source.html">Persona.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pila_8h_source.html">Pila.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a09450c847f0c9f5764c184fb779843a1" id="r_a09450c847f0c9f5764c184fb779843a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09450c847f0c9f5764c184fb779843a1">archivoVenta</a>&#160;&#160;&#160;&quot;ventas.bin&quot;</td></tr>
+<tr class="separator:a09450c847f0c9f5764c184fb779843a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a6aae09b22e2634fff6adc1ab00475fc4" id="r_a6aae09b22e2634fff6adc1ab00475fc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aae09b22e2634fff6adc1ab00475fc4">cargarArregloVentasInit</a> ()</td></tr>
+<tr class="memdesc:a6aae09b22e2634fff6adc1ab00475fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga las ventas del archivo (si existe) en un arreglo dinamico al inicio del programa.  <br /></td></tr>
+<tr class="separator:a6aae09b22e2634fff6adc1ab00475fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821f09877632e1a30d89532fe8ef9696" id="r_a821f09877632e1a30d89532fe8ef9696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a821f09877632e1a30d89532fe8ef9696">menuVentas</a> ()</td></tr>
+<tr class="memdesc:a821f09877632e1a30d89532fe8ef9696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que muestra un menu interactivo para el usuario sobre las funciones de la libreria ventas.  <br /></td></tr>
+<tr class="separator:a821f09877632e1a30d89532fe8ef9696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45a80bb89d434ac3e68b2d60dc4ddd7" id="r_aa45a80bb89d434ac3e68b2d60dc4ddd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa45a80bb89d434ac3e68b2d60dc4ddd7">verVentaFyP</a> (<a class="el" href="struct_venta.html">Venta</a> venta)</td></tr>
+<tr class="memdesc:aa45a80bb89d434ac3e68b2d60dc4ddd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que muestra solo la fecha y patente de la venta ingresada.  <br /></td></tr>
+<tr class="separator:aa45a80bb89d434ac3e68b2d60dc4ddd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ffac9c5d169e71e65636d4eb9127c0" id="r_a20ffac9c5d169e71e65636d4eb9127c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20ffac9c5d169e71e65636d4eb9127c0">verVentas</a> (<a class="el" href="struct_venta.html">Venta</a> venta)</td></tr>
+<tr class="memdesc:a20ffac9c5d169e71e65636d4eb9127c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que muestra la totalidad de la venta ingresada.  <br /></td></tr>
+<tr class="separator:a20ffac9c5d169e71e65636d4eb9127c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33444a592875c70412f635a7253636ac" id="r_a33444a592875c70412f635a7253636ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33444a592875c70412f635a7253636ac">verMayor</a> ()</td></tr>
+<tr class="memdesc:a33444a592875c70412f635a7253636ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que apila ganancias hasta finalizar recorriendo todas las ventas, despues de eso muestra esta venta.  <br /></td></tr>
+<tr class="separator:a33444a592875c70412f635a7253636ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac518e0da68c772c53db6f802db5097" id="r_a9ac518e0da68c772c53db6f802db5097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ac518e0da68c772c53db6f802db5097">verGananciaMes</a> (<a class="el" href="struct_venta.html">Venta</a> busqueda)</td></tr>
+<tr class="memdesc:a9ac518e0da68c772c53db6f802db5097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra las ganancias de un mes especifico de un a�o especifico.  <br /></td></tr>
+<tr class="separator:a9ac518e0da68c772c53db6f802db5097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ccdbfef1de3d8008a98999bdac6173" id="r_ab8ccdbfef1de3d8008a98999bdac6173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8ccdbfef1de3d8008a98999bdac6173">verGananciaMatrizAnio</a> (<a class="el" href="struct_venta.html">Venta</a> busqueda)</td></tr>
+<tr class="memdesc:ab8ccdbfef1de3d8008a98999bdac6173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra mediante una matriz las ganancias de un a�o.  <br /></td></tr>
+<tr class="separator:ab8ccdbfef1de3d8008a98999bdac6173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf7b23eee1db6652dc731ec40f616f9" id="r_a3cf7b23eee1db6652dc731ec40f616f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cf7b23eee1db6652dc731ec40f616f9">menuCargarVenta</a> ()</td></tr>
+<tr class="memdesc:a3cf7b23eee1db6652dc731ec40f616f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que llama a todas las funciones necesarias para cargar una venta.  <br /></td></tr>
+<tr class="separator:a3cf7b23eee1db6652dc731ec40f616f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf72102e0e15b98783a7b86f80f779c2" id="r_abf72102e0e15b98783a7b86f80f779c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf72102e0e15b98783a7b86f80f779c2">cargarAnioVenta</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:abf72102e0e15b98783a7b86f80f779c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga el a�o en que se hizo la venta.  <br /></td></tr>
+<tr class="separator:abf72102e0e15b98783a7b86f80f779c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293e2a203076f057a363510dc0353afa" id="r_a293e2a203076f057a363510dc0353afa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a293e2a203076f057a363510dc0353afa">cargarMes</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:a293e2a203076f057a363510dc0353afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga el mes en que se hizo la venta.  <br /></td></tr>
+<tr class="separator:a293e2a203076f057a363510dc0353afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b785aa96b5df8f00f45acf23eae0c8" id="r_a39b785aa96b5df8f00f45acf23eae0c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39b785aa96b5df8f00f45acf23eae0c8">cargarDia</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:a39b785aa96b5df8f00f45acf23eae0c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga el dia en que se hizo la venta.  <br /></td></tr>
+<tr class="separator:a39b785aa96b5df8f00f45acf23eae0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30855981f88fae15345502ba5c352ec0" id="r_a30855981f88fae15345502ba5c352ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30855981f88fae15345502ba5c352ec0">cargarDNIComprador</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:a30855981f88fae15345502ba5c352ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga el DNI del comprador en una venta.  <br /></td></tr>
+<tr class="separator:a30855981f88fae15345502ba5c352ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6403944e88da1bbb8db23015f273d18d" id="r_a6403944e88da1bbb8db23015f273d18d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6403944e88da1bbb8db23015f273d18d">cargarDNIVendedor</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:a6403944e88da1bbb8db23015f273d18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga el DNI de la consecionaria a la hora de vender un auto.  <br /></td></tr>
+<tr class="separator:a6403944e88da1bbb8db23015f273d18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2414c6eba9e86e625ae0e47a97ce8eb1" id="r_a2414c6eba9e86e625ae0e47a97ce8eb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2414c6eba9e86e625ae0e47a97ce8eb1">cargarPrecioVenta</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:a2414c6eba9e86e625ae0e47a97ce8eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga el precio de venta de una venta realizada y llama a su verificacion.  <br /></td></tr>
+<tr class="separator:a2414c6eba9e86e625ae0e47a97ce8eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e002a3d768fe1fea7a888ffadb2682" id="r_a86e002a3d768fe1fea7a888ffadb2682"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86e002a3d768fe1fea7a888ffadb2682">cargarGanancia</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:a86e002a3d768fe1fea7a888ffadb2682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga una ganancia y llama a la verificacion de la misma.  <br /></td></tr>
+<tr class="separator:a86e002a3d768fe1fea7a888ffadb2682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2090ec2d505197bb9f2c792574eca64" id="r_aa2090ec2d505197bb9f2c792574eca64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2090ec2d505197bb9f2c792574eca64">cargarPatenteVenta</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:aa2090ec2d505197bb9f2c792574eca64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que carga la totalidad de una patente y llama a las verificaciones de la misma.  <br /></td></tr>
+<tr class="separator:aa2090ec2d505197bb9f2c792574eca64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54aa5198446a9c2e55622cd60baf709" id="r_ae54aa5198446a9c2e55622cd60baf709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae54aa5198446a9c2e55622cd60baf709">cargarVentaArreglo</a> (<a class="el" href="struct_venta.html">Venta</a> venta)</td></tr>
+<tr class="memdesc:ae54aa5198446a9c2e55622cd60baf709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hace espacio en el arreglo de ventas para cargar una en el mismo.  <br /></td></tr>
+<tr class="separator:ae54aa5198446a9c2e55622cd60baf709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07cc3eac84c72cb81a9acf8c81377a8d" id="r_a07cc3eac84c72cb81a9acf8c81377a8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07cc3eac84c72cb81a9acf8c81377a8d">allocarEspacioVenta</a> (<a class="el" href="struct_venta.html">Venta</a> **arreglo)</td></tr>
+<tr class="memdesc:a07cc3eac84c72cb81a9acf8c81377a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que agrega un espacio a un arreglo dinamico de ventas para ingresar la venta recientemente cargada.  <br /></td></tr>
+<tr class="separator:a07cc3eac84c72cb81a9acf8c81377a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3928b7935d27dfa0457f2c1fed932866" id="r_a3928b7935d27dfa0457f2c1fed932866"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3928b7935d27dfa0457f2c1fed932866">guardarVentaFile</a> (<a class="el" href="struct_venta.html">Venta</a> venta)</td></tr>
+<tr class="memdesc:a3928b7935d27dfa0457f2c1fed932866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion que guarda el arreglo de ventas en un archivo binario.  <br /></td></tr>
+<tr class="separator:a3928b7935d27dfa0457f2c1fed932866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3065a699e62a805b0ee809dd6f77661e" id="r_a3065a699e62a805b0ee809dd6f77661e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3065a699e62a805b0ee809dd6f77661e">esVendedorConsecionaria</a> (<a class="el" href="struct_venta.html">Venta</a> venta)</td></tr>
+<tr class="memdesc:a3065a699e62a805b0ee809dd6f77661e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revisa si el vendedor de la venta es la consecionaria.  <br /></td></tr>
+<tr class="separator:a3065a699e62a805b0ee809dd6f77661e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31072a3c1179669b22477043d8fab42d" id="r_a31072a3c1179669b22477043d8fab42d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31072a3c1179669b22477043d8fab42d">esLaMismaFecha</a> (<a class="el" href="struct_venta.html">Venta</a> busqueda, <a class="el" href="struct_venta.html">Venta</a> venta)</td></tr>
+<tr class="memdesc:a31072a3c1179669b22477043d8fab42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revisa si es la misma fecha de busqueda con la de la venta.  <br /></td></tr>
+<tr class="separator:a31072a3c1179669b22477043d8fab42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf94f3d68338760ecc2560f354cdca7c" id="r_aaf94f3d68338760ecc2560f354cdca7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf94f3d68338760ecc2560f354cdca7c">mostrarVentasConsecionaria</a> ()</td></tr>
+<tr class="memdesc:aaf94f3d68338760ecc2560f354cdca7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra todas las ventas hechas por la consecionaria.  <br /></td></tr>
+<tr class="separator:aaf94f3d68338760ecc2560f354cdca7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a274c39303e9d92876811e10fa0f1f2" id="r_a9a274c39303e9d92876811e10fa0f1f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a274c39303e9d92876811e10fa0f1f2">mostrarVentasOtros</a> ()</td></tr>
+<tr class="memdesc:a9a274c39303e9d92876811e10fa0f1f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra todas las ventas hechas por otros titulares (externos a la consecionaria)  <br /></td></tr>
+<tr class="separator:a9a274c39303e9d92876811e10fa0f1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3995a9001568d4c1f8da89e1be6d2752" id="r_a3995a9001568d4c1f8da89e1be6d2752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3995a9001568d4c1f8da89e1be6d2752">mostrarVentasBasico</a> ()</td></tr>
+<tr class="memdesc:a3995a9001568d4c1f8da89e1be6d2752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra solo la fecha y patente de las ventas hechas por la consicionaria.  <br /></td></tr>
+<tr class="separator:a3995a9001568d4c1f8da89e1be6d2752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad73b0ecbd6057f89374c4397eb8932cf" id="r_ad73b0ecbd6057f89374c4397eb8932cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad73b0ecbd6057f89374c4397eb8932cf">mostrarUnaVenta</a> (<a class="el" href="struct_venta.html">Venta</a> busqueda)</td></tr>
+<tr class="memdesc:ad73b0ecbd6057f89374c4397eb8932cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra venta/s segun el vendedor y la patente.  <br /></td></tr>
+<tr class="separator:ad73b0ecbd6057f89374c4397eb8932cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aee0c5c05ff98a9b2af1eeaf8576875" id="r_a2aee0c5c05ff98a9b2af1eeaf8576875"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aee0c5c05ff98a9b2af1eeaf8576875">esVendedorYpatenteEspecifica</a> (<a class="el" href="struct_venta.html">Venta</a> busqueda, <a class="el" href="struct_venta.html">Venta</a> venta)</td></tr>
+<tr class="memdesc:a2aee0c5c05ff98a9b2af1eeaf8576875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si una patente y vendedor es la misma que la busqueda.  <br /></td></tr>
+<tr class="separator:a2aee0c5c05ff98a9b2af1eeaf8576875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8402ce6664ffcde8fd93cfce1185f9" id="r_a3a8402ce6664ffcde8fd93cfce1185f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a8402ce6664ffcde8fd93cfce1185f9">esPatenteEspecifica</a> (<a class="el" href="struct_venta.html">Venta</a> busqueda, <a class="el" href="struct_venta.html">Venta</a> venta)</td></tr>
+<tr class="separator:a3a8402ce6664ffcde8fd93cfce1185f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21da65e22c489710c9c13caf037012e1" id="r_a21da65e22c489710c9c13caf037012e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21da65e22c489710c9c13caf037012e1">escribirPatenteParaBuscar</a> (<a class="el" href="struct_venta.html">Venta</a> *venta)</td></tr>
+<tr class="memdesc:a21da65e22c489710c9c13caf037012e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se escribe una patente para buscar ventas que hayan pasado con ella.  <br /></td></tr>
+<tr class="separator:a21da65e22c489710c9c13caf037012e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047f56c8cdfc1628fe90d785ae9b3886" id="r_a047f56c8cdfc1628fe90d785ae9b3886"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a047f56c8cdfc1628fe90d785ae9b3886">hayVentas</a> ()</td></tr>
+<tr class="memdesc:a047f56c8cdfc1628fe90d785ae9b3886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si hay ventas.  <br /></td></tr>
+<tr class="separator:a047f56c8cdfc1628fe90d785ae9b3886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a214be369ffff696fbb3a85a760df52b2" id="r_a214be369ffff696fbb3a85a760df52b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_venta.html">Venta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a214be369ffff696fbb3a85a760df52b2">arregloVentas</a></td></tr>
+<tr class="separator:a214be369ffff696fbb3a85a760df52b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f768e7c4e6fd2e05a3383e73a9c147" id="r_a21f768e7c4e6fd2e05a3383e73a9c147"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21f768e7c4e6fd2e05a3383e73a9c147">cantidadVentas</a> = -1</td></tr>
+<tr class="separator:a21f768e7c4e6fd2e05a3383e73a9c147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="a09450c847f0c9f5764c184fb779843a1" name="a09450c847f0c9f5764c184fb779843a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09450c847f0c9f5764c184fb779843a1">&#9670;&#160;</a></span>archivoVenta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define archivoVenta&#160;&#160;&#160;&quot;ventas.bin&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a07cc3eac84c72cb81a9acf8c81377a8d" name="a07cc3eac84c72cb81a9acf8c81377a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07cc3eac84c72cb81a9acf8c81377a8d">&#9670;&#160;</a></span>allocarEspacioVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void allocarEspacioVenta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> **</td>          <td class="paramname"><span class="paramname"><em>arreglo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que agrega un espacio a un arreglo dinamico de ventas para ingresar la venta recientemente cargada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Venta**arreglo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="abf72102e0e15b98783a7b86f80f779c2" name="abf72102e0e15b98783a7b86f80f779c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf72102e0e15b98783a7b86f80f779c2">&#9670;&#160;</a></span>cargarAnioVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarAnioVenta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga el a�o en que se hizo la venta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> representa la venta a registrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a6aae09b22e2634fff6adc1ab00475fc4" name="a6aae09b22e2634fff6adc1ab00475fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aae09b22e2634fff6adc1ab00475fc4">&#9670;&#160;</a></span>cargarArregloVentasInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarArregloVentasInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga las ventas del archivo (si existe) en un arreglo dinamico al inicio del programa. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a39b785aa96b5df8f00f45acf23eae0c8" name="a39b785aa96b5df8f00f45acf23eae0c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b785aa96b5df8f00f45acf23eae0c8">&#9670;&#160;</a></span>cargarDia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarDia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga el dia en que se hizo la venta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> Representa la venta a cargar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a30855981f88fae15345502ba5c352ec0" name="a30855981f88fae15345502ba5c352ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30855981f88fae15345502ba5c352ec0">&#9670;&#160;</a></span>cargarDNIComprador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarDNIComprador </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga el DNI del comprador en una venta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> Representa la venta a registrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a6403944e88da1bbb8db23015f273d18d" name="a6403944e88da1bbb8db23015f273d18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6403944e88da1bbb8db23015f273d18d">&#9670;&#160;</a></span>cargarDNIVendedor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarDNIVendedor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga el DNI de la consecionaria a la hora de vender un auto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> Representa la venta a registrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a86e002a3d768fe1fea7a888ffadb2682" name="a86e002a3d768fe1fea7a888ffadb2682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e002a3d768fe1fea7a888ffadb2682">&#9670;&#160;</a></span>cargarGanancia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarGanancia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga una ganancia y llama a la verificacion de la misma. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> Representa la venta a registrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void Finaliza cuando el numero registrado sea valido segun la verificacion </dd></dl>
+
+</div>
+</div>
+<a id="a293e2a203076f057a363510dc0353afa" name="a293e2a203076f057a363510dc0353afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a293e2a203076f057a363510dc0353afa">&#9670;&#160;</a></span>cargarMes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarMes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga el mes en que se hizo la venta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> Representa la venta a cargar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aa2090ec2d505197bb9f2c792574eca64" name="aa2090ec2d505197bb9f2c792574eca64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2090ec2d505197bb9f2c792574eca64">&#9670;&#160;</a></span>cargarPatenteVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarPatenteVenta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga la totalidad de una patente y llama a las verificaciones de la misma. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> Representa la venta a ingresar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a2414c6eba9e86e625ae0e47a97ce8eb1" name="a2414c6eba9e86e625ae0e47a97ce8eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2414c6eba9e86e625ae0e47a97ce8eb1">&#9670;&#160;</a></span>cargarPrecioVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarPrecioVenta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que carga el precio de venta de una venta realizada y llama a su verificacion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> Representa la venta a registrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ae54aa5198446a9c2e55622cd60baf709" name="ae54aa5198446a9c2e55622cd60baf709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae54aa5198446a9c2e55622cd60baf709">&#9670;&#160;</a></span>cargarVentaArreglo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cargarVentaArreglo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hace espacio en el arreglo de ventas para cargar una en el mismo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> Recibe una venta para registrarla en el arreglo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a21da65e22c489710c9c13caf037012e1" name="a21da65e22c489710c9c13caf037012e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21da65e22c489710c9c13caf037012e1">&#9670;&#160;</a></span>escribirPatenteParaBuscar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void escribirPatenteParaBuscar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a> *</td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Se escribe una patente para buscar ventas que hayan pasado con ella. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Venta*venta</td><td>Puntero a ventas, se modifica solo el parametro de patente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a31072a3c1179669b22477043d8fab42d" name="a31072a3c1179669b22477043d8fab42d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31072a3c1179669b22477043d8fab42d">&#9670;&#160;</a></span>esLaMismaFecha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esLaMismaFecha </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>busqueda</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>venta</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Revisa si es la misma fecha de busqueda con la de la venta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">busqueda</td><td><a class="el" href="struct_venta.html">Venta</a> Objetivo a comparar </td></tr>
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> <a class="el" href="struct_venta.html">Venta</a> siendo comparada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si es asi, 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="a3a8402ce6664ffcde8fd93cfce1185f9" name="a3a8402ce6664ffcde8fd93cfce1185f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8402ce6664ffcde8fd93cfce1185f9">&#9670;&#160;</a></span>esPatenteEspecifica()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esPatenteEspecifica </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>busqueda</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>venta</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">busqueda</td><td><a class="el" href="struct_venta.html">Venta</a> </td></tr>
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a3065a699e62a805b0ee809dd6f77661e" name="a3065a699e62a805b0ee809dd6f77661e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3065a699e62a805b0ee809dd6f77661e">&#9670;&#160;</a></span>esVendedorConsecionaria()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esVendedorConsecionaria </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Revisa si el vendedor de la venta es la consecionaria. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> venta para checkear </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si es asi, 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="a2aee0c5c05ff98a9b2af1eeaf8576875" name="a2aee0c5c05ff98a9b2af1eeaf8576875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aee0c5c05ff98a9b2af1eeaf8576875">&#9670;&#160;</a></span>esVendedorYpatenteEspecifica()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esVendedorYpatenteEspecifica </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>busqueda</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>venta</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si una patente y vendedor es la misma que la busqueda. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">busqueda</td><td><a class="el" href="struct_venta.html">Venta</a> Busqueda para que venta sea igual </td></tr>
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> lo que se esta comparando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int si es lo mismo retorna 1, sino retorna 0 </dd></dl>
+
+</div>
+</div>
+<a id="a3928b7935d27dfa0457f2c1fed932866" name="a3928b7935d27dfa0457f2c1fed932866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3928b7935d27dfa0457f2c1fed932866">&#9670;&#160;</a></span>guardarVentaFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void guardarVentaFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que guarda el arreglo de ventas en un archivo binario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venta</td><td><a class="el" href="struct_venta.html">Venta</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a047f56c8cdfc1628fe90d785ae9b3886" name="a047f56c8cdfc1628fe90d785ae9b3886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047f56c8cdfc1628fe90d785ae9b3886">&#9670;&#160;</a></span>hayVentas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int hayVentas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si hay ventas. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>int 1 si hay, 0 si no. </dd></dl>
+
+</div>
+</div>
+<a id="a3cf7b23eee1db6652dc731ec40f616f9" name="a3cf7b23eee1db6652dc731ec40f616f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cf7b23eee1db6652dc731ec40f616f9">&#9670;&#160;</a></span>menuCargarVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menuCargarVenta </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que llama a todas las funciones necesarias para cargar una venta. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void Finaliza cuando todo se haya cargado y se guarde la venta en el archivo de ventas. </dd></dl>
+
+</div>
+</div>
+<a id="a821f09877632e1a30d89532fe8ef9696" name="a821f09877632e1a30d89532fe8ef9696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821f09877632e1a30d89532fe8ef9696">&#9670;&#160;</a></span>menuVentas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menuVentas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que muestra un menu interactivo para el usuario sobre las funciones de la libreria ventas. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ad73b0ecbd6057f89374c4397eb8932cf" name="ad73b0ecbd6057f89374c4397eb8932cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad73b0ecbd6057f89374c4397eb8932cf">&#9670;&#160;</a></span>mostrarUnaVenta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarUnaVenta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>busqueda</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra venta/s segun el vendedor y la patente. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="struct_venta.html">Venta</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a3995a9001568d4c1f8da89e1be6d2752" name="a3995a9001568d4c1f8da89e1be6d2752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3995a9001568d4c1f8da89e1be6d2752">&#9670;&#160;</a></span>mostrarVentasBasico()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarVentasBasico </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra solo la fecha y patente de las ventas hechas por la consicionaria. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aaf94f3d68338760ecc2560f354cdca7c" name="aaf94f3d68338760ecc2560f354cdca7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf94f3d68338760ecc2560f354cdca7c">&#9670;&#160;</a></span>mostrarVentasConsecionaria()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarVentasConsecionaria </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra todas las ventas hechas por la consecionaria. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a9a274c39303e9d92876811e10fa0f1f2" name="a9a274c39303e9d92876811e10fa0f1f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a274c39303e9d92876811e10fa0f1f2">&#9670;&#160;</a></span>mostrarVentasOtros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarVentasOtros </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra todas las ventas hechas por otros titulares (externos a la consecionaria) </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ab8ccdbfef1de3d8008a98999bdac6173" name="ab8ccdbfef1de3d8008a98999bdac6173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8ccdbfef1de3d8008a98999bdac6173">&#9670;&#160;</a></span>verGananciaMatrizAnio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verGananciaMatrizAnio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>busqueda</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra mediante una matriz las ganancias de un a�o. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">busqueda</td><td><a class="el" href="struct_venta.html">Venta</a> pasa la fecha de una venta para calcular </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a9ac518e0da68c772c53db6f802db5097" name="a9ac518e0da68c772c53db6f802db5097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac518e0da68c772c53db6f802db5097">&#9670;&#160;</a></span>verGananciaMes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verGananciaMes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>busqueda</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra las ganancias de un mes especifico de un a�o especifico. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">busqueda</td><td><a class="el" href="struct_venta.html">Venta</a> fecha para buscar resultados </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a33444a592875c70412f635a7253636ac" name="a33444a592875c70412f635a7253636ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33444a592875c70412f635a7253636ac">&#9670;&#160;</a></span>verMayor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verMayor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que apila ganancias hasta finalizar recorriendo todas las ventas, despues de eso muestra esta venta. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aa45a80bb89d434ac3e68b2d60dc4ddd7" name="aa45a80bb89d434ac3e68b2d60dc4ddd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45a80bb89d434ac3e68b2d60dc4ddd7">&#9670;&#160;</a></span>verVentaFyP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verVentaFyP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que muestra solo la fecha y patente de la venta ingresada. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a20ffac9c5d169e71e65636d4eb9127c0" name="a20ffac9c5d169e71e65636d4eb9127c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ffac9c5d169e71e65636d4eb9127c0">&#9670;&#160;</a></span>verVentas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verVentas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_venta.html">Venta</a></td>          <td class="paramname"><span class="paramname"><em>venta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion que muestra la totalidad de la venta ingresada. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a214be369ffff696fbb3a85a760df52b2" name="a214be369ffff696fbb3a85a760df52b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a214be369ffff696fbb3a85a760df52b2">&#9670;&#160;</a></span>arregloVentas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_venta.html">Venta</a>* arregloVentas</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21f768e7c4e6fd2e05a3383e73a9c147" name="a21f768e7c4e6fd2e05a3383e73a9c147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f768e7c4e6fd2e05a3383e73a9c147">&#9670;&#160;</a></span>cantidadVentas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cantidadVentas = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_390ffc40b31ea80b54cee1ba617c6532.html">librerias</a></li><li class="navelem"><a class="el" href="_venta_8c.html">Venta.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

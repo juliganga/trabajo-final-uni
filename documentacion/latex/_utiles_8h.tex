@@ -1,0 +1,86 @@
+\doxysection{Referencia del archivo librerias/\+Utiles.h}
+\hypertarget{_utiles_8h}{}\label{_utiles_8h}\index{librerias/Utiles.h@{librerias/Utiles.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_utiles_8h_a6cfb6fcc3311870cc2b041d7d54db74d}{existe\+Archivo}} (char \texorpdfstring{$\ast$}{*})
+\item 
+void \mbox{\hyperlink{_utiles_8h_ae178448a1f2f5bf890ae7eb83464da1e}{crear\+Archivo}} (char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Funcion que crea un archivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_utiles_8h_a3384557fad00ba58271beb11d239d667}{contar\+Digitos}} (int)
+\begin{DoxyCompactList}\small\item\em Funcion que muestra el contenido del archivo de Personas. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_utiles_8h_ac7877965f3018c25204a6f72f3b383e4}{traducir\+Mes}} (int)
+\begin{DoxyCompactList}\small\item\em Traduce el mes de y devuelve u. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_utiles_8h_a3384557fad00ba58271beb11d239d667}\index{Utiles.h@{Utiles.h}!contarDigitos@{contarDigitos}}
+\index{contarDigitos@{contarDigitos}!Utiles.h@{Utiles.h}}
+\doxysubsubsection{\texorpdfstring{contarDigitos()}{contarDigitos()}}
+{\footnotesize\ttfamily \label{_utiles_8h_a3384557fad00ba58271beb11d239d667} 
+int contar\+Digitos (\begin{DoxyParamCaption}\item[{int}]{numero}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que muestra el contenido del archivo de Personas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & \texorpdfstring{$\ast$}{*}nombre\+Archivo -\/\texorpdfstring{$>$}{>} el nombre del archivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none
+\end{DoxyReturn}
+Funcion que cuenta los digitos de un numero entero 
+\begin{DoxyParams}{Parámetros}
+{\em int} & numero -\/\texorpdfstring{$>$}{>} el numero a evaluar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} un entero que representa la cantidad de digitos que tiene el entero recibido por parametro 
+\end{DoxyReturn}
+\Hypertarget{_utiles_8h_ae178448a1f2f5bf890ae7eb83464da1e}\index{Utiles.h@{Utiles.h}!crearArchivo@{crearArchivo}}
+\index{crearArchivo@{crearArchivo}!Utiles.h@{Utiles.h}}
+\doxysubsubsection{\texorpdfstring{crearArchivo()}{crearArchivo()}}
+{\footnotesize\ttfamily \label{_utiles_8h_ae178448a1f2f5bf890ae7eb83464da1e} 
+void crear\+Archivo (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nombre\+Archivo}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que crea un archivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & \texorpdfstring{$\ast$}{*}nombre\+Archivo -\/\texorpdfstring{$>$}{>} puntero a char, que representa la cadena del nombre del archivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none 
+\end{DoxyReturn}
+\Hypertarget{_utiles_8h_a6cfb6fcc3311870cc2b041d7d54db74d}\index{Utiles.h@{Utiles.h}!existeArchivo@{existeArchivo}}
+\index{existeArchivo@{existeArchivo}!Utiles.h@{Utiles.h}}
+\doxysubsubsection{\texorpdfstring{existeArchivo()}{existeArchivo()}}
+{\footnotesize\ttfamily \label{_utiles_8h_a6cfb6fcc3311870cc2b041d7d54db74d} 
+int existe\+Archivo (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_utiles_8h_ac7877965f3018c25204a6f72f3b383e4}\index{Utiles.h@{Utiles.h}!traducirMes@{traducirMes}}
+\index{traducirMes@{traducirMes}!Utiles.h@{Utiles.h}}
+\doxysubsubsection{\texorpdfstring{traducirMes()}{traducirMes()}}
+{\footnotesize\ttfamily \label{_utiles_8h_ac7877965f3018c25204a6f72f3b383e4} 
+char \texorpdfstring{$\ast$}{*} traducir\+Mes (\begin{DoxyParamCaption}\item[{int}]{numero}{}\end{DoxyParamCaption})}
+
+
+
+Traduce el mes de y devuelve u. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em numero} & int numero de mes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}

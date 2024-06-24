@@ -1,0 +1,583 @@
+\doxysection{Referencia del archivo librerias/\+Venta.c}
+\hypertarget{_venta_8c}{}\label{_venta_8c}\index{librerias/Venta.c@{librerias/Venta.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}Venta.\+h"{}}\newline
+{\ttfamily \#include "{}Venta\+Validaciones.\+h"{}}\newline
+{\ttfamily \#include "{}Persona.\+h"{}}\newline
+{\ttfamily \#include "{}Pila.\+h"{}}\newline
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_venta_8c_a09450c847f0c9f5764c184fb779843a1}{archivo\+Venta}}~"{}ventas.\+bin"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_venta_8c_a6aae09b22e2634fff6adc1ab00475fc4}{cargar\+Arreglo\+Ventas\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que carga las ventas del archivo (si existe) en un arreglo dinamico al inicio del programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a821f09877632e1a30d89532fe8ef9696}{menu\+Ventas}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que muestra un menu interactivo para el usuario sobre las funciones de la libreria ventas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_aa45a80bb89d434ac3e68b2d60dc4ddd7}{ver\+Venta\+FyP}} (\mbox{\hyperlink{struct_venta}{Venta}} venta)
+\begin{DoxyCompactList}\small\item\em Funcion que muestra solo la fecha y patente de la venta ingresada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a20ffac9c5d169e71e65636d4eb9127c0}{ver\+Ventas}} (\mbox{\hyperlink{struct_venta}{Venta}} venta)
+\begin{DoxyCompactList}\small\item\em Funcion que muestra la totalidad de la venta ingresada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a33444a592875c70412f635a7253636ac}{ver\+Mayor}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que apila ganancias hasta finalizar recorriendo todas las ventas, despues de eso muestra esta venta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a9ac518e0da68c772c53db6f802db5097}{ver\+Ganancia\+Mes}} (\mbox{\hyperlink{struct_venta}{Venta}} busqueda)
+\begin{DoxyCompactList}\small\item\em Muestra las ganancias de un mes especifico de un a�o especifico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_ab8ccdbfef1de3d8008a98999bdac6173}{ver\+Ganancia\+Matriz\+Anio}} (\mbox{\hyperlink{struct_venta}{Venta}} busqueda)
+\begin{DoxyCompactList}\small\item\em Muestra mediante una matriz las ganancias de un a�o. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a3cf7b23eee1db6652dc731ec40f616f9}{menu\+Cargar\+Venta}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que llama a todas las funciones necesarias para cargar una venta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_abf72102e0e15b98783a7b86f80f779c2}{cargar\+Anio\+Venta}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Funcion que carga el a�o en que se hizo la venta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a293e2a203076f057a363510dc0353afa}{cargar\+Mes}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Funcion que carga el mes en que se hizo la venta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a39b785aa96b5df8f00f45acf23eae0c8}{cargar\+Dia}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Funcion que carga el dia en que se hizo la venta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a30855981f88fae15345502ba5c352ec0}{cargar\+DNIComprador}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Funcion que carga el DNI del comprador en una venta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a6403944e88da1bbb8db23015f273d18d}{cargar\+DNIVendedor}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Funcion que carga el DNI de la consecionaria a la hora de vender un auto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a2414c6eba9e86e625ae0e47a97ce8eb1}{cargar\+Precio\+Venta}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Funcion que carga el precio de venta de una venta realizada y llama a su verificacion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a86e002a3d768fe1fea7a888ffadb2682}{cargar\+Ganancia}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Funcion que carga una ganancia y llama a la verificacion de la misma. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_aa2090ec2d505197bb9f2c792574eca64}{cargar\+Patente\+Venta}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Funcion que carga la totalidad de una patente y llama a las verificaciones de la misma. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_ae54aa5198446a9c2e55622cd60baf709}{cargar\+Venta\+Arreglo}} (\mbox{\hyperlink{struct_venta}{Venta}} venta)
+\begin{DoxyCompactList}\small\item\em Hace espacio en el arreglo de ventas para cargar una en el mismo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a07cc3eac84c72cb81a9acf8c81377a8d}{allocar\+Espacio\+Venta}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arreglo)
+\begin{DoxyCompactList}\small\item\em Funcion que agrega un espacio a un arreglo dinamico de ventas para ingresar la venta recientemente cargada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a3928b7935d27dfa0457f2c1fed932866}{guardar\+Venta\+File}} (\mbox{\hyperlink{struct_venta}{Venta}} venta)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda el arreglo de ventas en un archivo binario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_8c_a3065a699e62a805b0ee809dd6f77661e}{es\+Vendedor\+Consecionaria}} (\mbox{\hyperlink{struct_venta}{Venta}} venta)
+\begin{DoxyCompactList}\small\item\em Revisa si el vendedor de la venta es la consecionaria. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_8c_a31072a3c1179669b22477043d8fab42d}{es\+La\+Misma\+Fecha}} (\mbox{\hyperlink{struct_venta}{Venta}} busqueda, \mbox{\hyperlink{struct_venta}{Venta}} venta)
+\begin{DoxyCompactList}\small\item\em Revisa si es la misma fecha de busqueda con la de la venta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_aaf94f3d68338760ecc2560f354cdca7c}{mostrar\+Ventas\+Consecionaria}} ()
+\begin{DoxyCompactList}\small\item\em Muestra todas las ventas hechas por la consecionaria. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a9a274c39303e9d92876811e10fa0f1f2}{mostrar\+Ventas\+Otros}} ()
+\begin{DoxyCompactList}\small\item\em Muestra todas las ventas hechas por otros titulares (externos a la consecionaria) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_a3995a9001568d4c1f8da89e1be6d2752}{mostrar\+Ventas\+Basico}} ()
+\begin{DoxyCompactList}\small\item\em Muestra solo la fecha y patente de las ventas hechas por la consicionaria. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_venta_8c_ad73b0ecbd6057f89374c4397eb8932cf}{mostrar\+Una\+Venta}} (\mbox{\hyperlink{struct_venta}{Venta}} busqueda)
+\begin{DoxyCompactList}\small\item\em Muestra venta/s segun el vendedor y la patente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_8c_a2aee0c5c05ff98a9b2af1eeaf8576875}{es\+Vendedor\+Ypatente\+Especifica}} (\mbox{\hyperlink{struct_venta}{Venta}} busqueda, \mbox{\hyperlink{struct_venta}{Venta}} venta)
+\begin{DoxyCompactList}\small\item\em Verifica si una patente y vendedor es la misma que la busqueda. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_8c_a3a8402ce6664ffcde8fd93cfce1185f9}{es\+Patente\+Especifica}} (\mbox{\hyperlink{struct_venta}{Venta}} busqueda, \mbox{\hyperlink{struct_venta}{Venta}} venta)
+\item 
+void \mbox{\hyperlink{_venta_8c_a21da65e22c489710c9c13caf037012e1}{escribir\+Patente\+Para\+Buscar}} (\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}venta)
+\begin{DoxyCompactList}\small\item\em Se escribe una patente para buscar ventas que hayan pasado con ella. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_venta_8c_a047f56c8cdfc1628fe90d785ae9b3886}{hay\+Ventas}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si hay ventas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_venta_8c_a214be369ffff696fbb3a85a760df52b2}{arreglo\+Ventas}}
+\item 
+int \mbox{\hyperlink{_venta_8c_a21f768e7c4e6fd2e05a3383e73a9c147}{cantidad\+Ventas}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de «define»}
+\Hypertarget{_venta_8c_a09450c847f0c9f5764c184fb779843a1}\index{Venta.c@{Venta.c}!archivoVenta@{archivoVenta}}
+\index{archivoVenta@{archivoVenta}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{archivoVenta}{archivoVenta}}
+{\footnotesize\ttfamily \label{_venta_8c_a09450c847f0c9f5764c184fb779843a1} 
+\#define archivo\+Venta~"{}ventas.\+bin"{}}
+
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_venta_8c_a07cc3eac84c72cb81a9acf8c81377a8d}\index{Venta.c@{Venta.c}!allocarEspacioVenta@{allocarEspacioVenta}}
+\index{allocarEspacioVenta@{allocarEspacioVenta}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{allocarEspacioVenta()}{allocarEspacioVenta()}}
+{\footnotesize\ttfamily \label{_venta_8c_a07cc3eac84c72cb81a9acf8c81377a8d} 
+void allocar\+Espacio\+Venta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{arreglo}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que agrega un espacio a un arreglo dinamico de ventas para ingresar la venta recientemente cargada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Venta\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arreglo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_abf72102e0e15b98783a7b86f80f779c2}\index{Venta.c@{Venta.c}!cargarAnioVenta@{cargarAnioVenta}}
+\index{cargarAnioVenta@{cargarAnioVenta}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarAnioVenta()}{cargarAnioVenta()}}
+{\footnotesize\ttfamily \label{_venta_8c_abf72102e0e15b98783a7b86f80f779c2} 
+void cargar\+Anio\+Venta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga el a�o en que se hizo la venta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} representa la venta a registrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a6aae09b22e2634fff6adc1ab00475fc4}\index{Venta.c@{Venta.c}!cargarArregloVentasInit@{cargarArregloVentasInit}}
+\index{cargarArregloVentasInit@{cargarArregloVentasInit}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarArregloVentasInit()}{cargarArregloVentasInit()}}
+{\footnotesize\ttfamily \label{_venta_8c_a6aae09b22e2634fff6adc1ab00475fc4} 
+void cargar\+Arreglo\+Ventas\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga las ventas del archivo (si existe) en un arreglo dinamico al inicio del programa. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a39b785aa96b5df8f00f45acf23eae0c8}\index{Venta.c@{Venta.c}!cargarDia@{cargarDia}}
+\index{cargarDia@{cargarDia}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarDia()}{cargarDia()}}
+{\footnotesize\ttfamily \label{_venta_8c_a39b785aa96b5df8f00f45acf23eae0c8} 
+void cargar\+Dia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga el dia en que se hizo la venta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la venta a cargar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a30855981f88fae15345502ba5c352ec0}\index{Venta.c@{Venta.c}!cargarDNIComprador@{cargarDNIComprador}}
+\index{cargarDNIComprador@{cargarDNIComprador}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarDNIComprador()}{cargarDNIComprador()}}
+{\footnotesize\ttfamily \label{_venta_8c_a30855981f88fae15345502ba5c352ec0} 
+void cargar\+DNIComprador (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga el DNI del comprador en una venta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la venta a registrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a6403944e88da1bbb8db23015f273d18d}\index{Venta.c@{Venta.c}!cargarDNIVendedor@{cargarDNIVendedor}}
+\index{cargarDNIVendedor@{cargarDNIVendedor}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarDNIVendedor()}{cargarDNIVendedor()}}
+{\footnotesize\ttfamily \label{_venta_8c_a6403944e88da1bbb8db23015f273d18d} 
+void cargar\+DNIVendedor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga el DNI de la consecionaria a la hora de vender un auto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la venta a registrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a86e002a3d768fe1fea7a888ffadb2682}\index{Venta.c@{Venta.c}!cargarGanancia@{cargarGanancia}}
+\index{cargarGanancia@{cargarGanancia}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarGanancia()}{cargarGanancia()}}
+{\footnotesize\ttfamily \label{_venta_8c_a86e002a3d768fe1fea7a888ffadb2682} 
+void cargar\+Ganancia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga una ganancia y llama a la verificacion de la misma. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la venta a registrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void Finaliza cuando el numero registrado sea valido segun la verificacion 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a293e2a203076f057a363510dc0353afa}\index{Venta.c@{Venta.c}!cargarMes@{cargarMes}}
+\index{cargarMes@{cargarMes}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarMes()}{cargarMes()}}
+{\footnotesize\ttfamily \label{_venta_8c_a293e2a203076f057a363510dc0353afa} 
+void cargar\+Mes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga el mes en que se hizo la venta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la venta a cargar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_aa2090ec2d505197bb9f2c792574eca64}\index{Venta.c@{Venta.c}!cargarPatenteVenta@{cargarPatenteVenta}}
+\index{cargarPatenteVenta@{cargarPatenteVenta}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarPatenteVenta()}{cargarPatenteVenta()}}
+{\footnotesize\ttfamily \label{_venta_8c_aa2090ec2d505197bb9f2c792574eca64} 
+void cargar\+Patente\+Venta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga la totalidad de una patente y llama a las verificaciones de la misma. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la venta a ingresar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a2414c6eba9e86e625ae0e47a97ce8eb1}\index{Venta.c@{Venta.c}!cargarPrecioVenta@{cargarPrecioVenta}}
+\index{cargarPrecioVenta@{cargarPrecioVenta}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarPrecioVenta()}{cargarPrecioVenta()}}
+{\footnotesize\ttfamily \label{_venta_8c_a2414c6eba9e86e625ae0e47a97ce8eb1} 
+void cargar\+Precio\+Venta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga el precio de venta de una venta realizada y llama a su verificacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Representa la venta a registrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_ae54aa5198446a9c2e55622cd60baf709}\index{Venta.c@{Venta.c}!cargarVentaArreglo@{cargarVentaArreglo}}
+\index{cargarVentaArreglo@{cargarVentaArreglo}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cargarVentaArreglo()}{cargarVentaArreglo()}}
+{\footnotesize\ttfamily \label{_venta_8c_ae54aa5198446a9c2e55622cd60baf709} 
+void cargar\+Venta\+Arreglo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Hace espacio en el arreglo de ventas para cargar una en el mismo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} Recibe una venta para registrarla en el arreglo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a21da65e22c489710c9c13caf037012e1}\index{Venta.c@{Venta.c}!escribirPatenteParaBuscar@{escribirPatenteParaBuscar}}
+\index{escribirPatenteParaBuscar@{escribirPatenteParaBuscar}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{escribirPatenteParaBuscar()}{escribirPatenteParaBuscar()}}
+{\footnotesize\ttfamily \label{_venta_8c_a21da65e22c489710c9c13caf037012e1} 
+void escribir\+Patente\+Para\+Buscar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}} \texorpdfstring{$\ast$}{*}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Se escribe una patente para buscar ventas que hayan pasado con ella. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Venta\texorpdfstring{$\ast$}{*}venta} & Puntero a ventas, se modifica solo el parametro de patente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a31072a3c1179669b22477043d8fab42d}\index{Venta.c@{Venta.c}!esLaMismaFecha@{esLaMismaFecha}}
+\index{esLaMismaFecha@{esLaMismaFecha}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{esLaMismaFecha()}{esLaMismaFecha()}}
+{\footnotesize\ttfamily \label{_venta_8c_a31072a3c1179669b22477043d8fab42d} 
+int es\+La\+Misma\+Fecha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{busqueda}{, }\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Revisa si es la misma fecha de busqueda con la de la venta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em busqueda} & \doxylink{struct_venta}{Venta} Objetivo a comparar \\
+\hline
+{\em venta} & \doxylink{struct_venta}{Venta} \doxylink{struct_venta}{Venta} siendo comparada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es asi, 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a3a8402ce6664ffcde8fd93cfce1185f9}\index{Venta.c@{Venta.c}!esPatenteEspecifica@{esPatenteEspecifica}}
+\index{esPatenteEspecifica@{esPatenteEspecifica}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{esPatenteEspecifica()}{esPatenteEspecifica()}}
+{\footnotesize\ttfamily \label{_venta_8c_a3a8402ce6664ffcde8fd93cfce1185f9} 
+int es\+Patente\+Especifica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{busqueda}{, }\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em busqueda} & \doxylink{struct_venta}{Venta} \\
+\hline
+{\em venta} & \doxylink{struct_venta}{Venta} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a3065a699e62a805b0ee809dd6f77661e}\index{Venta.c@{Venta.c}!esVendedorConsecionaria@{esVendedorConsecionaria}}
+\index{esVendedorConsecionaria@{esVendedorConsecionaria}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{esVendedorConsecionaria()}{esVendedorConsecionaria()}}
+{\footnotesize\ttfamily \label{_venta_8c_a3065a699e62a805b0ee809dd6f77661e} 
+int es\+Vendedor\+Consecionaria (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Revisa si el vendedor de la venta es la consecionaria. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} venta para checkear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int 1 si es asi, 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a2aee0c5c05ff98a9b2af1eeaf8576875}\index{Venta.c@{Venta.c}!esVendedorYpatenteEspecifica@{esVendedorYpatenteEspecifica}}
+\index{esVendedorYpatenteEspecifica@{esVendedorYpatenteEspecifica}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{esVendedorYpatenteEspecifica()}{esVendedorYpatenteEspecifica()}}
+{\footnotesize\ttfamily \label{_venta_8c_a2aee0c5c05ff98a9b2af1eeaf8576875} 
+int es\+Vendedor\+Ypatente\+Especifica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{busqueda}{, }\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si una patente y vendedor es la misma que la busqueda. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em busqueda} & \doxylink{struct_venta}{Venta} Busqueda para que venta sea igual \\
+\hline
+{\em venta} & \doxylink{struct_venta}{Venta} lo que se esta comparando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int si es lo mismo retorna 1, sino retorna 0 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a3928b7935d27dfa0457f2c1fed932866}\index{Venta.c@{Venta.c}!guardarVentaFile@{guardarVentaFile}}
+\index{guardarVentaFile@{guardarVentaFile}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{guardarVentaFile()}{guardarVentaFile()}}
+{\footnotesize\ttfamily \label{_venta_8c_a3928b7935d27dfa0457f2c1fed932866} 
+void guardar\+Venta\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que guarda el arreglo de ventas en un archivo binario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em venta} & \doxylink{struct_venta}{Venta} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a047f56c8cdfc1628fe90d785ae9b3886}\index{Venta.c@{Venta.c}!hayVentas@{hayVentas}}
+\index{hayVentas@{hayVentas}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{hayVentas()}{hayVentas()}}
+{\footnotesize\ttfamily \label{_venta_8c_a047f56c8cdfc1628fe90d785ae9b3886} 
+int hay\+Ventas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si hay ventas. 
+
+\begin{DoxyReturn}{Devuelve}
+int 1 si hay, 0 si no. 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a3cf7b23eee1db6652dc731ec40f616f9}\index{Venta.c@{Venta.c}!menuCargarVenta@{menuCargarVenta}}
+\index{menuCargarVenta@{menuCargarVenta}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{menuCargarVenta()}{menuCargarVenta()}}
+{\footnotesize\ttfamily \label{_venta_8c_a3cf7b23eee1db6652dc731ec40f616f9} 
+void menu\+Cargar\+Venta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que llama a todas las funciones necesarias para cargar una venta. 
+
+\begin{DoxyReturn}{Devuelve}
+void Finaliza cuando todo se haya cargado y se guarde la venta en el archivo de ventas. 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a821f09877632e1a30d89532fe8ef9696}\index{Venta.c@{Venta.c}!menuVentas@{menuVentas}}
+\index{menuVentas@{menuVentas}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{menuVentas()}{menuVentas()}}
+{\footnotesize\ttfamily \label{_venta_8c_a821f09877632e1a30d89532fe8ef9696} 
+void menu\+Ventas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que muestra un menu interactivo para el usuario sobre las funciones de la libreria ventas. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_ad73b0ecbd6057f89374c4397eb8932cf}\index{Venta.c@{Venta.c}!mostrarUnaVenta@{mostrarUnaVenta}}
+\index{mostrarUnaVenta@{mostrarUnaVenta}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{mostrarUnaVenta()}{mostrarUnaVenta()}}
+{\footnotesize\ttfamily \label{_venta_8c_ad73b0ecbd6057f89374c4397eb8932cf} 
+void mostrar\+Una\+Venta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{busqueda}{}\end{DoxyParamCaption})}
+
+
+
+Muestra venta/s segun el vendedor y la patente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_venta}{Venta}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a3995a9001568d4c1f8da89e1be6d2752}\index{Venta.c@{Venta.c}!mostrarVentasBasico@{mostrarVentasBasico}}
+\index{mostrarVentasBasico@{mostrarVentasBasico}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{mostrarVentasBasico()}{mostrarVentasBasico()}}
+{\footnotesize\ttfamily \label{_venta_8c_a3995a9001568d4c1f8da89e1be6d2752} 
+void mostrar\+Ventas\+Basico (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Muestra solo la fecha y patente de las ventas hechas por la consicionaria. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_aaf94f3d68338760ecc2560f354cdca7c}\index{Venta.c@{Venta.c}!mostrarVentasConsecionaria@{mostrarVentasConsecionaria}}
+\index{mostrarVentasConsecionaria@{mostrarVentasConsecionaria}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{mostrarVentasConsecionaria()}{mostrarVentasConsecionaria()}}
+{\footnotesize\ttfamily \label{_venta_8c_aaf94f3d68338760ecc2560f354cdca7c} 
+void mostrar\+Ventas\+Consecionaria (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Muestra todas las ventas hechas por la consecionaria. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a9a274c39303e9d92876811e10fa0f1f2}\index{Venta.c@{Venta.c}!mostrarVentasOtros@{mostrarVentasOtros}}
+\index{mostrarVentasOtros@{mostrarVentasOtros}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{mostrarVentasOtros()}{mostrarVentasOtros()}}
+{\footnotesize\ttfamily \label{_venta_8c_a9a274c39303e9d92876811e10fa0f1f2} 
+void mostrar\+Ventas\+Otros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Muestra todas las ventas hechas por otros titulares (externos a la consecionaria) 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_ab8ccdbfef1de3d8008a98999bdac6173}\index{Venta.c@{Venta.c}!verGananciaMatrizAnio@{verGananciaMatrizAnio}}
+\index{verGananciaMatrizAnio@{verGananciaMatrizAnio}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{verGananciaMatrizAnio()}{verGananciaMatrizAnio()}}
+{\footnotesize\ttfamily \label{_venta_8c_ab8ccdbfef1de3d8008a98999bdac6173} 
+void ver\+Ganancia\+Matriz\+Anio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{busqueda}{}\end{DoxyParamCaption})}
+
+
+
+Muestra mediante una matriz las ganancias de un a�o. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em busqueda} & \doxylink{struct_venta}{Venta} pasa la fecha de una venta para calcular \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a9ac518e0da68c772c53db6f802db5097}\index{Venta.c@{Venta.c}!verGananciaMes@{verGananciaMes}}
+\index{verGananciaMes@{verGananciaMes}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{verGananciaMes()}{verGananciaMes()}}
+{\footnotesize\ttfamily \label{_venta_8c_a9ac518e0da68c772c53db6f802db5097} 
+void ver\+Ganancia\+Mes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{busqueda}{}\end{DoxyParamCaption})}
+
+
+
+Muestra las ganancias de un mes especifico de un a�o especifico. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em busqueda} & \doxylink{struct_venta}{Venta} fecha para buscar resultados \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a33444a592875c70412f635a7253636ac}\index{Venta.c@{Venta.c}!verMayor@{verMayor}}
+\index{verMayor@{verMayor}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{verMayor()}{verMayor()}}
+{\footnotesize\ttfamily \label{_venta_8c_a33444a592875c70412f635a7253636ac} 
+void ver\+Mayor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que apila ganancias hasta finalizar recorriendo todas las ventas, despues de eso muestra esta venta. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_aa45a80bb89d434ac3e68b2d60dc4ddd7}\index{Venta.c@{Venta.c}!verVentaFyP@{verVentaFyP}}
+\index{verVentaFyP@{verVentaFyP}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{verVentaFyP()}{verVentaFyP()}}
+{\footnotesize\ttfamily \label{_venta_8c_aa45a80bb89d434ac3e68b2d60dc4ddd7} 
+void ver\+Venta\+FyP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que muestra solo la fecha y patente de la venta ingresada. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_venta_8c_a20ffac9c5d169e71e65636d4eb9127c0}\index{Venta.c@{Venta.c}!verVentas@{verVentas}}
+\index{verVentas@{verVentas}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{verVentas()}{verVentas()}}
+{\footnotesize\ttfamily \label{_venta_8c_a20ffac9c5d169e71e65636d4eb9127c0} 
+void ver\+Ventas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_venta}{Venta}}}]{venta}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que muestra la totalidad de la venta ingresada. 
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{_venta_8c_a214be369ffff696fbb3a85a760df52b2}\index{Venta.c@{Venta.c}!arregloVentas@{arregloVentas}}
+\index{arregloVentas@{arregloVentas}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{arregloVentas}{arregloVentas}}
+{\footnotesize\ttfamily \label{_venta_8c_a214be369ffff696fbb3a85a760df52b2} 
+\mbox{\hyperlink{struct_venta}{Venta}}\texorpdfstring{$\ast$}{*} arreglo\+Ventas}
+
+\Hypertarget{_venta_8c_a21f768e7c4e6fd2e05a3383e73a9c147}\index{Venta.c@{Venta.c}!cantidadVentas@{cantidadVentas}}
+\index{cantidadVentas@{cantidadVentas}!Venta.c@{Venta.c}}
+\doxysubsubsection{\texorpdfstring{cantidadVentas}{cantidadVentas}}
+{\footnotesize\ttfamily \label{_venta_8c_a21f768e7c4e6fd2e05a3383e73a9c147} 
+int cantidad\+Ventas = -\/1}
+

@@ -1,0 +1,94 @@
+\doxysection{Referencia del archivo librerias/\+Usuario.c}
+\hypertarget{_usuario_8c}{}\label{_usuario_8c}\index{librerias/Usuario.c@{librerias/Usuario.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}Usuario.\+h"{}}\newline
+{\ttfamily \#include "{}Usuario\+Validaciones.\+h"{}}\newline
+{\ttfamily \#include "{}Utiles.\+h"{}}\newline
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_usuario_8c_a95ab76abab3f02f587938030567f3867}{ARCHIVO\+\_\+\+USUARIOS}}~"{}Usuarios.\+bin"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_usuario_8c_ae6607fb0d97748dcfdf0ad16812bb440}{crear\+Usuario}} (\mbox{\hyperlink{struct_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}usuario)
+\begin{DoxyCompactList}\small\item\em Funcion que carga una estructura de tipo \doxylink{struct_usuario}{Usuario}. Verifica que exista el archivo, si no lo crea. Verifica todos los campos de la estructura sean validos. Al finalizar la carga guarda el usuario cargado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_usuario_8c_ad39457cb1c751146b6db138126eed668}{guardar\+Usuario}} (char \texorpdfstring{$\ast$}{*}nombre\+Archivo, \mbox{\hyperlink{struct_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}usuario)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda un usuario en un archivo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_usuario_8c_a072785aec28b4ac8b7645bc30646725b}{autenticar}} (char \texorpdfstring{$\ast$}{*}nombre\+Archivo, char \texorpdfstring{$\ast$}{*}nombre\+Usuario, char \texorpdfstring{$\ast$}{*}contrasenia)
+\begin{DoxyCompactList}\small\item\em Funcion que autentica un usuario, verifica que el usuario y la contrase�a esten en el archivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de «define»}
+\Hypertarget{_usuario_8c_a95ab76abab3f02f587938030567f3867}\index{Usuario.c@{Usuario.c}!ARCHIVO\_USUARIOS@{ARCHIVO\_USUARIOS}}
+\index{ARCHIVO\_USUARIOS@{ARCHIVO\_USUARIOS}!Usuario.c@{Usuario.c}}
+\doxysubsubsection{\texorpdfstring{ARCHIVO\_USUARIOS}{ARCHIVO\_USUARIOS}}
+{\footnotesize\ttfamily \label{_usuario_8c_a95ab76abab3f02f587938030567f3867} 
+\#define ARCHIVO\+\_\+\+USUARIOS~"{}Usuarios.\+bin"{}}
+
+Constante con el nombre de archivo, para persistir los usuarios 
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_usuario_8c_a072785aec28b4ac8b7645bc30646725b}\index{Usuario.c@{Usuario.c}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!Usuario.c@{Usuario.c}}
+\doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily \label{_usuario_8c_a072785aec28b4ac8b7645bc30646725b} 
+int autenticar (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nombre\+Archivo}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{nombre\+Usuario}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{contrasenia}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que autentica un usuario, verifica que el usuario y la contrase�a esten en el archivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & \texorpdfstring{$\ast$}{*}nombre\+Archivo -\/\texorpdfstring{$>$}{>} un puntero al nombre del archivo de usuarios \\
+\hline
+{\em char} & \texorpdfstring{$\ast$}{*}nombre\+Usuario -\/\texorpdfstring{$>$}{>} un puntero a la variable que contiene el nombre de usuario \\
+\hline
+{\em char} & \texorpdfstring{$\ast$}{*}contrasenia -\/\texorpdfstring{$>$}{>} un puntero a la variable que contiene la contrase�a \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si esta autenticado 0 si no lo esta. 
+\end{DoxyReturn}
+\Hypertarget{_usuario_8c_ae6607fb0d97748dcfdf0ad16812bb440}\index{Usuario.c@{Usuario.c}!crearUsuario@{crearUsuario}}
+\index{crearUsuario@{crearUsuario}!Usuario.c@{Usuario.c}}
+\doxysubsubsection{\texorpdfstring{crearUsuario()}{crearUsuario()}}
+{\footnotesize\ttfamily \label{_usuario_8c_ae6607fb0d97748dcfdf0ad16812bb440} 
+void crear\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}}]{usuario}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que carga una estructura de tipo \doxylink{struct_usuario}{Usuario}. Verifica que exista el archivo, si no lo crea. Verifica todos los campos de la estructura sean validos. Al finalizar la carga guarda el usuario cargado. 
+
+Implementacion de la interface \doxylink{struct_usuario}{Usuario} 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_usuario}{Usuario}} & \texorpdfstring{$\ast$}{*}usuario -\/\texorpdfstring{$>$}{>} un puntero a una estructura de tipo \doxylink{struct_usuario}{Usuario} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none 
+\end{DoxyReturn}
+\Hypertarget{_usuario_8c_ad39457cb1c751146b6db138126eed668}\index{Usuario.c@{Usuario.c}!guardarUsuario@{guardarUsuario}}
+\index{guardarUsuario@{guardarUsuario}!Usuario.c@{Usuario.c}}
+\doxysubsubsection{\texorpdfstring{guardarUsuario()}{guardarUsuario()}}
+{\footnotesize\ttfamily \label{_usuario_8c_ad39457cb1c751146b6db138126eed668} 
+void guardar\+Usuario (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nombre\+Archivo}{, }\item[{\mbox{\hyperlink{struct_usuario}{Usuario}} \texorpdfstring{$\ast$}{*}}]{usuario}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que guarda un usuario en un archivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em recive} & un puntero a char, y un puntero a \doxylink{struct_usuario}{Usuario} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+none 
+\end{DoxyReturn}

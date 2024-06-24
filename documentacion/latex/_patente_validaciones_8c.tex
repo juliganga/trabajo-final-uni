@@ -1,0 +1,95 @@
+\doxysection{Referencia del archivo librerias/\+Patente\+Validaciones.c}
+\hypertarget{_patente_validaciones_8c}{}\label{_patente_validaciones_8c}\index{librerias/PatenteValidaciones.c@{librerias/PatenteValidaciones.c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}Patente.\+h"{}}\newline
+{\ttfamily \#include "{}Patente\+Validaciones.\+h"{}}\newline
+{\ttfamily \#include "{}Auto.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_patente_validaciones_8c_a1de746f4b8d99c0b1764574633de6148}{existe\+Patente}} (\mbox{\hyperlink{struct_patente}{Patente}} patente)
+\begin{DoxyCompactList}\small\item\em Funcion que corrobora si existe la patente en el arreglo de autos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_patente_validaciones_8c_abbb2f36b791dab3e00fc671f98e596c2}{validar\+Letras}} (char letras\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que valida las letras de la patente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_patente_validaciones_8c_a5c75366580d5bd6a7d1da3283b482c5a}{validar\+Numeros}} (char numeros\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion que valida los numeros de la patente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_patente_validaciones_8c_aa59328fe1e4fc5582fa56e9ad6e619fb}{validar\+Limite}} (\mbox{\hyperlink{struct_patente}{Patente}} patente)
+\begin{DoxyCompactList}\small\item\em Funcion que valida que la patente tenga tres letras y tres numeros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{_patente_validaciones_8c_a1de746f4b8d99c0b1764574633de6148}\index{PatenteValidaciones.c@{PatenteValidaciones.c}!existePatente@{existePatente}}
+\index{existePatente@{existePatente}!PatenteValidaciones.c@{PatenteValidaciones.c}}
+\doxysubsubsection{\texorpdfstring{existePatente()}{existePatente()}}
+{\footnotesize\ttfamily \label{_patente_validaciones_8c_a1de746f4b8d99c0b1764574633de6148} 
+int existe\+Patente (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_patente}{Patente}}}]{patente}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que corrobora si existe la patente en el arreglo de autos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_patente}{Patente}} & patente -\/\texorpdfstring{$>$}{>} la patente a evaluar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si la patente existe 0 en otro caso 
+\end{DoxyReturn}
+\Hypertarget{_patente_validaciones_8c_abbb2f36b791dab3e00fc671f98e596c2}\index{PatenteValidaciones.c@{PatenteValidaciones.c}!validarLetras@{validarLetras}}
+\index{validarLetras@{validarLetras}!PatenteValidaciones.c@{PatenteValidaciones.c}}
+\doxysubsubsection{\texorpdfstring{validarLetras()}{validarLetras()}}
+{\footnotesize\ttfamily \label{_patente_validaciones_8c_abbb2f36b791dab3e00fc671f98e596c2} 
+int validar\+Letras (\begin{DoxyParamCaption}\item[{char}]{letras}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que valida las letras de la patente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & letras\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} un arreglo que representa las letras de la patente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si son letras 0 en otro caso 
+\end{DoxyReturn}
+\Hypertarget{_patente_validaciones_8c_aa59328fe1e4fc5582fa56e9ad6e619fb}\index{PatenteValidaciones.c@{PatenteValidaciones.c}!validarLimite@{validarLimite}}
+\index{validarLimite@{validarLimite}!PatenteValidaciones.c@{PatenteValidaciones.c}}
+\doxysubsubsection{\texorpdfstring{validarLimite()}{validarLimite()}}
+{\footnotesize\ttfamily \label{_patente_validaciones_8c_aa59328fe1e4fc5582fa56e9ad6e619fb} 
+int validar\+Limite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_patente}{Patente}}}]{patente}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que valida que la patente tenga tres letras y tres numeros. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \doxylink{struct_patente}{Patente}} & patente -\/\texorpdfstring{$>$}{>} la patente a evaluar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si son letras, 0 en otro caso 
+\end{DoxyReturn}
+\Hypertarget{_patente_validaciones_8c_a5c75366580d5bd6a7d1da3283b482c5a}\index{PatenteValidaciones.c@{PatenteValidaciones.c}!validarNumeros@{validarNumeros}}
+\index{validarNumeros@{validarNumeros}!PatenteValidaciones.c@{PatenteValidaciones.c}}
+\doxysubsubsection{\texorpdfstring{validarNumeros()}{validarNumeros()}}
+{\footnotesize\ttfamily \label{_patente_validaciones_8c_a5c75366580d5bd6a7d1da3283b482c5a} 
+int validar\+Numeros (\begin{DoxyParamCaption}\item[{char}]{numeros}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Funcion que valida los numeros de la patente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em char} & letras\mbox{[}\mbox{]} -\/\texorpdfstring{$>$}{>} un arreglo que representa los numeros de la patente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int -\/\texorpdfstring{$>$}{>} 1 si son numeros 0 en otro caso 
+\end{DoxyReturn}

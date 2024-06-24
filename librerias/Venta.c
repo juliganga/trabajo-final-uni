@@ -47,17 +47,19 @@ void menuVentas()
 {
     Venta venta;
     int decision = -1;
-
+    system("cls");
     while(decision != 0)
     {
         printf("\t-- Menu de Ventas --\n");
         printf("0 - Salir del menu\n");
         printf("1 - Registrar una venta\n");
-        printf("2 - Ver todas las ventas\n");
-        printf("3 - Ver solo la fecha y patente de todas las ventas\n");
-        printf("4 - Buscar cuanto se recaudo en un mes de un a%co especifico\n", 164);
-        printf("5 - Buscar cuanto se recuado en un a%co especifico\n",164);
-        printf("6 - Buscar cual venta genero la mayor ganancia\n");
+        printf("2 - Ver todas las ventas hechas por la consecionaria\n");
+        printf("3 - Ver todas las ventas hechas por titulares externos\n");
+        printf("4 - Ver solo la fecha y patente de todas las ventas de la consecionaria\n");
+        printf("5 - Ver ventas segun patente y vendedor\n");
+        printf("6 - Buscar cuanto se recaudo en un mes de un a%co especifico\n", 164);
+        printf("7 - Buscar cuanto se recuado en un a%co especifico\n",164);
+        printf("8 - Buscar cual venta genero la mayor ganancia\n");
 
 
     scanf("%d", &decision);
@@ -69,30 +71,56 @@ void menuVentas()
             menuCargarVenta();
             break;
         case 2:
-            for(int i = 0; i <= cantidadVentas; i++)
+            if(hayVentas() == 1)
             {
-                verVentas(arregloVentas[i]);
+                mostrarVentasConsecionaria();
             }
             break;
         case 3:
-            for(int i = 0; i <= cantidadVentas; i++)
+            if(hayVentas() == 1)
             {
-                verVentaFyP(arregloVentas[i]);
+                mostrarVentasOtros();
             }
             break;
         case 4:
-            cargarAnioVenta(&venta);
-            cargarMes(&venta);
-            verGananciaMes(venta);
+            if(hayVentas() == 1)
+            {
+                mostrarVentasBasico();
+            }
             break;
         case 5:
-            cargarAnioVenta(&venta);
-            verGananciaMatrizAnio(venta);
+            if(hayVentas() == 1)
+            {
+                cargarDNIVendedor(&venta);
+                listarAutosMatriz();
+                escribirPatenteParaBuscar(&venta);
+                mostrarUnaVenta(venta);
+            }
             break;
         case 6:
-            verMayor();
+            if(hayVentas() == 1)
+            {
+                cargarAnioVenta(&venta);
+                cargarMes(&venta);
+                verGananciaMes(venta);
+            }
+            break;
+        case 7:
+            if(hayVentas() == 1)
+            {
+                cargarAnioVenta(&venta);
+                verGananciaMatrizAnio(venta);
+            }
+            break;
+        case 8:
+            if(hayVentas() == 1)
+            {
+                verMayor();
+            }
             break;
         }
+    system("pause");
+    system("cls");
     }
 }
 
@@ -138,21 +166,44 @@ void verMayor()
     inicpila(&mayor);
     inicpila(&comp);
 
-    apilar(&mayor, arregloVentas[0].ganancia);
+    int flag = 0;
 
-    for(int i = 0; i <= cantidadVentas; i++)
+    int i = 0;
+    while(flag == 0 && cantidadVentas >= i)
     {
-        if(tope(&mayor) < arregloVentas[i].ganancia)
+        if(esVendedorConsecionaria(arregloVentas[i]) == 1)
         {
             apilar(&mayor, arregloVentas[i].ganancia);
-            masgrande = i;
+            flag = 1;
         }
+        i++;
     }
 
-    printf("Mayor ganancia: %i\n",tope(&mayor));
-    verVentas(arregloVentas[masgrande]);
+    if(flag == 1)
+    {
+        for(int i = 0; i <= cantidadVentas; i++)
+        {
+            if(esVendedorConsecionaria(arregloVentas[i]) == 1 && tope(&mayor) < arregloVentas[i].ganancia)
+            {
+                apilar(&mayor, arregloVentas[i].ganancia);
+                masgrande = i;
+            }
+        }
+        printf("Mayor ganancia hecha por la consecionaria: %i\n",tope(&mayor));
+        verVentas(arregloVentas[masgrande]);
+    }
+    else
+    {
+        printf("Todabia la consecionaria no hizo ninguna venta...\n");
+    }
 }
 
+/** \brief Muestra las ganancias de un mes especifico de un año especifico
+ *
+ * \param busqueda Venta fecha para buscar resultados
+ * \return void
+ *
+ */
 void verGananciaMes(Venta busqueda)
 {
     float ganancias = 0;
@@ -169,6 +220,12 @@ void verGananciaMes(Venta busqueda)
     printf("Ganancias del mes %s: %.2f\n",traducirMes(busqueda.fecha.mes),ganancias);
 }
 
+/** \brief Muestra mediante una matriz las ganancias de un año
+ *
+ * \param busqueda Venta pasa la fecha de una venta para calcular
+ * \return void
+ *
+ */
 void verGananciaMatrizAnio(Venta busqueda)
 {
     float ganancias = 0;
@@ -231,27 +288,34 @@ void verGananciaMatrizAnio(Venta busqueda)
  */
 void menuCargarVenta()
 {
-    Venta venta;
-    system("cls");
-    puts("--------- Agregando venta ---------");
+    if(hayPersonas() == 1 && hayAutos() == 1)
+    {
+        Venta venta;
+        system("cls");
+        puts("--------- Agregando venta ---------");
 
-    cargarAnioVenta(&venta);
-    cargarMes(&venta);
-    cargarDia(&venta);
-    cargarDNIComprador(&venta);
-    cargarDNIVendedor(&venta);
-    cargarPatenteVenta(&venta);
-    cargarPrecioVenta(&venta);
-    cargarGanancia(&venta);
+        cargarAnioVenta(&venta);
+        cargarMes(&venta);
+        cargarDia(&venta);
+        cargarDNIComprador(&venta);
+        cargarDNIVendedor(&venta);
+        cargarPatenteVenta(&venta);
+        cargarPrecioVenta(&venta);
+        cargarGanancia(&venta);
 
-    Patente patente;
-    strcpy(patente.letras,venta.autoAVender.letras);
-    strcpy(patente.numeros,venta.autoAVender.numeros);
+        Patente patente;
+        strcpy(patente.letras,venta.autoAVender.letras);
+        strcpy(patente.numeros,venta.autoAVender.numeros);
 
-    cambiarTitularPorVenta(venta.dniComprador,venta.dniVendedor,venta.precioVenta,patente);
-    cargarVentaArreglo(venta);
-    fflush(stdin);
-    guardarVentaFile(venta);
+        cambiarTitularPorVenta(venta.dniComprador,venta.dniVendedor,venta.precioVenta,patente);
+        cargarVentaArreglo(venta);
+        fflush(stdin);
+        guardarVentaFile(venta);
+    }
+    else
+    {
+        printf("No hay personas o autos registrados!\n");
+    }
 }
 
 
@@ -383,7 +447,7 @@ void cargarDNIVendedor(Venta*venta)
             }
             else
             {
-                printf("La person no existe");
+                printf("La persona no existe");
             }
         }
         else
@@ -402,13 +466,23 @@ void cargarDNIVendedor(Venta*venta)
  */
 void cargarPrecioVenta(Venta*venta)
 {
+    Auto autoenventa;
+    Patente patenteenventa;
+    int pos = 0;
+    strcpy(patenteenventa.letras,venta->autoAVender.letras);
+    strcpy(patenteenventa.numeros,venta->autoAVender.numeros);
+    autoenventa = buscarAutoPatente(patenteenventa,&pos);
+    mostrarAuto(autoenventa);
+
+
+
     int verificado = 0;
     while(verificado == 0)
     {
         puts("Precio de la venta?");
         scanf("%f", &venta->precioVenta);
 
-        if(precioVentaPositivo(*venta) == 1)
+        if(precioVentaPositivo(*venta) == 1 && gananciaMenorQueVenta(venta->precioVenta,autoenventa.precioDeAdquisicion) == 1)
         {
             verificado = 1;
         }
@@ -431,11 +505,8 @@ void cargarGanancia(Venta*venta)
     strcpy(patenteenventa.letras,venta->autoAVender.letras);
     strcpy(patenteenventa.numeros,venta->autoAVender.numeros);
     autoenventa = buscarAutoPatente(patenteenventa,&pos);
-
-    mostrarAuto(autoenventa);
-
     venta->ganancia = venta->precioVenta-autoenventa.precioDeAdquisicion;
-    printf("GANANCIA : %f",venta->ganancia);
+    printf("GANANCIA : %f\n",venta->ganancia);
 
     system("pause");
 }
@@ -449,6 +520,7 @@ void cargarGanancia(Venta*venta)
 void cargarPatenteVenta(Venta*venta)
 {
     int verificado = 0;
+    mostrarSegunTitular(venta->dniVendedor);
 
     while(verificado == 0)
     {
@@ -517,6 +589,12 @@ void guardarVentaFile(Venta venta)
     fclose(archi);
 }
 
+/** \brief Revisa si el vendedor de la venta es la consecionaria
+ *
+ * \param venta Venta venta para checkear
+ * \return int 1 si es asi, 0 si no.
+ *
+ */
 int esVendedorConsecionaria(Venta venta)
 {
     int flag = 0;
@@ -528,6 +606,14 @@ int esVendedorConsecionaria(Venta venta)
     return flag;
 }
 
+
+/** \brief Revisa si es la misma fecha de busqueda con la de la venta
+ *
+ * \param busqueda Venta Objetivo a comparar
+ * \param venta Venta Venta siendo comparada
+ * \return int 1 si es asi, 0 si no.
+ *
+ */
 int esLaMismaFecha(Venta busqueda,Venta venta)
 {
     int flag = 0;
@@ -538,3 +624,191 @@ int esLaMismaFecha(Venta busqueda,Venta venta)
     return flag;
 }
 
+
+/** \brief Muestra todas las ventas hechas por la consecionaria
+ *
+ * \return void
+ *
+ */
+void mostrarVentasConsecionaria()
+{
+    int cantidad = 0;
+    for(int i = 0;i<=cantidadVentas;i++)
+    {
+        if(esVendedorConsecionaria(arregloVentas[i]) == 1)
+        {
+            verVentas(arregloVentas[i]);
+            cantidad++;
+        }
+    }
+
+    if(cantidad == 0)
+    {
+        printf("No hay resultados...\n");
+    }
+
+}
+
+
+/** \brief Muestra todas las ventas hechas por otros titulares (externos a la consecionaria)
+ *
+ * \return void
+ *
+ */
+void mostrarVentasOtros()
+{
+    int cantidad = 0;
+    for(int i = 0;i<=cantidadVentas;i++)
+    {
+        if(esVendedorConsecionaria(arregloVentas[i]) == 0)
+        {
+            verVentas(arregloVentas[i]);
+            cantidad++;
+        }
+    }
+
+    if(cantidad == 0)
+    {
+        printf("No hay resultados... \n");
+    }
+}
+
+/** \brief Muestra solo la fecha y patente de las ventas hechas por la consicionaria
+ *
+ * \return void
+ *
+ */
+void mostrarVentasBasico()
+{
+    int cantidad = 0;
+    for(int i = 0; i <= cantidadVentas; i++)
+    {
+        if(esVendedorConsecionaria(arregloVentas[i]) == 1)
+        {
+            verVentaFyP(arregloVentas[i]);
+            cantidad++;
+        }
+    }
+
+    if(cantidad == 0)
+    {
+        printf("No hay resultados...");
+    }
+}
+
+
+/** \brief Muestra venta/s segun el vendedor y la patente
+ *
+ * \param Venta
+ * \return void
+ *
+ */
+void mostrarUnaVenta(Venta busqueda)
+{
+    int cantidad = 0;
+    for(int i = 0;i<=cantidadVentas;i++)
+    {
+        if(esVendedorYpatenteEspecifica(busqueda,arregloVentas[i]) == 1)
+        {
+            verVentas(arregloVentas[i]);
+            cantidad++;
+        }
+    }
+
+    if(cantidad == 0)
+    {
+        printf("No hay resultados...\n");
+    }
+
+}
+
+/** \brief Verifica si una patente y vendedor es la misma que la busqueda
+ *
+ * \param busqueda Venta Busqueda para que venta sea igual
+ * \param venta Venta lo que se esta comparando
+ * \return int si es lo mismo retorna 1, sino retorna 0
+ *
+ */
+int esVendedorYpatenteEspecifica(Venta busqueda,Venta venta)
+{
+    int flag = 0;
+    if(esPatenteEspecifica(busqueda,venta) == 1 && strcmp(busqueda.dniVendedor,venta.dniVendedor) == 0)
+    {
+        flag = 1;
+    }
+    return flag;
+}
+
+/** \brief
+ *
+ * \param busqueda Venta
+ * \param venta Venta
+ * \return int
+ *
+ */
+int esPatenteEspecifica(Venta busqueda,Venta venta)
+{
+    int flag = 0;
+
+    if(strcmp(busqueda.autoAVender.letras,venta.autoAVender.letras) == 0 && strcmp(busqueda.autoAVender.numeros,venta.autoAVender.numeros) == 0)
+    {
+        flag = 1;
+    }
+    return flag;
+}
+
+
+
+/** \brief Se escribe una patente para buscar ventas que hayan pasado con ella
+ *
+ * \param Venta*venta Puntero a ventas, se modifica solo el parametro de patente
+ * \return void
+ *
+ */
+void escribirPatenteParaBuscar(Venta*venta)
+{
+    int verificado = 0;
+
+    while(verificado == 0)
+    {
+        Patente patente;
+        printf("Ingresaremos la patente -> \n" );
+
+        printf("Las letras: ");
+        fflush(stdin);
+        letrasMayus(gets(&venta->autoAVender.letras));
+        fflush(stdin);
+        strcpy(&patente.letras, &venta->autoAVender.letras);
+
+        printf("Los numeros: ");
+        fflush(stdin);
+        scanf("%s",venta->autoAVender.numeros);
+        fflush(stdin);
+        strcpy(&patente.numeros,&venta->autoAVender.numeros);
+
+        if(validarLetras(patente.letras) == 1 && validarNumeros(patente.numeros) == 1 && validarLimite(patente) == 1)
+        {
+            verificado = 1;
+        }
+    }
+}
+
+/** \brief Verifica si hay ventas
+ *
+ * \return int 1 si hay, 0 si no.
+ *
+ */
+int hayVentas()
+{
+    int flag = 0;
+
+    if(cantidadVentas != -1)
+    {
+        flag = 1;
+    }
+    else
+    {
+        puts("No hay ventas...");
+    }
+    return flag;
+}

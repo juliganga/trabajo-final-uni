@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabajo final de Programacion 1: Archivo de código fuente librerias/AutoArchivo.h</title>
+<link rel="icon" href="auto.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="auto.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabajo final de Programacion 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Julián Alonso, Schettini Javier, Tonello Tiziano</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_auto_archivo_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AutoArchivo.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_auto_archivo_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef AUTOARCHIVO_H_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define AUTOARCHIVO_H_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_patente_8h.html">Patente.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_auto_8h.html">Auto.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_persona_8h.html">Persona.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="_auto_archivo_8h.html#a3a26b411af499585b55632e277f9ff65">   10</a></span><span class="preprocessor">#define ARCHIVO_AUTOS &quot;AutoArchivo.bin&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_auto_archivo.html">   15</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_auto_archivo.html#a93c8a7799c37f4f369c8d911d5571e43">   16</a></span>    <a class="code hl_struct" href="struct_patente.html">Patente</a> <a class="code hl_variable" href="struct_auto_archivo.html#a93c8a7799c37f4f369c8d911d5571e43">patente</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_auto_archivo.html#a92e12dd50e108b83f156b52842a527ca">   17</a></span>    <span class="keywordtype">char</span> marca[15];</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_auto_archivo.html#aa73e1ef88547dba73c5808ae490ff0f4">   18</a></span>    <span class="keywordtype">char</span> modelo[15];</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_auto_archivo.html#a238b17fce9d02877fe04226d395b6ed9">   19</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_auto_archivo.html#a238b17fce9d02877fe04226d395b6ed9">anio</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_auto_archivo.html#a17416b5429163e9121afb0e311631633">   20</a></span>    <span class="keywordtype">char</span> kms[8];</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_auto_archivo.html#a882d543bd13bfeefb939e3d4a084b379">   21</a></span>    <span class="keywordtype">char</span> dniTitular[9];</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_auto_archivo.html#a43ef042ebb93b63cc267ebd1abe94ee3">   22</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_auto_archivo.html#a43ef042ebb93b63cc267ebd1abe94ee3">precioDeAdquisicion</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <a class="code hl_struct" href="struct_auto_archivo.html">AutoArchivo</a>;</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><a class="code hl_struct" href="struct_auto_archivo.html">AutoArchivo</a> <a class="code hl_function" href="_auto_archivo_8h.html#a49dca1c50e63112459b154ab702db901">cargarAutoArchivo</a>(<a class="code hl_struct" href="struct_auto.html">Auto</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="_auto_archivo_8h.html#a719c918bee6bd96d5a2330c0046c2f71">guardarAutoArchivo</a>(<a class="code hl_struct" href="struct_auto_archivo.html">AutoArchivo</a>, <span class="keywordtype">char</span>*);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="_auto_archivo_8h.html#a3984e8e7b29fc7b49d88cd709c3cdafe">guardarAutoArchivoEnPos</a>(<a class="code hl_struct" href="struct_auto_archivo.html">AutoArchivo</a>, <span class="keywordtype">char</span>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif </span><span class="comment">// AUTOARCHIVO_H_INCLUDED</span></div>
+<div class="ttc" id="a_auto_8h_html"><div class="ttname"><a href="_auto_8h.html">Auto.h</a></div></div>
+<div class="ttc" id="a_auto_archivo_8h_html_a3984e8e7b29fc7b49d88cd709c3cdafe"><div class="ttname"><a href="_auto_archivo_8h.html#a3984e8e7b29fc7b49d88cd709c3cdafe">guardarAutoArchivoEnPos</a></div><div class="ttdeci">void guardarAutoArchivoEnPos(AutoArchivo, char *, int)</div><div class="ttdoc">Funcion que guarda un AutoArchivo en la posicion indicada.</div><div class="ttdef"><b>Definition</b> AutoArchivo.c:114</div></div>
+<div class="ttc" id="a_auto_archivo_8h_html_a49dca1c50e63112459b154ab702db901"><div class="ttname"><a href="_auto_archivo_8h.html#a49dca1c50e63112459b154ab702db901">cargarAutoArchivo</a></div><div class="ttdeci">AutoArchivo cargarAutoArchivo(Auto)</div><div class="ttdoc">Funci�n que carga una estructura tipo AutoArchivo.</div><div class="ttdef"><b>Definition</b> AutoArchivo.c:23</div></div>
+<div class="ttc" id="a_auto_archivo_8h_html_a719c918bee6bd96d5a2330c0046c2f71"><div class="ttname"><a href="_auto_archivo_8h.html#a719c918bee6bd96d5a2330c0046c2f71">guardarAutoArchivo</a></div><div class="ttdeci">void guardarAutoArchivo(AutoArchivo, char *)</div><div class="ttdoc">Funcion que guarda los datos de un auto en formato AutoArchivo.</div><div class="ttdef"><b>Definition</b> AutoArchivo.c:77</div></div>
+<div class="ttc" id="a_patente_8h_html"><div class="ttname"><a href="_patente_8h.html">Patente.h</a></div></div>
+<div class="ttc" id="a_persona_8h_html"><div class="ttname"><a href="_persona_8h.html">Persona.h</a></div></div>
+<div class="ttc" id="astruct_auto_archivo_html"><div class="ttname"><a href="struct_auto_archivo.html">AutoArchivo</a></div><div class="ttdef"><b>Definition</b> AutoArchivo.h:15</div></div>
+<div class="ttc" id="astruct_auto_archivo_html_a238b17fce9d02877fe04226d395b6ed9"><div class="ttname"><a href="struct_auto_archivo.html#a238b17fce9d02877fe04226d395b6ed9">AutoArchivo::anio</a></div><div class="ttdeci">int anio</div><div class="ttdef"><b>Definition</b> AutoArchivo.h:19</div></div>
+<div class="ttc" id="astruct_auto_archivo_html_a43ef042ebb93b63cc267ebd1abe94ee3"><div class="ttname"><a href="struct_auto_archivo.html#a43ef042ebb93b63cc267ebd1abe94ee3">AutoArchivo::precioDeAdquisicion</a></div><div class="ttdeci">float precioDeAdquisicion</div><div class="ttdef"><b>Definition</b> AutoArchivo.h:22</div></div>
+<div class="ttc" id="astruct_auto_archivo_html_a93c8a7799c37f4f369c8d911d5571e43"><div class="ttname"><a href="struct_auto_archivo.html#a93c8a7799c37f4f369c8d911d5571e43">AutoArchivo::patente</a></div><div class="ttdeci">Patente patente</div><div class="ttdef"><b>Definition</b> AutoArchivo.h:16</div></div>
+<div class="ttc" id="astruct_auto_html"><div class="ttname"><a href="struct_auto.html">Auto</a></div><div class="ttdef"><b>Definition</b> Auto.h:20</div></div>
+<div class="ttc" id="astruct_patente_html"><div class="ttname"><a href="struct_patente.html">Patente</a></div><div class="ttdef"><b>Definition</b> Patente.h:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_390ffc40b31ea80b54cee1ba617c6532.html">librerias</a></li><li class="navelem"><a class="el" href="_auto_archivo_8h.html">AutoArchivo.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

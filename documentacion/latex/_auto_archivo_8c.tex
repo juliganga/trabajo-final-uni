@@ -1,0 +1,108 @@
+\doxysection{Referencia del archivo librerias/\+Auto\+Archivo.c}
+\hypertarget{_auto_archivo_8c}{}\label{_auto_archivo_8c}\index{librerias/AutoArchivo.c@{librerias/AutoArchivo.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include "{}Auto\+Archivo.\+h"{}}\newline
+{\ttfamily \#include "{}Patente.\+h"{}}\newline
+{\ttfamily \#include "{}Auto.\+h"{}}\newline
+{\ttfamily \#include "{}Persona.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}} \mbox{\hyperlink{_auto_archivo_8c_a446e15cc938f1eee4e0d596b0857b26c}{cargar\+Auto\+Archivo}} (\mbox{\hyperlink{struct_auto}{Auto}} auto\+ACargar)
+\begin{DoxyCompactList}\small\item\em Función que carga una estructura tipo \doxylink{struct_auto_archivo}{Auto\+Archivo}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_archivo_8c_a8c42553c31e7a5f47da6837bece10c30}{mostrar\+Auto\+Archivo}} (\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}} coche)
+\begin{DoxyCompactList}\small\item\em Función que muestra por pantalla todos los campos de una estructura tipo \doxylink{struct_auto_archivo}{Auto\+Archivo}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_archivo_8c_ae0ef434ea95b7c62e8f651d059431d2a}{guardar\+Auto\+Archivo}} (\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}} coche, char \texorpdfstring{$\ast$}{*}nombre\+Archivo)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda los datos de un auto en formato \doxylink{struct_auto_archivo}{Auto\+Archivo}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_auto_archivo_8c_acec3e394c983d5581a6d7da0c52a376d}{guardar\+Auto\+Archivo\+En\+Pos}} (\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}} coche, char \texorpdfstring{$\ast$}{*}nombre\+Archivo, int pos)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda un \doxylink{struct_auto_archivo}{Auto\+Archivo} en la posicion indicada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{DocumentaciÃ³n de funciones}
+\Hypertarget{_auto_archivo_8c_a446e15cc938f1eee4e0d596b0857b26c}\index{AutoArchivo.c@{AutoArchivo.c}!cargarAutoArchivo@{cargarAutoArchivo}}
+\index{cargarAutoArchivo@{cargarAutoArchivo}!AutoArchivo.c@{AutoArchivo.c}}
+\doxysubsubsection{\texorpdfstring{cargarAutoArchivo()}{cargarAutoArchivo()}}
+{\footnotesize\ttfamily \label{_auto_archivo_8c_a446e15cc938f1eee4e0d596b0857b26c} 
+\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}} cargar\+Auto\+Archivo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto}{Auto}}}]{auto\+ACargar}{}\end{DoxyParamCaption})}
+
+
+
+Función que carga una estructura tipo \doxylink{struct_auto_archivo}{Auto\+Archivo}. 
+
+Implementacion de la interface \doxylink{struct_auto_archivo}{Auto\+Archivo} 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em auto\+ACargar} & \doxylink{struct_auto}{Auto} ecibe una estructura tipo \doxylink{struct_auto}{Auto} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\doxylink{struct_auto_archivo}{Auto\+Archivo} \doxylink{struct_auto}{Auto} para cargar a archivo 
+\end{DoxyReturn}
+\Hypertarget{_auto_archivo_8c_ae0ef434ea95b7c62e8f651d059431d2a}\index{AutoArchivo.c@{AutoArchivo.c}!guardarAutoArchivo@{guardarAutoArchivo}}
+\index{guardarAutoArchivo@{guardarAutoArchivo}!AutoArchivo.c@{AutoArchivo.c}}
+\doxysubsubsection{\texorpdfstring{guardarAutoArchivo()}{guardarAutoArchivo()}}
+{\footnotesize\ttfamily \label{_auto_archivo_8c_ae0ef434ea95b7c62e8f651d059431d2a} 
+void guardar\+Auto\+Archivo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}}}]{coche}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{nombre\+Archivo}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que guarda los datos de un auto en formato \doxylink{struct_auto_archivo}{Auto\+Archivo}. 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em coche} & \doxylink{struct_auto_archivo}{Auto\+Archivo} el auto a guardar \\
+\hline
+{\em nombre\+Archivo} & char\texorpdfstring{$\ast$}{*} Puntero al nombre del archivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_archivo_8c_acec3e394c983d5581a6d7da0c52a376d}\index{AutoArchivo.c@{AutoArchivo.c}!guardarAutoArchivoEnPos@{guardarAutoArchivoEnPos}}
+\index{guardarAutoArchivoEnPos@{guardarAutoArchivoEnPos}!AutoArchivo.c@{AutoArchivo.c}}
+\doxysubsubsection{\texorpdfstring{guardarAutoArchivoEnPos()}{guardarAutoArchivoEnPos()}}
+{\footnotesize\ttfamily \label{_auto_archivo_8c_acec3e394c983d5581a6d7da0c52a376d} 
+void guardar\+Auto\+Archivo\+En\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}}}]{coche}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{nombre\+Archivo}{, }\item[{int}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Funcion que guarda un \doxylink{struct_auto_archivo}{Auto\+Archivo} en la posicion indicada. 
+
+Funcion que guarda un \doxylink{struct_auto_archivo}{Auto\+Archivo} en la posicion indicada Params\+: \doxylink{struct_auto_archivo}{Auto\+Archivo} coche -\/\texorpdfstring{$>$}{>} el coche a guardar char \texorpdfstring{$\ast$}{*}nombre\+Archivo -\/\texorpdfstring{$>$}{>} puntero al archivo donde guardar int pos -\/\texorpdfstring{$>$}{>} las posicion donde guardar el auto 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em coche} & \doxylink{struct_auto_archivo}{Auto\+Archivo} El coche a guardar \\
+\hline
+{\em nombre\+Archivo} & char\texorpdfstring{$\ast$}{*} Puntero al archivo donde guardar \\
+\hline
+{\em pos} & int Las posicion donde guardar el auto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{_auto_archivo_8c_a8c42553c31e7a5f47da6837bece10c30}\index{AutoArchivo.c@{AutoArchivo.c}!mostrarAutoArchivo@{mostrarAutoArchivo}}
+\index{mostrarAutoArchivo@{mostrarAutoArchivo}!AutoArchivo.c@{AutoArchivo.c}}
+\doxysubsubsection{\texorpdfstring{mostrarAutoArchivo()}{mostrarAutoArchivo()}}
+{\footnotesize\ttfamily \label{_auto_archivo_8c_a8c42553c31e7a5f47da6837bece10c30} 
+void mostrar\+Auto\+Archivo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_auto_archivo}{Auto\+Archivo}}}]{coche}{}\end{DoxyParamCaption})}
+
+
+
+Función que muestra por pantalla todos los campos de una estructura tipo \doxylink{struct_auto_archivo}{Auto\+Archivo}. 
+
+Función que muestra por pantalla todos los campos de una estructura tipo \doxylink{struct_auto_archivo}{Auto\+Archivo}. Args\+: \doxylink{struct_auto_archivo}{Auto\+Archivo} Return\+: none 
+
+
+\begin{DoxyParams}{ParÃ¡metros}
+{\em coche} & \doxylink{struct_auto_archivo}{Auto\+Archivo} archivo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}

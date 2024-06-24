@@ -1,0 +1,32 @@
+\doxysection{Referencia del archivo librerias/\+Usuario\+Validaciones.h}
+\hypertarget{_usuario_validaciones_8h}{}\label{_usuario_validaciones_8h}\index{librerias/UsuarioValidaciones.h@{librerias/UsuarioValidaciones.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}Usuario.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_usuario_validaciones_8h_a50bd69de3ff55f2367591e026ac58bf8}{existe\+Usuario}} (char \texorpdfstring{$\ast$}{*}, char \texorpdfstring{$\ast$}{*})
+\item 
+int \mbox{\hyperlink{_usuario_validaciones_8h_aa79a88fd680a08b3f3181226b2713715}{validar\+Contrasenia}} (char\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{DocumentaciÃ³n de funciones}
+\Hypertarget{_usuario_validaciones_8h_a50bd69de3ff55f2367591e026ac58bf8}\index{UsuarioValidaciones.h@{UsuarioValidaciones.h}!existeUsuario@{existeUsuario}}
+\index{existeUsuario@{existeUsuario}!UsuarioValidaciones.h@{UsuarioValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{existeUsuario()}{existeUsuario()}}
+{\footnotesize\ttfamily \label{_usuario_validaciones_8h_a50bd69de3ff55f2367591e026ac58bf8} 
+int existe\+Usuario (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nombre\+Archivo}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{nombre\+Usuario}{}\end{DoxyParamCaption})}
+
+Funcion que verifica la existecia de un usuario en el archivo de usuarios. Utiliza el nombre de usuario como parametro para la busqueda.
+
+Args\+: recive un puntero a char que representa el nombre del archivo, y un \doxylink{struct_usuario}{Usuario}
+
+Return\+: devuelve un Int. 1 si encontro el usuario. 0 si no lo encontró. \Hypertarget{_usuario_validaciones_8h_aa79a88fd680a08b3f3181226b2713715}\index{UsuarioValidaciones.h@{UsuarioValidaciones.h}!validarContrasenia@{validarContrasenia}}
+\index{validarContrasenia@{validarContrasenia}!UsuarioValidaciones.h@{UsuarioValidaciones.h}}
+\doxysubsubsection{\texorpdfstring{validarContrasenia()}{validarContrasenia()}}
+{\footnotesize\ttfamily \label{_usuario_validaciones_8h_aa79a88fd680a08b3f3181226b2713715} 
+int validar\+Contrasenia (\begin{DoxyParamCaption}\item[{char}]{contrasenia}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+Funcion que valida la contraseña ingresada por el usuario. Args\+: un arreglo de char return un int = 1 si es valida. 0 si no lo es. 

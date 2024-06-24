@@ -85,11 +85,9 @@ return flag;
 
     \brief Funcion que valida que la patente tenga tres letras y tres numeros
     \param Patente patente -> la patente a evaluar.
-    \return int -> 1 si son letras
-                   0 en otro caso
+    \return int -> 1 si son letras, 0 en otro caso
 
 **/
-
 int validarLimite(Patente patente) {
     int flag = 0;
 
