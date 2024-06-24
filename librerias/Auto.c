@@ -673,6 +673,7 @@ int contarNuevos(Auto arreglo[])
 
 void agregarAutosNuevos()
 {
+    cantidadNuevos = -1;
     for(int i = 0;i<=cantidadAutos;i++)
     {
         if(esNuevo(arregloAutos[i]) == 1)
@@ -711,7 +712,7 @@ int encontrarMenor(Auto arr[], int pos, int validos)
     Auto aux = arr[pos];
     int i = posMenor;
 
-    while (i < validos)
+    while (i <= validos)
     {
         if (arr[i].anio < aux.anio)
         {
