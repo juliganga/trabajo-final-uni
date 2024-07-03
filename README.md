@@ -1,4 +1,4 @@
-# Trabajo pr·ctico ProgramaciÛn I
+# Trabajo pr√°ctico Programaci√≥n I
 UTN - MDP
 
 
@@ -10,7 +10,7 @@ UTN - MDP
 git clone <URL del repositorio>
 ```
 
-- DespuÈs de eso creamos una rama nueva local para agregar lo que querramos.
+- Despu√©s de eso creamos una rama nueva local para agregar lo que querramos.
 
 ``` shell
 
@@ -46,6 +46,3 @@ git push origin <nombre de la rama que creamos>
 ```
 
 - Luego de eso tenemos los cambios hechos en el repositorio remoto, en una rama nueva.
-
-
-# Dale que se puede!
